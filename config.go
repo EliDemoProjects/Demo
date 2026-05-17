@@ -12,467 +12,473 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package mock
+package config
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"reflect"
-	"strconv"
-	"testing"
 	"time"
 
-	"go.uber.org/atomic"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/reflect/protoreflect"
+	"google.golang.org/protobuf/types/known/anypb"
+	"google.golang.org/protobuf/types/known/structpb"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime/schema"
+	kubetypes "k8s.io/apimachinery/pkg/types"
 
-	networking "istio.io/api/networking/v1alpha3"
-	authz "istio.io/api/security/v1beta1"
-	api "istio.io/api/type/v1beta1"
-	"istio.io/istio/pilot/pkg/model"
-	config2 "istio.io/istio/pkg/config"
-	"istio.io/istio/pkg/config/schema/collections"
-	"istio.io/istio/pkg/config/schema/resource"
-	"istio.io/istio/pkg/log"
-	"istio.io/istio/pkg/test/config"
-	"istio.io/istio/pkg/test/util/retry"
+	"istio.io/api/label"
+	"istio.io/istio/pilot/pkg/util/protoconv"
+	"istio.io/istio/pkg/maps"
+	"istio.io/istio/pkg/ptr"
+	"istio.io/istio/pkg/slices"
+	"istio.io/istio/pkg/util/protomarshal"
+	"istio.io/istio/pkg/util/sets"
 )
 
-var (
-	// ExampleVirtualService is an example V2 route rule
-	ExampleVirtualService = &networking.VirtualService{
-		Hosts: []string{"prod", "test"},
-		Http: []*networking.HTTPRoute{
-			{
-				Route: []*networking.HTTPRouteDestination{
-					{
-						Destination: &networking.Destination{
-							Host: "job",
-						},
-						Weight: 80,
-					},
-				},
-			},
-		},
-	}
+// Meta is metadata attached to each configuration unit.
+// The revision is optional, and if provided, identifies the
+// last update operation on the object.
+type Meta struct {
+	// GroupVersionKind is a short configuration name that matches the content message type
+	// (e.g. "route-rule")
+	GroupVersionKind GroupVersionKind `json:"type,omitempty"`
 
-	ExampleServiceEntry = &networking.ServiceEntry{
-		Hosts:      []string{"*.google.com"},
-		Resolution: networking.ServiceEntry_NONE,
-		Ports: []*networking.ServicePort{
-			{Number: 80, Name: "http-name", Protocol: "http"},
-			{Number: 8080, Name: "http2-name", Protocol: "http2"},
-		},
-	}
+	// UID
+	UID string `json:"uid,omitempty"`
 
-	ExampleGateway = &networking.Gateway{
-		Servers: []*networking.Server{
-			{
-				Hosts: []string{"google.com"},
-				Port:  &networking.Port{Name: "http", Protocol: "http", Number: 10080},
-			},
-		},
-	}
+	// Name is a unique immutable identifier in a namespace
+	Name string `json:"name,omitempty"`
 
-	// ExampleDestinationRule is an example destination rule
-	ExampleDestinationRule = &networking.DestinationRule{
-		Host: "ratings",
-		TrafficPolicy: &networking.TrafficPolicy{
-			LoadBalancer: &networking.LoadBalancerSettings{
-				LbPolicy: new(networking.LoadBalancerSettings_Simple),
-			},
-		},
-	}
+	// Namespace defines the space for names (optional for some types),
+	// applications may choose to use namespaces for a variety of purposes
+	// (security domains, fault domains, organizational domains)
+	Namespace string `json:"namespace,omitempty"`
 
-	// ExampleAuthorizationPolicy is an example AuthorizationPolicy
-	ExampleAuthorizationPolicy = &authz.AuthorizationPolicy{
-		Selector: &api.WorkloadSelector{
-			MatchLabels: map[string]string{
-				"app":     "httpbin",
-				"version": "v1",
-			},
-		},
-	}
+	// Domain defines the suffix of the fully qualified name past the namespace.
+	// Domain is not a part of the unique key unlike name and namespace.
+	Domain string `json:"domain,omitempty"`
 
-	mockGvk = collections.Mock.GroupVersionKind()
-)
+	// Map of string keys and values that can be used to organize and categorize
+	// (scope and select) objects.
+	Labels map[string]string `json:"labels,omitempty"`
 
-// Make creates a mock config indexed by a number
-func Make(namespace string, i int) config2.Config {
-	name := fmt.Sprintf("%s%d", "mock-config", i)
-	return config2.Config{
-		Meta: config2.Meta{
-			GroupVersionKind: mockGvk,
-			Name:             name,
-			Namespace:        namespace,
-			Labels: map[string]string{
-				"key": name,
-			},
-			Annotations: map[string]string{
-				"annotationkey": name,
-			},
-		},
-		Spec: &config.MockConfig{
-			Key: name,
-			Pairs: []*config.ConfigPair{
-				{Key: "key", Value: strconv.Itoa(i)},
-			},
-		},
-	}
+	// Annotations is an unstructured key value map stored with a resource that may be
+	// set by external tools to store and retrieve arbitrary metadata. They are not
+	// queryable and should be preserved when modifying objects.
+	Annotations map[string]string `json:"annotations,omitempty"`
+
+	// ResourceVersion is an opaque identifier for tracking updates to the config registry.
+	// The implementation may use a change index or a commit log for the revision.
+	// The config client should not make any assumptions about revisions and rely only on
+	// exact equality to implement optimistic concurrency of read-write operations.
+	//
+	// The lifetime of an object of a particular revision depends on the underlying data store.
+	// The data store may compactify old revisions in the interest of storage optimization.
+	//
+	// An empty revision carries a special meaning that the associated object has
+	// not been stored and assigned a revision.
+	ResourceVersion string `json:"resourceVersion,omitempty"`
+
+	// CreationTimestamp records the creation time
+	CreationTimestamp time.Time `json:"creationTimestamp,omitempty"`
+
+	// OwnerReferences allows specifying in-namespace owning objects.
+	OwnerReferences []metav1.OwnerReference `json:"ownerReferences,omitempty"`
+
+	// A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.
+	Generation int64 `json:"generation,omitempty"`
 }
 
-// Compare checks two configs ignoring revisions and creation time
-func Compare(a, b config2.Config) bool {
-	a.ResourceVersion = ""
-	b.ResourceVersion = ""
-	a.CreationTimestamp = time.Time{}
-	b.CreationTimestamp = time.Time{}
+// Config is a configuration unit consisting of the type of configuration, the
+// key identifier that is unique per type, and the content represented as a
+// protobuf message.
+type Config struct {
+	Meta
+
+	// Spec holds the configuration object as a gogo protobuf message
+	Spec Spec
+
+	// Status holds long-running status.
+	Status Status
+
+	// Extra holds additional, non-spec information for internal processing.
+	Extra map[string]any
+}
+
+func LabelsInRevision(lbls map[string]string, rev string) bool {
+	configEnv, f := lbls[label.IoIstioRev.Name]
+	if !f {
+		// This is a global object, and always included
+		return true
+	}
+	// If the revision is empty, this means we don't specify a revision, and
+	// we should always include it
+	if rev == "" {
+		return true
+	}
+	// Otherwise, only return true if revisions equal
+	return configEnv == rev
+}
+
+func LabelsInRevisionOrTags(lbls map[string]string, rev string, tags sets.Set[string]) bool {
+	if LabelsInRevision(lbls, rev) {
+		return true
+	}
+	configEnv := lbls[label.IoIstioRev.Name]
+	// Otherwise, only return true if revisions equal
+	return tags.Contains(configEnv)
+}
+
+func ObjectInRevision(o *Config, rev string) bool {
+	return LabelsInRevision(o.Labels, rev)
+}
+
+// Spec defines the spec for the config. In order to use below helper methods,
+// this must be one of:
+// * golang/protobuf Message
+// * gogo/protobuf Message
+// * Able to marshal/unmarshal using json
+type Spec any
+
+func ToProto(s Spec) (*anypb.Any, error) {
+	// golang protobuf. Use protoreflect.ProtoMessage to distinguish from gogo
+	// golang/protobuf 1.4+ will have this interface. Older golang/protobuf are gogo compatible
+	// but also not used by Istio at all.
+	if pb, ok := s.(protoreflect.ProtoMessage); ok {
+		return protoconv.MessageToAnyWithError(pb)
+	}
+
+	js, err := json.Marshal(s)
+	if err != nil {
+		return nil, err
+	}
+	pbs := &structpb.Struct{}
+	if err := protomarshal.Unmarshal(js, pbs); err != nil {
+		return nil, err
+	}
+	return protoconv.MessageToAnyWithError(pbs)
+}
+
+func ToRaw(s Spec) (json.RawMessage, error) {
+	js, err := ToJSON(s)
+	if err != nil {
+		return nil, err
+	}
+
+	// Unmarshal from json bytes to go map
+	return js, nil
+}
+
+func ToJSON(s Spec) ([]byte, error) {
+	return toJSON(s, false)
+}
+
+func ToPrettyJSON(s Spec) ([]byte, error) {
+	return toJSON(s, true)
+}
+
+func toJSON(s Spec, pretty bool) ([]byte, error) {
+	indent := ""
+	if pretty {
+		indent = "    "
+	}
+
+	// golang protobuf. Use protoreflect.ProtoMessage to distinguish from gogo
+	// golang/protobuf 1.4+ will have this interface. Older golang/protobuf are gogo compatible
+	// but also not used by Istio at all.
+	if _, ok := s.(protoreflect.ProtoMessage); ok {
+		if pb, ok := s.(proto.Message); ok {
+			b, err := protomarshal.MarshalIndent(pb, indent)
+			return b, err
+		}
+	}
+
+	if pretty {
+		return json.MarshalIndent(s, "", indent)
+	}
+	return json.Marshal(s)
+}
+
+type deepCopier interface {
+	DeepCopyInterface() any
+}
+
+func ApplyJSONStrict(s Spec, js string) error {
+	// golang protobuf. Use protoreflect.ProtoMessage to distinguish from gogo
+	// golang/protobuf 1.4+ will have this interface. Older golang/protobuf are gogo compatible
+	// but also not used by Istio at all.
+	if _, ok := s.(protoreflect.ProtoMessage); ok {
+		if pb, ok := s.(proto.Message); ok {
+			err := protomarshal.ApplyJSONStrict(js, pb)
+			return err
+		}
+	}
+
+	d := json.NewDecoder(bytes.NewReader([]byte(js)))
+	d.DisallowUnknownFields()
+	return d.Decode(&s)
+}
+
+func ApplyJSON(s Spec, js string) error {
+	// golang protobuf. Use protoreflect.ProtoMessage to distinguish from gogo
+	// golang/protobuf 1.4+ will have this interface. Older golang/protobuf are gogo compatible
+	// but also not used by Istio at all.
+	if _, ok := s.(protoreflect.ProtoMessage); ok {
+		if pb, ok := s.(proto.Message); ok {
+			err := protomarshal.ApplyJSON(js, pb)
+			return err
+		}
+	}
+
+	return json.Unmarshal([]byte(js), &s)
+}
+
+// DeepCopy the object. Note: this does not use the correct DeepCopy on Kubernetes types; only use with Istio types.
+func DeepCopy(s any) any {
+	if s == nil {
+		return nil
+	}
+	// If deep copy is defined, use that
+	if dc, ok := s.(deepCopier); ok {
+		return dc.DeepCopyInterface()
+	}
+
+	// golang protobuf. Use protoreflect.ProtoMessage to distinguish from gogo
+	// golang/protobuf 1.4+ will have this interface. Older golang/protobuf are gogo compatible
+	// but also not used by Istio at all.
+	if _, ok := s.(protoreflect.ProtoMessage); ok {
+		if pb, ok := s.(proto.Message); ok {
+			return protomarshal.Clone(pb)
+		}
+	}
+
+	// If we don't have a deep copy method, we will have to do some reflection magic. Its not ideal,
+	// but all Istio types have an efficient deep copy.
+	js, err := json.Marshal(s)
+	if err != nil {
+		return nil
+	}
+
+	data := reflect.New(reflect.TypeOf(s)).Interface()
+	if err := json.Unmarshal(js, data); err != nil {
+		return nil
+	}
+	data = reflect.ValueOf(data).Elem().Interface()
+	return data
+}
+
+func (c *Config) Equals(other *Config) bool {
+	am, bm := c.Meta, other.Meta
+	if am.GroupVersionKind != bm.GroupVersionKind {
+		return false
+	}
+	if am.UID != bm.UID {
+		return false
+	}
+	if am.Name != bm.Name {
+		return false
+	}
+	if am.Namespace != bm.Namespace {
+		return false
+	}
+	if am.Domain != bm.Domain {
+		return false
+	}
+	if !maps.Equal(am.Labels, bm.Labels) {
+		return false
+	}
+	if !maps.Equal(am.Annotations, bm.Annotations) {
+		return false
+	}
+	if am.ResourceVersion != bm.ResourceVersion {
+		return false
+	}
+	if am.CreationTimestamp != bm.CreationTimestamp {
+		return false
+	}
+	if !slices.EqualFunc(am.OwnerReferences, bm.OwnerReferences, func(a metav1.OwnerReference, b metav1.OwnerReference) bool {
+		if a.APIVersion != b.APIVersion {
+			return false
+		}
+		if a.Kind != b.Kind {
+			return false
+		}
+		if a.Name != b.Name {
+			return false
+		}
+		if a.UID != b.UID {
+			return false
+		}
+		if !ptr.Equal(a.Controller, b.Controller) {
+			return false
+		}
+		if !ptr.Equal(a.BlockOwnerDeletion, b.BlockOwnerDeletion) {
+			return false
+		}
+		return true
+	}) {
+		return false
+	}
+	if am.Generation != bm.Generation {
+		return false
+	}
+
+	if !equals(c.Spec, other.Spec) {
+		return false
+	}
+	if !equals(c.Status, other.Status) {
+		return false
+	}
+	// Can't use map.Equal because store maps as the value
+	if !equals(c.Extra, other.Extra) {
+		return false
+	}
+	return true
+}
+
+func equals(a any, b any) bool {
+	if _, ok := a.(protoreflect.ProtoMessage); ok {
+		if pb, ok := a.(proto.Message); ok {
+			return proto.Equal(pb, b.(proto.Message))
+		}
+	}
+
 	return reflect.DeepEqual(a, b)
 }
 
-// CheckMapInvariant validates operational invariants of an empty config registry
-func CheckMapInvariant(r model.ConfigStore, t *testing.T, namespace string, n int) {
-	// check that the config descriptor is the mock config descriptor
-	_, contains := r.Schemas().FindByGroupVersionKind(mockGvk)
-	if !contains {
-		t.Fatal("expected config mock types")
-	}
-	log.Info("Created mock descriptor")
+type Status any
 
-	// create configuration objects
-	elts := make(map[int]config2.Config)
-	for i := 0; i < n; i++ {
-		elts[i] = Make(namespace, i)
-	}
-	log.Info("Make mock objects")
-
-	// post all elements
-	for _, elt := range elts {
-		if _, err := r.Create(elt); err != nil {
-			t.Error(err)
-		}
-	}
-	log.Info("Created mock objects")
-
-	revs := make(map[int]string)
-
-	// check that elements are stored
-	for i, elt := range elts {
-		v1 := r.Get(mockGvk, elt.Name, elt.Namespace)
-		if v1 == nil || !Compare(elt, *v1) {
-			t.Errorf("wanted %v, got %v", elt, v1)
-		} else {
-			revs[i] = v1.ResourceVersion
-		}
-	}
-
-	log.Info("Got stored elements")
-
-	if _, err := r.Create(elts[0]); err == nil {
-		t.Error("expected error posting twice")
-	}
-
-	invalid := config2.Config{
-		Meta: config2.Meta{
-			GroupVersionKind: mockGvk,
-			Name:             "invalid",
-			ResourceVersion:  revs[0],
-		},
-		Spec: &config.MockConfig{},
-	}
-
-	missing := config2.Config{
-		Meta: config2.Meta{
-			GroupVersionKind: mockGvk,
-			Name:             "missing",
-			ResourceVersion:  revs[0],
-		},
-		Spec: &config.MockConfig{Key: "missing"},
-	}
-
-	if _, err := r.Create(config2.Config{}); err == nil {
-		t.Error("expected error posting empty object")
-	}
-
-	if _, err := r.Create(invalid); err == nil {
-		t.Error("expected error posting invalid object")
-	}
-
-	if _, err := r.Update(config2.Config{}); err == nil {
-		t.Error("expected error updating empty object")
-	}
-
-	if _, err := r.Update(invalid); err == nil {
-		t.Error("expected error putting invalid object")
-	}
-
-	if _, err := r.Update(missing); err == nil {
-		t.Error("expected error putting missing object with a missing key")
-	}
-
-	// check for missing type
-	if l := r.List(config2.GroupVersionKind{}, namespace); len(l) > 0 {
-		t.Errorf("unexpected objects for missing type")
-	}
-
-	// check for missing element
-	if cfg := r.Get(mockGvk, "missing", ""); cfg != nil {
-		t.Error("unexpected configuration object found")
-	}
-
-	// check for missing element
-	if cfg := r.Get(config2.GroupVersionKind{}, "missing", ""); cfg != nil {
-		t.Error("unexpected configuration object found")
-	}
-
-	// delete missing elements
-	if err := r.Delete(config2.GroupVersionKind{}, "missing", "", nil); err == nil {
-		t.Error("expected error on deletion of missing type")
-	}
-
-	// delete missing elements
-	if err := r.Delete(mockGvk, "missing", "", nil); err == nil {
-		t.Error("expected error on deletion of missing element")
-	}
-	if err := r.Delete(mockGvk, "missing", "unknown", nil); err == nil {
-		t.Error("expected error on deletion of missing element in unknown namespace")
-	}
-
-	// list elements
-	l := r.List(mockGvk, namespace)
-	if len(l) != n {
-		t.Errorf("wanted %d element(s), got %d in %v", n, len(l), l)
-	}
-
-	// update all elements
-	for i := 0; i < n; i++ {
-		elt := Make(namespace, i)
-		elt.Spec.(*config.MockConfig).Pairs[0].Value += "(updated)"
-		elt.ResourceVersion = revs[i]
-		elts[i] = elt
-		if _, err := r.Update(elt); err != nil {
-			t.Error(err)
-		}
-	}
-
-	// check that elements are stored
-	for i, elt := range elts {
-		v1 := r.Get(mockGvk, elts[i].Name, elts[i].Namespace)
-		if v1 == nil || !Compare(elt, *v1) {
-			t.Errorf("wanted %v, got %v", elt, v1)
-		}
-	}
-
-	// delete all elements
-	for i := range elts {
-		if err := r.Delete(mockGvk, elts[i].Name, elts[i].Namespace, nil); err != nil {
-			t.Error(err)
-		}
-	}
-	log.Info("Delete elements")
-
-	l = r.List(mockGvk, namespace)
-	if len(l) != 0 {
-		t.Errorf("wanted 0 element(s), got %d in %v", len(l), l)
-	}
-	log.Info("Test done, deleting namespace")
+// Key function for the configuration objects
+func Key(grp, ver, typ, name, namespace string) string {
+	return grp + "/" + ver + "/" + typ + "/" + namespace + "/" + name // Format: %s/%s/%s/%s/%s
 }
 
-// CheckIstioConfigTypes validates that an empty store can ingest Istio config objects
-func CheckIstioConfigTypes(store model.ConfigStore, namespace string, t *testing.T) {
-	configName := "example"
-	// Global scoped policies like MeshPolicy are not isolated, can't be
-	// run as part of the normal test suites - if needed they should
-	// be run in separate environment. The test suites are setting cluster
-	// scoped policies that may interfere and would require serialization
+// Key is the unique identifier for a configuration object
+func (meta *Meta) Key() string {
+	return Key(
+		meta.GroupVersionKind.Group, meta.GroupVersionKind.Version, meta.GroupVersionKind.Kind,
+		meta.Name, meta.Namespace)
+}
 
-	cases := []struct {
-		name       string
-		configName string
-		schema     resource.Schema
-		spec       config2.Spec
-	}{
-		{"VirtualService", configName, collections.VirtualService, ExampleVirtualService},
-		{"DestinationRule", configName, collections.DestinationRule, ExampleDestinationRule},
-		{"ServiceEntry", configName, collections.ServiceEntry, ExampleServiceEntry},
-		{"Gateway", configName, collections.Gateway, ExampleGateway},
-		{"AuthorizationPolicy", configName, collections.AuthorizationPolicy, ExampleAuthorizationPolicy},
-	}
-
-	for _, c := range cases {
-		t.Run(c.name, func(t *testing.T) {
-			configMeta := config2.Meta{
-				GroupVersionKind: c.schema.GroupVersionKind(),
-				Name:             c.configName,
-			}
-			if !c.schema.IsClusterScoped() {
-				configMeta.Namespace = namespace
-			}
-
-			if _, err := store.Create(config2.Config{
-				Meta: configMeta,
-				Spec: c.spec,
-			}); err != nil {
-				t.Errorf("Post(%v) => got %v", c.name, err)
-			}
-		})
+func (meta *Meta) ToObjectMeta() metav1.ObjectMeta {
+	return metav1.ObjectMeta{
+		Name:              meta.Name,
+		Namespace:         meta.Namespace,
+		UID:               kubetypes.UID(meta.UID),
+		ResourceVersion:   meta.ResourceVersion,
+		Generation:        meta.Generation,
+		CreationTimestamp: metav1.NewTime(meta.CreationTimestamp),
+		Labels:            meta.Labels,
+		Annotations:       meta.Annotations,
+		OwnerReferences:   meta.OwnerReferences,
 	}
 }
 
-// CheckCacheEvents validates operational invariants of a cache
-func CheckCacheEvents(store model.ConfigStore, cache model.ConfigStoreController, namespace string, n int, t *testing.T) {
-	n64 := int64(n)
-	stop := make(chan struct{})
-	defer close(stop)
-	added, deleted := atomic.NewInt64(0), atomic.NewInt64(0)
-	cache.RegisterEventHandler(mockGvk, func(_, _ config2.Config, ev model.Event) {
-		switch ev {
-		case model.EventAdd:
-			if deleted.Load() != 0 {
-				t.Errorf("Events are not serialized (add)")
-			}
-			added.Inc()
-		case model.EventDelete:
-			if added.Load() != n64 {
-				t.Errorf("Events are not serialized (delete)")
-			}
-			deleted.Inc()
-		}
-		log.Infof("Added %d, deleted %d", added.Load(), deleted.Load())
-	})
-	go cache.Run(stop)
-
-	// run map invariant sequence
-	CheckMapInvariant(store, t, namespace, n)
-
-	log.Infof("Waiting till all events are received")
-	retry.UntilOrFail(t, func() bool {
-		return added.Load() == n64 && deleted.Load() == n64
-	}, retry.Message("receive events"), retry.Delay(time.Millisecond*500), retry.Timeout(time.Minute))
+func (meta Meta) DeepCopy() Meta {
+	nm := meta
+	nm.Labels = maps.Clone(meta.Labels)
+	nm.Annotations = maps.Clone(meta.Annotations)
+	return nm
 }
 
-// CheckCacheFreshness validates operational invariants of a cache
-func CheckCacheFreshness(cache model.ConfigStoreController, namespace string, t *testing.T) {
-	stop := make(chan struct{})
-	done := make(chan bool)
-	o := Make(namespace, 0)
-
-	// validate cache consistency
-	cache.RegisterEventHandler(mockGvk, func(_, config config2.Config, ev model.Event) {
-		elts := cache.List(mockGvk, namespace)
-		elt := cache.Get(o.GroupVersionKind, o.Name, o.Namespace)
-		switch ev {
-		case model.EventAdd:
-			if len(elts) != 1 {
-				t.Errorf("Got %#v, expected %d element(s) on Add event", elts, 1)
-			}
-			if elt == nil || !reflect.DeepEqual(elt.Spec, o.Spec) {
-				t.Errorf("Got %#v, expected %#v", elt, o)
-			}
-
-			log.Infof("Calling Update(%s)", config.Key())
-			revised := Make(namespace, 1)
-			revised.Meta = elt.Meta
-			if _, err := cache.Update(revised); err != nil {
-				t.Error(err)
-			}
-		case model.EventUpdate:
-			if len(elts) != 1 {
-				t.Errorf("Got %#v, expected %d element(s) on Update event", elts, 1)
-			}
-			if elt == nil {
-				t.Errorf("Got %#v, expected nonempty", elt)
-			}
-
-			log.Infof("Calling Delete(%s)", config.Key())
-			if err := cache.Delete(mockGvk, config.Name, config.Namespace, nil); err != nil {
-				t.Error(err)
-			}
-		case model.EventDelete:
-			if len(elts) != 0 {
-				t.Errorf("Got %#v, expected zero elements on Delete event", elts)
-			}
-			log.Infof("Stopping channel for (%#v)", config.Key())
-			close(stop)
-			done <- true
-		}
-	})
-
-	go cache.Run(stop)
-
-	// try warm-up with empty Get
-	if cfg := cache.Get(config2.GroupVersionKind{}, "example", namespace); cfg != nil {
-		t.Error("unexpected result for unknown type")
+func (c Config) DeepCopy() Config {
+	var clone Config
+	clone.Meta = c.Meta.DeepCopy()
+	clone.Spec = DeepCopy(c.Spec)
+	if c.Status != nil {
+		clone.Status = DeepCopy(c.Status)
 	}
-
-	// add and remove
-	log.Infof("Calling Create(%#v)", o)
-	if _, err := cache.Create(o); err != nil {
-		t.Error(err)
+	// Note that this is effectively a shallow clone, but this is fine as it is not manipulated.
+	if c.Extra != nil {
+		clone.Extra = maps.Clone(c.Extra)
 	}
+	return clone
+}
 
-	timeout := time.After(10 * time.Second)
-	select {
-	case <-timeout:
-		t.Fatal("timeout waiting to be done")
-	case <-done:
-		return
+func (c Config) GetName() string {
+	return c.Name
+}
+
+func (c Config) GetNamespace() string {
+	return c.Namespace
+}
+
+func (c Config) GetCreationTimestamp() time.Time {
+	return c.CreationTimestamp
+}
+
+func (c Config) NamespacedName() kubetypes.NamespacedName {
+	return kubetypes.NamespacedName{
+		Namespace: c.Namespace,
+		Name:      c.Name,
 	}
 }
 
-// CheckCacheSync validates operational invariants of a cache against the
-// non-cached client.
-func CheckCacheSync(store model.ConfigStore, cache model.ConfigStoreController, namespace string, n int, t *testing.T) {
-	keys := make(map[int]config2.Config)
-	// add elements directly through client
-	for i := 0; i < n; i++ {
-		keys[i] = Make(namespace, i)
-		if _, err := store.Create(keys[i]); err != nil {
-			t.Error(err)
-		}
+var _ fmt.Stringer = GroupVersionKind{}
+
+type GroupVersionKind struct {
+	Group   string `json:"group"`
+	Version string `json:"version"`
+	Kind    string `json:"kind"`
+}
+
+func (g GroupVersionKind) String() string {
+	return g.CanonicalGroup() + "/" + g.Version + "/" + g.Kind
+}
+
+// GroupVersion returns the group/version similar to what would be found in the apiVersion field of a Kubernetes resource.
+func (g GroupVersionKind) GroupVersion() string {
+	if g.Group == "" {
+		return g.Version
 	}
+	return g.Group + "/" + g.Version
+}
 
-	// check in the controller cache
-	stop := make(chan struct{})
-	defer close(stop)
-	go cache.Run(stop)
-	retry.UntilOrFail(t, cache.HasSynced, retry.Message("HasSynced"))
-	os := cache.List(mockGvk, namespace)
-	if len(os) != n {
-		t.Errorf("cache.List => Got %d, expected %d", len(os), n)
+func FromKubernetesGVK(gvk schema.GroupVersionKind) GroupVersionKind {
+	return GroupVersionKind{
+		Group:   gvk.Group,
+		Version: gvk.Version,
+		Kind:    gvk.Kind,
 	}
+}
 
-	// remove elements directly through client
-	for i := 0; i < n; i++ {
-		if err := store.Delete(mockGvk, keys[i].Name, keys[i].Namespace, nil); err != nil {
-			t.Error(err)
-		}
+// Kubernetes returns the same GVK, using the Kubernetes object type
+func (g GroupVersionKind) Kubernetes() schema.GroupVersionKind {
+	return schema.GroupVersionKind{
+		Group:   g.Group,
+		Version: g.Version,
+		Kind:    g.Kind,
 	}
+}
 
-	// check again in the controller cache
-	retry.UntilOrFail(t, func() bool {
-		os = cache.List(mockGvk, namespace)
-		log.Infof("cache.List => Got %d, expected %d", len(os), 0)
-		return len(os) == 0
-	}, retry.Message("no elements in cache"))
-
-	// now add through the controller
-	for i := 0; i < n; i++ {
-		if _, err := cache.Create(Make(namespace, i)); err != nil {
-			t.Error(err)
-		}
+func CanonicalGroup(group string) string {
+	if group != "" {
+		return group
 	}
+	return "core"
+}
 
-	// check directly through the client
-	retry.UntilOrFail(t, func() bool {
-		cs := cache.List(mockGvk, namespace)
-		os := store.List(mockGvk, namespace)
-		log.Infof("cache.List => Got %d, expected %d", len(cs), n)
-		log.Infof("store.List => Got %d, expected %d", len(os), n)
-		return len(os) == n && len(cs) == n
-	}, retry.Message("cache and backing store match"))
+// CanonicalGroup returns the group with defaulting applied. This means an empty group will
+// be treated as "core", following Kubernetes API standards
+func (g GroupVersionKind) CanonicalGroup() string {
+	return CanonicalGroup(g.Group)
+}
 
-	// remove elements directly through the client
-	for i := 0; i < n; i++ {
-		if err := store.Delete(mockGvk, keys[i].Name, keys[i].Namespace, nil); err != nil {
-			t.Error(err)
-		}
+// PatchFunc provides the cached config as a base for modification. Only diff the between the cfg
+// parameter and the returned Config will be applied.
+type PatchFunc func(cfg Config) (Config, kubetypes.PatchType)
+
+type Namer interface {
+	GetName() string
+	GetNamespace() string
+}
+
+func NamespacedName[T Namer](o T) kubetypes.NamespacedName {
+	return kubetypes.NamespacedName{
+		Namespace: o.GetNamespace(),
+		Name:      o.GetName(),
 	}
 }
