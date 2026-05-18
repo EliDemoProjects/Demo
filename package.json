@@ -1,0 +1,28 @@
+{
+  "name": "sql-injection-remediation-tests",
+  "version": "1.0.0",
+  "description": "Security tests for SQL injection vulnerability remediation",
+  "main": "vulnerable-sql.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "mysql2": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  }
+}

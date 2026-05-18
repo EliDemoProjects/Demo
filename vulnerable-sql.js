@@ -13,9 +13,10 @@ const db = mysql.createConnection({
 app.get("/user", (req, res) => {
   const username = req.query.username;
 
-  const query = "SELECT * FROM users WHERE username = '" + username + "'";
+  // Use parameterized query to prevent SQL injection
+  const query = "SELECT * FROM users WHERE username = ?";
 
-  db.query(query, (err, results) => {
+  db.query(query, [username], (err, results) => {
     if (err) {
       return res.status(500).send("Database error");
     }
@@ -25,3 +26,5 @@ app.get("/user", (req, res) => {
 });
 
 app.listen(3000);
+
+module.exports = app;
