@@ -1,0 +1,21 @@
+{
+  "name": "vulnerable-dependencies-demo",
+  "version": "1.0.0",
+  "description": "Demo application with intentionally vulnerable dependencies",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "4.20.0",
+    "ramda": "^0.30.0",
+    "lodash": "4.17.23"
+  },
+  "devDependencies": {
+    "typescript": "3.0.0",
+    "nodemon": "1.18.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
