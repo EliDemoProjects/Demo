@@ -1,32 +1,36 @@
 ---
-description: How to detect and remediate security risks using Checkmarx Developer Assist in VS Code
+description: How to detect and remediate security risks using Checkmarx Developer Assist in JetBrains IDEs
 ---
 
-# Using Developer Assist for Detection and Remediation
+# Using Developer Assist for Detection and Remediation (JetBrains)
 
 ## AI Remediation
 
-{% embed url="https://player.vimeo.com/video/1160134485" %}
-AI Remediation demo
-{% endembed %}
-
 ### How to Remediate Risks Using AI
 
-The following procedure explains how to remediate risks by clicking the Fix button for a particular risk. You can also request remediation via chat with your AI Agent.
+The following procedure explains how to remediate risks by clicking the Fix button. You can also request remediation via chat with your AI Agent.
 
 {% stepper %}
 {% step %}
+### Open a project
+
+Open a project in IntelliJ IDEA.
+{% endstep %}
+
+{% step %}
 ### Identify the risk
 
-When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem** — marked in the code with a squiggly underline and annotated in the margin with an icon indicating the risk type.
+When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem** — marked in the code with a squiggly underline and an icon in the margin.
 
-![Risk flagged in code](.gitbook/assets/img-8b30ebc58d203cf69432bb233991474a.png)
+![Risk flagged in JetBrains](.gitbook/assets/img-4f3f94be7ca1c8f0ce2b8faccbe8d496.png)
 {% endstep %}
 
 {% step %}
 ### Open the dialog
 
-Hover over the vulnerable line of code. The Checkmarx dialog opens.
+Hover over the vulnerable line. The Checkmarx dialog opens.
+
+![Checkmarx dialog in JetBrains](.gitbook/assets/img-d896b154664bf2bfe2fdd4594c952435.png)
 {% endstep %}
 
 {% step %}
@@ -34,69 +38,7 @@ Hover over the vulnerable line of code. The Checkmarx dialog opens.
 
 Click **Fix with Checkmarx Developer Assist**.
 
-![Fix with Developer Assist option](.gitbook/assets/img-13fe029e47946a4efb78d53865fb74b6.png)
-
-A Copilot session opens in the side panel and all relevant info is sent for analysis.
-
-{% hint style="info" %}
-Depending on your IDE configuration, you may need to click **Continue** several times to complete the process.
-{% endhint %}
-{% endstep %}
-
-{% step %}
-### Accept or refine
-
-Copilot automatically makes the necessary code changes to remediate the risk.
-
-- If you approve the change, click **Accept**. The change is made and the code is rescanned to verify the risk is no longer present.
-- If you want to improve the suggestion, click **Undo**. You can then chat with Copilot to determine the best remediation approach.
-{% endstep %}
-{% endstepper %}
-
-### Remediation via Chat
-
-You can submit a request for Dev Assist remediation via natural language chat with your AI Agent. Just say that you want to fix a security risk and indicate which risk(s) you want to fix. Your AI will automatically route the request to the Checkmarx MCP.
-
-Example chat requests:
-
-- "Fix the vulnerability in line 26"
-- "Fix all critical vulnerabilities"
-- "Fix all SQL Injection risks"
-- "Remediate all vulnerable packages"
-- "Correct all critical issues in my JavaFile.java"
-
-**Things to know about Dev Assist Chat:**
-
-- No need to mention "Checkmarx" explicitly — once Dev Assist is installed and running, all remediation requests are handled via Checkmarx MCP.
-- Multi-language prompts are supported.
-- Effective in a single message context; improved accuracy in the context of an existing thread or finding.
-- By default, requests are interpreted in the context of the current open file. You can specify a different file in your workspace.
-
----
-
-### How to Understand Risks Using AI
-
-{% stepper %}
-{% step %}
-### Identify the risk
-
-When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem** in the code.
-
-![Risk flagged in code](.gitbook/assets/img-8b30ebc58d203cf69432bb233991474a.png)
-{% endstep %}
-
-{% step %}
-### Open the dialog
-
-Hover over the vulnerable line of code. The Checkmarx dialog opens.
-{% endstep %}
-
-{% step %}
-### View details
-
-Click **View details**.
-
-![View details option](.gitbook/assets/img-ea6756f4b9eaa29b4671b352492a359a.png)
+![Fix with Developer Assist button](.gitbook/assets/img-c44e70f4834374a710812e32c758bdbb.png)
 
 A Copilot session opens in the side panel.
 
@@ -106,9 +48,69 @@ Depending on your IDE configuration, you may need to click **Continue** several 
 {% endstep %}
 
 {% step %}
+### Accept or refine
+
+Copilot automatically makes the necessary code changes.
+
+![Accept All or Discard All options](.gitbook/assets/img-d2088e3d0874c3b51abeafbbd7f04a71.png)
+
+- To approve: click **Accept All**.
+- To reject: click **Discard All**.
+- You can also chat with Copilot to improve upon the suggestion.
+{% endstep %}
+{% endstepper %}
+
+### Remediation via Chat
+
+You can submit a request for Dev Assist remediation via natural language chat with your AI Agent:
+
+- "Fix the vulnerability in line 26"
+- "Fix all critical vulnerabilities"
+- "Fix all SQL Injection risks"
+- "Remediate all vulnerable packages"
+- "Correct all critical issues in my JavaFile.java"
+
+**Things to know about Dev Assist Chat:**
+
+- No need to mention "Checkmarx" explicitly — Dev Assist is integrated with all remediation requests.
+- Multi-language prompts are supported.
+- By default, requests are interpreted in the context of the current open file.
+
+---
+
+## The Checkmarx Developer Assist Findings Window
+
+![Checkmarx Developer Assist Findings Window](.gitbook/assets/img-7c4a2407cf99756d42fbe12660d6f9ce.png)
+
+The **Checkmarx Developer Assist Findings Window** provides a centralized view of all detected issues within a project. It displays vulnerabilities per file along with the count of issues grouped by severity and file location. You can navigate directly to the exact line in the editor with a single click, and use filtering and sorting to streamline issue review.
+
+To open the **Findings Window**, click on the Checkmarx icon in the left navigation bar and select the **Checkmarx Developer Assist Findings** tab.
+
+---
+
+## How to Understand Risks Using AI
+
+{% stepper %}
+{% step %}
+### Identify the risk
+
+When a risk is flagged as a **Problem**, hover over the vulnerable line. The Checkmarx dialog opens.
+{% endstep %}
+
+{% step %}
+### View details
+
+Click **View details**.
+
+![View details button](.gitbook/assets/img-638b072f4e89de112ca36a27fc9d63e1.png)
+
+A Copilot session opens in the side panel.
+{% endstep %}
+
+{% step %}
 ### Chat for clarification
 
-Copilot explains the precise nature of the risk in the context of your code. You can chat with Copilot to ask for further clarification.
+Copilot explains the precise nature of the risk in context. You can chat for further clarification.
 {% endstep %}
 {% endstepper %}
 
@@ -116,66 +118,37 @@ Copilot explains the precise nature of the risk in the context of your code. You
 
 ## Ignoring Risks
 
-To help you focus on actionable risks, Checkmarx Dev Assist enables marking risks as **Ignored** so they no longer appear in your IDE. You can **Revive** a risk at any time. This can be applied to a specific instance of a risk or to all instances of that risk in your project.
+Checkmarx Developer Assist enables marking risks as **Ignored** so they no longer appear in your IDE. You can **Revive** a risk at any time. This can be applied to a specific instance or all instances of that risk.
 
 {% hint style="info" %}
-For risks identified in open source packages, a risk instance refers to the entire package that the vulnerability is associated with.
+For risks identified in open source packages, a risk instance refers to the entire package associated with the vulnerability.
 {% endhint %}
 
 **To ignore a risk:**
 
 {% stepper %}
 {% step %}
-### Identify the risk
+### Hover over the vulnerability
 
-When a risk is flagged, hover over the vulnerable line of code. The Checkmarx dialog opens.
-
-![Checkmarx dialog with ignore options](.gitbook/assets/img-999c6f8e74bccdfdd57a2c20eb26bec9.png)
+Hover over the vulnerable line to open the Checkmarx dialog.
 {% endstep %}
 
 {% step %}
 ### Choose ignore scope
 
-- To ignore this particular instance: click **Ignore this vulnerability**.
-- To ignore all instances of this risk: click **Ignore all of this type**.
+- Click **Ignore this vulnerability** to ignore this specific instance.
+- Click **Ignore all of this type** to ignore all instances.
 {% endstep %}
 {% endstepper %}
 
 **To revive a risk:**
 
-1. Click the **Ignore** icon in the bottom bar.
-
-   ![Ignore icon in bottom bar](.gitbook/assets/img-ebaacd1e8161e192a6584a7f20c2d22b.png)
-
-2. The **Ignored Vulnerabilities** tab opens.
-
-   ![Ignored Vulnerabilities tab](.gitbook/assets/img-059c35009247a914982566066c4d3be5.png)
-
-3. For the desired vulnerability, click the **Revive** button.
-
-   {% hint style="info" %}
-   Reviving can also be done as a bulk action for all selected items.
-   {% endhint %}
-
----
-
-## Troubleshooting
-
-<details>
-<summary>Issue: <code>mcp.json</code> file opens repeatedly in my workspace</summary>
-
-When using Developer Assist in **VS Code** with **GitHub Copilot**, there is a known issue where the `mcp.json` file automatically opens in your workspace each time you call the Checkmarx MCP.
-
-**Solution:** Go to the **MCP** settings in VS Code, and under **Autostart** select **never**.
-
-![MCP Autostart setting](.gitbook/assets/img-e18f8a53315e7a57d743c3a2a53a1ebc.png)
-
-{% hint style="warning" %}
-Once this workaround is implemented, the Checkmarx MCP will no longer start automatically when you restart VS Code. You will need to start the MCP manually each restart:
-
-1. Click **View** > **Command Palette** and enter **MCP:List Servers**.
-2. Select **Checkmarx**.
-3. Click **Start Server**.
+{% hint style="info" %}
+This can also be done as a bulk action for all selected items.
 {% endhint %}
 
-</details>
+1. Click the **Ignored Findings** tab in the Checkmarx window.
+
+   ![Ignored Findings tab](.gitbook/assets/img-02475afec7b97d2db724130403743d6d.png)
+
+2. For the desired vulnerability, click the **Revive** button.
