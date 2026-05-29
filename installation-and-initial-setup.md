@@ -1,128 +1,212 @@
 ---
-description: Install and configure the Checkmarx Developer Assist plugin for JetBrains IDEs
+description: Install and configure the Checkmarx Developer Assist extension for VS Code, Cursor, Windsurf, and Kiro
 ---
 
 # Installation and Initial Setup
 
-{% hint style="warning" %}
-The **Checkmarx Developer Assist** JetBrains plugin provides Developer Assist capabilities as a standalone experience. **Checkmarx One** customers with a Checkmarx One Assist license should use the [Checkmarx JetBrains Plugin](https://checkmarx.com), where Developer Assist is included as part of the Checkmarx One platform. The two plugins are mutually exclusive — ensure the Checkmarx plugin is uninstalled before installation.
-{% endhint %}
+## Initial Setup and Configuration
 
-## Prerequisites
+### Prerequisites
 
-- You have a Checkmarx Developer Activation Key.
-- You are running IntelliJ version 2022.2+.
-- **GitHub Copilot Chat** (AI Agent) version 1.5.62-243+ must be installed.
+- You have an API Key for authenticating with Developer Assist.
+- **VS Code:** Version 1.100.0 or above (supports both `settings.json` v1.100–1.101 and `mcp.json` v1.102+).
+- **VS Code:** GitHub Copilot must be installed.
+- **Kiro:** Version 0.6+ (latest version recommended).
 
----
+### Installing and Configuring the Plugin
 
-## Installing and Configuring the Plugin
-
-The Checkmarx Developer Assist JetBrains Plugin is available on the JetBrains Marketplace and can be installed directly from your JetBrains IDE console.
-
-**To install the plugin:**
+The instructions below cover the general setup for all supported IDEs. Open the collapsible section for your specific IDE for detailed steps.
 
 {% stepper %}
 {% step %}
-### Open Plugins
+### Install the extension
 
-Open your JetBrains IDE console (e.g., IntelliJ IDEA). Go to **Plugins** and click the **Marketplace** tab.
+Install the **Checkmarx Developer Assist** extension from the **Marketplace**.
 {% endstep %}
 
 {% step %}
-### Install
+### Log in
 
-Search for the **Checkmarx Developer Assist** plugin, then click **Install**.
+In the IDE, open the extension, click **Log in**, and enter your **API Key**.
+{% endstep %}
 
-![Installing the plugin from JetBrains Marketplace](../.gitbook/assets/img-d13e82645c7fc7dc70e6909e160012bd.png)
+{% step %}
+### Verify MCP
+
+Make sure that the Checkmarx Developer Assist MCP is running.
+{% endstep %}
+
+{% step %}
+### Optional settings
+
+Optionally, adjust Checkmarx Developer Assist settings.
 {% endstep %}
 {% endstepper %}
 
-**To configure the plugin:**
+{% tabs %}
+{% tab title="VS Code" %}
 
-{% stepper %}
-{% step %}
-### Open Settings
+{% embed url="https://player.vimeo.com/video/1165137006" %}
+VS Code installation walkthrough
+{% endembed %}
 
-Open the IDE **settings**.
-{% endstep %}
+1. In the VS Code IDE main navigation, click on the **Extensions** icon.
 
-{% step %}
-### Navigate to plugin settings
+2. Search for the **Checkmarx Developer Assist** extension, then click **Install**.
 
-Drill down to **Tools** > **Checkmarx Developer Assist**.
-{% endstep %}
+   ![Install the Checkmarx Developer Assist extension from the VS Code Marketplace](.gitbook/assets/img-01cd9d9ffe8671d61fcc3ff7f72aadd7.png)
 
-{% step %}
-### Enter activation key
+   The Developer Assist extension is installed and the Checkmarx icon appears in the left-side navigation panel.
 
-Enter your activation key in the **Developer Assist API Key** field and click **Sign in**.
+3. Click on the Checkmarx extension icon. The **Checkmarx One Authentication** sidebar opens.
 
-![Entering the API key](../.gitbook/assets/img-de0f163499e76b0588b5084d9ca2ca9d.png)
-{% endstep %}
+   ![Checkmarx One Authentication sidebar](.gitbook/assets/img-d6b6760b1203a07cad8e324f7c81786d.png)
 
-{% step %}
-### Welcome page
+4. In the sidebar, click **Log in**. The Log in window opens.
 
-A Checkmarx Developer Assist welcome page is displayed immediately after successful login. Close the window to proceed.
+   ![Log in window](.gitbook/assets/img-558e508297b81530776c63c0918c7f63.png)
 
-![Welcome page](../.gitbook/assets/img-8804289f11edc112f9fd85a1021d7a43.png)
-{% endstep %}
+5. Enter your activation key in the **Checkmarx Developer Assist API Key** field and click **Log in**.
 
-{% step %}
-### Optional additional params
+   The **Checkmarx Developer Assist Authentication** sidebar will now show that you are logged in.
 
-You can optionally add **Additional Params** to set up custom configurations, such as proxy servers or debug mode.
-{% endstep %}
+   ![Logged in state](.gitbook/assets/img-d5d55c9d3c80613ae335039ba75f6d9c.png)
 
-{% step %}
-### Install MCP
+6. A welcome page is displayed after successful login. Scroll down and click **Mark Done**.
 
-Click on **Go to Realtime Scanners** and select **Install MCP**.
+7. Click **View** > **Command Palette** and enter **MCP:List Servers**.
 
-The Checkmarx MCP is added to your `mcp.json` file.
+   ![MCP List Servers command](.gitbook/assets/img-39c7693cacb308149e58168a10d11ebd.png)
 
-{% hint style="info" %}
-In some cases the MCP is installed automatically when you authenticate. Best practice is to click **Install MCP** so the MCP file opens and you can verify it starts running.
-{% endhint %}
-{% endstep %}
+8. In the MCP servers list, select **Checkmarx Developer Assist**.
 
-{% step %}
-### Configure scanners
+9. Click **Start Server**.
 
-You can enable/disable specific realtime scanners. By default, all scanners are enabled.
-{% endstep %}
+10. Optionally adjust settings:
+    - Add **Additional Params** for proxy servers or debug mode.
+    - Enable/disable specific realtime scanners (all enabled by default).
+    - For IaC scanner: change the container platform (Docker by default, or Podman).
+    - Select the **AI Assistant** for remediation: **Copilot** (default) or **Claude**.
 
-{% step %}
-### Configure IaC container tool
+{% endtab %}
+{% tab title="Cursor" %}
 
-For the IaC Realtime scanner, select the **Containers Management Tool** used in your environment: **docker** or **podman**.
+{% embed url="https://player.vimeo.com/video/1165343738" %}
+Cursor installation walkthrough
+{% endembed %}
 
-For **Windows:** Verify that the selected Container Management Tool is installed on your system.
+1. In the Cursor IDE, click on the **Extensions** icon.
 
-For **macOS and Linux:** Verify that docker or podman is installed in `/usr/local/bin`. If installed in a different location, create a symbolic link:
+2. Search for the **Checkmarx Developer Assist** extension, then click **Install**.
 
-**For docker:**
+3. Click the arrow next to the Extensions icon to open the drop-down menu. Click the **pin** icon beside the **Checkmarx** extension to add it to the top navigation bar.
 
-1. Check the path: `which docker`
-2. Create a symbolic link: `sudo ln -s <PATH_FROM_ABOVE> /usr/local/bin/docker`
-3. Pull the required KICS image: `docker pull checkmarx/kics:v2.1.29`
+4. Click on the Checkmarx extension icon. The **Checkmarx Developer Assist Authentication** sidebar opens.
 
-{% hint style="warning" %}
-The change will not register until you close and restart the IDE.
-{% endhint %}
+   ![Cursor authentication sidebar](.gitbook/assets/img-5eef0a2616e60ef6a18690774a5f2614.png)
 
-**For podman:**
+5. Click **Log in**. The Log in window opens.
 
-1. Check the path: `which podman`
-2. Create a symbolic link: `sudo ln -s <PATH_FROM_ABOVE> /usr/local/bin/podman`
-3. Pull the required KICS image: `podman pull checkmarx/kics:v2.1.29`
+   ![Log in window](.gitbook/assets/img-4c6ed2af31cf1bf9795da8d0fe826bdd.png)
 
-{% hint style="warning" %}
-The change will not register until you close and restart the IDE.
-{% endhint %}
-{% endstep %}
-{% endstepper %}
+6. Enter your activation key in the **Checkmarx Developer Assist API Key** field and click **Log in**.
+
+   ![Logged in state](.gitbook/assets/img-a744e5e8e8901caa5276e68a9ede5909.png)
+
+7. A welcome page is displayed after successful login. Scroll down and click **Mark Done**.
+
+8. Verify MCP is running: in **Cursor Settings** under **Tools & MCP** > **Installed MCP Servers**, confirm the **Checkmarx Developer Assist** toggle is enabled.
+
+   ![Cursor MCP Servers list](.gitbook/assets/img-5ecbd5e52c5fb5161fc8eb1a0f3c0a00.png)
+
+9. Optionally adjust settings:
+    - Add **Additional Params** for proxy servers or debug mode.
+    - Enable/disable specific realtime scanners.
+    - For IaC scanner: change the container platform.
+    - The IDE's built-in AI assistant is enabled by default. To use a different one: disable **Prefer Native AI Assistant**, then select **Copilot** or **Claude**.
+
+{% endtab %}
+{% tab title="Windsurf" %}
+
+{% embed url="https://player.vimeo.com/video/1165305636" %}
+Windsurf installation walkthrough
+{% endembed %}
+
+1. In the Windsurf IDE main navigation, click on the **Extensions** icon.
+
+2. Search for the **Checkmarx Developer Assist** extension, then click **Install**.
+
+   ![Installing in Windsurf](.gitbook/assets/img-ee0ba170f46e470180d7e774093b1b14.png)
+
+3. Click on the Checkmarx extension icon. The **Checkmarx Developer Assist Authentication** sidebar opens.
+
+   ![Windsurf authentication sidebar](.gitbook/assets/img-1b22d947c20665ceaae9387e769d5636.png)
+
+4. Click **Log in**. The Log in window opens.
+
+   ![Log in window](.gitbook/assets/img-6c78f6d3a6a4a427b75640846c3e2b9f.png)
+
+5. Enter your activation key and click **Log in**.
+
+   ![Logged in state](.gitbook/assets/img-25b9ce1269bea01209f77eb047315959.png)
+
+6. A welcome page is displayed after successful login. Scroll down and click **Mark Done**.
+
+7. Verify MCP is running:
+
+   ![Windsurf MCP settings](.gitbook/assets/img-73f8858306e005194cc779ea1f7f46cc.png)
+
+   Go to **Settings** > **Windsurf Settings**. Under **Cascade**, click **Open MCP Marketplace** and confirm the **Checkmarx Developer Assist** MCP is installed and enabled.
+
+8. Optionally adjust settings:
+    - Add **Additional Params** for proxy servers or debug mode.
+    - Enable/disable specific realtime scanners.
+    - For IaC scanner: change the container platform.
+    - The IDE's built-in AI assistant is enabled by default. To use a different one: disable **Prefer Native AI Assistant**, then select **Copilot** or **Claude**.
+
+{% endtab %}
+{% tab title="Kiro" %}
+
+{% embed url="https://player.vimeo.com/video/1166288643" %}
+Kiro installation walkthrough
+{% endembed %}
+
+1. In the Kiro IDE main navigation, click on the **Extensions** icon.
+
+2. Search for the **Checkmarx Developer Assist** extension, then click **Install**.
+
+   ![Installing in Kiro](.gitbook/assets/img-3ba1d9fab93658e70d7adcc073efa658.png)
+
+3. In the pop-up window, click **Trust Publisher and Install**.
+
+4. Click on the Checkmarx extension icon. The **Checkmarx Developer Assist Authentication** sidebar opens.
+
+   ![Kiro authentication sidebar](.gitbook/assets/img-3618c003af0cefb85b2fe568a4c6605e.png)
+
+5. Click **Log in**. The Log in window opens.
+
+   ![Log in window](.gitbook/assets/img-1a7b7107dc538758e993fab2d93f7aec.png)
+
+6. Enter your activation key and click **Log in**.
+
+   ![Logged in state](.gitbook/assets/img-c5195b57a94266c197a67bd07cdf29f8.png)
+
+7. A welcome page is displayed after successful login. Scroll down and click **Mark Done**.
+
+8. Verify MCP is connected:
+
+   ![Kiro MCP servers](.gitbook/assets/img-106b2291cb519d405901758f13bc9113.png)
+
+   Select the **Kiro** icon in the left-side navigation panel. Under **MCP servers**, confirm that **Checkmarx Developer Assist** is connected.
+
+9. Optionally adjust settings:
+    - Add **Additional Params** for proxy servers or debug mode.
+    - Enable/disable specific realtime scanners.
+    - For IaC scanner: change the container platform.
+    - The IDE's built-in AI assistant is enabled by default. To use a different one: disable **Prefer Native AI Assistant**, then select **Copilot** or **Claude**.
+
+{% endtab %}
+{% endtabs %}
 
 ---
 
@@ -130,7 +214,10 @@ The change will not register until you close and restart the IDE.
 
 If the automatic installation procedure fails, you can manually configure access to the Checkmarx MCP server.
 
-1. If it does not already exist, create an `mcp.json` file at: `${homeDir}\AppData\Local\github-copilot\intellij\mcp.json`
+{% tabs %}
+{% tab title="VS Code" %}
+
+1. If it does not already exist, create an `mcp.json` file at: `${homeDir}\AppData\Roaming\Code\User\mcp.json`
 
 2. Add the Checkmarx Developer Assist MCP using the following snippet, replacing `<Activation_Key>` with your Developer Assist Activation Key:
 
@@ -140,10 +227,95 @@ If the automatic installation procedure fails, you can manually configure access
     "Checkmarx Developer Assist": {
       "url": "https://mea.ast.checkmarx.net/api/security-mcp/mcp",
       "headers": {
-        "cx-origin": "Jetbrains",
+        "cx-origin": "VsCode",
         "Authorization": "<Activation_Key>"
       }
     }
   }
 }
 ```
+
+3. Start the MCP server:
+   - Click **View** > **Command Palette** and enter **MCP:List Servers**.
+   - Select **Checkmarx Developer Assist**.
+   - Click **Start Server**.
+
+{% endtab %}
+{% tab title="Cursor" %}
+
+1. If it does not already exist, create an `mcp.json` file at: `${homeDir}\.cursor\mcp.json`
+
+2. Add the following snippet, replacing `<Activation_Key>` with your key:
+
+```json
+{
+  "mcpServers": {
+    "checkmarx Developer Assist": {
+      "url": "https://mea.ast.checkmarx.net/api/security-mcp/mcp",
+      "headers": {
+        "cx-origin": "Cursor",
+        "Authorization": "<Activation_Key>"
+      }
+    }
+  }
+}
+```
+
+3. Verify in **Cursor Settings** under **Tools & MCP** > **Installed MCP Servers** that the **Checkmarx Developer Assist** toggle is enabled.
+
+   ![Cursor MCP enabled](.gitbook/assets/img-5ecbd5e52c5fb5161fc8eb1a0f3c0a00.png)
+
+{% endtab %}
+{% tab title="Windsurf" %}
+
+1. If it does not already exist, create an `mcp_config.json` file at: `${homeDir}\.codeium\windsurf\mcp_config.json`
+
+   {% hint style="info" %}
+   If you are using windsurf-next, the file location should be `${homeDir}\.codeium\windsurf-next\mcp_config.json`
+   {% endhint %}
+
+2. Add the following snippet, replacing `<Activation_Key>` with your key:
+
+```json
+{
+  "mcpServers": {
+    "checkmarx Developer Assist": {
+      "url": "https://mea.ast.checkmarx.net/api/security-mcp/mcp",
+      "headers": {
+        "cx-origin": "Windsurf",
+        "Authorization": "<Activation_Key>"
+      }
+    }
+  }
+}
+```
+
+3. Go to **Settings** > **Windsurf Settings**. Under **Cascade**, click **Open MCP Marketplace** and make sure the Checkmarx Developer Assist MCP is installed and enabled.
+
+{% endtab %}
+{% tab title="Kiro" %}
+
+1. If it does not already exist, create an `mcp.json` file at: `${homeDir}\.kiro\settings\mcp.json`
+
+2. Add the following snippet, replacing `<Activation_Key>` with your key:
+
+```json
+{
+  "mcpServers": {
+    "checkmarx Developer Assist": {
+      "url": "https://mea.ast.checkmarx.net/api/security-mcp/mcp",
+      "headers": {
+        "cx-origin": "Kiro",
+        "Authorization": "<Activation_Key>"
+      }
+    }
+  }
+}
+```
+
+3. Click on the **Kiro** icon in the left-side navigation. Under **MCP servers**, confirm that Checkmarx Developer Assist is connected.
+
+   ![Kiro MCP connected](.gitbook/assets/img-fc56ec476d6b1e9093674b814e31c5e5.png)
+
+{% endtab %}
+{% endtabs %}
