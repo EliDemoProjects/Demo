@@ -1,8 +1,10 @@
 ---
-description: How to detect and remediate security risks using Checkmarx Developer Assist in JetBrains IDEs
+description: >-
+  How to detect and remediate security risks using Checkmarx Developer Assist in
+  JetBrains IDEs
 ---
 
-# Using Developer Assist for Detection and Remediation (JetBrains)
+# using developer assist
 
 ## AI Remediation
 
@@ -42,7 +44,11 @@ Click **Fix with Checkmarx Developer Assist**.
 
 A Copilot session opens in the side panel.
 
-{% hint style="info" %}
+{% hint style="info" icon="pencil" %}
+Depending on your IDE configuration, you may need to click **Continue** several times to complete the process.
+{% endhint %}
+
+{% hint style="success" icon="key" %}
 Depending on your IDE configuration, you may need to click **Continue** several times to complete the process.
 {% endhint %}
 {% endstep %}
@@ -54,9 +60,9 @@ Copilot automatically makes the necessary code changes.
 
 ![Accept All or Discard All options](.gitbook/assets/img-d2088e3d0874c3b51abeafbbd7f04a71.png)
 
-- To approve: click **Accept All**.
-- To reject: click **Discard All**.
-- You can also chat with Copilot to improve upon the suggestion.
+* To approve: click **Accept All**.
+* To reject: click **Discard All**.
+* You can also chat with Copilot to improve upon the suggestion.
 {% endstep %}
 {% endstepper %}
 
@@ -64,19 +70,19 @@ Copilot automatically makes the necessary code changes.
 
 You can submit a request for Dev Assist remediation via natural language chat with your AI Agent:
 
-- "Fix the vulnerability in line 26"
-- "Fix all critical vulnerabilities"
-- "Fix all SQL Injection risks"
-- "Remediate all vulnerable packages"
-- "Correct all critical issues in my JavaFile.java"
+* "Fix the vulnerability in line 26"
+* "Fix all critical vulnerabilities"
+* "Fix all SQL Injection risks"
+* "Remediate all vulnerable packages"
+* "Correct all critical issues in my JavaFile.java"
 
 **Things to know about Dev Assist Chat:**
 
-- No need to mention "Checkmarx" explicitly — Dev Assist is integrated with all remediation requests.
-- Multi-language prompts are supported.
-- By default, requests are interpreted in the context of the current open file.
+* No need to mention "Checkmarx" explicitly — Dev Assist is integrated with all remediation requests.
+* Multi-language prompts are supported.
+* By default, requests are interpreted in the context of the current open file.
 
----
+***
 
 ## The Checkmarx Developer Assist Findings Window
 
@@ -86,7 +92,7 @@ The **Checkmarx Developer Assist Findings Window** provides a centralized view o
 
 To open the **Findings Window**, click on the Checkmarx icon in the left navigation bar and select the **Checkmarx Developer Assist Findings** tab.
 
----
+***
 
 ## How to Understand Risks Using AI
 
@@ -114,7 +120,7 @@ Copilot explains the precise nature of the risk in context. You can chat for fur
 {% endstep %}
 {% endstepper %}
 
----
+***
 
 ## Ignoring Risks
 
@@ -136,19 +142,18 @@ Hover over the vulnerable line to open the Checkmarx dialog.
 {% step %}
 ### Choose ignore scope
 
-- Click **Ignore this vulnerability** to ignore this specific instance.
-- Click **Ignore all of this type** to ignore all instances.
+* Click **Ignore this vulnerability** to ignore this specific instance.
+* Click **Ignore all of this type** to ignore all instances.
 {% endstep %}
 {% endstepper %}
 
 **To revive a risk:**
 
-{% hint style="info" %}
+{% hint style="info" icon="key" %}
 This can also be done as a bulk action for all selected items.
 {% endhint %}
 
-1. Click the **Ignored Findings** tab in the Checkmarx window.
+1.  Click the **Ignored Findings** tab in the Checkmarx window.
 
-   ![Ignored Findings tab](.gitbook/assets/img-02475afec7b97d2db724130403743d6d.png)
-
+    ![Ignored Findings tab](.gitbook/assets/img-02475afec7b97d2db724130403743d6d.png)
 2. For the desired vulnerability, click the **Revive** button.
