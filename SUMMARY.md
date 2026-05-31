@@ -1,16 +1,18 @@
-# Checkmarx Developer Assist
+# Table of contents
+
+* [README](README.md)
 
 ## VS Code Extension
 
-- [Overview](vs-code/README.md)
-- [Installation and Initial Setup](vs-code/installation-and-initial-setup.md)
-- [Using Developer Assist for Detection and Remediation](vs-code/using-developer-assist.md)
-- [Tutorial Videos](vs-code/tutorial-videos.md)
-- [Changelog](vs-code/changelog.md)
+* [Overview](vs-code-extension/overview.md)
+* [Installation and Initial Setup](vs-code-extension/installation-and-initial-setup.md)
+* [Using Developer Assist for Detection and Remediation](vs-code-extension/using-developer-assist-for-detection-and-remediation.md)
+* [Tutorial Videos](vs-code-extension/tutorial-videos.md)
+* [Changelog](vs-code-extension/changelog.md)
 
 ## JetBrains Plugin
 
-- [Overview](jetbrains/README.md)
-- [Installation and Initial Setup](jetbrains/installation-and-initial-setup.md)
-- [Using Developer Assist for Detection and Remediation](jetbrains/using-developer-assist.md)
-- [Changelog](jetbrains/changelog.md)
+* [Overview](jetbrains-plugin/overview.md)
+* [Installation and Initial Setup](jetbrains-plugin/installation-and-initial-setup.md)
+* [Using Developer Assist for Detection and Remediation](jetbrains-plugin/using-developer-assist-for-detection-and-remediation.md)
+* [Changelog](jetbrains-plugin/changelog.md)
