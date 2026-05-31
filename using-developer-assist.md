@@ -1,27 +1,29 @@
-# Checkmarx Developer Assist – JetBrains Plugin
+# Developer Assist Tutorial Videos
 
-The Checkmarx Developer Assist JetBrains Plugin provides Developer Assist capabilities as a standalone experience within JetBrains IDEs.
+This page provides tutorial videos demonstrating the end-to-end flow of setting up and using the Checkmarx Developer Assist extension. There is a separate video for each supported IDE: VS Code, Cursor, Windsurf, and Kiro.
 
-{% hint style="warning" %}
-**Checkmarx One** customers with a Checkmarx One Assist license should use the [Checkmarx JetBrains Plugin](https://checkmarx.com), where Developer Assist is included as part of the Checkmarx One platform. The **Checkmarx Developer Assist** and **Checkmarx** JetBrains plugins are mutually exclusive. To use the Checkmarx Developer Assist plugin, ensure that the Checkmarx plugin is uninstalled before installation.
-{% endhint %}
+Each video covers the following steps:
 
-## Key Capabilities
+1. Install the extension from Marketplace
+2. Verify that the extension is set up and running properly
+3. Identify and remediate an SCA risk using the AI Agent
+4. Identify and remediate an ASCA risk using the AI Agent
+5. View AI analysis of a risk
+6. Mark the risk as "Ignored"
+7. Revive the "Ignored" risk
 
-**Realtime Scanning** identifies vulnerabilities as you write or edit code — covering both human-generated and AI-generated code. The scanners run in the background whenever you open or edit a relevant file and flag the following risk types:
+## VS Code
 
-- Code vulnerabilities (SAST/ASCA)
-- Unmasked secrets
-- Vulnerable or malicious open source packages (SCA)
-- Vulnerable or malicious container images
-- Infrastructure-as-Code (IaC) misconfigurations
+{% embed url="https://player.vimeo.com/video/1165629128" %}
 
-Results are marked as Problems, highlighted in the code with a squiggly underline, and annotated in the margin with an icon that indicates the risk type.
+## Cursor
 
-**Agentic-AI Remediation** lets you initiate an AI session to receive remediation suggestions. Checkmarx feeds all relevant information to the AI agent, which accesses the Checkmarx MCP server to gather data from proprietary databases and customized AI models. The AI assistant then uses this data to generate remediated code. You can accept the suggested changes or chat with the agent to learn more about the vulnerability and fine-tune the suggestion.
+{% embed url="https://player.vimeo.com/video/1166127782" %}
 
-## In This Section
+## Windsurf
 
-- [Installation and Initial Setup](installation-and-initial-setup.md)
-- [Using Developer Assist for Detection and Remediation](using-developer-assist.md)
-- [Changelog](changelog.md)
+{% embed url="https://player.vimeo.com/video/1166130296" %}
+
+## Kiro
+
+{% embed url="https://player.vimeo.com/video/1166375054" %}

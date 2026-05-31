@@ -1,23 +1,21 @@
-# Using Developer Assist for Detection and Remediation (JetBrains)
+# Using Developer Assist for Detection and Remediation
 
 ## AI Remediation
+
+{% embed url="https://player.vimeo.com/video/1160134485" %}
 
 ### How to Remediate Risks Using AI
 
 The following procedure explains how to remediate risks by clicking the Fix button for a particular risk. Alternatively, you can request remediation via chat with your AI Agent, as described below.
 
-1. Open a project in IntelliJ IDEA.
-2. When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem**, marked in the code with a squiggly underline and annotated in the margin with an icon indicating the risk type.
+1. When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem**, marked in the code with a squiggly underline and annotated in the margin with an icon indicating the risk type.
 
-   ![](../.gitbook/assets/img-4f3f94be7ca1c8f0ce2b8faccbe8d496.png)
+   ![](../.gitbook/assets/img-8b30ebc58d203cf69432bb233991474a.png)
 
-3. Hover over the vulnerable line of code. The Checkmarx dialog opens.
+2. Hover over the vulnerable line of code. The Checkmarx dialog opens.
+3. Click **Fix with Checkmarx Developer Assist**.
 
-   ![](../.gitbook/assets/img-d896b154664bf2bfe2fdd4594c952435.png)
-
-4. Click **Fix with Checkmarx Developer Assist**.
-
-   ![](../.gitbook/assets/img-c44e70f4834374a710812e32c758bdbb.png)
+   ![](../.gitbook/assets/img-13fe029e47946a4efb78d53865fb74b6.png)
 
    A Copilot session opens in the side panel and all relevant information is sent for analysis.
 
@@ -25,13 +23,10 @@ The following procedure explains how to remediate risks by clicking the Fix butt
    Depending on your IDE configuration, you may need to click **Continue** several times to complete the process.
    {% endhint %}
 
-5. Copilot automatically makes the necessary changes in the code to remediate the risk.
+4. Copilot automatically makes the necessary changes in the code to remediate the risk.
 
-   ![](../.gitbook/assets/img-d2088e3d0874c3b51abeafbbd7f04a71.png)
-
-   - If you approve the changes, click **Accept All**.
-   - If you do not want to implement the suggestion, click **Discard All**.
-   - You can also chat with Copilot to improve upon the suggestion.
+   - If you approve the change, click **Accept**. The change is made and the code is rescanned to verify that the risk is no longer present.
+   - If you want to improve on the suggestion, click **Undo**. You can then chat with Copilot to determine the best way of remediating the code.
 
 #### Remediation via Chat
 
@@ -52,27 +47,16 @@ Some examples of valid requests:
 - Effective in single-message context; improved accuracy in the context of an existing thread or finding.
 - By default, requests are interpreted in the context of the current open file (e.g., line 26 of the open file). You can specify a different file in your workspace.
 
-### The Checkmarx Developer Assist Findings Window
-
-![](../.gitbook/assets/img-7c4a2407cf99756d42fbe12660d6f9ce.png)
-
-The **Checkmarx Developer Assist Findings Window** provides a centralized view of all detected issues within a project. It displays vulnerabilities per file along with the count of issues grouped by severity and file location. You can navigate directly to the exact line in the editor with a single click, and the window supports filtering and sorting to streamline issue review.
-
-To open the Findings Window, click the Checkmarx icon in the left navigation bar and select the **Checkmarx Developer Assist Findings** tab.
-
 ### How to Understand Risks Using AI
 
 1. When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem**, marked in the code with a squiggly underline and annotated in the margin with an icon indicating the risk type.
 
-   ![](../.gitbook/assets/img-4f3f94be7ca1c8f0ce2b8faccbe8d496.png)
+   ![](../.gitbook/assets/img-8b30ebc58d203cf69432bb233991474a.png)
 
 2. Hover over the vulnerable line of code. The Checkmarx dialog opens.
-
-   ![](../.gitbook/assets/img-d896b154664bf2bfe2fdd4594c952435.png)
-
 3. Click **View details**.
 
-   ![](../.gitbook/assets/img-638b072f4e89de112ca36a27fc9d63e1.png)
+   ![](../.gitbook/assets/img-ea6756f4b9eaa29b4671b352492a359a.png)
 
    A Copilot session opens in the side panel and all relevant information is sent for analysis.
 
@@ -94,23 +78,49 @@ For risks identified in open source packages, a risk instance refers to the enti
 
 1. When Checkmarx realtime scanners identify a risk, it is flagged as a **Problem**, marked in the code with a squiggly underline and annotated in the margin with an icon indicating the risk type.
 
-   ![](../.gitbook/assets/img-4f3f94be7ca1c8f0ce2b8faccbe8d496.png)
+   ![](../.gitbook/assets/img-8b30ebc58d203cf69432bb233991474a.png)
 
 2. Hover over the vulnerable line of code. The Checkmarx dialog opens.
 
-   ![](../.gitbook/assets/img-d896b154664bf2bfe2fdd4594c952435.png)
+   ![](../.gitbook/assets/img-999c6f8e74bccdfdd57a2c20eb26bec9.png)
 
 3. To ignore the risk in this particular instance, click **Ignore this vulnerability**.
 4. To ignore all instances of the risk, click **Ignore all of this type**.
 
 **To revive a risk:**
 
-{% hint style="info" %}
-This can also be done as a bulk action for all selected items.
+1. Click the **Ignore** icon in the bottom bar.
+
+   ![](../.gitbook/assets/img-ebaacd1e8161e192a6584a7f20c2d22b.png)
+
+2. The **Ignored Vulnerabilities** tab opens.
+
+   ![](../.gitbook/assets/img-059c35009247a914982566066c4d3be5.png)
+
+3. For the desired vulnerability, click the **Revive** button.
+
+   {% hint style="info" %}
+   This can also be done as a bulk action for all selected items.
+   {% endhint %}
+
+## Troubleshooting
+
+<details>
+
+<summary>Issue: <code>mcp.json</code> file opens repeatedly in my workspace</summary>
+
+When using Developer Assist in VS Code with GitHub Copilot, there is a known issue where the `mcp.json` file automatically opens in your workspace each time the Checkmarx MCP is called.
+
+**Solution:** Go to the **MCP** settings in VS Code, and under **Autostart** select **never**.
+
+![](../.gitbook/assets/img-e18f8a53315e7a57d743c3a2a53a1ebc.png)
+
+{% hint style="warning" %}
+Once this workaround is implemented, the Checkmarx MCP will no longer start automatically when you restart VS Code. Whenever you restart VS Code you will need to start the MCP manually:
+
+1. Click **View** > **Command Palette** and enter **MCP:List Servers**.
+2. In the MCP servers list, select **Checkmarx**.
+3. Click **Start Server**.
 {% endhint %}
 
-1. Click the **Ignored Findings** tab in the Checkmarx window. The Ignored Findings tab opens.
-
-   ![](../.gitbook/assets/img-02475afec7b97d2db724130403743d6d.png)
-
-2. For the desired vulnerability, click the **Revive** button.
+</details>
