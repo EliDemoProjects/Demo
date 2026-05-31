@@ -1,2 +1,0 @@
-# Installation and Initial Setup
-
