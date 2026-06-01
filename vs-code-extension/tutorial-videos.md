@@ -1,4 +1,4 @@
-# Developer Assist Tutorial Videos
+# Tutorial Videos
 
 This page provides tutorial videos demonstrating the end-to-end flow of setting up and using the Checkmarx Developer Assist extension. There is a separate video for each supported IDE: VS Code, Cursor, Windsurf, and Kiro.
 
@@ -12,7 +12,15 @@ Each video covers the following steps:
 6. Mark the risk as "Ignored"
 7. Revive the "Ignored" risk
 
-## VS Code
+{% tabs %}
+{% tab title="Tab 1" %}
+VS Code
+{% endtab %}
+
+{% tab title="Tab 2" %}
+
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://player.vimeo.com/video/1165629128" %}
 

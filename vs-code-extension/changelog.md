@@ -2,7 +2,7 @@
 
 The following table lists improvements and bug fixes implemented for the Checkmarx Developer Assist JetBrains Plugin with the relevant version release.
 
-{% hint style="info" %}
+{% hint style="info" icon="pencil" %}
 See full documentation of this plugin [here](./).
 {% endhint %}
 
