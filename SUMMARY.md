@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [Checkmarx Developer Assist](README.md)
 
 ## VS Code Extension
 
