@@ -12,34 +12,28 @@ Each video shows the following steps:
 6. Mark the risk as "Ignored"
 7. Revive the "Ignored" risk
 
-<details>
-
-<summary>VS Code</summary>
-
+{% tabs %}
+{% tab title="VS Code" %}
 {% embed url="https://player.vimeo.com/video/1165629128" %}
 
-</details>
 
-<details>
+{% endtab %}
 
-<summary>Cursor</summary>
-
+{% tab title="Cursor" %}
 {% embed url="https://player.vimeo.com/video/1166127782" %}
 
-</details>
 
-<details>
+{% endtab %}
 
-<summary>Windsurf</summary>
-
+{% tab title="Windsurf" %}
 {% embed url="https://player.vimeo.com/video/1166130296" %}
 
-</details>
 
-<details>
+{% endtab %}
 
-<summary>Kiro</summary>
-
+{% tab title="Kiro" %}
 {% embed url="https://player.vimeo.com/video/1166375054" %}
 
-</details>
+
+{% endtab %}
+{% endtabs %}
