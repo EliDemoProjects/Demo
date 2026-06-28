@@ -27,28 +27,28 @@ The instructions below cover the general setup for all supported IDEs. For detai
 1. In the VS Code IDE main navigation, click on the **Extensions** icon.
 2.  Search for the **Checkmarx Developer Assist** extension, then click **Install** for that extension.
 
-    ![](../.gitbook/assets/img-01cd9d9ffe8671d61fcc3ff7f72aadd7.png)
+    ![](../../.gitbook/assets/img-01cd9d9ffe8671d61fcc3ff7f72aadd7.png)
 
     The Developer Assist extension is installed and the Checkmarx icon appears in the left-side navigation panel.
 3.  Click on the Checkmarx extension icon.
 
     The **Checkmarx One Authentication** sidebar opens:
 
-    <div align="left"><img src="../.gitbook/assets/img-d6b6760b1203a07cad8e324f7c81786d.png" alt="" width="512"></div>
+    <div align="left"><img src="../../.gitbook/assets/img-d6b6760b1203a07cad8e324f7c81786d.png" alt="" width="512"></div>
 4.  In the **Checkmarx One Authentication** sidebar, click **Log in**.
 
     The Log in window opens.
 
-    <div align="left"><img src="../.gitbook/assets/img-558e508297b81530776c63c0918c7f63.png" alt="" width="545"></div>
+    <div align="left"><img src="../../.gitbook/assets/img-558e508297b81530776c63c0918c7f63.png" alt="" width="545"></div>
 5.  Enter your activation key in the **Checkmarx Developer Assist API Key** field and click **Log in**.
 
     The **Checkmarx Developer Assist Authentication** sidebar will now show that you are logged in.
 
-    <div align="left"><img src="../.gitbook/assets/img-d5d55c9d3c80613ae335039ba75f6d9c.png" alt="" width="511"></div>
+    <div align="left"><img src="../../.gitbook/assets/img-d5d55c9d3c80613ae335039ba75f6d9c.png" alt="" width="511"></div>
 6. A Checkmarx Developer Assist welcome page is displayed immediately after a successful login. Scroll down and click on **Mark Done**.
 7.  Click **View** > **Command Palette** and enter **MCP:List Servers**.
 
-    ![](../.gitbook/assets/img-39c7693cacb308149e58168a10d11ebd.png)
+    ![](../../.gitbook/assets/img-39c7693cacb308149e58168a10d11ebd.png)
 8. In the MCP servers list, select **Checkmarx Developer Assist**.
 9. Click on **Start Server**.
 10. You can optionally adjust the Checkmarx Developer Assist Settings as follows:
@@ -72,22 +72,22 @@ The instructions below cover the general setup for all supported IDEs. For detai
 
     The **Checkmarx Developer Assist Authentication** sidebar opens:
 
-    <div align="left"><img src="../.gitbook/assets/img-5eef0a2616e60ef6a18690774a5f2614.png" alt="" width="404"></div>
+    <div align="left"><img src="../../.gitbook/assets/img-5eef0a2616e60ef6a18690774a5f2614.png" alt="" width="404"></div>
 5.  In the **Checkmarx Developer Assist Authentication** sidebar, click **Log in**.
 
     The Log in window opens.
 
-    <div align="left"><img src="../.gitbook/assets/img-4c6ed2af31cf1bf9795da8d0fe826bdd.png" alt="" width="543"></div>
+    <div align="left"><img src="../../.gitbook/assets/img-4c6ed2af31cf1bf9795da8d0fe826bdd.png" alt="" width="543"></div>
 6.  Enter your activation key in the **Checkmarx Developer Assist API Key** field and click **Log in**.
 
     The **Checkmarx Developer Assist Authentication** sidebar will now show that you are logged in.
 
-    <div align="left"><img src="../.gitbook/assets/img-a744e5e8e8901caa5276e68a9ede5909.png" alt="" width="456"></div>
+    <div align="left"><img src="../../.gitbook/assets/img-a744e5e8e8901caa5276e68a9ede5909.png" alt="" width="456"></div>
 7. A Checkmarx Developer Assist welcome page is displayed immediately after a successful login. Scroll down and click on **Mark Done**.
 8. To verify that your MCP server is running:
    1.  In **Cursor Settings** under **Tools & MCP** > **Installed MCP Servers**, confirm that the **Checkmarx Developer Assist** toggle is enabled.
 
-       ![](../.gitbook/assets/img-5ecbd5e52c5fb5161fc8eb1a0f3c0a00.png)
+       ![](../../.gitbook/assets/img-5ecbd5e52c5fb5161fc8eb1a0f3c0a00.png)
 9. You can optionally adjust the Checkmarx Developer Assist Settings as follows:
    1. Add **Additional Params** to set up custom configurations, such as proxy servers or to run in debug mode.
    2. Enable/disable specific realtime scanners. By default, all scanners are enabled.
@@ -105,28 +105,28 @@ The instructions below cover the general setup for all supported IDEs. For detai
 1. In the Windsurf IDE main navigation, click on the **Extensions** icon.
 2.  Search for the **Checkmarx Developer Assist** extension, then click **Install** for that extension.
 
-    ![](../.gitbook/assets/img-ee0ba170f46e470180d7e774093b1b14.png)
+    ![](../../.gitbook/assets/img-ee0ba170f46e470180d7e774093b1b14.png)
 
     The Developer Assist extension is installed and the Checkmarx icon appears in the left-side navigation panel.
 3.  Click on the Checkmarx extension icon.
 
     The **Checkmarx Developer Assist Authentication** sidebar opens:
 
-    ![](../.gitbook/assets/img-1b22d947c20665ceaae9387e769d5636.png)
+    ![](../../.gitbook/assets/img-1b22d947c20665ceaae9387e769d5636.png)
 4.  In the **Checkmarx Developer Assist Authentication** sidebar, click **Log in**.
 
     The Log in window opens.
 
-    ![](../.gitbook/assets/img-6c78f6d3a6a4a427b75640846c3e2b9f.png)
+    ![](../../.gitbook/assets/img-6c78f6d3a6a4a427b75640846c3e2b9f.png)
 5.  Enter your activation key in the **Checkmarx Developer Assist API Key** field and click **Log in**.
 
     The **Checkmarx Developer Assist Authentication** sidebar will now show that you are logged in.
 
-    ![](../.gitbook/assets/img-25b9ce1269bea01209f77eb047315959.png)
+    ![](../../.gitbook/assets/img-25b9ce1269bea01209f77eb047315959.png)
 6. A Checkmarx Developer Assist welcome page is displayed immediately after a successful login. Scroll down and click on **Mark Done**.
 7.  To verify that your MCP server is running:
 
-    ![](../.gitbook/assets/img-73f8858306e005194cc779ea1f7f46cc.png)
+    ![](../../.gitbook/assets/img-73f8858306e005194cc779ea1f7f46cc.png)
 
     1. Go to **Settings** > **Windsurf Settings**.
     2. Under **Cascade**, click **Open MCP Marketplace**, and make sure that the **Checkmarx Developer Assist** MCP is installed and enabled.
@@ -147,7 +147,7 @@ The instructions below cover the general setup for all supported IDEs. For detai
 1. In the Kiro IDE main navigation, click on the **Extensions** icon.
 2.  Search for the **Checkmarx Developer Assist** extension, then click **Install** for that extension.
 
-    ![](../.gitbook/assets/img-3ba1d9fab93658e70d7adcc073efa658.png)
+    ![](../../.gitbook/assets/img-3ba1d9fab93658e70d7adcc073efa658.png)
 3.  In the pop-up window, click **Trust Publisher and Install**.
 
     The Developer Assist extension is installed and the **Checkmarx** icon appears in the left-side navigation panel.
@@ -155,21 +155,21 @@ The instructions below cover the general setup for all supported IDEs. For detai
 
     The **Checkmarx Developer Assist Authentication** sidebar opens:
 
-    ![](../.gitbook/assets/img-3618c003af0cefb85b2fe568a4c6605e.png)
+    ![](../../.gitbook/assets/img-3618c003af0cefb85b2fe568a4c6605e.png)
 5.  In the **Checkmarx Developer Assist Authentication** sidebar, click **Log in**.
 
     The Log in window opens.
 
-    ![](../.gitbook/assets/img-1a7b7107dc538758e993fab2d93f7aec.png)
+    ![](../../.gitbook/assets/img-1a7b7107dc538758e993fab2d93f7aec.png)
 6.  Enter your activation key in the **Checkmarx Developer Assist API Key** field and click **Log in**.
 
     The **Checkmarx Developer Assist Authentication** sidebar will now show that you are logged in.
 
-    ![](../.gitbook/assets/img-c5195b57a94266c197a67bd07cdf29f8.png)
+    ![](../../.gitbook/assets/img-c5195b57a94266c197a67bd07cdf29f8.png)
 7. A Checkmarx Developer Assist welcome page is displayed immediately after a successful login. Scroll down and click on **Mark Done**.
 8.  To verify that your MCP server is connected:
 
-    ![](../.gitbook/assets/img-106b2291cb519d405901758f13bc9113.png)
+    ![](../../.gitbook/assets/img-106b2291cb519d405901758f13bc9113.png)
 
     1. Select the **Kiro** icon in the left-side navigation panel.
     2. Under **MCP servers**, confirm that **Checkmarx Developer Assist** is connected.
@@ -212,7 +212,7 @@ In case the automatic installation procedure fails. You can manually configure a
 3. Start running the MCP server as follows:
    1.  Click **View** > **Command Palette** and enter **MCP:List Servers**.
 
-       ![](../.gitbook/assets/img-39c7693cacb308149e58168a10d11ebd.png)
+       ![](../../.gitbook/assets/img-39c7693cacb308149e58168a10d11ebd.png)
    2. In the MCP servers list, select **Checkmarx Developer Assist**.
    3. Click on **Start Server**.
 
@@ -242,7 +242,7 @@ In case the automatic installation procedure fails. You can manually configure a
     ```
 3.  Verify that your MCP server is running by opening **Cursor Settings** and under **Tools & MCP** > **Installed MCP Servers**, confirm that the **Checkmarx Developer Assist** toggle is enabled.
 
-    ![](../.gitbook/assets/img-5ecbd5e52c5fb5161fc8eb1a0f3c0a00.png)
+    ![](../../.gitbook/assets/img-5ecbd5e52c5fb5161fc8eb1a0f3c0a00.png)
 
 </details>
 
@@ -252,7 +252,7 @@ In case the automatic installation procedure fails. You can manually configure a
 
 In case the automatic installation procedure fails. You can manually configure access to the Checkmarx MCP server using the following procedure.
 
-![](../.gitbook/assets/img-73f8858306e005194cc779ea1f7f46cc.png)
+![](../../.gitbook/assets/img-73f8858306e005194cc779ea1f7f46cc.png)
 
 1.  If it does not already exist, create an mcp\_config.json file at the following location: `${homeDir}\.codeium\windsurf\mcp_config.json`
 
@@ -300,6 +300,6 @@ In case the automatic installation procedure fails. You can manually configure a
     ```
 3.  Click on the **Kiro** icon in the left-side navigation, and under **MCP servers**, confirm that Checkmarx Developer Assist is connected.
 
-    ![](../.gitbook/assets/img-106b2291cb519d405901758f13bc9113.png)
+    ![](../../.gitbook/assets/img-106b2291cb519d405901758f13bc9113.png)
 
 </details>
