@@ -1,12 +1,15 @@
 const express = require("express");
-const { exec } = require("child_process");
+const { execFile } = require("child_process");
 
 const app = express();
 
 app.get("/ping", (req, res) => {
   const host = req.query.host;
 
-  exec("ping -c 1 " + host, (error, stdout, stderr) => {
+  // Use execFile with an argument array instead of exec with a shell string.
+  // execFile does not invoke a shell, so shell metacharacters in `host`
+  // are never interpreted — this prevents command injection (CWE-77).
+  execFile("ping", ["-c", "1", host], (error, stdout, stderr) => {
     if (error) {
       return res.status(500).send(error.message);
     }
