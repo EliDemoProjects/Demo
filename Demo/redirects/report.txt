@@ -1,0 +1,20 @@
+Spaces: 8
+Pages mapped: 153
+  - Checkmarx SCA Release Notes -> /checkmarx-sca-release-notes (62 pages)
+  - Checkmarx SCA FAQ -> /faq (1 pages)
+  - Checkmarx SCA - Product Info -> /checkmarx-sca---product-info (14 pages)
+  - Checkmarx SCA - Quick Start Tutorial -> /checkmarx-sca---quick-start-tutorial (1 pages)
+  - Checkmarx SCA - User Guide -> /checkmarx-sca---user-guide (39 pages)
+  - Checkmarx SCA Resolver -> /checkmarx-sca-resolver (10 pages)
+  - Checkmarx SCA Integrations and Plugins -> /checkmarx-sca-integrations-and-plugins (5 pages)
+  - Checkmarx SCA (REST) API Documentation -> /checkmarx-sca--rest--api-documentation (21 pages)
+
+Items to check (8):
+SPACE checkmarx-sca-release-notes: 61 pages, 0 kept their ID digits to stay unique
+SPACE faq: 0 pages, 0 kept their ID digits to stay unique
+SPACE checkmarx-sca---product-info: 13 pages, 0 kept their ID digits to stay unique
+SPACE checkmarx-sca---quick-start-tutorial: 0 pages, 0 kept their ID digits to stay unique
+SPACE checkmarx-sca---user-guide: 38 pages, 0 kept their ID digits to stay unique
+SPACE checkmarx-sca-resolver: 9 pages, 0 kept their ID digits to stay unique
+SPACE checkmarx-sca-integrations-and-plugins: 4 pages, 0 kept their ID digits to stay unique
+SPACE checkmarx-sca--rest--api-documentation: 20 pages, 0 kept their ID digits to stay unique

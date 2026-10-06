@@ -1,0 +1,45 @@
+page,count,form,context,titles
+18662-158245-checkmarx-sca-release-notes-april-2023.html,1,details,,Details About Unity Support
+34965-19101-faq.html,4,details,faq,What are the connectivity requirements for using SCA? | When you trigger an SCA scan via C
+34965-19101-faq.html,3,details,faq,Does Checkmarx store SCA scan data in the cloud? | What security measures does SCA use for
+34965-19101-faq.html,5,details,faq,"What are ""CxID"" vulnerabilities? And, how do they differ from standard CVEs? | Are ""zero-d"
+34965-19101-faq.html,7,details,faq,Why can’t I connect to the Checkmarx SCA cloud? | Is there a timeout threshold for Checkma
+34965-19101-faq.html,5,details,faq,Why did the scan have no (or partial) results? | The remediation suggestion for a vulnerab
+18662-131661-supported-languages-and-package-managers.html,1,details,,How SCA Works
+18662-131661-supported-languages-and-package-managers.html,12,details,,Java | JavaScript/TypeScript | .NET | Python | PHP | iOS | Go | Ruby | C++ | Unity | Perl 
+18662-19110-container-scans.html,2,tabs,,Linux/MacOS | Windows
+18662-19110-container-scans.html,2,tabs,,Linux/MacOS | Windows
+18662-19110-container-scans.html,1,details,,Example - DockerHub Authentication
+18662-19110-container-scans.html,3,tabs,,Scanning Images from AWS ECR | Scanning Images from GCR | Scanning Images from GAR
+18662-19126-viewing-the-project-page.html,1,details,,Hiding Dev & Test Dependencies
+18662-19127-project-page-tabs.html,1,details,,API Responses
+18662-19127-project-page-tabs.html,1,details,,How We Detect Malware Risks
+18662-19127-project-page-tabs.html,2,tabs,,Container Packages Page | Container Vulnerabilities Page
+18662-19159-sbom-reports.html,1,details,,What is an SBOM Report?
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19199-running-scans-using-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-132888-checkmarx-sca-resolver-configuration-arguments.html,2,tabs,,US Environment | EU Environment
+18662-132888-checkmarx-sca-resolver-configuration-arguments.html,5,tabs,,Mandatory Arguments | Optional Arguments | Custom Parameters | Report Arguments | Exploita
+18662-132888-checkmarx-sca-resolver-configuration-arguments.html,1,details,nested,Exploitable Path offline mode sample
+18662-19200-saml-authentication-for-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-154893-master-access-control-authentication-for-checkmarx-sca-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19202-running-exploitable-path-scans-using-resolver.html,2,tabs,,Linux/MacOS | Windows
+18662-19202-running-exploitable-path-scans-using-resolver.html,1,details,,Exploitable Path offline mode sample
+18662-19203-configuring-exploitable-path-queries-for-checkmarx-sca-resolver.html,2,tabs,,For systems using C# v6 (i.e. SAST below version 9.2) | For systems using C# v7 (i.e. SAST
+18662-19203-configuring-exploitable-path-queries-for-checkmarx-sca-resolver.html,1,details,nested,Java Queries for systems using SAST version 9.6.1 and above
+18662-19203-configuring-exploitable-path-queries-for-checkmarx-sca-resolver.html,2,tabs,,For systems using C# v6 (i.e. SAST below version 9.2) | For systems using C# v7 (i.e. SAST
+18662-19203-configuring-exploitable-path-queries-for-checkmarx-sca-resolver.html,2,tabs,,SQL Statements | XML Snippet
+18662-19203-configuring-exploitable-path-queries-for-checkmarx-sca-resolver.html,2,tabs,,For systems using C# v6 (i.e. SAST below version 9.2) | For systems using C# v7 (i.e. SAST
+18662-19203-configuring-exploitable-path-queries-for-checkmarx-sca-resolver.html,2,tabs,,SQL Statements | XML Snippet
+18662-19204-checkmarx-sca-resolver-changelog.html,1,details,,Version Management
+18662-202397-checkmarx-sca-sysdig-integration---runtime-usage.html,1,details,,Prerequisites
+18662-202397-checkmarx-sca-sysdig-integration---runtime-usage.html,2,tabs,,Linux/MacOS | Windows
+18662-202397-checkmarx-sca-sysdig-integration---runtime-usage.html,2,tabs,,Linux/MacOS | Windows
+18662-201117-checkmarx-docker-desktop-extension.html,1,details,,Checkmarx Terms of Service
+18662-201117-checkmarx-docker-desktop-extension.html,2,tabs,,Non-OS Package Managers | OS Distribution Package Managers
