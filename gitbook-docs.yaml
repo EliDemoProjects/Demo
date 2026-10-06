@@ -1,6 +1,6 @@
 $schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
-  title: Dev Assist
+  title: Sandbox
   structure:
     - type: space
       key: space-1
