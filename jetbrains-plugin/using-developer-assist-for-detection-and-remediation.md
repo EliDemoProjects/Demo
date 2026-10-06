@@ -1,6 +1,6 @@
 # Using Developer Assist for Detection and Remediation (JetBrains)
 
-## AI Remediation
+## AI Remediation (TEST CHANGE)
 
 ### How to Remediate Risks Using AI
 
