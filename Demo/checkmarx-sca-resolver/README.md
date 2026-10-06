@@ -39,7 +39,7 @@ The scan results, provided by the Checkmarx SCA Cloud, are displayed in the CLI,
 After the File Analysis and Dependency Resolution are completed on-prem, the output of the analysis, the “evidence files”, are sent to the cloud for the final process of Evidence Analysis.
 
 {% hint style="info" icon="pencil" %}
-In **Online** mode this occurs immediately, and in **Offline** mode this occurs when the **Upload** command is run.
+In Online mode this occurs immediately, and in Offline mode this occurs when the Upload command is run.
 {% endhint %}
 
 - The project name

@@ -10,7 +10,7 @@ We have implemented a new integration with [Sysdig Risk Spotlight](https://docs.
 
 ### Prerequisites
 
-- You need to have a Sysdig license and you need to obtain a **Sysdig Risk Spotlight Token** for your account.
+- You need to have a Sysdig license and you need to obtain a Sysdig Risk Spotlight Token for your account.
 - Make sure that your Sysdig agents are configured to cover all images that you will be scanning in Checkmarx.
 
 ### Limitations
@@ -34,6 +34,7 @@ In order to get results for runtime usage you need to scan the built image creat
    {% hint style="info" icon="pencil" %}
    Make sure that all relevant package managers are installed on your local environment, see [Installing Supported Package Managers for Resolver](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-download-and-installation/installing-supported-package-managers-for-resolver).
    {% endhint %}
+
 2. Download and install [Syft](https://github.com/anchore/syft/blob/main/README.md) version 0.83.1 from [here](https://github.com/anchore/syft/releases/tag/v0.83.1).
 
 {% hint style="warning" %}
@@ -46,16 +47,18 @@ It is generally preferable to install both tools in the same folder. Make sure t
 <summary>Prerequisites</summary>
 
 - You need to have the name and tag for each of the images that you would like to scan.
+
 - If you are using a private repo, you need to be authenticated for your registry.
 
   {% hint style="info" icon="pencil" %}
   Authentication can be done via Docker or Podman.
 
-  Alternatively, you can use the syft login command, as follows: ` syft login <private_registry_domain> -u <your_username> -p <your_password>`
+  Alternatively, you can use the syft login command, as follows: `syft login <private_registry_domain> -u <your_username> -p <your_password>`
 
   Before running the scan, it is recommended to verify that you are able to access the image on your local machine.
   {% endhint %}
-- You need to have the following info about your Checkmarx SCA account: *account name*, *username* and *password*.
+
+- You need to have the following info about your Checkmarx SCA account: **account name**, **username** and **password**.
 
   {% hint style="info" icon="pencil" %}
   If you authenticate via a SAML provider, then providing user credentials is not necessary. See [SAML Authentication for Checkmarx SCA Resolver](https://app.gitbook.com/s/XSPACE_RESOLVER/saml-authentication-for-checkmarx-sca-resolver).
@@ -110,8 +113,11 @@ For more info about Checkmarx container scans, see [Container Scans](https://app
    ```
    {% endtab %}
    {% endtabs %}
+
 2. You can add additional arguments to specify the desired scan configuration, see [Checkmarx SCA Resolver Configuration Arguments](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-configuration-arguments).
+
 3. Add the `--scan-containers` flag to the SCA Resolver scan command.
+
 4. Add the `--images` flag followed by a comma separated list of images. Specify each image using the following syntax {image_name}:{image_tag}.
 
 The following example shows a command to run a container scan on specific images.
@@ -135,11 +141,11 @@ Once the integration has been configured for your account, whenever you run a sc
 
 ### Container Packages Tab
 
-In the **Container Packages** tab, there is a column **Runtime Usage** which indicates which packages are used in runtime.
+In the Container Packages tab, there is a column Runtime Usage which indicates which packages are used in runtime.
 
 <div align="left"><figure><img src=".gitbook/assets/img-f5fd2fd3f50e63823ac11c300433dd12.png" alt=""></figure></div>
 
-Possible values for **Runtime Usage** are:
+Possible values for Runtime Usage are:
 
 - Used - Runtime usage of this package was identified.
 - Not Used - No runtime usage of this package was identified.
@@ -148,10 +154,10 @@ Possible values for **Runtime Usage** are:
 
 ### Container Vulnerabilities Tab
 
-In the **Containers Vulnerabilities** tab, runtime usage is shown as a **Risk Factor** for vulnerabilities that are associated with used packages.
+In the Containers Vulnerabilities tab, runtime usage is shown as a Risk Factor for vulnerabilities that are associated with used packages.
 
 <div align="left"><figure><img src=".gitbook/assets/img-2d0748a277649118c695cafd399be768.png" alt=""></figure></div>
 
-Also, when you drill-down to open the details page for a specific vulnerability, runtime usage is shown as a **Risk Factor**.
+Also, when you drill-down to open the details page for a specific vulnerability, runtime usage is shown as a Risk Factor.
 
 <div align="left"><figure><img src=".gitbook/assets/img-59eb98dad794abee766d6469d077e4ba.png" alt=""></figure></div>

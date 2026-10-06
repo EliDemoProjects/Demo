@@ -2,7 +2,7 @@
 
 ## August 26, 2021
 
-NEW - AppSec Knowledge Center - Our new AppSec Knowledge Center can be accessed via the Checkmarx SCA web portal. The Knowledge Center enables you to search our extensive database for information about specific package versions and vulnerabilities. This enables you to check the open source packages that you want to use in your project **in advance** to make sure that you won’t be introducing security risks into the project.
+NEW - AppSec Knowledge Center - Our new AppSec Knowledge Center can be accessed via the Checkmarx SCA web portal. The Knowledge Center enables you to search our extensive database for information about specific package versions and vulnerabilities. This enables you to check the open source packages that you want to use in your project in advance to make sure that you won’t be introducing security risks into the project.
 
 The database includes CVEs and also vulnerabilities discovered by the Checkmarx Vulnerability Research Team (“Cx” vulnerabilities).
 
@@ -21,7 +21,7 @@ For additional details, see [Checkmarx SCA Resolver Changelog](https://app.gitbo
 
 ## May 10, 2021
 
-NEW - Exporting Risk Reports - You can now export Risk Reports, showing comprehensive info about the risks identified in each of your Checkmarx SCA Projects. The Risk Report shows the results of a specific scan of a Project, including both overall results as well as detailed info about the risks that were identified. You can export a Risk Report via the Checkmarx SCA web portal by navigating to the Scan Results page for the desired scan and clicking on the **Export** button at the top of the page. You can specify the desired file format (pdf, xml, json, or csv) as well as which sections to include in the report (*Packages*, *Vulnerabilities*, *Licenses*, or *All*). For more info, see [Scan Reports](https://app.gitbook.com/s/XSPACE_USER_GUIDE/generating-sca-reports/sca-scan-reports).
+NEW - Exporting Risk Reports - You can now export Risk Reports, showing comprehensive info about the risks identified in each of your Checkmarx SCA Projects. The Risk Report shows the results of a specific scan of a Project, including both overall results as well as detailed info about the risks that were identified. You can export a Risk Report via the Checkmarx SCA web portal by navigating to the Scan Results page for the desired scan and clicking on the Export button at the top of the page. You can specify the desired file format (pdf, xml, json, or csv) as well as which sections to include in the report (**Packages**, **Vulnerabilities**, **Licenses**, or **All**). For more info, see [Scan Reports](https://app.gitbook.com/s/XSPACE_USER_GUIDE/generating-sca-reports/sca-scan-reports).
 
 You can also generate Risk Reports via Checkmarx SCA Resolver, see [Risk Report Arguments](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-configuration-arguments).
 
@@ -97,14 +97,23 @@ NEW VERSION - Checkmarx SCA Resolver version 1.4.28 was released. Download links
 The new version of Checkmarx SCA Resolver includes the following improvements:
 
 - Added ability to pass custom parameters to Bower, Composer, Lerna, NPM, Nuget, Pip, SBT, and Yarn project scans
+
 - Added ability to disable upload of manifest files
+
 - SCA scans now extract compressed files of type .zip, .war, .ear. Also, the user can add a flag to specify custom file types for extraction.
+
 - For Exploitable Path scans, the config file key "OldResultsThresholdMinutes" was added, enabling users to customize the time period for which SAST results are checked. By default, this is now set as two weeks.
+
 - Changed "Invalid SAST settings" to warning level instead of error
+
 - Improved Gradle dev-dependencies detection
+
 - Fixed NPM package-lock.json display error
+
 - Fixed errors causing scan failures in Gradle, Bower and Maven
+
 - For Exploitable Path scans, users now have the option of providing the SAST Project name instead of the Project ID
+
 - Added Gradle dependency parser customizations:
 
   - Exclude scopes - include all scopes other than the specified exclusions

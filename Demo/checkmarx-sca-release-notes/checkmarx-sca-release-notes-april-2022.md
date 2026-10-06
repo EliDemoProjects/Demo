@@ -16,7 +16,7 @@ Download the latest version of Resolver [here](https://app.gitbook.com/s/XSPACE_
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | UPDATE | Gradle 6.9 | Added support for Gradle version 6.9. |
 | UPDATE | Support for MCR | Added support for scanning container images hosted on Microsoft Container Registry (MCR). |

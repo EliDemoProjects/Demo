@@ -8,13 +8,15 @@
 
 We have fundamentally restructured the screens that show Project information in the SCA web application.
 
-- Clicking on the row of a Project in the **Dashboard** now takes you directly to the main **Project** page which contains all information about that Project, including the overview, the scan history and detailed scan results (it is no longer necessary to click on the **Scan Results** button). The info on this page is divided into the following tabs: Project Overview, Packages, Risks, Container, Licenses, Remediation Tasks and Policy Violations.
-- The list of scans, which had been shown in the **Scan History** tab of the **Overview** page, is now shown below the overview widgets in the **Project Overview** tab.
+- Clicking on the row of a Project in the Dashboard now takes you directly to the main Project page which contains all information about that Project, including the overview, the scan history and detailed scan results (it is no longer necessary to click on the Scan Results button). The info on this page is divided into the following tabs: Project Overview, Packages, Risks, Container, Licenses, Remediation Tasks and Policy Violations.
+
+- The list of scans, which had been shown in the Scan History tab of the Overview page, is now shown below the overview widgets in the Project Overview tab.
 
   {% hint style="warning" %}
-  The **Top Vulnerabilities** section that had been shown in that position has been deprecated.
+  The Top Vulnerabilities section that had been shown in that position has been deprecated.
   {% endhint %}
-- The info that had been shown in the **Scan Summary** tab of the **Scan Results** page is now available from the more options menu at the top of **Project** page (for all tabs). The section showing details of the scan process is now accessed by selecting **Scan Details**. The section showing info about the package resolution process (e.g., successful and failed manifest files) is now accessed by selecting **Resolving Info**.
+
+- The info that had been shown in the Scan Summary tab of the Scan Results page is now available from the more options menu at the top of Project page (for all tabs). The section showing details of the scan process is now accessed by selecting Scan Details. The section showing info about the package resolution process (e.g., successful and failed manifest files) is now accessed by selecting Resolving Info.
 
 Aside from the changes in the way the info is presented, this update also involves fundamental changes to how the data is gathered "under the hood". This will improve efficiency and ensure more consistent and uniform behavior of aggregated counters.
 

@@ -6,7 +6,7 @@
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | UPDATE | SBOM | We added two optional query parameters to the `POST /export` API, `hideDevAndTestDependencies` and `showOnlyEffectiveLicenses`. These can be used to filter the results returned in the SBOM report. |
 

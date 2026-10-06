@@ -12,6 +12,7 @@ The default behavior is that the content of these files is sent to the Checkmarx
   - settings.xml
   - build.properties
   - versions.properties
+
 - Gradle
 
   - \*.gradle
@@ -21,6 +22,7 @@ The default behavior is that the content of these files is sent to the Checkmarx
   - gradlew
   - gradlew.bat
   - gradle-wrapper.jar
+
 - Ivy
 
   - ivy.xml
@@ -30,6 +32,7 @@ The default behavior is that the content of these files is sent to the Checkmarx
 
   - build.sbt
   - plugins.sbt
+
 - NPM
 
   - package.json
@@ -37,14 +40,17 @@ The default behavior is that the content of these files is sent to the Checkmarx
   - lerna.json
   - .npmrc
   - npm-shrinkwrap.json
+
 - Yarn
 
   - yarn.lock
   - .yarnrc
   - package.json
+
 - Bower
 
   - bower.json
+
 - NuGet
 
   - \*.csproj
@@ -52,6 +58,7 @@ The default behavior is that the content of these files is sent to the Checkmarx
   - packages.config
   - project.assets.json
   - packages.lock.json
+
 - PIP
 
   - requirements.txt
@@ -59,41 +66,51 @@ The default behavior is that the content of these files is sent to the Checkmarx
   - requirement.txt
   - requirement-\*.txt
   - packages.txt
+
 - Poetry
 
   - pyproject.toml
   - poetry.lock
+
 - Pipenv
 
   - pipfile
   - pipfile.lock
+
 - Composer
 
   - composer.json
   - composer.lock
+
 - SwiftPm
 
   - Package.swift
   - Package.lock
+
 - Carthage
 
   - Cartfile
   - Cartfile.private
   - Cartfile.resolved
+
 - RubyGems
 
   - gemfile
+
 - Go Modules
 
   - go.mod
   - go.sum
+
 - Cpan
 
   - cpanfile
   - cpanfile.snapshot
+
 - Pub
 
   - pubspec.lock
+
 - General
 
   - VERSION

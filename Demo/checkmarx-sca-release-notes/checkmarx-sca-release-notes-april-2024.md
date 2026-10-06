@@ -3,7 +3,7 @@
 {% include ".gitbook/includes/note-031596ef.md" %}
 
 {% hint style="warning" %}
-The *IgnoreVulnerability* and *UnignoreVulnerability* APIs, which had been used for triaging SCA vulnerabilities, will be deprecated on July 7. They have been replaced by the new [Management of Risk](https://app.gitbook.com/s/XSPACE_REST_API/checkmarx-sca--rest--api---management-of-risk) API, which supports applying the new set of states and adding comments. We recommend migrating to the new API well in advance of the July 7 deadline.
+The **IgnoreVulnerability** and **UnignoreVulnerability** APIs, which had been used for triaging SCA vulnerabilities, will be deprecated on July 7. They have been replaced by the new [Management of Risk](https://app.gitbook.com/s/XSPACE_REST_API/checkmarx-sca--rest--api---management-of-risk) API, which supports applying the new set of states and adding comments. We recommend migrating to the new API well in advance of the July 7 deadline.
 {% endhint %}
 
 {% include ".gitbook/includes/caution-f72202af.md" %}
@@ -18,15 +18,15 @@ In addition, EPSS score is shown in the AppSec Knowledge Center vulnerability da
 
 ## Detection Date
 
-In the **Scan Results** \> **Risks** tab, we now show the "Detection" date. This is the date that the vulnerability was first identified in the project that you are viewing. For vulnerabilities that were first identified in the scan that you are viewing, the NEW label is shown next to the date. You can alternate between showing the "Publication" date and the "Detection" date by clicking on the column header.
+In the Scan Results \> Risks tab, we now show the "Detection" date. This is the date that the vulnerability was first identified in the project that you are viewing. For vulnerabilities that were first identified in the scan that you are viewing, the NEW label is shown next to the date. You can alternate between showing the "Publication" date and the "Detection" date by clicking on the column header.
 
 ## Legal Risk
 
-We fundamentally changed the way that we handle legal risks. Instead of listing all Licenses in the **Vulnerabilities** \> **Legal Risk** section, we now show a separate tab with a list of all licenses identified in the project. In the **Vulnerabilities** \> **Legal Risk** section, we now show only the following types of legal risks:
+We fundamentally changed the way that we handle legal risks. Instead of listing all Licenses in the Vulnerabilities \> Legal Risk section, we now show a separate tab with a list of all licenses identified in the project. In the Vulnerabilities \> Legal Risk section, we now show only the following types of legal risks:
 
-- **Risky effective license** - A license with medium or high severity License Score is marked as Effective for this package.
-- **Package with no effective license** - There is an open source package in your project for which no license has been marked as Effective.
-- **Package with no license** - Checkmarx didn't identify any licenses associated with this package.
+- Risky effective license - A license with medium or high severity License Score is marked as Effective for this package.
+- Package with no effective license - There is an open source package in your project for which no license has been marked as Effective.
+- Package with no license - Checkmarx didn't identify any licenses associated with this package.
 
 ## Support for Perl
 
@@ -34,11 +34,11 @@ Added support for Perl using cpan package manager.
 
 <table>
 <thead>
-<tr><th><strong>Perl</strong></th><th></th><th colspan="2"><strong>Languages/Frameworks:</strong> Perl<br><strong>Repository:</strong> <a href="https://www.cpan.org/"> Cpan</a><br><strong>File Types:</strong> none</th></tr>
+<tr><th><p><strong><strong>Perl</strong></strong></p></th><th></th><th colspan="2"><p><strong><strong>Languages/Frameworks:</strong></strong> Perl</p><p><strong><strong>Repository:</strong></strong> <a href="https://www.cpan.org/"> Cpan</a></p><p><strong><strong>File Types:</strong></strong> none</p></th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Supported Package Managers</strong></td><td><strong>Exploitable Path</strong></td><td><strong>Supply Chain Security (SCS)</strong></td><td><strong>Manifest Files</strong> (Packages marked with are required)</td></tr>
-<tr><td>Cpan</td><td></td><td></td><td><code>cpanfile</code>, <code>spcanfile.snapshot</code></td></tr>
+<tr><td><p><strong><strong>Supported Package Managers</strong></strong></p></td><td><p><strong><strong>Exploitable Path</strong></strong></p></td><td><p><strong><strong>Supply Chain Security (SCS)</strong></strong></p></td><td><p><strong><strong>Manifest Files</strong></strong> (Packages marked with are required)</p></td></tr>
+<tr><td><p>Cpan</p></td><td><p></p></td><td><p></p></td><td><p><code>cpanfile</code>, <code>spcanfile.snapshot</code></p></td></tr>
 </tbody>
 </table>
 

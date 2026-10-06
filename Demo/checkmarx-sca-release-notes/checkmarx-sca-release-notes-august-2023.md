@@ -6,7 +6,7 @@
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | UPDATE | Supported manifest files | We added support for resolving Swift dependencies using the `Package.resolved` file when no `Package.swift` file is present in the project. |
 
@@ -30,12 +30,16 @@ The complete changelog, and links to download SCA Resolver are available [here](
 ### Version 2.3.3
 
 - When multi-module projects cause manifest files to be duplicated in the results, we now merge the results from both manifests so that the scan can complete successfully.
+
 - For Poetry, added the flag `--poetry-parameters` for adding custom parameters for Poetry.
+
 - For Python:
 
   - When there is a problem resolving the dependencies from a manifest file, we now correctly show a failure for the resolution of that manifest file.
   - Added support for pyenv configuration.
+
 - For Gradle, fixed issue that despite the `--gradle-include-modules` flag being used, non-included modules were still being scanned.
+
 - For NPM, improved the method for resolving workspaces, so that it is no longer necessary to change the content of the package-lock file.
 
 ## JFrog Plugin

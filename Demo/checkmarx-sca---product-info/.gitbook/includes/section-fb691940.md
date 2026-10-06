@@ -6,7 +6,7 @@
 When running a container scan in Offline mode, you must use the `--containers-result-path` flag to specify the container results output location. Then, when running Upload, you need to use the same flag to refer to the file location.
 {% endhint %}
 
-**Example of scanning the project's Dockerfile:**
+Example of scanning the project's Dockerfile:
 
 The following example shows a command to run a container scan on the Dockerfile in your project.
 

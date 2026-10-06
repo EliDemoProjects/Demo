@@ -35,7 +35,7 @@ Download the latest version of Resolver [here](https://app.gitbook.com/s/XSPACE_
 
 ## Improvements
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | UPDATE | Pip dependency tree | Pip now uses a new tree converter to create the dependency tree. |
 | UPDATE | Exploitable Path | Improved scan times for large Exploitable Path scans. |
@@ -43,7 +43,7 @@ Download the latest version of Resolver [here](https://app.gitbook.com/s/XSPACE_
 
 ## Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | FIXED | Vulnerability identification | Removed mistaken matches for log4j vulnerabilities. |
 | FIXED | iOS package release dates | Fixed issue that release dates for some cocoa pod packages had been inaccurate. |

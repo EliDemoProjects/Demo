@@ -8,7 +8,7 @@
 
 We have implemented a new integration with Sysdig for identifying runtime usage of container packages. This provides important insights for prioritizing remediation activities.
 
-Once the integration has been configured for your account, you will see a new column **Runtime Usage** in the Containers Packages tab indicating which packages are used in runtime. In addition, in the Containers Vulnerabilities tab, runtime usage will be shown as a Risk Factor for specific vulnerabilities.
+Once the integration has been configured for your account, you will see a new column Runtime Usage in the Containers Packages tab indicating which packages are used in runtime. In addition, in the Containers Vulnerabilities tab, runtime usage will be shown as a Risk Factor for specific vulnerabilities.
 
 {% hint style="info" icon="pencil" %}
 This integration is only available for accounts that have a Sysdig license. To set up the integration, please contact your account manager and provide them with your Sysdig Risk Spotlight token.
@@ -16,7 +16,7 @@ This integration is only available for accounts that have a Sysdig license. To s
 
 ## Exploitable Path Queries
 
-We improved the performance of Exploitable Path scans for Java projects. The updated queries yield more complete results while **cutting the scan time by as much as half**.
+We improved the performance of Exploitable Path scans for Java projects. The updated queries yield more complete results while cutting the scan time by as much as half.
 
 ## SCA Resolver Version 2.4.8
 

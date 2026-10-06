@@ -25,9 +25,9 @@ We added support for Unity package manager.
 
 <table>
 <tbody>
-<tr><td><img src=".gitbook/assets/img-8b3dcc8e671fe99e2fe76c9a40c74069.png" alt=""></td><td colspan="3"><strong>Languages/Frameworks:</strong> Unity<br><strong>Repository:</strong> <a href="https://github.com/orgs/Unity-Technologies/repositories">Unity Technologies</a>, <a href="https://github.com/orgs/needle-mirror/repositories">Needle-mirror</a>, <a href="https://openupm.com/packages/">Open UPM</a><br><strong>File Types:</strong> none</td></tr>
-<tr><td><strong>Supported Package Managers</strong></td><td><strong>Exploitable Path</strong></td><td><strong>Supply Chain Security (SCS)</strong></td><td><strong>Manifest Files</strong> (Packages marked with <img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt=""> are required)</td></tr>
-<tr><td>none</td><td></td><td></td><td>manifest.json<img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt="">, packages.json<img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt=""></td></tr>
+<tr><td><img src=".gitbook/assets/img-8b3dcc8e671fe99e2fe76c9a40c74069.png" alt=""></td><td colspan="3"><p><strong><strong>Languages/Frameworks:</strong></strong> Unity</p><p><strong><strong>Repository:</strong></strong> <a href="https://github.com/orgs/Unity-Technologies/repositories">Unity Technologies</a>, <a href="https://github.com/orgs/needle-mirror/repositories">Needle-mirror</a>, <a href="https://openupm.com/packages/">Open UPM</a></p><p><strong><strong>File Types:</strong></strong> none</p></td></tr>
+<tr><td><p><strong><strong>Supported Package Managers</strong></strong></p></td><td><p><strong><strong>Exploitable Path</strong></strong></p></td><td><p><strong><strong>Supply Chain Security (SCS)</strong></strong></p></td><td><p><strong><strong>Manifest Files</strong></strong> (Packages marked with <img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt=""> are required)</p></td></tr>
+<tr><td><p>none</p></td><td><p></p></td><td><p></p></td><td><p>manifest.json<img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt="">, packages.json<img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt=""></p></td></tr>
 </tbody>
 </table>
 

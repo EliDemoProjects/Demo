@@ -6,7 +6,7 @@
 
 ## Improvements
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | UPDATE | Persistent filters | The filters applied to the Global Inventory page are now persistent, so that when you drill-down to see details for a package or a risk and then click the back button in the browser, the filters on the Global Inventory page will remain in place. |
 | FIXED | Project name | Fixed issue that changing project name in repo for a Checkmarx One project had caused errors for the SCA scanner. |
@@ -30,7 +30,9 @@ The complete changelog, and links to download SCA Resolver are available [here](
 ### Version 2.5.11
 
 - We now only create a reports folder when the user actually generates a report.
+
 - Fixed the fingerprint calculation for JavaScript files.
+
 - For container scans, updated ImageResolver to version 3.0.31, which includes the following updates:
 
   - We now scan yaml files, enabling detection of images inside docker-compose files and helm charts. This dramatically increases our coverage for detecting container images.
@@ -38,12 +40,15 @@ The complete changelog, and links to download SCA Resolver are available [here](
     {% hint style="info" %}
     If you prefer to exclude these files from a scan, you can do so using the command `--excludes "*.yaml"`.
     {% endhint %}
+
   - Improved detection of Java and IOS package inside images.
+
   - Enabled running container scans via Checkmarx One CLI.
 
     This is done by using SCA Resolver in the CLI command, and setting the Resolver params as follows:
 
     - `--scan-containers`
+
     - `--containers-result-path <base_folder_path>/.cxsca-container-results.json`
 
       {% hint style="info" %}

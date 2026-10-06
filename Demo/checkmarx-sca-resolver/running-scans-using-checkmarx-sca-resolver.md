@@ -5,8 +5,10 @@
 - Download and install the latest version of Checkmarx SCA Resolver for your OS, see [Checkmarx SCA Resolver Download](checkmarx-sca-resolver-download-and-installation.md).
 
   {% include ".gitbook/includes/note-215672c4.md" %}
-- Checkmarx SCA Resolver requires dependency resolution utilities to be installed, and the project to be in a **buildable state**. For a list of requirements, see [Package Managers Support in SCA Resolver.](installing-supported-package-managers-for-resolver.md)
-- You need to have the following info about your Checkmarx SCA account: *account name*, *username* and *password*.
+
+- Checkmarx SCA Resolver requires dependency resolution utilities to be installed, and the project to be in a buildable state. For a list of requirements, see [Package Managers Support in SCA Resolver.](installing-supported-package-managers-for-resolver.md)
+
+- You need to have the following info about your Checkmarx SCA account: **account name**, **username** and **password**.
 
   {% include ".gitbook/includes/warning-e25f6b2c.md" %}
 
@@ -16,27 +18,27 @@ If you authenticate via a SAML provider, then providing user credentials is not 
 
 ## Running Scans Using the Checkmarx SCA Resolver
 
-You can use the Resolver to scan an *existing* Project or to create a *new* Project. If you are scanning an existing Project, then the Project settings that you configured in the SCA web portal (e.g., teams assignment, notifications, Python version) are automatically applied to the scan. If you are creating a new Project in Resolver, then you can use the optional configuration arguments to configure these settings, see [Checkmarx SCA Resolver Configuration Arguments](checkmarx-sca-resolver-configuration-arguments.md).
+You can use the Resolver to scan an **existing** Project or to create a **new** Project. If you are scanning an existing Project, then the Project settings that you configured in the SCA web portal (e.g., teams assignment, notifications, Python version) are automatically applied to the scan. If you are creating a new Project in Resolver, then you can use the optional configuration arguments to configure these settings, see [Checkmarx SCA Resolver Configuration Arguments](checkmarx-sca-resolver-configuration-arguments.md).
 
 {% hint style="info" icon="pencil" %}
-If you would like to use the *Policy* feature to cause builds to break whenever the specified threshold of security threats is detected, you need to first create the Project in the web portal and assign it to a Policy (see [Policy Management](https://app.gitbook.com/s/XSPACE_USER_GUIDE/policy-management)). Then, you can run the Project using Resolver.
+If you would like to use the **Policy** feature to cause builds to break whenever the specified threshold of security threats is detected, you need to first create the Project in the web portal and assign it to a Policy (see [Policy Management](https://app.gitbook.com/s/XSPACE_USER_GUIDE/policy-management)). Then, you can run the Project using Resolver.
 {% endhint %}
 
 {% hint style="info" icon="pencil" %}
-If you would like to run scans using the *Exploitable Path* feature, use the procedure described in [Running Exploitable Path Scans Using Resolver](running-exploitable-path-scans-using-resolver.md).
+If you would like to run scans using the **Exploitable Path** feature, use the procedure described in [Running Exploitable Path Scans Using Resolver](running-exploitable-path-scans-using-resolver.md).
 {% endhint %}
 
 ### Checkmarx SCA Resolver Modes
 
-Checkmarx SCA Resolver (version 1.5.4+) can be run either in **Online** mode or in **Offline** mode. When online mode is used (default), the resolved results are automatically sent to Checkmarx SCA Cloud for scanning. When offline mode is used, the resolved results are saved locally. You can then use **Upload** mode at a later time to send the results to Checkmarx SCA Cloud for scanning.
+Checkmarx SCA Resolver (version 1.5.4+) can be run either in Online mode or in Offline mode. When online mode is used (default), the resolved results are automatically sent to Checkmarx SCA Cloud for scanning. When offline mode is used, the resolved results are saved locally. You can then use Upload mode at a later time to send the results to Checkmarx SCA Cloud for scanning.
 
 {% hint style="info" icon="pencil" %}
-In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode you need to provide authentication credentials. The procedures below describe the standard authentication method, which uses the username and password for authentication. Alternatively, if you have integrated your Checkmarx SCA account with a SAML provider, you can authenticate for Checkmarx SCA Resolver via your SAML provider, see [SAML Authentication for Checkmarx SCA Resolver](saml-authentication-for-checkmarx-sca-resolver.md).
+In order to run Checkmarx SCA Resolver in Online or Upload mode you need to provide authentication credentials. The procedures below describe the standard authentication method, which uses the username and password for authentication. Alternatively, if you have integrated your Checkmarx SCA account with a SAML provider, you can authenticate for Checkmarx SCA Resolver via your SAML provider, see [SAML Authentication for Checkmarx SCA Resolver](saml-authentication-for-checkmarx-sca-resolver.md).
 {% endhint %}
 
 ### Running a Scan - Online Mode
 
-**To run a new scan using the Checkmarx SCA Resolver in Online mode:**
+To run a new scan using the Checkmarx SCA Resolver in Online mode:
 
 1. If you would like to view the list of available arguments, in the CLI, run `ScaResolver.exe` (Windows) or `ScaResolver` (Linux) with the `-h` flag, as shown:
 
@@ -45,6 +47,7 @@ In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode you need
    ```
 
    The available arguments are displayed.
+
 2. To start a scan, run `ScaResolver.exe` (Windows) or `ScaResolver` (Linux) with the following mandatory arguments:
 
    -s : path to the folder to scan
@@ -100,7 +103,7 @@ In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode you need
 
 ### Running a Scan - Offline Mode
 
-**To run a new scan using the Checkmarx SCA Resolver in Offline mode:**
+To run a new scan using the Checkmarx SCA Resolver in Offline mode:
 
 1. If you would like to view the list of available arguments, in the CLI, run `ScaResolver.exe` (Windows) or `ScaResolver` (Linux) with the `-h` flag, as shown:
 
@@ -109,6 +112,7 @@ In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode you need
    ```
 
    The available arguments are displayed.
+
 2. To start a scan, run `ScaResolver.exe offline` (Windows) or `ScaResolver offline` (Linux) with the following mandatory arguments:
 
    -s : path to the folder to scan
@@ -145,6 +149,7 @@ In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode you need
    {% hint style="info" icon="pencil" %}
    You can add additional arguments to specify the desired scan configuration, see [SCA Resolver Configuration Arguments](checkmarx-sca-resolver-configuration-arguments.md). For example, the `-e` argument enables you to exclude specific folder and file patterns, see examples in the “Optional Arguments” section of [SCA Resolver Configuration Arguments](checkmarx-sca-resolver-configuration-arguments.md).
    {% endhint %}
+
 3. When you are ready to run the scan, run `ScaResolver.exe upload` (Windows) or `ScaResolver upload` (Linux) with the following mandatory arguments:
 
    -n : enter the name of the Project (same as used for Offline mode)
@@ -193,14 +198,16 @@ In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode you need
    Low severity vulnerabilities:           0
    ###########################################################
    ```
+
 4. If you used the `--report-type` flag in the Upload run command, then you can open the Risk Report file to view the results. Otherwise, you can view the results in the Checkmarx SCA web portal by searching for the Project by the name designated in the -n argument.
 
 ### Reports
 
 Checkmarx SCA generates two types of reports:
 
-- **Risk Report** - a comprehensive report which shows aggregated statistics for your Project as well as detailed info about the risks that were identified by the scan.
-- **Software Bill of Materials (SBOM)** - a report that gives a complete list of all components used by the program, including direct and transitive dependencies. The report follows the [CycloneDX v1.3](https://cyclonedx.org/docs/1.3/#SchemaProperties) format, which includes info for each component such as name, supplier name, version, hashes and other unique identifiers etc. Checkmarx SCA supplements this data with additional “property” fields that contain info about the risks associated with each package.
+- Risk Report - a comprehensive report which shows aggregated statistics for your Project as well as detailed info about the risks that were identified by the scan.
+
+- Software Bill of Materials (SBOM) - a report that gives a complete list of all components used by the program, including direct and transitive dependencies. The report follows the [CycloneDX v1.3](https://cyclonedx.org/docs/1.3/#SchemaProperties) format, which includes info for each component such as name, supplier name, version, hashes and other unique identifiers etc. Checkmarx SCA supplements this data with additional “property” fields that contain info about the risks associated with each package.
 
   {% hint style="warning" %}
   There is an alternative method for generating SBOM reports using the [Export Service API](https://app.gitbook.com/s/XSPACE_REST_API/checkmarx-sca--rest--api---export-service). The Export Service API generates SBOMs that are more compliant with SBOM formatting specifications. Export Service also supports generating SBOMs in SPDX format.
@@ -208,7 +215,7 @@ Checkmarx SCA generates two types of reports:
 
 You can generate a Risk Report in json, xml, csv or pdf format when running a scan using Checkmarx SCA Resolver (version 1.5.4+).
 
-**Risk Report Example:**
+Risk Report Example:
 
 {% tabs %}
 {% tab title="Linux/MacOS" %}
@@ -225,7 +232,7 @@ You can generate a Risk Report in json, xml, csv or pdf format when running a sc
 
 You can generate an SBOM Report in json or xml format when running a scan using Checkmarx SCA Resolver (version 1.5.52+).
 
-**SBOM Report Example:**
+SBOM Report Example:
 
 {% tabs %}
 {% tab title="Linux/MacOS" %}
@@ -273,7 +280,7 @@ You can use a proxy server to make internet requests for SCA Resolver. You can c
 1. To scan a project using a proxy server, add the `--proxies` flag to the scan command followed by comma separated host urls.
 2. If you you need to pass credentials, add them using the following syntax @\<username\>:\<password\>.
 
-**Proxy Scan Example:**
+Proxy Scan Example:
 
 The following example shows a command to run a scan using proxy HTTP and HTTPS servers. This command also passes the the authentication credentials for the HTTP server.
 
@@ -294,7 +301,7 @@ The following example shows a command to run a scan using proxy HTTP and HTTPS s
 
 The table below shows the possible exit codes that are received from Checkmarx SCA Resolver and explains their meaning.
 
-| **Code** | **Name** | **Description** |
+| Code | Name | Description |
 | --- | --- | --- |
 | 0 | Success | The request ran successfully. |
 | 3 | AuthenticationFailure | Request failed because unable to authenticate the user account. |
@@ -312,9 +319,9 @@ Logs are printed to the standard output as well as to the “logs” directory, 
 
 Each run creates a log file with an appropriate timestamp.
 
-The location of the log directory is determined by the **LogsDirectory** parameter in the config file.
+The location of the log directory is determined by the LogsDirectory parameter in the config file.
 
-By default, log verbosity is **information** level and higher. Use **--log_level Debug** to receive more output, or **--log_level Error** to receive only errors.
+By default, log verbosity is information level and higher. Use --log_level Debug to receive more output, or --log_level Error to receive only errors.
 
 For more information, see SCA Resolver Configuration Arguments.
 
@@ -344,7 +351,7 @@ Please provide this Scan ID with all support calls and requests.
 
 ### Troubleshooting Dependency Resolution
 
-Checkmarx SCA Resolver requires dependency resolution utilities to be installed, and the project to be in a **buildable state**. Some errors may occur during dependency resolution.
+Checkmarx SCA Resolver requires dependency resolution utilities to be installed, and the project to be in a buildable state. Some errors may occur during dependency resolution.
 
 For a list of requirements, see [Package Managers Support in SCA Resolver.](installing-supported-package-managers-for-resolver.md)
 

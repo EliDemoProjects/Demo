@@ -14,11 +14,11 @@ The documentation also provides test commands that can be run as part of your tr
 
 ### Maven Dependency Resolver
 
-**Manifest files:** `pom.xml`
+Manifest files: `pom.xml`
 
-**Package Manager used:** `Maven`
+Package Manager used: `Maven`
 
-**Prerequisites:**
+Prerequisites:
 
 - JDK installed under the JAVA_HOME environment variable
 - Make sure that any additional SDK needed for resolving dependencies in your project (e.g., Android SDK) is available in your local environment
@@ -47,7 +47,7 @@ It requires connectivity to a Maven repository to download those dependencies. B
 If you want to apply the settings in your `settings.xml` file to all `pom.xml` resolution, you can add the `settings.xml` file to a `.cxsca.configurations` folder in the root of the project. In this case, Checkmarx SCA will apply these settings to each module and sub-module in the project, overriding the local `settings.xml` settings.
 {% endhint %}
 
-**Testing Dependency Resolution**
+Testing Dependency Resolution
 
 You can test whether the dependency tree can be extracted successfully, by running the following command inside the folder where the manifest exists:
 
@@ -55,7 +55,7 @@ You can test whether the dependency tree can be extracted successfully, by runni
 mvn dependency:tree
 ```
 
-**Troubleshooting**
+Troubleshooting
 
 The following command can be used to troubleshoot problems with the dependency resolution.
 
@@ -63,7 +63,7 @@ The following command can be used to troubleshoot problems with the dependency r
 mvn install -DskipTests
 ```
 
-**Dev Dependencies**
+Dev Dependencies
 
 Any dependency marked with `<scope>test</scope>` is considered a Dev dependency in Checkmarx SCA
 
@@ -73,7 +73,7 @@ A multi-module project has a root `pom.xml` file and multiple modules, each in a
 
 The root `pom.xml` has the following structure:
 
-```xml
+```
   <modules>
     <module>module1</module>
     <module>module2</module>
@@ -100,11 +100,11 @@ For example, for the exec-maven-plugin, the `exec:exec` profile that runs the SC
 
 ### Gradle Dependency Resolver
 
-**Manifest files:** `build.gradle` , `build.gradle.kts`
+Manifest files: `build.gradle` , `build.gradle.kts`
 
-**Package Manager used:** `gradle`
+Package Manager used: `gradle`
 
-**Prerequisites:**
+Prerequisites:
 
 - JDK installed under the JAVA_HOME environment variable
 - Make sure that any additional SDK needed for resolving dependencies in your project (e.g., Android SDK) is available in your local environment
@@ -165,11 +165,11 @@ To learn more, visit [https://docs.gradle.org/current/userguide/gradle_wrapper.h
 
 ### Ivy Dependency Resolver
 
-**Manifest files:** `build.xml`, `ivy.xml`
+Manifest files: `build.xml`, `ivy.xml`
 
-**Package Manager used:** `Apache Ivy`
+Package Manager used: `Apache Ivy`
 
-**Prerequisites:** JDK installed under the JAVA_HOME environment variable
+Prerequisites: JDK installed under the JAVA_HOME environment variable
 
 #### Installation
 
@@ -185,7 +185,7 @@ Debian:
 8. To ensure Apache Ant is installed, run `ant -version`
 9. To ensure Apache Ivy is installed, run ant inside your Ivy project folder
 
-**Dependency Resolution**
+Dependency Resolution
 
 Each `ivy.xml` file will tentatively be associated with a `build.xml` file. For each ivy.xml file, configurations will be fetched. Each corresponding build.xml file will be modified to contain a specific target which will download the dependencies to the local cache folder (usually `.ivy2`) and generate XML report files based on the configurations fetched from `ivy.xml`.
 
@@ -195,13 +195,13 @@ This process requires connectivity to a repository to download those dependencie
 
 At the end of the process, `build.xml` files which were modified will be restored back to their original content.
 
-**Test**
+Test
 
 Check the configurations for a particular `ivy.xml`.
 
 Add the following target to the corresponding build.xml (inside `<project> tag`), ensuring that `{CONFS}` contains a comma separated list of the configurations from `ivy.xml`.
 
-```xml
+```
     <target name="generateIvyReportsforDependencyScan" description="Generate Ivy report files">
 
         <ivy:resolve />
@@ -217,9 +217,9 @@ Run `ant generateIvyReportsforDependencyScan` in `build.xml` location and check 
 
 ### NuGet Dependency Resolver
 
-**Manifest files:** `*.csproj`, `packages.config`, `*.vbproj`
+Manifest files: `*.csproj`, `packages.config`, `*.vbproj`
 
-**Package Manager used:** `dotnet cli` or `nuget cli`
+Package Manager used: `dotnet cli` or `nuget cli`
 
 For `dotnet cli`, the minimum required SDK version is 2.1.816.
 
@@ -251,7 +251,7 @@ Checkmarx SCA Resolver uses NuGet to create a lock file and parses it to extract
 If you want to apply the settings in your `nuget.config` file to all `*.csproj` resolution, you can add the `nuget.config` file to a `.cxsca.configurations` folder in the root of the project. In this case, Checkmarx SCA will apply these settings to each module and sub-module in the project, overriding the local `nuget.config` settings.
 {% endhint %}
 
-**Test**
+Test
 
 Checkmarx SCA Resolver requires the project to be in a ‘buildable’ state for the packages to be resolved.
 
@@ -273,7 +273,7 @@ nuget restore -Force -UseLockFile
 
 ### NPM Dependency Resolver
 
-**Manifest files:** `package.json`(required), `package-lock.json`
+Manifest files: `package.json`(required), `package-lock.json`
 
 Package Manager used: `npm`
 
@@ -319,7 +319,7 @@ Custom NPM registries may be configured inside the `package.json` file, or in pr
 If you want to apply the settings in your `.npmrc` file to all `package.json` resolution, you can add the `.npmrc` file to a `.cxsca.configurations` folder in the root of the project. In this case, Checkmarx SCA will apply these settings to each module and sub-module in the project, overriding the local `.npmrc` settings.
 {% endhint %}
 
-**Test**
+Test
 
 To generate a lock file, run the following command inside the project directory (a `package-lock.json` file is created):
 
@@ -337,7 +337,7 @@ If the file already exists, or created in the step above, run the following comm
 npm ls --json
 ```
 
-**Dev Dependencies**
+Dev Dependencies
 
 Any dependency under `devDependencies` section is considered Dev.
 
@@ -375,9 +375,9 @@ This creates a lock file in the root folder with the complete project dependenci
 
 ### Yarn Dependency Resolver
 
-**Manifest files:** `package.json`(required), `yarn.lock`(required)
+Manifest files: `package.json`(required), `yarn.lock`(required)
 
-**Package Manager used:** `yarn`
+Package Manager used: `yarn`
 
 #### Installation
 
@@ -402,7 +402,7 @@ When creating a lock file, Yarn connects to the NPM registry to collect metadata
 
 Custom NPM registries may be configured inside the `package.json` file, or in project / global configurations, usually `.yarnrc`files.
 
-**Test**
+Test
 
 To generate a lock file, run the following command inside the project directory. A `yarn.lock` file is created.
 
@@ -410,7 +410,7 @@ To generate a lock file, run the following command inside the project directory.
 yarn install --ignore-scripts
 ```
 
-**Dev Dependencies**
+Dev Dependencies
 
 Any dependency under `devDependencies` in the `package.json` file is considered as a dev dependency.
 
@@ -426,9 +426,9 @@ This creates a lock file in the root folder with the complete project dependenci
 
 ### Bower Dependency Resolver
 
-**Manifest files:** `bower.json`
+Manifest files: `bower.json`
 
-**Package Manager used:** `bower`
+Package Manager used: `bower`
 
 #### Installation
 
@@ -459,7 +459,7 @@ Checkmarx SCA Resolver uses the `bower-dependency-tree` module to generate a tre
 
 This is an NPM module. In case it is not installed, Checkmarx SCA Resolver installs it using NPM.
 
-**Test**
+Test
 
 Ensure installation of the `bower-dependency-tree` module with the following command:
 
@@ -477,9 +477,9 @@ bower-dependency-tree
 
 ### PIP Dependency Resolver
 
-**Manifest files:** `requirements.txt`, `requirements-*.txt`, `requirement.txt`, `requirement-*.txt`, `pyproject.toml`. `setup.cfg`, and `setup.py`
+Manifest files: `requirements.txt`, `requirements-*.txt`, `requirement.txt`, `requirement-*.txt`, `pyproject.toml`. `setup.cfg`, and `setup.py`
 
-**Package Manager used:** `pip`
+Package Manager used: `pip`
 
 #### Installation
 
@@ -530,7 +530,7 @@ Then, all commands are run in the virtual environment and the `pipdeptree` utili
 source random-name/bin/activate && python -m pip install -r requirements.txt
 ```
 
-**Test**
+Test
 
 Checkmarx SCA Resolver requires the dependencies to be installed to extract the full tree. Use the following command:
 
@@ -561,9 +561,9 @@ You can use the `--python-version` flag or `PythonVersion` configuration argumen
 
 ### Poetry Dependency Resolver
 
-**Manifest files:** `pyproject.toml` (required). `poetry.lock`
+Manifest files: `pyproject.toml` (required). `poetry.lock`
 
-**Package Manager used:** `Poetry`
+Package Manager used: `Poetry`
 
 #### Installation
 
@@ -588,7 +588,7 @@ poetry --version
 
 Checkmarx SCA Resolver ensures the installations of the dependencies in manifest to extract the dependency tree of the project.
 
-**Test**
+Test
 
 Use the following command to install dependencies::
 
@@ -606,9 +606,9 @@ poetry show --tree
 
 ### Composer Dependency Resolver
 
-**Manifest files:** `composer.json`(required),`composer.lock`
+Manifest files: `composer.json`(required),`composer.lock`
 
-**Package Manager used:** `composer`
+Package Manager used: `composer`
 
 #### Installation
 
@@ -638,7 +638,7 @@ Checkmarx SCA Resolver install the dependencies using composer. Composer install
 
 Afterwards, Composer is used to the detect dependencies
 
-**Test**
+Test
 
 Checkmarx SCA Resolver requires the dependencies to be installed to extract the full tree. Use the following command:
 
@@ -647,7 +647,7 @@ composer install
 composer show --tree --format json
 ```
 
-**Dev Dependencies**
+Dev Dependencies
 
 Dependencies under `require-dev` are considered as dev by Checkmarx SCA.
 
@@ -655,9 +655,9 @@ Dependencies under `require-dev` are considered as dev by Checkmarx SCA.
 
 ### SBT Dependency Resolver
 
-**Manifest files:** `build.sbt`
+Manifest files: `build.sbt`
 
-**Package Manager used:** `sbt`
+Package Manager used: `sbt`
 
 #### Installation
 
@@ -677,7 +677,7 @@ They can be found under the `target/scala-*/reports/*.xml`, where `scala-*` can 
 
 Those XML files are parsed to generate the tree of dependencies.
 
-**Test**
+Test
 
 Run the following command in the project root:
 
@@ -691,20 +691,24 @@ After a successful build, validate that XML files are generated inside the `targ
 
 ### SwiftPm Dependency Resolver
 
-**Manifest files:** `Package.swift`
+Manifest files: `Package.swift`
 
-**Package Manager used:** `SwiftPm`
+Package Manager used: `SwiftPm`
 
 #### Installation
 
-**Debian:**
+Debian:
 
 Use the following procedure to ensure that version 5.3.3 of SwiftPm is installed as well as other necessary tools.
 
 1. Install dependencies: `apt install -y clang libicu-dev libtinfo5 libncurses5 libxml2`
+
 2. Download SwiftPM: `wget https://swift.org/builds/swift-5.3.3-release/ubuntu1804/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz`
+
 3. Extract: `tar -xvzf swift-5.3.3-RELEASE-ubuntu18.04.tar.gz && rm -f swift-5.3.3-RELEASE-ubuntu18.04.tar.gz`
+
 4. Update path environment variable: `export PATH=$PATH:{extractedPath}/usr/bin`, with `{extractedPath}` representing the path where you ran the previous command.
+
 5. To ensure SwiftPm is installed correctly, open a console and run the following command:
 
    `swift package –-version`
@@ -719,7 +723,7 @@ If a `Package.swift` file exists, then Checkmarx SCA Resolver uses that to calcu
 
 If there is only a `Package.resolved` file, then the package resolution is done from that file, without executing any commands.
 
-**Test**
+Test
 
 Run the following command in the project root:
 
@@ -735,9 +739,9 @@ Manifest files: `Cartfile`(required), `Cartfile.private`, `Cartfile.resolved`
 At least one `.private` or `.resolved` file must be included.
 {% endhint %}
 
-**Package Manager used:** none
+Package Manager used: none
 
-**Requirements:** none
+Requirements: none
 
 {% hint style="info" %}
 Officially, Carthage has a hard dependency on MacOS and XCode. However, Checkmarx SCA uses custom handling and resolution of the manifest files to suppress this requirement. This approach provides a platform independent resolution without any installation prerequisites.
@@ -751,7 +755,7 @@ The dependency resolution process involves downloading the manifest files from G
 
 Checkmarx SCA Resolver uses `Cartfile`, `Cartfile.private` and `Cartfile.resolved` files to gather the info needed to generate the set of dependencies. When the dependencies repository includes the `Cartfile.resolved` files, these are used to avoid resolving the versions again.
 
-**Test:** no testing needed
+Test: no testing needed
 
 {% hint style="info" icon="pencil" %}
 Since there are no specific requirements for the package manager, there is no need to perform any prerequisite test before using Carthage in Checkmarx SCA.
@@ -765,9 +769,9 @@ Repositories that are referenced as “git sources” aren’t considered for re
 
 ### CocoaPods Dependency Resolver
 
-**Manifest files:** `Podfile`(required), `Podfile.lock`
+Manifest files: `Podfile`(required), `Podfile.lock`
 
-**Package Manager used:** `CocoaPods`
+Package Manager used: `CocoaPods`
 
 #### Installation
 
@@ -785,7 +789,7 @@ To ensure that CocoaPods is installed, run `pod --version --allow-root`
 
 If `Podfile.lock` does not exist, dependencies from Podfile will be installed and the `Podfile.lock` file will be generated. This file will then be parsed, creating the dependency tree.
 
-**Test**
+Test
 
 Run the following command where Podfile is located:
 
@@ -797,19 +801,22 @@ After running successfully, check if Podfile.lock file was created.
 
 ### Go Modules Dependency Resolver
 
-**Manifest files:** `go.mod`(required), `go.sum`
+Manifest files: `go.mod`(required), `go.sum`
 
-**Package Manager used:** `GoModules`
+Package Manager used: `GoModules`
 
 #### Installation
 
-**Debian:**
+Debian:
 
 Use the following procedure to install Go version 1.16.6 and other necessary tools.
 
 1. Download Go: `wget https://golang.org/dl/go1.16.6.linux-amd64.tar.gz`
+
 2. Extract: `tar -xvzf go1.16.6.linux-amd64.tar.gz && rm -f go1.16.6.linux-amd64.tar.gz`
+
 3. Update path environment variable: `export PATH=$PATH:{extractedPath}/go/bin` . {extractedPath} should be replaced by the path where you ran the previous command.
+
 4. To ensure Go is installed correctly, open a console and run the following command: `go version`.
 
    If Go is correctly installed, you should receive a message indicating which version is installed on your machine.
@@ -818,7 +825,7 @@ Use the following procedure to install Go version 1.16.6 and other necessary too
 
 If “go.sum” does not exist, dependencies from “go.mod” will be installed and “go.sum” file will be generated. Then a dependency graph will be generated that is used to build the dependency tree.
 
-**Test**
+Test
 
 1. Run the following command where go.mod is located: `go mod download`
 2. After running successfully, check if go.sum file is created. Then run the following command: `go mod graph`
@@ -826,9 +833,9 @@ If “go.sum” does not exist, dependencies from “go.mod” will be installed
 
 ## Container Scan in Checkmarx SCA
 
-**Manifest files:** `Dockerfile*`
+Manifest files: `Dockerfile*`
 
-**Package Manager used:** none
+Package Manager used: none
 
 ### Installation
 
@@ -838,15 +845,15 @@ No Installation needed
 
 The dependency resolution process involves downloading the manifest files from Docker Hub via API.
 
-Checkmarx SCA Resolver uses *Dockerfile\** files information to collect and generate the set of dependencies based on docker layers.
+Checkmarx SCA Resolver uses **Dockerfile\*** files information to collect and generate the set of dependencies based on docker layers.
 
-**Test**
+Test
 
 Since there are no package manager specific requirements, there is no need to perform any prerequisite test before using container scans in Checkmarx SCA.
 
 #### Limitations
 
-**Authentication**
+Authentication
 
 Docker Hub API has restrictions for anonymous requests. We offer the possibility to authenticate your requests through these environment variables:
 
@@ -857,7 +864,7 @@ Docker Hub API has restrictions for anonymous requests. We offer the possibility
 Authenticating with Docker Hub also enables Resolver to access your private repositories.
 {% endhint %}
 
-**Build Arguments**
+Build Arguments
 
 Some projects may contain build arguments that are required for layer resolution.
 
@@ -869,7 +876,7 @@ For more info about using custom build arguments, see [Container Scans](https://
 
 Manifest files: `gemfile` (required), `gemfile.lock`
 
-**Package Manager** **used**: RubyGems
+Package Manager used: RubyGems
 
 ### Installation
 
@@ -889,7 +896,7 @@ To ensure that Bundler is installed, run `bundler --version`
 
 If `gemfile.lock` does not exist, dependencies from `gemfile` will be installed and the `gemfile.lock` file will be generated. This file will then be parsed, creating the dependency tree.
 
-**Test**
+Test
 
 Run the following command where gemfile is located:
 
@@ -901,11 +908,11 @@ After running successfully, check if `gemfile.lock` file was created.
 
 ## Unity Package Manager Dependency Resolver
 
-**Manifest files:** `manifest.json`(required), `package.json` (required)
+Manifest files: `manifest.json`(required), `package.json` (required)
 
-**Package Manager used:** none
+Package Manager used: none
 
-**Requirements:** none
+Requirements: none
 
 {% hint style="info" %}
 Unity’s SDK, although cross platform, has a hard dependency on .NET framework, which requires Mono to be supported on all the supported platforms. Checkmarx uses custom handling and resolution of the manifest files in order to suppress this requirement. This approach provides platform agnostic resolution without any installation prerequisites.
@@ -919,7 +926,7 @@ No Installation needed
 
 The dependency resolution process involves two elements, determining the package version (which is found in the `manifest.json`) and determining which Unity version is in use (which is found in the `package.json`).
 
-**Test:** none
+Test: none
 
 {% hint style="info" icon="pencil" %}
 Since there are no specific requirements for the package manager, there is no need to perform a prerequisite test before using Unity in Checkmarx SCA.
@@ -933,9 +940,9 @@ Since Checkmarx SCA Resolver doesn’t use the Unity Package Manager, it is poss
 
 ### Cpan Dependency Resolver
 
-**Manifest files:** `cpanfile` (required), `cpanfile.snapshot` (optional)
+Manifest files: `cpanfile` (required), `cpanfile.snapshot` (optional)
 
-**Package Manager used:** `cpan` and `carton`
+Package Manager used: `cpan` and `carton`
 
 #### Installation
 
@@ -955,7 +962,7 @@ To ensure that Carton is installed, run `carton --version`
 
 If `cpanfile.snapshot` does not exist, dependencies from `cpanfile` will be installed and the `cpanfile.snapshot` file will be generated. This file will then be processed to create the dependencies tree.
 
-**Test:**
+Test:
 
 Run the following command where cpanfile is located:
 
@@ -975,11 +982,11 @@ Cpan does not support development and testing packages. This is done to improve 
 
 ### Pub Dependency Resolver
 
-**Manifest files:** `pubspec.lock` (required)
+Manifest files: `pubspec.lock` (required)
 
-**Package Manager used:** none
+Package Manager used: none
 
-**Requirements:** none
+Requirements: none
 
 #### Installation: no installation needed
 
@@ -989,7 +996,7 @@ The dependency resolution process involves downloading the manifest files.
 
 Checkmarx SCA Resolver uses the `pubspec.lock` file to gather the info needed to generate the set of dependencies.
 
-**Test:** no testing needed
+Test: no testing needed
 
 #### Limitations
 

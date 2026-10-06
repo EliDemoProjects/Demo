@@ -1,4 +1,3 @@
-$schema: https://api.gitbook.com/openapi.yaml#/components/schemas/GitSyncSiteConfig
 site:
   title: Checkmarx SCA
   structure:

@@ -22,7 +22,7 @@ To learn more about the plugin, see [Checkmarx SCA Plugin for Nexus](/document/p
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | FIXED | Nuget dependencies | Resolved issue that "CentralTrasitive" type dependencies weren't being parsed in Nuget. |
 | FIXED | Yarn in cloud | Resolved issue that Checkmarx SCA wasn't identifying certain cloud instances of Yarn. |
@@ -36,9 +36,13 @@ We have released several new versions of Resolver with a wide range of improveme
 - We changed the format of the configuration file from .ini to .yml.
 
   {% hint style="warning" %}
-  We temporarily continue to support .ini format. However, once version 2.0 is released (scheduled for end of February) this format won't be supported. **Please make sure to migrate the configuration files in all of your environments to the yaml format by that time.**
+  We temporarily continue to support .ini format. However, once version 2.0 is released (scheduled for end of February) this format won't be supported. Please make sure to migrate the configuration files in all of your environments to the yaml format by that time.
   {% endhint %}
+
 - Added Syft integration. Use the `--use-syft` flag in order to use Syft for container image resolution.
+
 - Uses image resolver version 1.0.11.
+
 - Enable adding tags to projects (`--project-tags`) and scans (`--scan-tags`) .
+
 - The project teams flag (`-t`| `--project-teams`) flag can now be used to update the teams assigned to an existing project. (Previously, it could only assign teams to a new project.)

@@ -12,7 +12,7 @@ For scans run via the Checkmarx SCA web portal or Checkmarx plugins only public 
 
 ## Viewing Container Scan Results
 
-The **Scan Results** \> **Container** tab shows the container packages identified in your project and the vulnerabilities associated with them. For a description of the info shown in the Container tab, see [Container Tab](https://app.gitbook.com/s/XSPACE_USER_GUIDE/viewing-results/viewing-the-project-page/project-page-tabs#UUID-cb7b834c-d2fc-5c05-7b96-6955938c4e1a).
+The Scan Results \> Container tab shows the container packages identified in your project and the vulnerabilities associated with them. For a description of the info shown in the Container tab, see [Container Tab](https://app.gitbook.com/s/XSPACE_USER_GUIDE/viewing-results/viewing-the-project-page/project-page-tabs#UUID-cb7b834c-d2fc-5c05-7b96-6955938c4e1a).
 
 <div align="left"><figure><img src=".gitbook/assets/img-b1da1858e2337c1dc5ad3705cf445b55.png" alt=""></figure></div>
 
@@ -39,8 +39,8 @@ In addition, even when using public repos in DockerHub there is an advantage to 
 
 For DockerHub authentication make sure that your environment variables are set as:
 
-- *DockerhubUsername* - your username
-- *DockerhubToken* - your password or authorization token
+- **DockerhubUsername** - your username
+- **DockerhubToken** - your password or authorization token
 
 </details>
 
@@ -92,9 +92,11 @@ The following procedure describes how to obtain these values via the CLI.
 1. To obtain the repository uri, run the CLI command `aws ecr describe-repositories --repository-name {your_repo_name}`, and make a note of the value returned for `repositoryUri`.
 
    <div align="left"><figure><img src=".gitbook/assets/img-4b0c97d4f74e3f0f53cbbb5d82086d77.png" alt=""></figure></div>
+
 2. To obtain the image tags of the images in the repo, run the CLI command `aws ecr list-images --repository-name {your_repo_name}`, and make a note of the value returned for `ImageTag` for the desired image.
 
    <div align="left"><figure><img src=".gitbook/assets/img-8b46dbe62270c5e4d1bc1d8ac6b7b36a.png" alt=""></figure></div>
+
 3. Run the SCA Resolver command with the `--scan-containers` flag, and add the `--images` flag specifying the desired images using the syntax {repository_uri}:{image_tag}. For example:
 
    ```
@@ -105,20 +107,20 @@ The following procedure describes how to obtain these values via the CLI.
 
 Resolver is configured to scan your AWS ECR repo assuming that the default values/paths are in use. If the “credentials” file is in the default AWS path, and you are using the “default” profile, then no action is needed. If you have changed these settings, then you need to configure the following environment variables.
 
-- *AWS_PROFILE* (default value: “*default*”)
+- **AWS_PROFILE** (default value: “**default**”)
 
 {% hint style="info" %}
 You can configure multiple profiles, e.g., for different environments.
 {% endhint %}
 
-- *AWS_CONFIG_FILE* (default path: “*\~/.aws/config*”)
-- *AWS_SHARED_CREDENTIALS_FILE* (default path: “*\~/.aws/credentials*”)
+- **AWS_CONFIG_FILE** (default path: “**~/.aws/config**”)
+- **AWS_SHARED_CREDENTIALS_FILE** (default path: “**~/.aws/credentials**”)
 
 See [AWS SDKs and Tools](https://docs.aws.amazon.com/sdkref/latest/guide/overview.html)
 
-**Example of Credentials File**
+Example of Credentials File
 
-File ““\~/.aws/credentials”
+File ““~/.aws/credentials”
 
 ```
 [default]
@@ -144,6 +146,7 @@ The recommended authentication is using [gcloud](https://cloud.google.com/contai
 To authenticate using gcloud:
 
 1. Log in to gcloud as the user that will run Docker commands and run the command `gcloud auth login`.
+
 2. Configure Docker using the following command `gcloud auth configure-docker`.
 
    Your credentials are saved in your user home directory.
@@ -157,9 +160,10 @@ The value submitted for the `--images` parameter for GCR uses the following synt
 
 1. Obtain the value needed to identify this image. The following is on possible method for obtaining this info:
 
-   - Open ECR in the Google Cloud portal and navigate to the image and tag of the desired image. Then, in the **PULL** tab, copy the value given in the **Pull by tag** snippet (without the "docker pull" command).
+   - Open ECR in the Google Cloud portal and navigate to the image and tag of the desired image. Then, in the PULL tab, copy the value given in the Pull by tag snippet (without the "docker pull" command).
 
      <div align="left"><figure><img src=".gitbook/assets/img-86fa04f35c7e8426b017815b78047edf.png" alt=""></figure></div>
+
 2. Run the SCA Resolver command with the `--scan-containers` flag, and add the `--images` flag specifying the desired images using the syntax gcr.io/{project_id}/{image_name}:{image_tag}. For example:
 
    ```
@@ -188,6 +192,7 @@ To authenticate using gcloud:
 The value submitted for the `--images` parameter for GAR uses the following syntax {gar_region}-docker.pkg.dev/{project_id}/{image_name}:{image_tag}.
 
 1. Obtain the values needed to identify this image.
+
 2. Run the SCA Resolver command with the `--scan-containers` flag, and add the `--images` flag specifying the desired images using the syntax gcr.io/{project_id}/{image_name}:{image_tag}. For example:
 
    ```

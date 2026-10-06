@@ -14,7 +14,7 @@ Also, the Legal Risks widget now shows values for distinct legal risks (i.e., do
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | FIXED | Error message | We now return 404 instead of 500 when a CVE is not found in the AppSec Knowledge Center. |
 | FIXED | Pip Virtualenv | Certain packages were taking a long time to resolve. The issue was fixed by upgrading the pip virtualenv. |
@@ -30,11 +30,13 @@ We have released several new versions of Resolver with a wide range of improveme
 ### Version 1.10.2
 
 - Added the `--Sca-app-url` flag for specifying the url of the web application. Previously this could only be done via the config file.
+
 - Added the ability to include the password in the config file. Previously this could only be done via the CLI command.
 
   {% hint style="info" icon="pencil" %}
   It isn't recommended to include a password in clear text in the config file. Instead, you can use an environment variable for the password. Resolver first checks for an environment variable of the specified name, and uses the plain text value only if no variable is found.
   {% endhint %}
+
 - Added the `--override-default-excludes` flag, for disabling the default file exclusions.
 
 ### Version 1.9.10

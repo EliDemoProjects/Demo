@@ -11,7 +11,7 @@ This change affects all previous SCA Resolver MacOS Installer versions, which ar
 Use the relevant link to download the latest version of SCA Resolver.
 
 {% hint style="info" icon="pencil" %}
-The latest version of SCA Resolver is currently **2.16.2**.
+The latest version of SCA Resolver is currently 2.16.2.
 {% endhint %}
 
 - [Windows](https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-win64.zip)
@@ -38,24 +38,26 @@ Links to download older versions of Resolver are available at [Checkmarx SCA Res
 The following procedure is relevant when you download Resolver as a zip archive. When you run the MacOS Installer you just need to follow the prompts to run the installer. The installer saves the Configuration.yml file to `/Library/ScaResolver/{version}/Configuration.yml`.
 {% endhint %}
 
-**To download and Install Checkmarx SCA Resolver:**
+To download and Install Checkmarx SCA Resolver:
 
 1. Use the appropriate link (shown above) to download the correct version of Checkmarx SCA Resolver for your OS.
+
 2. Extract the compressed archive file.
 
    {% include ".gitbook/includes/note-215672c4.md" %}
+
 3. Install all required resolution utilities, see [Installing Supported Package Managers for Resolver](installing-supported-package-managers-for-resolver.md)
 
-**Installation Notes:**
+Installation Notes:
 
-- On **Ubuntu**, run the command as root before running, or if you encounter any startup issues.
+- On Ubuntu, run the command as root before running, or if you encounter any startup issues.
 
 ```
 apt update
 apt install ca-certificates libgssapi-krb5-2
 ```
 
-- On **Alpine Linux**, run the command as root before running, or if you encounter any startup issues.
+- On Alpine Linux, run the command as root before running, or if you encounter any startup issues.
 
 ```
 apk add libstdc++ 

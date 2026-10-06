@@ -20,7 +20,7 @@ To use this feature, it is required that you include the `node_modules` folder i
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
 | FIXED | Problem with settings.gradle file | Fixed issue that when a settings.gradle file contains an IncludeBuild property, it had been causing the scan to fail. |
 | FIXED | Remediation tasks | We now remove the downstream remediation tasks when they don't have any vulnerabilities. |
@@ -33,10 +33,12 @@ We have released several new versions of Resolver with a wide range of improveme
 ### Improvements in Version 1.11.3
 
 - For Gradle, improved results by preventing Gradle from resolving multiple projects simultaneously.
+
 - For Python:
 
   - Added support for Poetry package manager
   - Added support for PIP to resolve dependencies from the following files: `pyproject.toml`, `setup.cfg` and `setup.py`.
+
 - For Composer, we now attempt to resolve dependencies without running the install command.
 
 ## Checkmarx SCA Plugin for Jfrog

@@ -39,9 +39,13 @@ We have released several new versions of Resolver with a wide range of improveme
   {% hint style="warning" %}
   This is a breaking change which makes the new version of Resolver incompatible with installations that still rely on a `Configuration.ini` file.
   {% endhint %}
+
 - When submitting your SAST password using `--cxpassword`, you can now use an Environment Variable. This is preferable to including a password in clear text in the config file.
+
 - Users can now specify a custom path to the NetRc file to be used for authentication.
+
 - For Java, improved the Java version detection for openjdk11 on Windows.
+
 - For Bower:
 
   - We now support JFrog artifactory.
@@ -49,6 +53,6 @@ We have released several new versions of Resolver with a wide range of improveme
 
 ## Improvements and Bug Fixes
 
-| **Status** | **Item** | **Description** |
+| Status | Item | Description |
 | --- | --- | --- |
-| FIXED | Sorting scan result | On the **Scan Results** screen, the All Risks and All Packages tabs are now sorted accurately. All Risks is sorted by **Risks** severity and All Packages is sorted by **Risk Score**. |
+| FIXED | Sorting scan result | On the Scan Results screen, the All Risks and All Packages tabs are now sorted accurately. All Risks is sorted by Risks severity and All Packages is sorted by Risk Score. |
