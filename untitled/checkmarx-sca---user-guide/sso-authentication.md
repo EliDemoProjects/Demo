@@ -31,13 +31,13 @@ To set up a new SSO integration:
 3. Go to the User Management (Access Control) > Settings tab.
 4.  On the SAML subtab (default) click on the Service Provider subtab and then click Download Metadata.
 
-    <div align="left"><figure><img src="../.gitbook/assets/img-60dddcdfff51e2fabafc21eedb81e845.png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-60dddcdfff51e2fabafc21eedb81e845.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
     Make a note of where the Metadata file is saved, as you will need to access it soon.
 5. Click on the Identity Providers subtab.
 6.  Click Add Identity Providers.
 
-    <div align="left"><figure><img src="../.gitbook/assets/img-1352d15a45a3416cfde9d9e59af560b4.png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-1352d15a45a3416cfde9d9e59af560b4.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
     The Add New SAML Identity Provider form is shown.
 
