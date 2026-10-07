@@ -2,7 +2,7 @@
 
 The **Access Control** screen can be accessed by clicking on the User Management icon in the main navigation.
 
-<div align="left"><figure><img src="../.gitbook/assets/img-5b4100f2385ca626e01e92a44a85be75.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-5b4100f2385ca626e01e92a44a85be75.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 The **Access Control** screen opens in a new browser tab. The Access Control screen enables users to edit their own account profiles. In addition, admin users can manage access control for the entire organization, including creating and editing users, roles and Teams.
 
