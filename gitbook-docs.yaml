@@ -28,7 +28,7 @@ site:
           path: checkmarx-dast
           default: true
           content:
-            directory: ./checkmarx-dast
+            directory: /checkmarx-dast
     - type: section
       key: section-3
       title: Checkmarx SCA
@@ -41,4 +41,4 @@ site:
           path: checkmarx-sca
           default: true
           content:
-            directory: ./checkmarx-sca
+            directory: /checkmarx-sca
