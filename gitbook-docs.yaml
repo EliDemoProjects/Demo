@@ -41,4 +41,4 @@ site:
           path: checkmarx-sca
           default: true
           content:
-            directory: /checkmarx-sca
+            directory: ./checkmarx-sca
