@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes March 2024
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
-{% include "../.gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540.md" %}
 
 {% hint style="warning" %}
 For the SCA JFrog plugin, version 1.1.9 and below are no longer supported. To continue using this plugin, make sure to upgrade to version 1.1.10.
@@ -22,8 +22,9 @@ We expanded our support for Nuget package manager to include VB.NET projects tha
 
 ## SCA Resolver Version 2.6.9 (Mar 21, 2024)
 
-* For Gradle,
-  * Fixed exception during project detection
-  * Fixed issue that scans were being duplicated
+- For Gradle,
+
+  - Fixed exception during project detection
+  - Fixed issue that scans were being duplicated
 
 Download the new version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-changelog).

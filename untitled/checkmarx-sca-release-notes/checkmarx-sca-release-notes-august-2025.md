@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes August 2025
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
-{% include "../.gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540.md" %}
 
 ## SCA Updates
 
@@ -18,4 +18,4 @@ Download the latest version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/che
 
 ### Version 2.12.34 (August 13, 2025)
 
-* Improved handling of `node_modules` exclusion rules.
+- Improved handling of `node_modules` exclusion rules.

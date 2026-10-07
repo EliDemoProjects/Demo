@@ -14,43 +14,43 @@ This section gives you a quick overview of how the Checkmarx SCA Resolver works.
 
 Run Checkmarx SCA Resolver on your local computer, specifying the path to the source code folder and your Checkmarx SCA credentials.
 
-<div align="left"><figure><img src="../.gitbook/assets/img-032f364f0545362d1a2f05bbb8286c73.png" alt="" width="50%"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-032f364f0545362d1a2f05bbb8286c73.png" alt="" width="50%"></figure></div>
 
 ### Stage 2: Resolver Collects Data
 
 Checkmarx SCA Resolver collects fingerprints and dependency trees, using pre-installed package managers.
 
-<div align="left"><figure><img src="../.gitbook/assets/img-5fefc3fb3166f934632acbe7b25559f8.png" alt="" width="50%"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-5fefc3fb3166f934632acbe7b25559f8.png" alt="" width="50%"></figure></div>
 
 ### Stage 3: Resolver Sends Data to the Cloud
 
 Checkmarx SCA Resolver sends the collected data to the Checkmarx SCA Cloud and initiates a scan.
 
-<div align="left"><figure><img src="../.gitbook/assets/img-772e4f8ab2e70d72cd4eef579832400e.png" alt="" width="75%"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-772e4f8ab2e70d72cd4eef579832400e.png" alt="" width="75%"></figure></div>
 
 ### Stage 4: Checkmarx SCA Returns the Scan Results
 
 The scan results, provided by the Checkmarx SCA Cloud, are displayed in the CLI, in the form of a brief Risk Report Summary. You can also view a detailed Risk Report in the Checkmarx SCA web portal.
 
-<div align="left"><figure><img src="../.gitbook/assets/img-74d061e4202e13dc552805afea999aa0.png" alt="" width="75%"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-74d061e4202e13dc552805afea999aa0.png" alt="" width="75%"></figure></div>
 
 ## What data is sent to the Checkmarx SCA Cloud?
 
-After the File Analysis and Dependency Resolution are completed on-prem, the output of the analysis, the “evidence files”, are sent to the cloud for the final process of Evidence Analysis.
+After the File Analysis and Dependency Resolution are completed on-prem, the output of the analysis, the “evidence files”, are sent to the cloud for the final process of Evidence Analysis.
 
 {% hint style="info" icon="pencil" %}
 In Online mode this occurs immediately, and in Offline mode this occurs when the Upload command is run.
 {% endhint %}
 
-* The project name
-* List of all file names and relative paths (except the ones that were excluded from the scan)
-* Various checksums of the files (SHA-1, SHA-1 on content without spaces, etc.)
-* Manifest files (except for scans run via Resolver with the `--no-upload-manifest` flag)
+- The project name
+- List of all file names and relative paths (except the ones that were excluded from the scan)
+- Various checksums of the files (SHA-1, SHA-1 on content without spaces, etc.)
+- Manifest files (except for scans run via Resolver with the `--no-upload-manifest` flag)
 
 {% hint style="info" icon="pencil" %}
 The complete list of files that are sent to the cloud can be seen in [Files Used for Manifest Resolution](https://app.gitbook.com/s/XSPACE_PRODUCT_INFO/files-used-for-manifest-resolution).
 {% endhint %}
 
-* Names of dependencies extracted from manifest files
-* Scan errors and warnings such as “Failed resolving dependencies”. Each warning message may contain a file path as an argument.
-* SAST Exploitable Path Query result (for Exploitable Path scans)
+- Names of dependencies extracted from manifest files
+- Scan errors and warnings such as “Failed resolving dependencies”. Each warning message may contain a file path as an argument.
+- SAST Exploitable Path Query result (for Exploitable Path scans)

@@ -1,0 +1,45 @@
+site:
+  title: Checkmarx SCA
+  structure:
+    - type: space
+      key: checkmarx-sca-release-notes
+      title: Checkmarx SCA Release Notes
+      path: checkmarx-sca-release-notes
+      content:
+        directory: ./checkmarx-sca-release-notes
+    - type: space
+      key: faq
+      title: Checkmarx SCA FAQ
+      path: faq
+      content:
+        directory: ./faq
+    - type: space
+      key: checkmarx-sca---product-info
+      title: Checkmarx SCA - Product Info
+      path: checkmarx-sca---product-info
+      content:
+        directory: ./checkmarx-sca---product-info
+    - type: space
+      key: checkmarx-sca---quick-start-tutorial
+      title: Checkmarx SCA - Quick Start Tutorial
+      path: checkmarx-sca---quick-start-tutorial
+      content:
+        directory: ./checkmarx-sca---quick-start-tutorial
+    - type: space
+      key: checkmarx-sca---user-guide
+      title: Checkmarx SCA - User Guide
+      path: checkmarx-sca---user-guide
+      content:
+        directory: ./checkmarx-sca---user-guide
+    - type: space
+      key: checkmarx-sca-resolver
+      title: Checkmarx SCA Resolver
+      path: checkmarx-sca-resolver
+      content:
+        directory: ./checkmarx-sca-resolver
+    - type: space
+      key: checkmarx-sca-integrations-and-plugins
+      title: Checkmarx SCA Integrations and Plugins
+      path: checkmarx-sca-integrations-and-plugins
+      content:
+        directory: ./checkmarx-sca-integrations-and-plugins

@@ -4,17 +4,17 @@
 
 The Account Settings enables you to view your account’s license info as well to configure the global settings for your account.
 
-To open the Account Settings page, click on the Account Settings icon ![](../.gitbook/assets/img-74465055067f72b698e713c38e6279d1.png), located at the bottom left of the screen, in the Navigation pane.
+To open the Account Settings page, click on the Account Settings icon <img src=".gitbook/assets/img-74465055067f72b698e713c38e6279d1.png" alt="" data-size="line">, located at the bottom left of the screen, in the Navigation pane.
 
-<div align="left"><figure><img src="../.gitbook/assets/img-959f0da7ef2a0fe8e445b3e4d81d5d62.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-959f0da7ef2a0fe8e445b3e4d81d5d62.png" alt=""></figure></div>
 
 ## Licensing
 
 This section shows the following info about the license for your tenant account.
 
-* Number of Licensed Users - the max. number of user accounts that can be created in this tenant account.
-* Number of Licensed Projects - the max. number of Projects that can be created in this tenant account.
-* Expiration - When this tenant account will expire. Starting from 30 days before the license expiration date, a notification is presented to the user displaying the number of days left until the account expires.
+- Number of Licensed Users - the max. number of user accounts that can be created in this tenant account.
+- Number of Licensed Projects - the max. number of Projects that can be created in this tenant account.
+- Expiration - When this tenant account will expire. Starting from 30 days before the license expiration date, a notification is presented to the user displaying the number of days left until the account expires.
 
 {% hint style="info" icon="pencil" %}
 After the license expires, only viewing is allowed in the web application, all editing actions will be blocked. Also, any API requests that require more than viewing permissions will be rejected.

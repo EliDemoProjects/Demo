@@ -10,7 +10,7 @@ We added a Policy management feature that enables you to apply customized securi
 
 The system comes with default Policies that are automatically applied to all Projects in your account. You can also create custom Policies, which you then assign to specific Projects or apply “Globally” to all Projects in your account. For more info about Policies, see [Policy Management](https://app.gitbook.com/s/XSPACE_USER_GUIDE/policy-management).
 
-<div align="left"><figure><img src="../.gitbook/assets/img-151230aa49c5d3b1d42bd0ec690c6069.jpg" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-151230aa49c5d3b1d42bd0ec690c6069.jpg" alt=""></figure></div>
 
 ### Support for Go Language
 
@@ -26,17 +26,17 @@ We have released several new versions of Resolver with a wide range of improveme
 
 The following are some highlights from the recent releases:
 
-* The Checkmarx SCA Resolver installation files are created using a new method that adds the necessary dependencies to the zip for execution.
-* Windows binaries are now signed by Checkmarx
-* Added ability to export an SBOM report (CycloneDx format)
+- The Checkmarx SCA Resolver installation files are created using a new method that adds the necessary dependencies to the zip for execution.
+- Windows binaries are now signed by Checkmarx
+- Added ability to export an SBOM report (CycloneDx format)
 
 For additional details, see [Checkmarx SCA Resolver Changelog](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-changelog).
 
-<div align="left"><figure><img src="../.gitbook/assets/img-9fe819fa7841bf3615d945372f3fa998.jpg" alt="" width="75%"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/img-9fe819fa7841bf3615d945372f3fa998.jpg" alt="" width="75%"></figure></div>
 
 ## Bug Fixes
 
-| Status | Item                | Description                                                                      |
-| ------ | ------------------- | -------------------------------------------------------------------------------- |
-| FIXED  | License correlation | Removed mistaken correlation for EPL 1.0.                                        |
-| FIXED  | Hide failed scans   | Fixed issue that couldn’t hide failed scans when the most recent scan succeeded. |
+| Status | Item | Description |
+| --- | --- | --- |
+| FIXED | License correlation | Removed mistaken correlation for EPL 1.0. |
+| FIXED | Hide failed scans | Fixed issue that couldn’t hide failed scans when the most recent scan succeeded. |

@@ -1,6 +1,6 @@
 # Checkmarx SCA Release Notes March 2026
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
 ## SCA Updates
 
@@ -22,4 +22,4 @@ Download the latest version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/che
 
 ### Version 2.13.3 (Feb 25, 2026)
 
-* Added support for [Delta Scan](../../document/preview/322318/#UUID-2865b187-60e6-84f0-67c8-c5313ef205fc_section-idm234701538181768) resolution on Checkmarx One CLI scans, dramatically cutting the time of SCA scans when rescanning an existing project. When running SCA scans via the Checkmarx One CLI (v 2.3.44+) using Resolver (this version and above), the Delta Scan feature will now run by default. This setting can be overriden by using the `--sca-resolver-params` flag with the argument `--disable-delta-scan`.
+- Added support for [Delta Scan](/document/preview/322318#UUID-2865b187-60e6-84f0-67c8-c5313ef205fc_section-idm234701538181768) resolution on Checkmarx One CLI scans, dramatically cutting the time of SCA scans when rescanning an existing project. When running SCA scans via the Checkmarx One CLI (v 2.3.44+) using Resolver (this version and above), the Delta Scan feature will now run by default. This setting can be overriden by using the `--sca-resolver-params` flag with the argument `--disable-delta-scan`.

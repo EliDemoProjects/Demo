@@ -4,4 +4,4 @@ Access to the Checkmarx SCA Console (UI) is controlled by user accounts which ar
 
 When your account is created, Checkmarx configures an initial admin account for your company’s Checkmarx SCA administrator. Your administrator can then create additional user accounts within your organization.
 
-You can create and edit user accounts, as well as roles and Teams in the Checkmarx SCA Access Control console, which is accessed via the SCA web portal. Alternatively, you can use Master Access Control which offers a centralized management console for configuring users and roles across all Checkmarx products, see [Using Master Access Control (Replica Mode)](using-master-access-control-replica-mode.md).
+You can create and edit user accounts, as well as roles and Teams in the Checkmarx SCA Access Control console, which is accessed via the SCA web portal. Alternatively, you can use Master Access Control which offers a centralized management console for configuring users and roles across all Checkmarx products, see [Using Master Access Control (Replica Mode)](using-master-access-control--replica-mode-.md).

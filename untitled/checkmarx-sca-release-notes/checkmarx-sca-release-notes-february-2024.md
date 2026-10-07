@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes February 2024
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
-{% include "../.gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540.md" %}
 
 {% hint style="warning" %}
 For the SCA JFrog plugin, version 1.1.9 and below will stop working on Feb. 29. To continue using this plugin, make sure to upgrade to version 1.1.10 before that date.
@@ -12,9 +12,9 @@ For the SCA Nexus plugin, version 1.1.5 and below will stop working on Feb. 29. 
 
 ## SCA Resolver Version 2.6.1
 
-* Added a flag to ignore test dependencies.
-* For Nuget, added support for VB.NET projects.
-* Fixed exception during the FolderAnalyzer step.
-* For Ivy, fixed a bug when build.xml does not have a target node.
+- Added a flag to ignore test dependencies.
+- For Nuget, added support for VB.NET projects.
+- Fixed exception during the FolderAnalyzer step.
+- For Ivy, fixed a bug when build.xml does not have a target node.
 
 Download the new version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-changelog).

@@ -1,6 +1,6 @@
 # Checkmarx SCA Release Notes May 2026
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
 ## SCA Updates
 

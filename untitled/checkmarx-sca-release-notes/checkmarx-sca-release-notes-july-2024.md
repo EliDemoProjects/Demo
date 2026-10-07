@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes July 2024
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
-{% include "../.gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540.md" %}
 
 ## Identifying "Framework" Dependencies
 

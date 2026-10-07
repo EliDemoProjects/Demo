@@ -1,6 +1,6 @@
 # Checkmarx SCA Release Notes June 2026
 
-{% include "../.gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef.md" %}
 
 ## SCA Updates
 
@@ -14,10 +14,10 @@ Download the latest version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/che
 
 ### Version 2.14.3 (June 16, 2026)
 
-* For Ruby, improved dependency detection
-* Improved version sanitization
-* Improved Delta Scan detection
-* Added an option to generate SBOM output
-* Removed the use of `legacy-peer-deps` for NPM
-* Improved resilience when downloading reports.
-* For Pip, added support for scanning projects located in folders that contain spaces.
+- For Ruby, improved dependency detection
+- Improved version sanitization
+- Improved Delta Scan detection
+- Added an option to generate SBOM output
+- Removed the use of `legacy-peer-deps` for NPM
+- Improved resilience when downloading reports.
+- For Pip, added support for scanning projects located in folders that contain spaces.
