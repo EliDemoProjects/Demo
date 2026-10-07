@@ -32,12 +32,13 @@ site:
             directory: ./checkmarx-dast
     - type: section
       key: section-3
-      title: checkmarx-sca
+      title: Checkmarx SCA
       path: checkmarx-sca
+      description: ""
       children:
         - type: space
           key: space-3
-          title: checkmarx-sca
+          title: Checkmarx SCA
           path: checkmarx-sca
           default: true
           draft: true
