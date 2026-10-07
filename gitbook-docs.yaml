@@ -67,3 +67,16 @@ site:
           draft: true
           content:
             directory: ./untitled
+    - type: section
+      key: section-6
+      title: Release Notes
+      path: release-notes
+      children:
+        - type: space
+          key: space-6
+          title: Untitled
+          path: untitled
+          default: true
+          draft: true
+          content:
+            directory: ./untitled
