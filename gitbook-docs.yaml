@@ -15,7 +15,7 @@ site:
           path: untitled
           default: true
           content:
-            directory: ./
+            directory: null
     - type: section
       key: section-2
       title: Checkmarx DAST
