@@ -28,3 +28,16 @@ site:
           draft: true
           content:
             directory: ./untitled
+    - type: section
+      key: section-3
+      title: Quick Start Tutorial
+      path: quick-start-tutorial
+      children:
+        - type: space
+          key: space-3
+          title: Untitled
+          path: untitled
+          default: true
+          draft: true
+          content:
+            directory: ./untitled
