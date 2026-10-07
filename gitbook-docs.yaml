@@ -94,3 +94,16 @@ site:
           draft: true
           content:
             directory: ./untitled
+    - type: section
+      key: section-8
+      title: Untitled - Checkmarx SCA FAQ
+      path: untitled-checkmarx-sca-faq
+      children:
+        - type: space
+          key: space-8
+          title: Untitled
+          path: untitled
+          default: true
+          draft: true
+          content:
+            directory: ./untitled
