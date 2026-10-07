@@ -17,18 +17,6 @@ site:
           content:
             directory: ./untitled
     - type: section
-      key: section-3
-      title: Quick Start Tutorial
-      path: quick-start-tutorial
-      children:
-        - type: space
-          key: space-3
-          title: Sandbox
-          path: untitled
-          default: true
-          content:
-            directory: ./untitled
-    - type: section
       key: section-4
       title: User Guide
       path: user-guide
