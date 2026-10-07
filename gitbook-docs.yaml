@@ -27,7 +27,6 @@ site:
           title: Checkmarx DAST
           path: checkmarx-dast
           default: true
-          draft: true
           content:
             directory: ./checkmarx-dast
     - type: section
