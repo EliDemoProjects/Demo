@@ -9,7 +9,7 @@ This is necessary for accessing the Checkmarx SCA web portal as well as for send
 ## Checkmarx SCA Endpoints
 
 {% hint style="info" icon="pencil" %}
-We recommend adding the Checkmarx services URLs to your firewall rules and not the IP addresses. Since the IPs of Checkmarx service endpoints are not necessarily static, adding them directly to the firewall might not be effective.
+We recommend adding the Checkmarx services **URLs** to your firewall rules **and not the IP addresses**. Since the IPs of Checkmarx service endpoints are not necessarily static, adding them directly to the firewall might not be effective.
 {% endhint %}
 
 The URLs are accessed by HTTPS protocol on port 443.

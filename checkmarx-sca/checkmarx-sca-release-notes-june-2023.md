@@ -6,7 +6,7 @@
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE | Exploitable Path | We added support for scanning cshtml files using the the Exploitable Path queries. |
 

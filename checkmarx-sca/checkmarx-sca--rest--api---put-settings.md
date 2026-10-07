@@ -15,7 +15,7 @@ Activate/deactivate the Exploitable Path feature for a specific Project.
 3. You can scan the Project using the [Scan Upload](checkmarx-sca--rest--api---scan-upload.md) APIs.
 
 {% hint style="info" icon="pencil" %}
-To use Exploitable Path for scans that are run via the API,no prior configuration is required. A cloud instance of SAST is automatically used to analyze your proprietary code. Alternatively, you can run EP using your local SAST instance via [Checkmarx SCA Resolver](running-exploitable-path-scans-using-resolver.md).
+To use Exploitable Path for scans that are run via the API,**no prior configuration is required**. A cloud instance of SAST is automatically used to analyze your proprietary code. Alternatively, you can run EP using your local SAST instance via [Checkmarx SCA Resolver](running-exploitable-path-scans-using-resolver.md).
 {% endhint %}
 
 ## URL
@@ -39,13 +39,13 @@ Accept: application/json
 
 Path Parameter - Required
 
-| Parameter | Type | Description |
+| **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
 | projectId | string | The unique identifier of the Project for which you would like to activate/deactivate EP. |
 
 Body Parameters - Required
 
-| Parameter | Type | Enum | Description |
+| **Parameter** | **Type** | **Enum** | **Description** |
 | --- | --- | --- | --- |
 | enableExploitablePath | boolean | <ul><li><p>true</p></li><li><p>false</p></li></ul> | Activate/deactivate Exploitable Path for this Project. |
 

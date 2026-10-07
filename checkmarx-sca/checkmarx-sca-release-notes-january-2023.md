@@ -32,29 +32,29 @@ We have improved the UI display for the following elements.
 
 #### Scan Results - Packages Tab
 
-The results shown in the All Packages sub-tab of the Scan Results screen are now divided by category.
+The results shown in the **All Packages** sub-tab of the Scan Results screen are now divided by category.
 
 <div align="left"><figure><img src=".gitbook/assets/img-499de7f631b345d69e13c6466631f0d7.png" alt=""></figure></div>
 
 The section heading for each category shows the number of packages identified as well as the number of policy violations for that category. Click on a category to expand the display for the results in that category. The following categories are shown:
 
-- Direct 3rd Party Packages - Shows all 3rd party packages called directly by your source code.
-- Transitive 3rd Party Packages - Shows all 3rd party packages called indirectly by your project.
-- Private Packages - Shows all private packages identified in your project.
-- SaaS Providers - Shows all packages used for accessing SaaS services.
+- **Direct 3rd Party Packages** - Shows all 3rd party packages called directly by your source code.
+- **Transitive 3rd Party Packages** - Shows all 3rd party packages called indirectly by your project.
+- **Private Packages** - Shows all private packages identified in your project.
+- **SaaS Providers** - Shows all packages used for accessing SaaS services.
 
 #### Scan Results - Risk Tab
 
-The results shown in the All Risks sub-tab of the Scan Results screen are now divided by category.
+The results shown in the **All Risks** sub-tab of the Scan Results screen are now divided by category.
 
 <div align="left"><figure><img src=".gitbook/assets/img-dee17d419050f998c82d69e4bb178975.png" alt=""></figure></div>
 
 The section heading for each category shows the total number of risks identified as well as a breakdown by severity level. Click on a category to expand the display for the results in that category. The following categories are shown:
 
-- Vulnerability - shows a list of vulnerabilities in your open source packages that can be exploited by an attacker. This includes vulnerabilities that have been published as CVEs as well as vulnerabilities identified by the Checkmarx Vulnerability Research Team (i.e., Cx). The summary graph shows the total number of vulnerabilities and a breakdown by severity level.
-- Supply Chain - shows various types of supply chain risks that affect the packages in your project, such as packages that are Malicious by design and packages that are vulnerable to ChainJacking attacks etc. The summary graph shows the total number of supply chain risks and a breakdown by severity level.
-- Legal Risk - shows all of the Legal Risks relating to the licensing of the packages used in your project. The summary graph shows the total number of legal risks and a breakdown by severity level.
-- Outdated - shows a list of all packages that have vulnerabilities or supply chain risks, for which a more recent package version is available.
+- **Vulnerability** - shows a list of vulnerabilities in your open source packages that can be exploited by an attacker. This includes vulnerabilities that have been published as CVEs as well as vulnerabilities identified by the Checkmarx Vulnerability Research Team (i.e., Cx). The summary graph shows the total number of vulnerabilities and a breakdown by severity level.
+- **Supply Chain** - shows various types of supply chain risks that affect the packages in your project, such as packages that are Malicious by design and packages that are vulnerable to ChainJacking attacks etc. The summary graph shows the total number of supply chain risks and a breakdown by severity level.
+- **Legal Risk** - shows all of the Legal Risks relating to the licensing of the packages used in your project. The summary graph shows the total number of legal risks and a breakdown by severity level.
+- **Outdated** - shows a list of all packages that have vulnerabilities or supply chain risks, for which a more recent package version is available.
 
 ## Checkmarx SCA Resolver Updates
 

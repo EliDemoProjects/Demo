@@ -1,6 +1,6 @@
 # SAML Authentication for Checkmarx SCA Resolver
 
-In order to run Checkmarx SCA Resolver in Online or Upload mode, you need to provide authentication credentials. For the standard authentication method, this is done by providing your Checkmarx SCA username and password. Alternatively, if you have integrated your Checkmarx SCA account with a SAML provider (see [SSO Authentication](sso-authentication.md)), you can authenticate for Checkmarx SCA Resolver via your SAML provider.
+In order to run Checkmarx SCA Resolver in **Online** or **Upload** mode, you need to provide authentication credentials. For the standard authentication method, this is done by providing your Checkmarx SCA username and password. Alternatively, if you have integrated your Checkmarx SCA account with a SAML provider (see [SSO Authentication](sso-authentication.md)), you can authenticate for Checkmarx SCA Resolver via your SAML provider.
 
 In order to use SAML authentication, you need to provide the name of your SSO provider in the Resolver execution command. When the command is run, a browser will open, prompting you to authenticate with your SAML provider. Once the authentication has been completed you can resume using Checkmarx SCA Resolver from the Command interface.
 

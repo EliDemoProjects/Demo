@@ -6,7 +6,7 @@
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE | Supported manifest files | We added support for resolving Swift dependencies using the `Package.resolved` file when no `Package.swift` file is present in the project. |
 

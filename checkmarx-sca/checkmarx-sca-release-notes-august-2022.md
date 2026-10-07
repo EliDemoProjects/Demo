@@ -22,7 +22,7 @@ We now do file analysis (fingerprints) for C++ files (.cpp, .c, .h, .hpp, .a, .o
 
 We have updated the Risk Management capabilities for Checkmarx SCA. Users can now change the state of risks (To Verify, Not Exploitable, Proposed not Exploitable, Confirmed or Urgent) and also add comments.
 
-While viewing the Risk Details page for a specific risk, you can open a side panel with tabs for New Action (i.e. making changes) and for viewing History of changes made.
+While viewing the Risk Details page for a specific risk, you can open a side panel with tabs for **New Action** (i.e. making changes) and for viewing **History** of changes made.
 
 <div align="left"><figure><img src=".gitbook/assets/img-ef1b72408bc5af0c62c5b29d9188fc9c.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
@@ -36,7 +36,7 @@ Comments and state changes are shown in the All Risks table. Not Exploitable ris
 
 <div align="left"><figure><img src=".gitbook/assets/img-0c8b6e879b2c6bf03644f4712ca5b452.png" alt=""></figure></div>
 
-In addition, a detailed history of all changes is shown in the Management of Risk panel \> History tab. For each change that was made, the name of the user who made the change and the time of the change are shown. In addition, for state changes, the new state is shown alongside the previous state.
+In addition, a detailed history of all changes is shown in the **Management of Risk** panel \> **History** tab. For each change that was made, the name of the user who made the change and the time of the change are shown. In addition, for state changes, the new state is shown alongside the previous state.
 
 <div align="left"><figure><img src=".gitbook/assets/img-b3ae1576cd2db6abab95d6aa21f1d5d4.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
@@ -44,6 +44,6 @@ For more information about managing risk, see [Risk Management](risk-management-
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE | Private packages | Improved handling of private packages for Maven and Nuget. |

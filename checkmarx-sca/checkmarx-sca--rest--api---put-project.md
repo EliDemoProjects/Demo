@@ -25,7 +25,7 @@ Accept: application/json
 
 Path Parameter - Required:
 
-| Parameter | Type | Description |
+| **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
 | id | string | The unique identifier of the Project that you would like to update. |
 
@@ -33,10 +33,10 @@ Body Parameters
 
 ### \* indicates a required parameter
 
-| Parameter | Type | Enum | Description |
+| **Parameter** | **Type** | **Enum** | **Description** |
 | --- | --- | --- | --- |
 | name\* | string | - | The new name for the Project. |
-| assignedTeams | string | - | An array specifying the Team/s to which you are assigning the Project. e.g., \[“/CxServer/Team03, /CxServer/Team05”\]<br>**Tip** If this parameter is null, then all Teams are assigned to the Project.<br>**Tip** This overwrites the Teams that are currently assigned. |
+| assignedTeams | string | - | An array specifying the Team/s to which you are assigning the Project. e.g., \[“/CxServer/Team03, /CxServer/Team05”\]<br>**Tip** If this parameter is null, then **all** Teams are assigned to the Project.<br>**Tip** This overwrites the Teams that are currently assigned. |
 
 ## Success Response
 

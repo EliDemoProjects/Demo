@@ -39,7 +39,7 @@ Accept: application/json
 
 Body Parameters - Required
 
-| Parameter | Type | Enum | Description |
+| **Parameter** | **Type** | **Enum** | **Description** |
 | --- | --- | --- | --- |
 | name | string | - | The name of the Project. |
 | assignedTeams\[\] | string | - | An array sprecifying the Team/s that the Project is assigned to. e.g. \[“/CxServer/Team03, /CxServer/Team05”\]<br>If an empty array is submitted then all Teams can access the Project. |
@@ -50,9 +50,9 @@ Code: 201 Created
 
 Attributes:
 
-| Attribute | Type | Enums | Description |
+| **Attribute** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- |
-| id | string | - | The unique identifier of the Project. |
+| id | string | **-** | The unique identifier of the Project. |
 | name | string | - | The name of the Project. |
 | isManaged | boolean | <ul><li><p>True</p></li><li><p>False</p></li></ul> | True if the Project is managed by GitHub. False if it is a “General” Project.<br>**Tip** All Projects created via API are “General” Projects. |
 | createdOn<br>(nullable) | string<br>(date-time) | - | The date and time that the Project was created. |

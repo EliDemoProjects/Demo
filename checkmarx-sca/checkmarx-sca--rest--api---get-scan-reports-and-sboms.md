@@ -8,8 +8,8 @@ This API will be deprecated soon. You should start using the new [Export Service
 
 This API enables you to export reports of the data identified by a Checkmarx SCA scan. This includes detailed info about the open source packages in your project and the risks associated with them. This API can be used to generate two different types of reports:
 
-- Scan Report - shows an overview of the security of your project as well as specific vulnerabilities, legal risks, and outdated versions identified by the scan. Scan Reports can be generated in JSON, XML, PDF or CSV format.
-- Software Bill of Materials (SBOM) - shows detailed info about each of the open source packages used by your program and the associated risks, using [CycloneDX v1.3](https://cyclonedx.org/docs/1.3/#SchemaProperties) format. SBOM Reports can be generated in JSON or XML format.
+- **Scan Report** - shows an overview of the security of your project as well as specific vulnerabilities, legal risks, and outdated versions identified by the scan. Scan Reports can be generated in JSON, XML, PDF or CSV format.
+- **Software Bill of Materials (SBOM)** - shows detailed info about each of the open source packages used by your program and the associated risks, using [CycloneDX v1.3](https://cyclonedx.org/docs/1.3/#SchemaProperties) format. SBOM Reports can be generated in JSON or XML format.
 
 {% hint style="info" %}
 Each API call generates a single type of report, in a single format. If you would like to generate multiple types of reports and/or multiple output formats, then you need to send a separate API call for each report.
@@ -21,10 +21,10 @@ The report shows an overview of the security of your project as well as specific
 
 Reports show data divided into the following sections:
 
-- Packages - shows info about the open source packages used by your project that contain risks, including: security vulnerabilities, license violations, and outdated versions. The info is separated into a direct packages table and a transitive packages table.
-- Vulnerabilities - shows info about all of the security vulnerabilities that were identified in the open source packages used by your project, including: severity level, CVE references, remediation recommendations etc.
-- Licenses - shows the licenses that you have for the packages in your project and the legal risks associated with those packages.
-- Policy Violations - shows any security Policies which the Project violates.
+- **Packages** - shows info about the open source packages used by your project that contain risks, including: security vulnerabilities, license violations, and outdated versions. The info is separated into a direct packages table and a transitive packages table.
+- **Vulnerabilities** - shows info about all of the security vulnerabilities that were identified in the open source packages used by your project, including: severity level, CVE references, remediation recommendations etc.
+- **Licenses** - shows the licenses that you have for the packages in your project and the legal risks associated with those packages.
+- **Policy Violations** - shows any security Policies which the Project violates.
 
 When you generate a report, you can specify whether you want to include all sections or only specific sections.
 {% endtab %}
@@ -60,13 +60,13 @@ Accept: application/\*
 
 #### Path Parameters (Required)
 
-| Parameter | Type | Description |
+| **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
 | scan_id | string | The unique identifier of the scan for which you would like to generate a report. |
 
 #### Query Parameter
 
-| Parameter | Type | Description | Enum | Default |
+| **Parameter** | **Type** | **Description** | **Enum** | **Default** |
 | --- | --- | --- | --- | --- |
 | format | string | The format of the report that is generated. Your selection determines whether the report generated is a Scan Report or an SBOM Report. It al determines the file format of the report. | <ul><li><p>Json - Scan Report in JSON format</p></li><li><p>Xml - Scan Report in XML format</p></li><li><p>Pdf - Scan Report in PDF format</p></li><li><p>Csv - Scan Report in CSV format</p><p><strong>Tip</strong></p><p>- for this format, the response is given as a zip file, which can be extracted to obtain the CSV files</p></li><li><p>CycloneDxJson - SBOM report <a href="https://cyclonedx.org/docs/1.3/#SchemaProperties">CycloneDX v1.3</a> format, returned as a JSON</p></li><li><p>CycloneDxXml - SBOM report <a href="https://cyclonedx.org/docs/1.3/#SchemaProperties">CycloneDX v1.3</a> format, returned as an XML</p></li></ul><br>**Tip** There is an alternative method for generating SBOM reports using the [Export Service](checkmarx-sca--rest--api---export-service.md). The Export Service generates SBOMs that are more compliant with SBOM formatting specifications. Export Service also supports generating SBOMs in SPDX format. | Json |
 | dataType\[\] | string | Specifies the sections that will be included in the report. You can specify<br>**Tip** This parameter is relevant only for Scan Reports, not for SBOM Reports. | <ul><li><p>All</p></li><li><p>Packages</p></li><li><p>Vulnerabilities</p></li><li><p>Licenses</p></li><li><p>Policies</p></li><li><p>SupplyChainRisks</p></li></ul> | All |

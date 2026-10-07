@@ -6,7 +6,7 @@
 
 ## Improvements
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE | Persistent filters | The filters applied to the Global Inventory page are now persistent, so that when you drill-down to see details for a package or a risk and then click the back button in the browser, the filters on the Global Inventory page will remain in place. |
 | FIXED | Project name | Fixed issue that changing project name in repo for a Checkmarx One project had caused errors for the SCA scanner. |

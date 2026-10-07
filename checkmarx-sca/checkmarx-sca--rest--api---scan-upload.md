@@ -27,7 +27,7 @@ The following is a list of the Checkmarx SCA APIs that relate to Scan Upload:
 If a GitHub URL is being scanned (as opposed to a zip file), then the only API needed is POST Scan.
 {% endhint %}
 
-| API | Method | Endpoint | Description |
+| **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
 | [POST Generate Upload Link](checkmarx-sca--rest--api---post-scans-generate-upload-link.md) | POST | /api/uploads | Generate an upload link for scanning a ZIP file.<br>This returns an Upload Link which is used in **PUT Upload Link** and **POST Scan**. |
 | [PUT Upload Link](checkmarx-sca--rest--api---put-upload-link.md) | PUT | {upload_url} | Upload the ZIP file to Checkmarx SCA.<br>The url is the url that you generated using **POST Generate Upload Link**.<br>The Body parameter is the path to the zip file on your local machine. |

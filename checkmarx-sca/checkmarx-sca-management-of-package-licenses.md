@@ -59,7 +59,7 @@ Authentication is done using a JWT (JSON Web Token) access token. For Checkmarx 
 
 The following is a list of Checkmarx One APIs that relate to management of package licenses:
 
-| API | Method | Endpoint | Description |
+| **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
 | Add License | POST | /package-licenses | Add a license to a package. |
 | Disable License | POST | /package-licenses/disable | Disable (delete) a license that was added manually. |
@@ -104,15 +104,15 @@ curl --location 'https://api-sca.checkmarx.net/management-of-risk/package-lice
 
 Body Parameters
 
-| Parameter | Mandatory | Type | Enums | Description |
+| **Parameter** | **Mandatory** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- | --- |
 | LicenseId | yes | int |  | The ID that represents the license that you are adding to the package. See the table below for the list of supported licenses and the ID of each license. |
 | packageName | yes | string |  | The name of the package. |
 | packageVersion | yes | string |  | The version of the package. |
 | packageManager | yes | string |  | The package manager used for this package. |
-| projectId | no | string |  | The project IDs of each of the projects for which this license is being added to this package.<br>If no project ID is specified, then by default the license is added in all projects in your account. |
+| projectId | no | string |  | The project IDs of each of the projects for which this license is being added to this package.<br>If no project ID is specified, then by default the license is added in **all** projects in your account. |
 | actions\[\] | yes | json object |  | The action that is being taken to add one or more licenses. |
-| actionType | yes | string | Supported action types are:<br><ul><li><p>AddLicense</p></li></ul> | The type of action to be done.<br><ul><li><p>The action <code>AddLicense</code> adds the license. By default, each license that is added is marked as <strong><strong>Effective</strong></strong>. You can change the state to <strong><strong>Not Effective</strong></strong> using the management of risk APIs.</p></li></ul> |
+| actionType | yes | string | Supported action types are:<br><ul><li><p>AddLicense</p></li></ul> | The type of action to be done.<br><ul><li><p>The action <code>AddLicense</code> adds the license. By default, each license that is added is marked as <strong>Effective</strong>. You can change the state to <strong>Not Effective</strong> using the management of risk APIs.</p></li></ul> |
 | value | yes | int |  | The ID that represents the license that you are adding to the package.<br>Note: This should be the identical ID that was given for the LicenseId parameter. |
 
 #### Success Response
@@ -153,13 +153,13 @@ curl --location 'https://api-sca.checkmarx.net/management-of-risk/package-lice
 
 Body Parameters
 
-| Parameter | Mandatory | Type | Enums | Description |
+| **Parameter** | **Mandatory** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- | --- |
 | LicenseId | yes | int |  | The ID that represents the license that you are disabling (deleting) for this package. See the table below for the list of supported licenses and the ID of each license. |
 | packageName | yes | string |  | The name of the package. |
 | packageVersion | yes | string |  | The version of the package. |
 | packageManager | yes | string |  | The package manager used for this package. |
-| projectId | no | string |  | The project IDs of each of the projects for which this license is being disabled (deleted).<br>If no project ID is specified, then by default the license is deleted from all projects in your account. |
+| projectId | no | string |  | The project IDs of each of the projects for which this license is being disabled (deleted).<br>If no project ID is specified, then by default the license is deleted from **all** projects in your account. |
 | actionType | yes | string | Currently, the only supported action type is:<br><ul><li><p>AddLicense</p></li></ul> | Specify the action that you are disabling. |
 
 #### Success Response

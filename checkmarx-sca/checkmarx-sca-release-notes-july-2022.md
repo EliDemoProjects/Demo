@@ -14,7 +14,7 @@ Also, the Legal Risks widget now shows values for distinct legal risks (i.e., do
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | FIXED | Error message | We now return 404 instead of 500 when a CVE is not found in the AppSec Knowledge Center. |
 | FIXED | Pip Virtualenv | Certain packages were taking a long time to resolve. The issue was fixed by upgrading the pip virtualenv. |

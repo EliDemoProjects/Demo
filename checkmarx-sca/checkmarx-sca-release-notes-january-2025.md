@@ -23,8 +23,8 @@
 
 We now include results from Malicious Package Detection on the Global Inventory & Risks screen. The data is shown in the relevant tabs.
 
-- Packages tab - Malicious Packages and Suspected Malware are now shown in the table with the Vulnerabilities column showing the malicious icon . You can filter and sort for Malicious Packages and/or Suspected Malware.
-- Risks tab - Risks associated with malicious packages are shown in the table with the Risk Type listed as "Suspected Malware". You can filter and sort for Suspected Malware.
+- Packages tab - Malicious Packages and Suspected Malware are now shown in the table with the **Vulnerabilities** column showing the malicious icon <img src=".gitbook/assets/img-5fad3e90f581a658622835c4e1771c2f.png" alt="" data-size="line">. You can filter and sort for Malicious Packages and/or Suspected Malware.
+- Risks tab - Risks associated with malicious packages are shown in the table with the **Risk Type** listed as "Suspected Malware". You can filter and sort for Suspected Malware.
 
 When you export the data from the SCA Inventory and Risks, the malicious package data is included in the report.
 

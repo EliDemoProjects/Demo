@@ -53,6 +53,6 @@ We have released several new versions of Resolver with a wide range of improveme
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| FIXED | Sorting scan result | On the Scan Results screen, the All Risks and All Packages tabs are now sorted accurately. All Risks is sorted by Risks severity and All Packages is sorted by Risk Score. |
+| FIXED | Sorting scan result | On the **Scan Results** screen, the All Risks and All Packages tabs are now sorted accurately. All Risks is sorted by **Risks** severity and All Packages is sorted by **Risk Score**. |

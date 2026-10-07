@@ -16,7 +16,7 @@ This page relates only to integrations for SCA standalone accounts and free SCA 
 
 ## SCA Standalone Accounts
 
-| Platform(Documentation links) | Comments |
+| **Platform(Documentation links)** | **Comments** |
 | --- | --- |
 | [CLI Plugin](/document/preview/8149#UUID-929c3f4a-dabe-6247-b44e-7a87d9a52f46) |  |
 | [CxFlow](https://github.com/checkmarx-ltd/cx-flow/wiki/CxSCA-Integration) |  |
@@ -27,9 +27,9 @@ This page relates only to integrations for SCA standalone accounts and free SCA 
 
 ## Free Tools
 
-| Platform(Documentation links) | Comments |
+| **Platform(Documentation links)** | **Comments** |
 | --- | --- |
-| [Docker Desktop Extension](checkmarx-docker-desktop-extension.md) | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does not sync with your account. |
-| JFrog Plugin | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does not sync with your account. |
-| Nexus Plugin | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does not sync with your account. |
-| [VS Code Plugin - Realtime Scanner](/document/preview/152268#UUID-4f8d5acd-3566-3bc2-7144-6ff451ede6df) | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does not sync with your account. |
+| [Docker Desktop Extension](checkmarx-docker-desktop-extension.md) | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does **not** sync with your account. |
+| JFrog Plugin | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does **not** sync with your account. |
+| Nexus Plugin | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does **not** sync with your account. |
+| [VS Code Plugin - Realtime Scanner](/document/preview/152268#UUID-4f8d5acd-3566-3bc2-7144-6ff451ede6df) | Free tool, no Checkmarx SCA account required.<br>For Checkmarx SCA users, data does **not** sync with your account. |

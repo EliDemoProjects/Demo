@@ -37,9 +37,9 @@ Code: 200 OK
 
 Attributes:
 
-| Attribute | Type | Enums | Description |
+| **Attribute** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- |
-| url | string | - | The url that will be needed for the next two steps of the flow (**PUT Upload Link** and **POST Scan**) for scanning a ZIP file. |
+| url | string | **-** | The url that will be needed for the next two steps of the flow (**PUT Upload Link** and **POST Scan**) for scanning a ZIP file. |
 
 ### Sample Success Response
 

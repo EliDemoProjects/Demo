@@ -20,7 +20,7 @@ Added support for .NET 8 for the SCA scanner
 
 ## Changed Name of "Supply Chain" Risks
 
-The category of risks that had been referred to as "Supply Chain" are now referred to as "Suspected Malware", which more accurately expresses the nature of the risk. This is reflected in the section title and icon on the All Risks page as well as in all places that the category name is used.
+The category of risks that had been referred to as "Supply Chain" are now referred to as "Suspected Malware", which more accurately expresses the nature of the risk. This is reflected in the section title and icon on the **All Risks** page as well as in all places that the category name is used.
 
 <div align="left"><figure><img src=".gitbook/assets/img-9d3bdbf4a2b839aec5348db56cdc8bcc.png" alt="" width="563"><figcaption></figcaption></figure></div>
 

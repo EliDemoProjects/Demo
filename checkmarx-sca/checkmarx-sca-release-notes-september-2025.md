@@ -8,7 +8,7 @@
 
 ### Show Exploitable Method Details
 
-On the Risk Details page, we now show details about the vulnerable methods that expose the vulnerability to exploitation. When the relevant details are available, we show the vulnerable file path, class, and method. This visibility increases transparency into how we evaluate exploitable paths, and provides actionable data for cases where full exploitable path analysis is not possible.
+On the **Risk Details** page, we now show details about the vulnerable methods that expose the vulnerability to exploitation. When the relevant details are available, we show the vulnerable file path, class, and method. This visibility increases transparency into how we evaluate exploitable paths, and provides actionable data for cases where full exploitable path analysis is not possible.
 
 ## SCA Resolver
 

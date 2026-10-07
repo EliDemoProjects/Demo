@@ -26,27 +26,27 @@ The workflow for using Master Access Control integration involves the following 
 
 ## Step 1 - Configure Master Access Control Integration
 
-To Configure Master Access Control for SCA:
+**To Configure Master Access Control for SCA:**
 
 1. Log in to the SCA web platform as an admin.
 
-2. In the main navigation, click User Management.
+2. In the main navigation, click **User Management**.
 
    The Access Control screen opens in a new tab.
 
-3. On the Access Control screen select the Settings tab.
+3. On the Access Control screen select the **Settings** tab.
 
-4. Click on the SAML sub-tab and make sure that all SAML connections are disabled.
+4. Click on the **SAML** sub-tab and make sure that all SAML connections are **disabled**.
 
-5. Click on the Master Access Control sub-tab.
+5. Click on the **Master Access Control** sub-tab.
 
    The Primary Access Control form opens.
 
    <div align="left"><figure><img src=".gitbook/assets/img-ed41211376341457a0a29397d4561cf7.png" alt=""></figure></div>
 
-6. Toggle the Enable… switch to the right (On).
+6. Toggle the **Enable…** switch to the right (On).
 
-7. In the Local base URL field, enter the URL of the Primary Access Control instance.
+7. In the **Local base URL** field, enter the URL of the Primary Access Control instance.
 
    {% hint style="info" icon="pencil" %}
    You can copy the URL from your browser when you have the Primary Access Control console opened. Make sure to use the actual IP or a domain name that is recognized by the machine that is being used, e.g., \<SAST_on_prem_base_url\>/CxRestAPI/auth/, for example, “https://checkmarx.hostedcustomer.com/CxRestAPI/auth/”.
@@ -63,16 +63,16 @@ To Configure Master Access Control for SCA:
 
    - The Local Base URL protocol should be 'HTTPS', If the protocol is 'HTTP', refer to [Setting up Primary Access Control using the API](https://checkmarx.atlassian.net/wiki/spaces/PlarformServices/pages/1812103918/Setting+up+Primary+Access+Control+using+the+API) or allow mixed content via the browser configuration, using the appropriate procedure for your browser:
 
-     - Chrome: Click the lock icon -\> Site settings -\> Insecure content -\> Allow
-     - Firefox: Open menu -\> Options -\> Privacy and Security -\> HTTPS-Only Mode -\> Don’t enable HTTPS-Only Mode
-     - Edge: Click the lock icon -\> Site permissions -\> Insecure content -\> Allow
+     - Chrome: Click the lock icon -\> **Site settings** -\> **Insecure content** -\> **Allow**
+     - Firefox: Open menu -\> **Options** -\> **Privacy and Security** -\> **HTTPS-Only Mode** -\> **Don’t enable** **HTTPS-Only Mode**
+     - Edge: Click the lock icon -\> **Site permissions** -\> **Insecure content** -\> **Allow**
 
      Once Master Access Control integration has been completed, you can disable the mixed content setting on your browser.
    {% endhint %}
 
-8. In the Name field, enter a name for the Master Access Control integration, e.g., “Master Access Control”. This name will appear in the button on the SCA login page that is used for Master Access Control login.
+8. In the **Name** field, enter a name for the Master Access Control integration, e.g., “Master Access Control”. This name will appear in the button on the SCA login page that is used for Master Access Control login.
 
-9. Click Save.
+9. Click **Save**.
 
 {% hint style="info" icon="pencil" %}
 The integration is implemented. However, the SAST users aren’t added to SCA Access Control until they actually log in to SCA using Master Access Control.
@@ -90,11 +90,11 @@ After setting up the integration, the SCA admin should inform all relevant SAST 
 
 - an explanation of the initial login procedure, as described below.
 
-To login using Master Access Control credentials:
+**To login using Master Access Control credentials:**
 
 1. Go to the SCA login screen. (For a US environment: [https://sca.checkmarx.net](https://sca.checkmarx.net/). For an EU environment: [https://eu.sca.checkmarx.net](https://eu.sca.checkmarx.net/))
 
-2. Click on the master access control button that was created for your integration, e.g., “Master Access Control”.
+2. Click on the master access control button that was created for your integration, e.g., “**Master Access Control”**.
 
    The SAST login screen opens.
 
@@ -110,7 +110,7 @@ For each user who accesses SCA via Master Access Control a user account is creat
 If a Team with the identical name and hierarchy path already exists in SCA, then the user is automatically assigned to that Team.
 {% endhint %}
 
-Roles Mapping from SAST to SCA
+**Roles Mapping from SAST to SCA**
 
 When using Master Access Control, users who are assigned roles in Checkmarx SAST will automatically be assigned equivalent roles in Checkmarx SCA. For detailed info about how the roles and permissions are mapped from Checkmarx SAST to Checkmarx SCA, see [Mapping Roles and Permissions from Checkmarx SAST to Checkmarx SCA](using-master-access-control--replica-mode-.md#UUID-7886acc2-966e-6acc-122d-fc59186d1201).
 
@@ -118,35 +118,35 @@ When using Master Access Control, users who are assigned roles in Checkmarx SAST
 
 Once a SAST user has logged in to SCA, the user account is shown in the SCA Access Control console. A SCA Admin or a Global Admin can now use the SCA Access Control console to edit the user’s account details, including assigning the user to Teams and adjusting the user’s roles.
 
-To edit a user account:
+**To edit a user account:**
 
-1. In the SCA web portal main navigation, click the User Management icon.
+1. In the SCA web portal main navigation, click the **User Management** icon.
 
    The Access Control screen opens in a new browser tab.
 
-2. On the Access Control screen select the Users tab (default).
+2. On the Access Control screen select the **Users** tab (default).
 
-3. On the Users tab, click on the context menu at the end of the row for the desired user account.
+3. On the **Users** tab, click on the context menu at the end of the row for the desired user account.
 
    <div align="left"><figure><img src=".gitbook/assets/img-499777f745c58c6b5013c950700c9d88.png" alt=""></figure></div>
 
-4. In the context menu, select Edit User.
+4. In the context menu, select **Edit User**.
 
    <div align="left"><figure><img src=".gitbook/assets/img-d9b9113d08b10eb89dd3e502835a1db9.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-   The Edit User window opens, showing the current account details.
+   The **Edit User** window opens, showing the current account details.
 
-5. In the General tab, adjust the user info as desired.
+5. In the **General** tab, adjust the user info as desired.
 
    {% hint style="info" icon="pencil" %}
    The Username and Authentication Provider fields cannot be edited.
    {% endhint %}
 
-6. If you would like to change the user’s Team/s, then in the Teams tab, select the checkbox for the desired Team or Teams. For more info, see [Teams](teams.md).
+6. If you would like to change the user’s Team/s, then in the **Teams** tab, select the checkbox for the desired Team or Teams. For more info, see [Teams](teams.md).
 
-7. If you would like to change the user’s role/s, then in the Roles tab, select the checkbox for the desired role or roles. For more info, see [Roles](roles.md).
+7. If you would like to change the user’s role/s, then in the **Roles** tab, select the checkbox for the desired role or roles. For more info, see [Roles](roles.md).
 
-8. Click Save.
+8. Click **Save**.
 
 ## Mapping Roles and Permissions from Checkmarx SAST to Checkmarx SCA
 
@@ -165,30 +165,30 @@ Roles that relate to "Access Control" and "Management and Orchestration" are sys
 <tr><th><p>Roles in Checkmarx SAST</p></th><th><p>Description</p></th><th><p>Checkmarx SCA Roles<sup>1]</sup></p></th><th><p>Access Control/M&amp;O Permissions</p></th><th><p>SAST Permissions</p></th><th><p>SCA Permissions</p></th></tr>
 </thead>
 <tbody>
-<tr><td><p><strong><strong>Admin</strong></strong></p></td><td><p>Checkmarx products global administrator</p></td><td><p>SCA Admin</p></td><td><p>All Access Control permissions + All Management and Orchestration permissions<sup>2]</sup></p></td><td><p>All SAST permissions<sup>2]</sup></p></td><td><p>All SCA permission</p></td></tr>
-<tr><td><p><strong><strong>SAST Admin</strong></strong></p></td><td><p>Full SAST permissions</p></td><td><p>SCA Admin</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>All SAST permissions (excluding use-cxaudit)</p></td><td><p>All SCA permissions</p></td></tr>
-<tr><td><p><strong><strong>SAST Auditor</strong></strong></p></td><td><p>Permissions to manage vulnerability queries and use CxAudit</p></td><td><p>Custom role: Can scan and create projects</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>use-cxaudit</p><p>create-preset</p><p>update-and-delete-preset</p><p>manage-custom-description</p><p>save-sast-scan</p><p>save-project</p></td><td><p>scan</p><p>create-project</p></td></tr>
-<tr><td><p><strong><strong>SAST Data Cleaner</strong></strong></p></td><td><p>Permissions to delete projects and scans</p></td><td><p>Custom role: Can view and delete projects</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>delete-sast-scan</p><p>delete-project</p></td><td><p>delete-scan</p><p>delete-project</p></td></tr>
-<tr><td><p><strong><strong>SAST Results Updater</strong></strong></p></td><td><p>Permissions to update the properties of scan results</p></td><td><p>Custom role: Can view and manage risks</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-results-state-and-assignee</p><p>(Replaced in 9.3.0 HF13 with manage-result-assignee)</p><p>manage-result-comment</p><p>manage-result-severity</p></td><td><p>manage-risk</p></td></tr>
-<tr><td><p><strong><strong>SAST Results Verifier</strong></strong></p></td><td><p>Permissions to set the state of scan results to "Not Exploitable"</p></td><td><p>Custom role: Can delete projects and manage risks</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-result-exploitability</p><p>Replaced in 9.3.0 HF13 with the following:</p><p>set-result-state-notexploitable</p><p>set-result-state-toverify</p><p>set-result-state-confirmed</p><p>set-result-state-urgent</p><p>set-result-state-proposednotexploitable</p></td><td><p>manage-risk</p></td></tr>
-<tr><td><p><strong><strong>SAST Reviewer</strong></strong></p></td><td><p>Read-only permissions to view scan results and generate reports</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-result-comment</p><p>manage-data-analysis-templates</p><p>generate-scan-report</p><p>export-scan-results</p><p>see-support-link</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
-<tr><td><p><strong><strong>SAST Scanner</strong></strong></p></td><td><p>Permissions to create and manage projects, and run scans</p></td><td><p>Custom role: has permissions of "SCA Scanner" except for delete-projects</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>save-sast-scan</p><p>save-osa-scan</p><p>open-issue-tracking-tickets</p><p>save-project</p><p>create-project</p><p>view-failed-sast-scan</p><p>download-scan-log</p><p>see-support-link</p></td><td><p>scan</p><p>create-project</p><p>edit-project</p></td></tr>
-<tr><td><p><strong><strong>Access Control Manager</strong></strong></p></td><td><p>Manages users, authentication and system settings</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>All Access Control Permissions, includes:</p><p>manage-authentication-providers</p><p>manage-clients</p><p>manage-roles</p><p>manage-system-settings</p><p>manage-users</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
-<tr><td><p><strong><strong>User Manager</strong></strong></p></td><td><p>Manages the users in the system</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-users</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
-<tr><td><p><strong><strong>Security Risk Manager</strong></strong></p></td><td><p>Grants permissions to manage the security risk at scale, manage policies, KPIs, business applications, weights, and more.</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>All Management and Orchestration permissions, includes:</p><p>manage-global-policies-settings</p><p>manage-policies</p><p>manage-remediation-intelligence</p><p>view-analytics</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
-<tr><td><p><strong><strong>Security Risk Viewer</strong></strong></p></td><td><p>Grants permissions to track the security risk, and view policy violations and KPIs.</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>view-analytics</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
+<tr><td><p><strong>Admin</strong></p></td><td><p>Checkmarx products global administrator</p></td><td><p>SCA Admin</p></td><td><p>All Access Control permissions + All Management and Orchestration permissions<sup>2]</sup></p></td><td><p>All SAST permissions<sup>2]</sup></p></td><td><p>All SCA permission</p></td></tr>
+<tr><td><p><strong>SAST Admin</strong></p></td><td><p>Full SAST permissions</p></td><td><p>SCA Admin</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>All SAST permissions (excluding use-cxaudit)</p></td><td><p>All SCA permissions</p></td></tr>
+<tr><td><p><strong>SAST Auditor</strong></p></td><td><p>Permissions to manage vulnerability queries and use CxAudit</p></td><td><p>Custom role: Can scan and create projects</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>use-cxaudit</p><p>create-preset</p><p>update-and-delete-preset</p><p>manage-custom-description</p><p>save-sast-scan</p><p>save-project</p></td><td><p>scan</p><p>create-project</p></td></tr>
+<tr><td><p><strong>SAST Data Cleaner</strong></p></td><td><p>Permissions to delete projects and scans</p></td><td><p>Custom role: Can view and delete projects</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>delete-sast-scan</p><p>delete-project</p></td><td><p>delete-scan</p><p>delete-project</p></td></tr>
+<tr><td><p><strong>SAST Results Updater</strong></p></td><td><p>Permissions to update the properties of scan results</p></td><td><p>Custom role: Can view and manage risks</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-results-state-and-assignee</p><p>(Replaced in 9.3.0 HF13 with manage-result-assignee)</p><p>manage-result-comment</p><p>manage-result-severity</p></td><td><p>manage-risk</p></td></tr>
+<tr><td><p><strong>SAST Results Verifier</strong></p></td><td><p>Permissions to set the state of scan results to "Not Exploitable"</p></td><td><p>Custom role: Can delete projects and manage risks</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-result-exploitability</p><p>Replaced in 9.3.0 HF13 with the following:</p><p>set-result-state-notexploitable</p><p>set-result-state-toverify</p><p>set-result-state-confirmed</p><p>set-result-state-urgent</p><p>set-result-state-proposednotexploitable</p></td><td><p>manage-risk</p></td></tr>
+<tr><td><p><strong>SAST Reviewer</strong></p></td><td><p>Read-only permissions to view scan results and generate reports</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-result-comment</p><p>manage-data-analysis-templates</p><p>generate-scan-report</p><p>export-scan-results</p><p>see-support-link</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
+<tr><td><p><strong>SAST Scanner</strong></p></td><td><p>Permissions to create and manage projects, and run scans</p></td><td><p>Custom role: has permissions of "SCA Scanner" except for delete-projects</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>save-sast-scan</p><p>save-osa-scan</p><p>open-issue-tracking-tickets</p><p>save-project</p><p>create-project</p><p>view-failed-sast-scan</p><p>download-scan-log</p><p>see-support-link</p></td><td><p>scan</p><p>create-project</p><p>edit-project</p></td></tr>
+<tr><td><p><strong>Access Control Manager</strong></p></td><td><p>Manages users, authentication and system settings</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>All Access Control Permissions, includes:</p><p>manage-authentication-providers</p><p>manage-clients</p><p>manage-roles</p><p>manage-system-settings</p><p>manage-users</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
+<tr><td><p><strong>User Manager</strong></p></td><td><p>Manages the users in the system</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>manage-users</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
+<tr><td><p><strong>Security Risk Manager</strong></p></td><td><p>Grants permissions to manage the security risk at scale, manage policies, KPIs, business applications, weights, and more.</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>All Management and Orchestration permissions, includes:</p><p>manage-global-policies-settings</p><p>manage-policies</p><p>manage-remediation-intelligence</p><p>view-analytics</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
+<tr><td><p><strong>Security Risk Viewer</strong></p></td><td><p>Grants permissions to track the security risk, and view policy violations and KPIs.</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><p>view-analytics</p></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td><td><figure><img src=".gitbook/assets/img-c6cfefdfd81a997f28ba29c7dcf3a66f.png" alt=""></figure></td></tr>
 </tbody>
 </table>
 
-1\] For roles that do not map out to a pre-configured Checkmarx SCA role, a custom role is created in SCA with the appropriate permissions. In this case, no Checkmarx SCA role is shown in the Master Access Control web application under the role column.
+**1\]** For roles that do not map out to a pre-configured Checkmarx SCA role, a custom role is created in SCA with the appropriate permissions. In this case, no Checkmarx SCA role is shown in the Master Access Control web application under the role column.
 
-2\] M&O and Checkmarx SAST roles are only available for on-prem instances, not for cloud deployment.
+**2\]** M&O and Checkmarx SAST roles are only available for on-prem instances, not for cloud deployment.
 
 ### Permission Mapping
 
 The following table shows how specific Checkmarx SAST permissions map out to Checkmarx SCA permissions. If a user has a custom Checkmarx SAST role that includes one or more of these permissions, they are automatically assigned the specified Checkmarx SCA permission.
 
-| SAST Permission | SCA Permission |
+| **SAST Permission** | **SCA Permission** |
 | --- | --- |
 | save-sast-sca | scan |
 | save-osa-sca | scan |
@@ -204,15 +204,15 @@ The following table shows how specific Checkmarx SAST permissions map out to Che
 
 If you would like to enable users to use the CLI tool via Master Access Control, after configuring Master Access Control in the web portal as described in [Using Master Access Control (Replica Mode)](using-master-access-control--replica-mode-.md), do the following procedure to configure the CLI tool.
 
-1. In the web portal go to Access Control \> Settings \> Master Access Control.
+1. In the web portal go to **Access Control** \> **Settings** \> **Master Access Control**.
 
-2. In the Local base URL field, make sure that the base URL ends with a "/" character, then copy the value of the Local base URL.
+2. In the **Local base URL field**, make sure that the base URL ends with a "/" character, then copy the value of the **Local base URL**.
 
    <div align="left"><figure><img src=".gitbook/assets/img-295cc35ef11abc9e88dbf2b117b51294.png" alt=""></figure></div>
 
-3. In the CLI plugin folder, open ...\\CxConsolePlugin-.1.10\\config\\cx_console.properties.
+3. In the CLI plugin folder, open **...\\CxConsolePlugin-.1.10\\config\\cx_console.properties**.
 
-4. Go to the `scan.sca.accesscontrol.url` attribute and paste the value of the Local base URL. For example:
+4. Go to the `scan.sca.accesscontrol.url` attribute and paste the value of the **Local base URL**. For example:
 
    ```
    scan.sca.accesscontrol.url=http://<HOST_IP>/CxRestAPI/auth/

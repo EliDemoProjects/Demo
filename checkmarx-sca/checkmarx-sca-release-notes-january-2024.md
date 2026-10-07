@@ -12,10 +12,10 @@ For the SCA Nexus plugin, version 1.1.5 and below will stop working on Feb. 29. 
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE |  |  |
-| FIXED | Link from All Packages tab | Clicking on the Vulnerabilities widget on a Scan Results \> Package Details page now opens the Risks tab, filtered for the specific package. |
+| FIXED | Link from All Packages tab | Clicking on the Vulnerabilities widget on a **Scan Results** \> **Package Details** page now opens the **Risks** tab, filtered for the specific package. |
 
 ## SCA Resolver Version 2.5.15
 

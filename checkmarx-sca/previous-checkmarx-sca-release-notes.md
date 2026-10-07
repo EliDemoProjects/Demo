@@ -2,7 +2,7 @@
 
 ## August 26, 2021
 
-NEW - AppSec Knowledge Center - Our new AppSec Knowledge Center can be accessed via the Checkmarx SCA web portal. The Knowledge Center enables you to search our extensive database for information about specific package versions and vulnerabilities. This enables you to check the open source packages that you want to use in your project in advance to make sure that you won’t be introducing security risks into the project.
+NEW - AppSec Knowledge Center - Our new AppSec Knowledge Center can be accessed via the Checkmarx SCA web portal. The Knowledge Center enables you to search our extensive database for information about specific package versions and vulnerabilities. This enables you to check the open source packages that you want to use in your project **in advance** to make sure that you won’t be introducing security risks into the project.
 
 The database includes CVEs and also vulnerabilities discovered by the Checkmarx Vulnerability Research Team (“Cx” vulnerabilities).
 
@@ -21,7 +21,7 @@ For additional details, see [Checkmarx SCA Resolver Changelog](checkmarx-sca-res
 
 ## May 10, 2021
 
-NEW - Exporting Risk Reports - You can now export Risk Reports, showing comprehensive info about the risks identified in each of your Checkmarx SCA Projects. The Risk Report shows the results of a specific scan of a Project, including both overall results as well as detailed info about the risks that were identified. You can export a Risk Report via the Checkmarx SCA web portal by navigating to the Scan Results page for the desired scan and clicking on the Export button at the top of the page. You can specify the desired file format (pdf, xml, json, or csv) as well as which sections to include in the report (**Packages**, **Vulnerabilities**, **Licenses**, or **All**). For more info, see [Scan Reports](sca-scan-reports.md).
+NEW - Exporting Risk Reports - You can now export Risk Reports, showing comprehensive info about the risks identified in each of your Checkmarx SCA Projects. The Risk Report shows the results of a specific scan of a Project, including both overall results as well as detailed info about the risks that were identified. You can export a Risk Report via the Checkmarx SCA web portal by navigating to the Scan Results page for the desired scan and clicking on the **Export** button at the top of the page. You can specify the desired file format (pdf, xml, json, or csv) as well as which sections to include in the report (**Packages**, **Vulnerabilities**, **Licenses**, or **All**). For more info, see [Scan Reports](sca-scan-reports.md).
 
 You can also generate Risk Reports via Checkmarx SCA Resolver, see [Risk Report Arguments](checkmarx-sca-resolver-configuration-arguments.md).
 

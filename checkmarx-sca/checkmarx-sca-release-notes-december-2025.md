@@ -10,7 +10,7 @@ In order to speed up the process of adding newly identified CVEs to our database
 
 ### Highlighting AppSec Team Remarks
 
-Our AppSec Research team often adds remarks based on their expert analysis. These remarks give important information about exploitability and remediation options. We now highlight these comments by showing them in a separate info box both in the scan results Risk Details page and in our AppSec Knowledge Center.
+Our AppSec Research team often adds remarks based on their expert analysis. These remarks give important information about exploitability and remediation options. We now highlight these comments by showing them in a separate info box both in the scan results **Risk Details** page and in our **AppSec Knowledge Center**.
 
 ### Added Suspected Malware Risks to AppSec Knowledge Center
 
@@ -24,4 +24,4 @@ For .NET projects, we added support for scanning `packages.lock.json` files.
 
 We added new fields that provide additional information about the packages used in your project. This will help organizations meet regulatory requirements and improve the transparency and security of their software supply chain.
 
-The Packages section of Checkmarx SCA reports now includes Component Description, Component Supplier and Executable Properties fields. And, SBOM reports (CycloneDX and SPDX) now include the Component Description field.
+The **Packages** section of Checkmarx SCA reports now includes **Component Description**, **Component Supplier** and **Executable Properties** fields. And, SBOM reports (CycloneDX and SPDX) now include the **Component Description** field.

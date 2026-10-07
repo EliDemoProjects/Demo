@@ -46,13 +46,13 @@ The following are some highlights from the recent releases:
 
 ## Improvements
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE | Show CVSS v2.0/3.0/3.1 | Checkmarx SCA now shows the CVSS score and additional data for v3.1 in addition to previously supplied data for 2.0 and 3.0. |
 
 ## Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | FIXED | Apache Licenses | Fixed problem with missing Apache licenses. |
 | FIXED | Exploitable Path using Checkmarx SCA Resolver | When a scan is initiated via Resolver for a Project with Exploitable Path enabled in the web console, the Exploitable Path now runs as expected. |

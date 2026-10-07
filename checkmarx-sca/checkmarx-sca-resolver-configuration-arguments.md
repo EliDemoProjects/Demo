@@ -7,7 +7,7 @@ Certain parameters must be submitted via the config file. Therefore, it is manda
 {% endhint %}
 
 {% hint style="info" %}
-The info provided on this page relates to running Resolver as a standalone tool. If you are running Resolver via an external platform such as the Checkmarx One CLI tool or plugins, or the CxSAST/CxSCA CLI tool or plugins, then only Offline arguments can be used. In addition, the mandatory arguments differ for different platforms. See the relevant [SAST/SCA Integrations](/document/preview/7297#UUID-09af4cb8-95d4-d86a-48f3-5e0e5176366b) documentation for details.
+The info provided on this page relates to running Resolver as a standalone tool. If you are running Resolver via an external platform such as the Checkmarx One CLI tool or plugins, or the CxSAST/CxSCA CLI tool or plugins, then only **Offline** arguments can be used. In addition, the mandatory arguments differ for different platforms. See the relevant [SAST/SCA Integrations](/document/preview/7297#UUID-09af4cb8-95d4-d86a-48f3-5e0e5176366b) documentation for details.
 {% endhint %}
 
 ## Configuration.yml file Specifications
@@ -45,7 +45,7 @@ The following tables describe the supported arguments that can be used in Resolv
 
 {% tabs %}
 {% tab title="Mandatory Arguments" %}
-| Argument | Name | Config file key | Description | Used in mode | Default value |
+| **Argument** | **Name** | **Config file key** | **Description** | **Used in mode** | **Default value** |
 | --- | --- | --- | --- | --- | --- |
 | -a\| --account | Account | Account | Your SCA account a name. | Online, Upload | - |
 | --authentication-server-url | Authentication Server URL<sup>1</sup> | AuthenticationServerUrl | The URL of the SCA Access Control server. | Online, Upload | [https://platform.checkmarx.net](https://platform.checkmarx.net) |
@@ -66,9 +66,9 @@ The following tables describe the supported arguments that can be used in Resolv
 
 2\] The default value for Logs Directory is preconfigured in the config file. There is no argument for adjusting this value in the CLI.
 
-3\] Authentication is done either using your Checkmarx SCA credentials, or via your SSO provider. Therefore, you are required to submit either `-u| --username` and `-p| --password` or `--sso-provider` but not both.
+3\] Authentication is done either using your Checkmarx SCA credentials, or via your SSO provider. Therefore, you are required to submit **either** `-u| --username` and `-p| --password` **or** `--sso-provider` but not both.
 
-Samples using mandatory arguments:
+**Samples using mandatory arguments:**
 
 Linux/MacOS
 
@@ -85,7 +85,7 @@ Windows
 {% tab title="Optional Arguments" %}
 <table>
 <thead>
-<tr><th><p><strong><strong>Argument</strong></strong></p></th><th><p><strong><strong>Name</strong></strong></p></th><th><p><strong><strong>Config file key</strong></strong></p></th><th><p><strong><strong>Description</strong></strong></p></th><th><p><strong><strong>Used in mode</strong></strong></p></th><th><p><strong><strong>Default value</strong></strong></p></th></tr>
+<tr><th><p><strong>Argument</strong></p></th><th><p><strong>Name</strong></p></th><th><p><strong>Config file key</strong></p></th><th><p><strong>Description</strong></p></th><th><p><strong>Used in mode</strong></p></th><th><p><strong>Default value</strong></p></th></tr>
 </thead>
 <tbody>
 <tr><td><p>N/A</p></td><td><p>Additional Manifest Patterns</p></td><td><p>AdditionalManifestPatterns</p></td><td><p>Allows the user to specify additional patterns to detect as manifest.</p><p><strong>Tip</strong></p><p>Currently supported only for pip.</p><p>Syntax:</p><pre><code>AdditionalManifestPatterns:  
@@ -101,8 +101,8 @@ Windows
 <tr><td><p>--sbom-output-name</p></td><td><p>Custom sbom file name</p></td><td><p>SbomOutputName</p></td><td><p>Filename for the SBOM file. Defaults to cx-sbom.json if omitted.</p></td><td><p>Offline</p></td><td><p>cx-sbom.json</p></td></tr>
 <tr><td><p>--sbom-output-path</p></td><td><p>Custom sbom file path</p></td><td><p>SbomOutputPath</p></td><td><p>Directory where the SBOM file is written. Defaults to the project directory if omitted.</p></td><td><p>Offline</p></td><td><p>Project directory</p></td></tr>
 <tr><td><p>--override-default-excludes</p></td><td><p>Disable default exclusions</p></td><td><p>OverrideDefaultExcludes</p></td><td><p>When this is set, only the folders and files specified in the --excludes flag are excluded.</p></td><td><p>Online, Offline</p></td><td><p>false</p></td></tr>
-<tr><td><p>--disable-delta-scan</p></td><td><p>Disable delta scan</p></td><td><p>DisableDeltaScan</p></td><td><p>Override the default behavior of running Delta scans when using Resolver in Checkmarx One.</p><p><strong><strong>Note</strong></strong>: For SCA standalone users, Resolver does not run Delta scans. Therefore, this flag is not relevant for standalone users.</p></td><td><p>Offline</p></td><td><p>False</p></td></tr>
-<tr><td><p>--no-upload-manifest</p></td><td><p>Disable manifest upload</p></td><td><p>N/A</p></td><td><p>When this argument is set, the manifest files are <strong><strong>not</strong></strong> uploaded to Checkmarx SCA Cloud.</p><p><strong>Tip</strong></p><p>Preventing manifest uploads doesn’t affect the scan's effectiveness, but it may limit Checkmarx SCA’s ability to suggest precise mitigation actions.</p></td><td><p>Online</p></td><td><p>False (i.e., manifest files are uploaded)</p></td></tr>
+<tr><td><p>--disable-delta-scan</p></td><td><p>Disable delta scan</p></td><td><p>DisableDeltaScan</p></td><td><p>Override the default behavior of running Delta scans when using Resolver in Checkmarx One.</p><p><strong>Note</strong>: For SCA standalone users, Resolver does not run Delta scans. Therefore, this flag is not relevant for standalone users.</p></td><td><p>Offline</p></td><td><p>False</p></td></tr>
+<tr><td><p>--no-upload-manifest</p></td><td><p>Disable manifest upload</p></td><td><p>N/A</p></td><td><p>When this argument is set, the manifest files are <strong>not</strong> uploaded to Checkmarx SCA Cloud.</p><p><strong>Tip</strong></p><p>Preventing manifest uploads doesn’t affect the scan's effectiveness, but it may limit Checkmarx SCA’s ability to suggest precise mitigation actions.</p></td><td><p>Online</p></td><td><p>False (i.e., manifest files are uploaded)</p></td></tr>
 <tr><td><p>--disable-parameter-sanitization</p></td><td><p>Disable parameters sanitization</p></td><td><p>DisableParameterSanitization</p></td><td><p>Disable sanitization of package managers' additional parameters.</p></td><td><p>Online, Offline</p></td><td><p>False</p></td></tr>
 <tr><td><p>--sbom-first</p></td><td><p>Enables sbom resolution</p></td><td><p>EnableSbomFirst</p></td><td><p>Enables SBOM generation. When set, a CycloneDX 1.6 JSON file is produced after dependency resolution completes, covering both manifest-resolved and binary-detected components, and written to the output directory.</p></td><td><p>Offline</p></td><td><p>False</p></td></tr>
 <tr><td><p>-e| --excludes</p></td><td><p>Excludes</p></td><td><p>ExcludePatterns</p></td><td><p>Specify file and folder patterns to exclude from the zip file being scanned.</p><p>See examples below.</p><p><strong>Tip</strong></p><p>Using this argument adds to the list of exclusions; it does not override the default exclusions.</p></td><td><p>Online, Offline</p></td><td><p>Default excluded folders:</p><p>node_modules,</p><p>bower_components,</p><p>.git,</p><p>vendor,</p><p>Carthage</p></td></tr>
@@ -148,7 +148,7 @@ Windows
 </tbody>
 </table>
 
-Samples using some optional arguments:
+**Samples using some optional arguments:**
 
 Linux/MacOS
 
@@ -162,7 +162,7 @@ Windows
 ./ScaResolver.exe -s C:\home\jack\src\MyApp -a Checkmarx -u jack -p “demo123!” --log-level Debug --save-evidence-path ./evidences.json --extract-archives zip,ear --extract-depth 3 --gradle-exclude-scopes api,testCompile
 ```
 
-Sample of folder exclusions:
+**Sample of folder exclusions:**
 
 {% hint style="info" icon="pencil" %}
 The syntax shown below excludes only folders with the precise name that is specified. If you would like to exclude all folders that have the specified string anywhere in the file path, then you need to omit the backslashes, like this: `*project2*`.
@@ -180,7 +180,7 @@ Windows
 ./ScaResolver.exe -s C:\home\jack\src\MyApp -a Checkmarx -u jack -p “demo123!” -e "*\project2\*,*\project 3\*"
 ```
 
-Sample of file exclusions:
+**Sample of file exclusions:**
 
 Linux/MacOS
 
@@ -194,7 +194,7 @@ Windows
 ./ScaResolver.exe -s C:\home\jack\src\MyApp -a Checkmarx -u jack -p “demo123!” -e "*.ext1,*file name.ext2"
 ```
 
-Sample of tags:
+**Sample of tags:**
 
 Linux/MacOS
 
@@ -222,7 +222,7 @@ Windows
 ./ScaResolver.exe -s C:\home\jack\src\MyApp -a Checkmarx -u jack -p “demo123!” --private-dependency-name 'my-private-package' --private-dependency-version '1.0.0' --private-dependency-type 'Npm'
 ```
 
-Sample of SBOM capabilites:
+**Sample of SBOM capabilites:**
 
 The following example shows how to produce a CycloneDX 1.6 JSON file immediately after dependency resolution completes, covering both manifest-resolved and binary-detected components, and written to the output directory.
 
@@ -244,7 +244,7 @@ The custom parameters enable you to add additional parameters to the scan comman
 {% endhint %}
 
 {% hint style="warning" %}
-Certain special characters aren't supported for use in the arguments sent to the package managers. The following is the list of allowed characters:
+Certain special characters aren't supported for use in the arguments sent to the package managers. The following is the list of **allowed** characters:
 
 - Numbers and letters (lower and upper case)
 - Blank characters (space, tab, new line, etc)
@@ -253,7 +253,7 @@ Certain special characters aren't supported for use in the arguments sent to the
 It is possible to bypass our sanitization process and allow all characters to pass by adding the `--disable-parameters-sanitization` flag.
 {% endhint %}
 
-| Argument | Name | Config file key | Description | Used in mode |
+| **Argument** | **Name** | **Config file key** | **Description** | **Used in mode** |
 | --- | --- | --- | --- | --- |
 | --bower-parameters | Bower Custom Parameters | None | Parameters to be appended to bower package manager directly | Online, Offline |
 | --cocoapods-parameters | CocoaPods Custom Parameters | None | Parameters to be appended to CocoaPods package manager directly | Online, Offline |
@@ -270,10 +270,10 @@ It is possible to bypass our sanitization process and allow all characters to pa
 | --yarn-parameters | Yarn Custom Parameters | None | Parameters to be appended to yarn package manager directly | Online, Offline |
 
 {% hint style="info" icon="pencil" %}
-All custom parameters are not mandatory.
+All custom parameters are **not** mandatory.
 {% endhint %}
 
-Sample using custom arguments:
+**Sample using custom arguments:**
 
 Linux/MacOS
 
@@ -288,14 +288,14 @@ Windows
 ```
 {% endtab %}
 {% tab title="Report Arguments" %}
-| Argument | Name | Config file key | Description | Enums | Used in mode | Default value |
+| **Argument** | **Name** | **Config file key** | **Description** | **Enums** | **Used in mode** | **Default value** |
 | --- | --- | --- | --- | --- | --- | --- |
 | --report-content | Report Content | None | Specify the type of content that will be included in the report. | <ul><li><p>All</p></li><li><p>Packages</p></li><li><p>Vulnerabilities</p></li><li><p>Licenses</p></li></ul> | Online, Upload | All |
-| --report-extension | Report Extension | None | Specify the file type of report.<br>Note: You can specify multiple (comma separated) extension types in order to generate files of each type.<br>Note: CycloneDx reports must be in Json or Xml format. | <ul><li><p>Json</p></li><li><p>Xml</p></li><li><p>Csv (saved as zip with multiple Csv files)</p></li><li><p>Pdf</p></li></ul> | Online, Upload | Json |
+| --report-extension | Report Extension | None | Specify the file type of report.<br>**Note:** You can specify multiple (comma separated) extension types in order to generate files of each type.<br>**Note:** CycloneDx reports must be in Json or Xml format. | <ul><li><p>Json</p></li><li><p>Xml</p></li><li><p>Csv (saved as zip with multiple Csv files)</p></li><li><p>Pdf</p></li></ul> | Online, Upload | Json |
 | --report-path | Report Path | None | Specify the path to the location where the Report will be saved. | - | Online, Upload | reports |
 | --report-type | Report Type | None | You can use this flag to generate a report. There are two types of reports:<br><ul><li><p>Risk Report - A comprehensive report of the risks identified by Checkmarx SCA.</p></li><li><p>CycloneDx - A Software Bill of Materials (SBOM) report using the CycloneDx format.</p></li></ul> | <ul><li><p>Risk</p></li><li><p>CycloneDx</p></li><li><p>None</p></li></ul> | Online, Upload | None |
 
-Risk Report sample:
+**Risk Report sample:**
 
 Linux/MacOS
 
@@ -311,7 +311,7 @@ Windows
 
 You can generate an SBOM Report in json or xml format when running a scan using Checkmarx SCA Resolver (version 1.5.52+).
 
-SBOM Report sample:
+**SBOM Report sample:**
 
 Linux/MacOS
 
@@ -329,23 +329,23 @@ Windows
 To run a scan using the **Exploitable Path** feature, in addition to the regular mandatory arguments, you also need to add the following arguments, see [Exploitable Path](exploitable-path.md).
 
 {% hint style="info" %}
-Attributes marked as Mandatory in this table, are mandatory only when running an Exploitable Path scan. When running an Exploitable Path scan in Upload mode, you can either include the attributes that specify the account and Project info or the path to the result file.
+Attributes marked as Mandatory in this table, are mandatory only when running an Exploitable Path scan. When running an Exploitable Path scan in Upload mode, you can either include the attributes that specify the account and Project info **or** the path to the result file.
 {% endhint %}
 
-| Argument | Name | Config file key | Description | Mandatory | Used in | Default value |
+| **Argument** | **Name** | **Config file key** | **Description** | **Mandatory** | **Used in** | **Default value** |
 | --- | --- | --- | --- | --- | --- | --- |
-| --sast-result-path | Path to read SAST results | SastResultPath | Specify the path to the file of the saved SAST results that you are uploading. | For Upload mode, either this attribute with the path to the result file or info about the account and Project is mandatory. | Upload | false |
+| --sast-result-path | Path to read SAST results | SastResultPath | Specify the path to the file of the saved SAST results that you are uploading. | For Upload mode, either this attribute with the path to the result file **or** info about the account and Project is mandatory. | Upload | false |
 | --sast-result-path | Path to save SAST results | SastResultPath | Specify the path to the directory/file where the SAST results will be saved (for future upload). | YES (for Offline mode) | Offline | false |
 | --cxpassword | SAST Authentication server password | SastPassword | Your password for the SAST Authentication server | YES | All | - |
 | --cxuser | SAST Authentication server username | SastUserName | Your username for the SAST Authentication server | YES | All | - |
-| --cxprojectid | SAST Project ID | SastProjectId | The ProjectId of the Project that you created in SAST for running the SCA Exploitable Path feature. | Either the Project ID or the Project name is mandatory. | All | - |
-| --cxprojectname | SAST Project name | SastProjectName | The Project name of the Project that you created in SAST for running the SCA Exploitable Path feature. | Either the Project ID or the Project name is mandatory. | All | - |
+| --cxprojectid | SAST Project ID | SastProjectId | The ProjectId of the Project that you created in SAST for running the SCA Exploitable Path feature. | Either the Project ID **or** the Project name is mandatory. | All | - |
+| --cxprojectname | SAST Project name | SastProjectName | The Project name of the Project that you created in SAST for running the SCA Exploitable Path feature. | Either the Project ID **or** the Project name is mandatory. | All | - |
 | --cxserver | SAST Server endpoint | SastServer | Your CxServer endpoint.<br>e.g., [https://checkmarxServer/](https://checkmarxServer/) | YES | All | - |
 | N/A | Timeout for receiving response from SAST | EngineResultsReceiveTimeOutMinutes | Maximum time to wait to receive the results from the SAST engine. | NO | All | 15 min. |
 | N/A | Timeout for sending request to SAST | EngineResultsReceiveTimeOutMinutes | Maximum time to wait to send the request to the SAST engine. | NO | All | 2 min. |
-| N/A | Time period to check for SAST results | OldResultsThresholdMinutes | The time period for which SAST results will be checked. If multiple results exist, the most recent will be used.<br>**Tip** Exploitable Path is based on results from the most recent full SAST scan of the project, results from incremental scans aren't considered.<br>**Tip** There is no CLI argument for this parameter, so it must be set in the config file. | NO | All | 1 day |
+| N/A | Time period to check for SAST results | OldResultsThresholdMinutes | The time period for which SAST results will be checked. If multiple results exist, the most recent will be used.<br>**Tip** Exploitable Path is based on results from the most recent **full** SAST scan of the project, results from incremental scans aren't considered.<br>**Tip** There is no CLI argument for this parameter, so it must be set in the config file. | NO | All | 1 day |
 
-Sample using Exploitable Path:
+**Sample using Exploitable Path:**
 
 Linux/MacOS
 

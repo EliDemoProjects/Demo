@@ -12,11 +12,11 @@ This API is supported both for Checkmarx One and SCA standalone accounts.
 
 This API enables you to export reports of the data identified by a Checkmarx SCA scan. This includes detailed info about the open source packages in your project and the risks associated with them. This API can be used to generate the following types of reports:
 
-- Scan Report - shows an overview of the security of your project as well as specific vulnerabilities, legal risks, and outdated versions identified by the scan. Scan Reports can be generated in JSON, XML, PDF or CSV format.
+- **Scan Report** - shows an overview of the security of your project as well as specific vulnerabilities, legal risks, and outdated versions identified by the scan. Scan Reports can be generated in JSON, XML, PDF or CSV format.
 
-- Software Bill of Materials (SBOM) - SBOMs can be generated in either [CycloneDX v1.7](https://cyclonedx.org/docs/1.7/#SchemaProperties) or [SPDX v2.3](https://spdx.github.io/spdx-spec/v2.3/) format. SPDX SBOMs are output in JSON format. For CycloneDX, there is an option to output the data as JSON or XML.
+- **Software Bill of Materials (SBOM)** - SBOMs can be generated in either [CycloneDX v1.7](https://cyclonedx.org/docs/1.7/#SchemaProperties) or [SPDX v2.3](https://spdx.github.io/spdx-spec/v2.3/) format. SPDX SBOMs are output in JSON format. For CycloneDX, there is an option to output the data as JSON or XML.
 
-- Remediated Manifest File - A replacement manifest file that contains the recommended versions for each of your packages. You can download the remediated manifest file and use it to update your project. This feature is currently supported only for npm manifest files and this remediation method is relevant only for direct dependencies.
+- **Remediated Manifest File** - A replacement manifest file that contains the recommended versions for each of your packages. You can download the remediated manifest file and use it to update your project. This feature is currently supported only for npm manifest files and this remediation method is relevant only for direct dependencies.
 
   {% hint style="warning" %}
   If you update the dependency versions, your code may require some refactoring because of some possible functionality changes.
@@ -32,12 +32,12 @@ The report shows an overview of the security of your project as well as specific
 
 Reports show data divided into the following sections:
 
-- Packages - shows info about the open source packages used by your project that contain risks, including: security vulnerabilities, license violations, and outdated versions. The info is separated into a direct packages table and a transitive packages table.
-- Vulnerabilities - shows info about all of the security vulnerabilities that were identified in the open source packages used by your project, including: severity level, CVE references, remediation recommendations etc. Results are shown also for Supply Chain risks (i.e., suspected malicious packages).
-- Licenses - shows the licenses that you have for the packages in your project and the legal risks associated with those packages.
-- Policy Violations - shows any security Policies which the Project violates.
+- **Packages** - shows info about the open source packages used by your project that contain risks, including: security vulnerabilities, license violations, and outdated versions. The info is separated into a direct packages table and a transitive packages table.
+- **Vulnerabilities** - shows info about all of the security vulnerabilities that were identified in the open source packages used by your project, including: severity level, CVE references, remediation recommendations etc. Results are shown also for Supply Chain risks (i.e., suspected malicious packages).
+- **Licenses** - shows the licenses that you have for the packages in your project and the legal risks associated with those packages.
+- **Policy Violations** - shows any security Policies which the Project violates.
 
-When you generate a report, by default all sections are included in the report. You can specify any sections that you would like to exclude from the report.
+When you generate a report, by default all sections are included in the report. You can specify any sections that you would like to **exclude** from the report.
 {% endtab %}
 {% tab title="What's in an SBOM Report?" %}
 Software Bill of Materials (SBOM), in simple words, is a list of all ingredients (i.e., components) of a software product. Just like you would check the ingredients of a food product before eating it, so too you should know what’s in your software before using it.
@@ -96,7 +96,7 @@ Authentication for all SCA endpoints is done using an access token. To learn how
 This endpoint is used to generate a report for a specific scan by specifying the `scanId` and the desired report format.
 
 {% hint style="info" icon="pencil" %}
-The success response includes an exportId which is used to check the status and get the download URL.
+The success response includes an **exportId** which is used to check the status and get the download URL.
 {% endhint %}
 
 ### Request Parameters
@@ -105,7 +105,7 @@ The success response includes an exportId which is used to check the status and 
 
 The POST method must be submitted with the following body parameters.
 
-| Parameter | Mandatory | Type | Default | Enum/Comments | Description |
+| **Parameter** | **Mandatory** | **Type** | Default | Enum/Comments | **Description** |
 | --- | --- | --- | --- | --- | --- |
 | ScanId | yes | string | N/A | N/A | The unique identifier of the scan for which you would like to generate a report. |
 | FileFormat | yes | string | N/A | <ul><li><p>CycloneDxJson</p></li><li><p>CycloneDxXml</p></li><li><p>SpdxJson</p></li><li><p>RemediatedPackagesJson</p></li><li><p>ScanReportJson</p></li><li><p>ScanReportXml</p></li><li><p>ScanReportCsv</p></li><li><p>ScanReportPdf</p></li></ul> | The format of the report. |
@@ -200,7 +200,7 @@ This endpoint is used to check the status of a specific report. Once the report 
 
 The GET method must be submitted with the following query parameter.
 
-| Parameter | Mandatory | Type | Enum | Description |
+| **Parameter** | **Mandatory** | **Type** | Enum | **Description** |
 | --- | --- | --- | --- | --- |
 | exportId | yes | string | N/A | The unique identifier of the report for which you would like to get the status and download link. |
 
@@ -217,7 +217,7 @@ Code: 200
 
 The response body consists of the following parameters.
 
-| Parameter | Type | Enum | Description |
+| **Parameter** | **Type** | Enum | **Description** |
 | --- | --- | --- | --- |
 | exportId | string | N/A | The unique identifier of the scan for which you would like to generate a report. |
 | exportStatus | string | <ul><li><p>Pending</p></li><li><p>Exporting</p></li><li><p>Completed</p></li><li><p>Failed</p></li></ul> | The current status of the report generation. |

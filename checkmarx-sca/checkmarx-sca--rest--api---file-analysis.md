@@ -42,7 +42,7 @@ The following base URLs are used for these APIs, depending on your environment:
 
 ## SCA File Analysis Endpoints Summary
 
-| API | Method | Endpoint | Description |
+| **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
 | Run file analysis | POST | /analysis/requests | Run file analysis on a supported file type. |
 | Retrieve analysis results | GET | /analysis/requests/{requestId} | Get detailed results from SCA file analysis. The results include detailed info about the packages specified in the file as well as all associated vulnerabilities, supply chain risks and license info. |
@@ -73,7 +73,7 @@ curl --request POST \
 
 Query Parameters
 
-| Parameter | Type | Required | Enum | Description |
+| **Parameter** | **Type** | Required | **Enum** | **Description** |
 | --- | --- | --- | --- | --- |
 | AnalysisType | string | Yes | sbom | Specify the type of file that you are submitting for analysis. Currently, the only supported type is Sbom. |
 | DisableRetention | boolean | No |  | If `true`, as soon as the Analysis report has been retrieved successfully once, all related data is deleted from the SCA cloud. If `false` (default) then data is retained for 5 days and multiple report retrievals are allowed. |
@@ -82,7 +82,7 @@ Body Parameter - Required
 
 Format: multipart/form-data
 
-| Parameter | Type | Description |
+| **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
 | fileToAnalyze | string | The path to the file that is being submitted for analysis.<br>**Tip** You can submit a raw json or xml file, or a zip archive. |
 
@@ -97,7 +97,7 @@ Message: `Accepted`
 
 Attributes:
 
-| Attribute | Type | Description |
+| **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
 | requestId | string | The unique identifier for retrieving results from this analysis. |
 
@@ -136,7 +136,7 @@ curl --request GET \
 
 Path Parameter - Required
 
-| Parameter | Type | Description |
+| **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
 | requestId | string | Specify the unique identifier for the SCA analysis that you would like to retrieve. |
 

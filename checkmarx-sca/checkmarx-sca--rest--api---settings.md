@@ -11,7 +11,7 @@ The following base URLs are used for all calls, depending on your environment:
 
 The following is a list of the Checkmarx SCA APIs that relate to Settings:
 
-| API | Method | Endpoint | Description |
+| **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
 | GET (Specific Project) Settings | GET | /risk-management/settings/projects/{projectId} | View the Exploitable Path setting for a specific Project. |
 | [PUT (Specific Project) Settings](checkmarx-sca--rest--api---put-settings.md) | PUT | /risk-management/settings/projects/{projectId} | Set the Exploitable Path setting for a specific Project. |

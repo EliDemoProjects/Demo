@@ -6,7 +6,7 @@ We are excited to announce important improvements in our Checkmarx SCA web appli
 
 ### Notifications
 
-Users can now create customized Notifications to be sent automatically to the designated recipients when important events occur in the account. Notifications can be sent via email and/or by configuring webhooks for integration with other platforms.
+Users can now create customized **Notifications** to be sent automatically to the designated recipients when important events occur in the account. Notifications can be sent via email and/or by configuring webhooks for integration with other platforms.
 
 {% hint style="info" icon="pencil" %}
 There is a one-to-one relationship between notifications and projects. Meaning that each notification has a single project assigned to it, and each project can only be assigned to a single notification.
@@ -14,12 +14,12 @@ There is a one-to-one relationship between notifications and projects. Meaning t
 
 You can configure notifications for the following event types.
 
-- New vulnerability - a new vulnerability was identified in a package that is used in the project.
-- Policy violation - a scan of the project identified violations of the security policies that are assigned to the project.
-- Successful scan - the project was scanned successfully.
-- Failed scan - an attempted scan of the project failed.
+- **New vulnerability** - a new vulnerability was identified in a package that is used in the project.
+- **Policy violation** - a scan of the project identified violations of the security policies that are assigned to the project.
+- **Successful scan** - the project was scanned successfully.
+- **Failed scan** - an attempted scan of the project failed.
 
-By default, for each new project created in SCA a notification is configured to send New vulnerability and Policy violation notifications to the email of the user who created the project. You can edit or delete existing notifications and you can create new notifications (for projects that aren't yet assigned to a notification).
+By default, for each new project created in SCA a notification is configured to send **New vulnerability** and **Policy violation** notifications to the email of the user who created the project. You can edit or delete existing notifications and you can create new notifications (for projects that aren't yet assigned to a notification).
 
 To learn more about notifications, see [Notifications](notifications.md).
 

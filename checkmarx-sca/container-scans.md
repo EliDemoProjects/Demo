@@ -12,7 +12,7 @@ For scans run via the Checkmarx SCA web portal or Checkmarx plugins only public 
 
 ## Viewing Container Scan Results
 
-The Scan Results \> Container tab shows the container packages identified in your project and the vulnerabilities associated with them. For a description of the info shown in the Container tab, see [Container Tab](project-page-tabs.md#UUID-cb7b834c-d2fc-5c05-7b96-6955938c4e1a).
+The **Scan Results** \> **Container** tab shows the container packages identified in your project and the vulnerabilities associated with them. For a description of the info shown in the Container tab, see [Container Tab](project-page-tabs.md#UUID-cb7b834c-d2fc-5c05-7b96-6955938c4e1a).
 
 <div align="left"><figure><img src=".gitbook/assets/img-b1da1858e2337c1dc5ad3705cf445b55.png" alt=""></figure></div>
 
@@ -118,7 +118,7 @@ You can configure multiple profiles, e.g., for different environments.
 
 See [AWS SDKs and Tools](https://docs.aws.amazon.com/sdkref/latest/guide/overview.html)
 
-Example of Credentials File
+**Example of Credentials File**
 
 File ““~/.aws/credentials”
 
@@ -160,7 +160,7 @@ The value submitted for the `--images` parameter for GCR uses the following synt
 
 1. Obtain the value needed to identify this image. The following is on possible method for obtaining this info:
 
-   - Open ECR in the Google Cloud portal and navigate to the image and tag of the desired image. Then, in the PULL tab, copy the value given in the Pull by tag snippet (without the "docker pull" command).
+   - Open ECR in the Google Cloud portal and navigate to the image and tag of the desired image. Then, in the **PULL** tab, copy the value given in the **Pull by tag** snippet (without the "docker pull" command).
 
      <div align="left"><figure><img src=".gitbook/assets/img-86fa04f35c7e8426b017815b78047edf.png" alt=""></figure></div>
 

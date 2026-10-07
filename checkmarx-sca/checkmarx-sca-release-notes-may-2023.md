@@ -10,7 +10,7 @@ We have released a new version of the AppSec Knowledge Center. The new version m
 
 The following are some of the main improvements:
 
-- The Package page now shows Supply Chain risks, and Licenses associated with the package (in addition to vulnerabilities).
+- The **Package** page now shows **Supply Chain** risks, and **Licenses** associated with the package (in addition to vulnerabilities).
 
 - Package selection is now done by entering the package name and then clicking on a marker for a specific version.
 
@@ -35,17 +35,17 @@ The following are some of the main improvements:
 
   The info is now divided into the following elements:
 
-  - Overview - gives general info about the vulnerability including the CVSS score.
+  - **Overview** - gives general info about the vulnerability including the CVSS score.
 
-  - Info Pane - shows the description of the vulnerability and CWE and gives references for further research.
+  - **Info Pane** - shows the description of the vulnerability and CWE and gives references for further research.
 
-    - Notes - Within the info pane, we have added a section for notes. This section shows notes that were added to a vulnerability by the Checkmarx AppSect team. These notes may explain discrepancies between our data and data shown in NVD, such as when we have confirmed the disputation of a vulnerability. They may also suggest specific mitigation actions such as changing configurations, or offer other helpful insights from our AppSec team.
+    - **Notes** - Within the info pane, we have added a section for notes. This section shows notes that were added to a vulnerability by the Checkmarx AppSect team. These notes may explain discrepancies between our data and data shown in NVD, such as when we have confirmed the disputation of a vulnerability. They may also suggest specific mitigation actions such as changing configurations, or offer other helpful insights from our AppSec team.
 
-  - Detail Tabs - The bottom section gives additional details about the vulnerability and the packages affected by the vulnerability. The info is divided into tabs for Affected Versions, Score and Status.
+  - **Detail Tabs** - The bottom section gives additional details about the vulnerability and the packages affected by the vulnerability. The info is divided into tabs for Affected Versions, Score and Status.
 
 ## Tags in Global Inventory
 
-We added a Tags column to the Packages table on the Global Inventory screen. This shows both the scan tags and project tags associated with the most recent scan in which the package was identified.
+We added a **Tags** column to the Packages table on the Global Inventory screen. This shows both the scan tags and project tags associated with the most recent scan in which the package was identified.
 
 {% hint style="info" icon="pencil" %}
 This can be useful for tracking which project branch uses the package.

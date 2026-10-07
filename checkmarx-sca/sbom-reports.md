@@ -38,7 +38,7 @@ Our reports can be generated in [CycloneDX](https://cyclonedx.org/specification/
 - [Export Service API](checkmarx-sca--rest--api---export-service.md) - supports [CycloneDX v1.7](https://cyclonedx.org/docs/1.7/#SchemaProperties) and [SPDX v2.3](https://spdx.github.io/spdx-spec/v2.3/) formats.
 
   {% hint style="info" icon="pencil" %}
-  For best results generating reports that are compliant with SBOM formatting specifications, we recommend using the Export Service API as opposed to the Reports API.
+  For best results generating reports that are compliant with SBOM formatting specifications, we recommend using the **Export Service API** as opposed to the **Reports API**.
   {% endhint %}
 
 ## Generating SBOM Reports
@@ -49,17 +49,17 @@ You can generate an SBOM report via the web portal (UI). You can generate a repo
 Alternatively, when running a scan using Checkmarx SCA Resolver you can add a flag to generate a “CycloneDx” report for that scan.
 {% endhint %}
 
-To generate an SBOM report:
+**To generate an SBOM report:**
 
 1. Navigate to the Projects screen for the desired Project.
 
-2. Click on the Export button <img src=".gitbook/assets/img-4e6379243702a50bda6afbf432de08b3.png" alt="" data-size="line"> in the header bar.
+2. Click on the **Export** button <img src=".gitbook/assets/img-4e6379243702a50bda6afbf432de08b3.png" alt="" data-size="line"> in the header bar.
 
    The export type menu opens.
 
    <div align="left"><figure><img src=".gitbook/assets/img-b4590f2160d3243a3b10def80f094757.jpg" alt=""></figure></div>
 
-3. Click on Software Bill of Materials.
+3. Click on **Software Bill of Materials**.
 
    The SBOM configuration dialog opens.
 
@@ -67,19 +67,19 @@ To generate an SBOM report:
 
 4. Select the desired SBOM standard. Options are: SPDX orCycloneDx.
 
-5. Select the Hide Private Packages checkbox if you want to exclude private packages from the report.
+5. Select the **Hide Private Packages** checkbox if you want to exclude private packages from the report.
 
-6. Select the Exclude Dev and Test packages checkbox to exclude Dev and Test packages from the report.
+6. Select the **Exclude Dev and Test packages** checkbox to exclude Dev and Test packages from the report.
 
    {% hint style="info" %}
    To learn more about Dev and Test dependencies, see [here](https://docs.checkmarx.com/en/34965-322318-sca-scanner.html#UUID-2865b187-60e6-84f0-67c8-c5313ef205fc_UUID-ce0b5676-9ab8-dee1-1004-5c32410eaa0a).
    {% endhint %}
 
-7. Select the Include only effective licenses checkbox if you want to exclude licenses that haven't been designated as effective from the report. By default, the checkbox is selected.
+7. Select the **Include only effective licenses** checkbox if you want to exclude licenses that haven't been designated as effective from the report. By default, the checkbox is selected.
 
 8. Select the output format. Options are: for CycloneDx, XML or JSON; for SPDX only JSON is supported.
 
-9. Click Export.
+9. Click **Export**.
 
    The SBOM report is downloaded and can be viewed on standard XML/JSON viewers.
 
@@ -91,7 +91,7 @@ The report follows the [CycloneDX v1.7](https://cyclonedx.org/docs/1.7/#SchemaPr
 
 In addition, Checkmarx SCA adds a “properties” section with extended information for each library. This section contains key information about the risks associated with the library.
 
-Sample XML:
+**Sample XML:**
 
 <div align="left"><figure><img src=".gitbook/assets/img-b2fd1d8858ce23199718e5678c03659c.png" alt=""></figure></div>
 
@@ -99,6 +99,6 @@ Sample XML:
 
 Each component contains its dependent components, and each dependency section contains a set of required fields and a properties section.
 
-Sample Components Section (XML):
+**Sample Components Section (XML):**
 
 <div align="left"><figure><img src=".gitbook/assets/img-345bd6a177a47b45699144b5f15cb7e7.png" alt=""></figure></div>

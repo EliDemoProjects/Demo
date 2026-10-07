@@ -18,15 +18,15 @@ In addition, EPSS score is shown in the AppSec Knowledge Center vulnerability da
 
 ## Detection Date
 
-In the Scan Results \> Risks tab, we now show the "Detection" date. This is the date that the vulnerability was first identified in the project that you are viewing. For vulnerabilities that were first identified in the scan that you are viewing, the NEW label is shown next to the date. You can alternate between showing the "Publication" date and the "Detection" date by clicking on the column header.
+In the **Scan Results** \> **Risks** tab, we now show the "Detection" date. This is the date that the vulnerability was first identified in the project that you are viewing. For vulnerabilities that were first identified in the scan that you are viewing, the NEW label is shown next to the date. You can alternate between showing the "Publication" date and the "Detection" date by clicking on the column header.
 
 ## Legal Risk
 
-We fundamentally changed the way that we handle legal risks. Instead of listing all Licenses in the Vulnerabilities \> Legal Risk section, we now show a separate tab with a list of all licenses identified in the project. In the Vulnerabilities \> Legal Risk section, we now show only the following types of legal risks:
+We fundamentally changed the way that we handle legal risks. Instead of listing all Licenses in the **Vulnerabilities** \> **Legal Risk** section, we now show a separate tab with a list of all licenses identified in the project. In the **Vulnerabilities** \> **Legal Risk** section, we now show only the following types of legal risks:
 
-- Risky effective license - A license with medium or high severity License Score is marked as Effective for this package.
-- Package with no effective license - There is an open source package in your project for which no license has been marked as Effective.
-- Package with no license - Checkmarx didn't identify any licenses associated with this package.
+- **Risky effective license** - A license with medium or high severity License Score is marked as Effective for this package.
+- **Package with no effective license** - There is an open source package in your project for which no license has been marked as Effective.
+- **Package with no license** - Checkmarx didn't identify any licenses associated with this package.
 
 ## Support for Perl
 
@@ -34,11 +34,11 @@ Added support for Perl using cpan package manager.
 
 <table>
 <thead>
-<tr><th><p><strong><strong>Perl</strong></strong></p></th><th></th><th colspan="2"><p><strong><strong>Languages/Frameworks:</strong></strong> Perl</p><p><strong><strong>Repository:</strong></strong> <a href="https://www.cpan.org/"> Cpan</a></p><p><strong><strong>File Types:</strong></strong> none</p></th></tr>
+<tr><th><p><strong>Perl</strong></p></th><th></th><th colspan="2"><p><strong>Languages/Frameworks:</strong> Perl</p><p><strong>Repository:</strong> <a href="https://www.cpan.org/"> Cpan</a></p><p><strong>File Types:</strong> none</p></th></tr>
 </thead>
 <tbody>
-<tr><td><p><strong><strong>Supported Package Managers</strong></strong></p></td><td><p><strong><strong>Exploitable Path</strong></strong></p></td><td><p><strong><strong>Supply Chain Security (SCS)</strong></strong></p></td><td><p><strong><strong>Manifest Files</strong></strong> (Packages marked with are required)</p></td></tr>
-<tr><td><p>Cpan</p></td><td><p></p></td><td><p></p></td><td><p><code>cpanfile</code>, <code>spcanfile.snapshot</code></p></td></tr>
+<tr><td><p><strong>Supported Package Managers</strong></p></td><td><p><strong>Exploitable Path</strong></p></td><td><p><strong>Supply Chain Security (SCS)</strong></p></td><td><p><strong>Manifest Files</strong> (Packages marked with are required)</p></td></tr>
+<tr><td><p>Cpan</p></td><td><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><code>cpanfile</code>, <code>spcanfile.snapshot</code></p></td></tr>
 </tbody>
 </table>
 

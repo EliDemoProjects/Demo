@@ -15,25 +15,25 @@ Checkmarx SCA helps you to prioritize (triage) remediation activities by providi
 While you triage the results, you can mark the status of each vulnerability as **To Verify**, **Not Exploitable**, **Proposed Not Exploitable**, **Confirmed** or **Urgent**. See [Risk Management](risk-management--beta-.md)
 {% endhint %}
 
-- Severity - On the Scan Results \> Packages tab, the risk level of the package is shown, as well the number of vulnerabilities of each severity level that affect the package. This inf is also available in the AppSec Knowledge Center \> Package page.
+- Severity - On the **Scan Results** \> **Packages** tab, the risk level of the package is shown, as well the number of vulnerabilities of each severity level that affect the package. This inf is also available in the **AppSec Knowledge Center** \> **Package** page.
 
-- Exploitability - Checkmarx provides info for three factors that affect exploitablility. This info is shown in the Scan Results \> Risks tab for each vulnerability in the scan. (KEV and POV are also shown in the AppSec Knowledge Center \> Vulnerabilities page.)
+- Exploitability - Checkmarx provides info for three factors that affect exploitablility. This info is shown in the **Scan Results** \> **Risks** tab for each vulnerability in the scan. (KEV and POV are also shown in the **AppSec Knowledge Center** \> **Vulnerabilities** page.)
 
   - Exploitable Path - If your project has been scanned with the the Exploitable Path feature activated, then the scan results indicate whether the vulnerable method is actually called in your source code.
   - KEV - A vulnerability that is cataloged by CISA as a Known Exploited Vulnerability (KEV), indicating that it poses a severe and imminent threat.
   - POC - A Proof of Concept (POC) for exploiting this vulnerability is available in the wild, making it easy for threat actors to implement an exploitation of this vulnerability.
 
-- Usage - On the Scan Results \> Packages tab, Checkmarx indicates whether or not the package is used by your source code. For transitive dependencies, we indicate whether it is "Potentially Used", i.e., if it is a dependency of a package that is used.
+- Usage - On the **Scan Results** \> **Packages** tab, Checkmarx indicates whether or not the package is used by your source code. For transitive dependencies, we indicate whether it is "Potentially Used", i.e., if it is a dependency of a package that is used.
 
   {% hint style="warning" %}
   Usage info is only provided for scans that were run with the Exploitable Path feature activated.
   {% endhint %}
 
   {% hint style="info" icon="pencil" %}
-  The fact that a vulnerable package is used doesn't necessarily indicate that the vulnerable method itself is called. That is only known when SCA indicates that there is an Exploitable Path to the vulnerability.
+  The fact that a vulnerable package is **used** doesn't necessarily indicate that the vulnerable method itself is called. That is only known when SCA indicates that there is an Exploitable Path to the vulnerability.
   {% endhint %}
 
-- Number of references - if a vulnerable transitive package is referenced by several different paths, these vulnerabilities can be remediated by simply adding the non-vulnerable version to the manifest file. This info is shown in the Scan Results \> Packages tab.
+- Number of references - if a vulnerable transitive package is referenced by several different paths, these vulnerabilities can be remediated by simply adding the non-vulnerable version to the manifest file. This info is shown in the **Scan Results** \> **Packages** tab.
 
 ## Checkmarx SCA Remediation Recommendations
 
@@ -41,27 +41,27 @@ Checkmarx SCA offers recommendations for effective remediation actions. Checkmar
 
 ### Method 1 - Upgrade to Version
 
-While viewing Scan Results, the Vulnerability details screen shows a section Remediate this Vulnerability. If Checkmarx is aware of an alternative version of the package that doesn't have this particular vulnerability, then the Upgrade to version section shows the next version up from the current version that doesn't have this vulnerability.
+While viewing **Scan Results**, the **Vulnerability** details screen shows a section **Remediate this Vulnerability**. If Checkmarx is aware of an alternative version of the package that doesn't have this particular vulnerability, then the **Upgrade to version** section shows the next version up from the current version that doesn't have this vulnerability.
 
 {% hint style="info" icon="pencil" %}
-If you would like to find a version that doesn't have any vulnerabilities, click on the Find best package version link, which takes you to the AppSec Knowledge Center.
+If you would like to find a version that doesn't have **any** vulnerabilities, click on the **Find best package version** link, which takes you to the AppSec Knowledge Center.
 {% endhint %}
 
 <div align="left"><figure><img src=".gitbook/assets/img-afc352c882e95c8711abb039271f2f63.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 #### Advantages
 
-- Broad Support - This info is provided for packages associated with any platform/package manager supported by SCA.
+- **Broad Support** - This info is provided for packages associated with any platform/package manager supported by SCA.
 
 #### Limitations
 
-- Vulnerability Specific - This recommendation relates only to remediation of the specific vulnerability that is being viewed. The recommended version may still have other vulnerabilities associated with it.
+- **Vulnerability Specific** - This recommendation relates only to remediation of the specific vulnerability that is being viewed. The recommended version may still have other vulnerabilities associated with it.
 
   {% hint style="info" icon="pencil" %}
-  You can click on Find best package at the bottom of the Upgrade to version section to open the AppSecKnowledge Center where you can find info about all vulnerabilities associated with each version of the package.
+  You can click on **Find best package** at the bottom of the **Upgrade to version** section to open the AppSecKnowledge Center where you can find info about all vulnerabilities associated with each version of the package.
   {% endhint %}
 
-- Manual Implementation - Changes must be made manually. The Vulnerable package path is shown at the bottom of the screen, enabling you to identify where the change needs to be made.
+- **Manual Implementation** - Changes must be made manually. The Vulnerable package path is shown at the bottom of the screen, enabling you to identify where the change needs to be made.
 
   {% hint style="info" icon="pencil" %}
   For Checkmarx One customers using the VS Code or JetBrains plugin, there is a one-click method for implementing the recommendation in your code.
@@ -71,7 +71,7 @@ If you would like to find a version that doesn't have any vulnerabilities, click
 
 Checkmarx enables you to generate a remediated manifest file for your project. Checkmarx provides a new manifest file that contains the recommended versions for your packages. You can download the remediated manifest file and use it to update your project.
 
-This feature is accessed from the Scan Results screen by clicking on the <img src=".gitbook/assets/img-4e6379243702a50bda6afbf432de08b3.png" alt="" data-size="line"> icon and selecting Remediation Manifest. For more info, see [Remediation using a Manifest File](remediation-using-a-manifest-file.md).
+This feature is accessed from the Scan Results screen by clicking on the <img src=".gitbook/assets/img-4e6379243702a50bda6afbf432de08b3.png" alt="" data-size="line"> icon and selecting **Remediation Manifest**. For more info, see [Remediation using a Manifest File](remediation-using-a-manifest-file.md).
 
 <div align="left"><figure><img src=".gitbook/assets/img-3ec2b90c7b77c9e64b24ed81dc00648c.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
@@ -88,18 +88,18 @@ This feature is accessed from the Scan Results screen by clicking on the <img sr
 
 ### Method 3 - Remediation Tasks Tab
 
-The Remediation Tasks tab shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project. These tasks involve replacing vulnerable packages in your project with non-vulnerable versions of those packages. For more info, see [Remediation Tasks Tab](project-page-tabs.md#UUID-4838541d-dfbc-58bb-cef1-5e9c58de543c).
+The **Remediation Tasks** tab shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project. These tasks involve replacing vulnerable packages in your project with non-vulnerable versions of those packages. For more info, see [Remediation Tasks Tab](project-page-tabs.md#UUID-4838541d-dfbc-58bb-cef1-5e9c58de543c).
 
 <div align="left"><figure><img src=".gitbook/assets/img-603efdbf8c0e446b7e1d056a8937e08a.png" alt=""></figure></div>
 
-The Remediation Tasks tab contains sub-tabs that show two types of pages:
+The **Remediation Tasks** tab contains sub-tabs that show two types of pages:
 
-- All Remediation Tasks – shows a list of remediation tasks that are recommended for this Project, with general info about each task, including an assessment of the Effort Required and Impact for each task.
-- Task Details – shows detailed info about a specific task, including the Developer Walkthrough which gives clear instructions for each step in the remediation process. The task details tab is opened by clicking on the How to fix button in a task row in the All Remediation Tasks sub-tab.
+- **All Remediation Tasks** – shows a list of remediation tasks that are recommended for this Project, with general info about each task, including an assessment of the **Effort Required** and **Impact** for each task.
+- **Task Details** – shows detailed info about a specific task, including the Developer Walkthrough which gives clear instructions for each step in the remediation process. The task details tab is opened by clicking on the **How to fix** button in a task row in the **All Remediation Tasks** sub-tab.
 
 #### Advantages
 
-- Facilitates triage by showing assessment of Effort Required and Impact (based on proprietary algorithms) for each task
+- Facilitates triage by showing assessment of **Effort Required** and **Impact** (based on proprietary algorithms) for each task
 
 - Gives detailed steps for remediating each vulnerable package
 

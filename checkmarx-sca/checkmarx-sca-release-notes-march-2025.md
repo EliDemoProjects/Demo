@@ -8,7 +8,7 @@
 
 ### Global Inventory Improvements
 
-We added the following functionality to the Vulnerabilities and Malware tab of the Global Inventory & Risks.
+We added the following functionality to the **Vulnerabilities and Malware** tab of the **Global Inventory & Risks**.
 
 - Added the “Secure Version” column, indicating whether or not a remediated version of the package is available. You can sort and filter for this column.
 - The [EPSS](https://www.first.org/epss/) score is now shown in a separate column (not under Exploitability). You can now sort and filter for EPSS.

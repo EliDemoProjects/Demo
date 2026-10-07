@@ -10,7 +10,7 @@ We have implemented a new integration with [Sysdig Risk Spotlight](https://docs.
 
 ### Prerequisites
 
-- You need to have a Sysdig license and you need to obtain a Sysdig Risk Spotlight Token for your account.
+- You need to have a Sysdig license and you need to obtain a **Sysdig Risk Spotlight Token** for your account.
 - Make sure that your Sysdig agents are configured to cover all images that you will be scanning in Checkmarx.
 
 ### Limitations
@@ -141,11 +141,11 @@ Once the integration has been configured for your account, whenever you run a sc
 
 ### Container Packages Tab
 
-In the Container Packages tab, there is a column Runtime Usage which indicates which packages are used in runtime.
+In the **Container Packages** tab, there is a column **Runtime Usage** which indicates which packages are used in runtime.
 
 <div align="left"><figure><img src=".gitbook/assets/img-f5fd2fd3f50e63823ac11c300433dd12.png" alt=""></figure></div>
 
-Possible values for Runtime Usage are:
+Possible values for **Runtime Usage** are:
 
 - Used - Runtime usage of this package was identified.
 - Not Used - No runtime usage of this package was identified.
@@ -154,10 +154,10 @@ Possible values for Runtime Usage are:
 
 ### Container Vulnerabilities Tab
 
-In the Containers Vulnerabilities tab, runtime usage is shown as a Risk Factor for vulnerabilities that are associated with used packages.
+In the **Containers Vulnerabilities** tab, runtime usage is shown as a **Risk Factor** for vulnerabilities that are associated with used packages.
 
 <div align="left"><figure><img src=".gitbook/assets/img-2d0748a277649118c695cafd399be768.png" alt=""></figure></div>
 
-Also, when you drill-down to open the details page for a specific vulnerability, runtime usage is shown as a Risk Factor.
+Also, when you drill-down to open the details page for a specific vulnerability, runtime usage is shown as a **Risk Factor**.
 
 <div align="left"><figure><img src=".gitbook/assets/img-59eb98dad794abee766d6469d077e4ba.png" alt=""></figure></div>

@@ -15,7 +15,7 @@ The following base URLs are used for all calls, depending on your environment:
 
 The following is a list of the Checkmarx SCA APIs that relate to Projects:
 
-| API | Method | Endpoint | Description |
+| **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
 | GET Projects | GET | /risk-management/projects | View info about all the Projects in your account. |
 | [POST Projects](checkmarx-sca--rest--api---post-project.md) | POST | /risk-management/projects | Create a new Project. The user specifies the Project name and configures the Project settings. The response returns a unique Project ID which is used to refer to the Project. |

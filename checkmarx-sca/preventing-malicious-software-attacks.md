@@ -16,7 +16,7 @@ The following table shows some examples of suspected malware risks of each type 
 
 <table>
 <thead>
-<tr><th><p><strong><strong>Title</strong></strong></p></th><th><p><strong><strong>Description</strong></strong></p></th></tr>
+<tr><th><p><strong>Title</strong></p></th><th><p><strong>Description</strong></p></th></tr>
 </thead>
 <tbody>
 <tr><td colspan="2"><p>Reputation</p></td></tr>
@@ -39,7 +39,7 @@ The following table shows some examples of suspected malware risks of each type 
 
 ## Viewing Suspected Malware Risks in the Checkmarx SCA Web Portal
 
-Suspected malware risks are shown as a separate group in the Scan Results \> Risks tab.
+Suspected malware risks are shown as a separate group in the **Scan Results** \> **Risks tab**.
 
 <div align="left"><figure><img src=".gitbook/assets/img-8c80ff5498b8ddbbeafbda856fa14ac8.png" alt=""></figure></div>
 
@@ -47,19 +47,19 @@ Click on the row of a suspected malware risk to open a details page showing deta
 
 <div align="left"><figure><img src=".gitbook/assets/img-1d1182f81365084563f5bb67ef52f95a.png" alt=""></figure></div>
 
-In addition, when you click on a package with a suspected malware risk on the Scan Results \> Packages tab, the details page that opens shows gauge widgets representing three risk categories (Reputation, Reliability and Behavior). The scores are given on a scale of 0-10, with 10 indicating the highest level of security.
+In addition, when you click on a package with a suspected malware risk on the **Scan Results** \> **Packages** tab, the details page that opens shows gauge widgets representing three risk categories (Reputation, Reliability and Behavior). The scores are given on a scale of 0-10, with 10 indicating the highest level of security.
 
 <div align="left"><figure><img src=".gitbook/assets/img-ff06ff055f3528fa521b33316091c750.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 ## Creating Suspected Malware Policies
 
-Checkmarx SCA Policy Management enables you to apply customized security rules to the open source packages in your Projects. This makes it easy to identify Projects that are non-compliant with your self-defined security policies.
+Checkmarx SCA **Policy Management** enables you to apply customized security rules to the open source packages in your Projects. This makes it easy to identify Projects that are non-compliant with your self-defined security policies.
 
 {% hint style="info" icon="pencil" %}
 Learn more about [Policy Management](policy-management.md).
 {% endhint %}
 
-Checkmarx SCA offers a specialized set of Policy conditions for suspected malware risks. When defining a policy, you can configure conditions based on two independent attributes of a suspected malware finding: its severity level (for example, Low, Medium, High, or Critical) and its risk type (which represents the category of the suspected malware, for example, Malicious Package).
+Checkmarx SCA offers a specialized set of Policy conditions for suspected malware risks. When defining a policy, you can configure conditions based on two independent attributes of a suspected malware finding: its **severity level** (for example, Low, Medium, High, or Critical) and its **risk type** (which represents the category of the suspected malware, for example, Malicious Package).
 
 For example:
 
@@ -67,8 +67,8 @@ For example:
 - Setting **Risk type = Malicious Package** means the policy will be triggered for any finding classified as a malicious package, regardless of its severity level.
 - Setting both conditions together will further narrow the trigger so that only findings that match both the selected severity and risk type are included.
 
-Suspected Malware conditions can also be combined with other condition sets, such as package conditions, to further refine the scope of the policy and control when it is triggered.
+Suspected Malware conditions can also be combined with other condition sets, such as **package** conditions, to further refine the scope of the policy and control when it is triggered.
 
-In the following example, the policy is configured to trigger only when a Critical severity suspected malware risk is identified in a package that is not classified as a Dev or Test dependency
+In the following example, the policy is configured to trigger only when a **Critical** severity suspected malware risk is identified in a package that is not classified as a **Dev** or **Test** dependency
 
 <div align="left"><figure><img src=".gitbook/assets/img-3545a2ec5efccf5d007fe76056fa6b8d.png" alt="" width="375"><figcaption></figcaption></figure></div>

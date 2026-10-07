@@ -1,7 +1,7 @@
 # Checkmarx SCA (REST) API - Management of Risk
 
 {% hint style="warning" %}
-These APIs are intended to replace the APIs that had previously been used for risk management: [Checkmarx SCA (REST) API - PUT Risk Reports UnIgnore Vulnerability](checkmarx-sca--rest--api---put-risk-reports-unignore-vulnerability.md) and [Checkmarx SCA (REST) API - PUT Risk Reports UnIgnore Vulnerability](checkmarx-sca--rest--api---put-risk-reports-unignore-vulnerability.md). The old risk-management APIs will be deprecated on September 30.
+These APIs are intended to replace the APIs that had previously been used for risk management: [Checkmarx SCA (REST) API - PUT Risk Reports UnIgnore Vulnerability](checkmarx-sca--rest--api---put-risk-reports-unignore-vulnerability.md) and [Checkmarx SCA (REST) API - PUT Risk Reports UnIgnore Vulnerability](checkmarx-sca--rest--api---put-risk-reports-unignore-vulnerability.md). **The old risk-management APIs will be deprecated on September 30**.
 {% endhint %}
 
 {% hint style="info" icon="pencil" %}
@@ -16,7 +16,7 @@ This enables users to prioritize remediation activity and manage risks throughou
 
 A "Risk Instance" is defined as a specific risk that is associated with a particular package. So that, if a particular risk affects several packages that are used in your project, each instance will have its own profile.
 
-A unique risk is identified based on: packageName, packageVersion, packageManager and vulerabilityId (or supplyChainRiskId).
+A unique risk is identified based on: packageName, packageVersion, packageManager **and** vulerabilityId (or supplyChainRiskId).
 
 ### Changing the State
 
@@ -73,7 +73,7 @@ We do not currently enforce the need for specific management of risk permissions
 
 The following is a list of Checkmarx One APIs that relate to Management of Risk:
 
-| API | Method | Endpoint | Description |
+| **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
 | Change vulnerability profile | POST | /package-vulnerabilities | Change the state and add a comment to a specific instance of a vulnerability.<br>You can specify one or more projects for which the change will take effect.<br>**Tip** This endpoint replaces the current APIs `IgnoreVulnerability` and `UnignoreVulnerability`, which will be deprecated soon. |
 | Change Supply Chain risk profile | POST | /package-supply-chain-risks | Change the state and add a comment to a specific instance of an SCS risk.<br>You can specify one or more projects for which the change will take effect. |
@@ -119,13 +119,13 @@ curl --request POST \
 
 Body Parameters
 
-| Parameter | Mandatory | Type | Enums | Description |
+| **Parameter** | **Mandatory** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- | --- |
 | packageName | yes | string |  | The name of the package. |
 | packageVersion | yes | string |  | The version of the package. |
 | packageManager | yes | string |  | The package manager used for this package. |
 | VulnerabilityId | yes | string |  | The id of the vulnerability. |
-| projectIds\[\] | no | string |  | The project id of one or more projects for which the new profile will be applied.<br>If no project ID is specified, then by default the change applies to all projects in your account. |
+| projectIds\[\] | no | string |  | The project id of one or more projects for which the new profile will be applied.<br>If no project ID is specified, then by default the change applies to **all** projects in your account. |
 | actions\[\] | yes | json object |  | The action that is being taken to change the risk instance profile. |
 | actionType | yes | string | Currently, the only supported action type is:<br>ChangeState | The type of action to be done. |
 | value | yes | string | For ChangeState:<br><ul><li><p>ToVerify</p></li><li><p>NotExploitable</p></li><li><p>ProposedNotExploitable</p></li><li><p>Confirmed</p></li><li><p>Urgent</p></li></ul> | The value assigned for this action, based on the action type. For ChangeState, specify the state to be assigned to this vulnerability instance. |
@@ -158,13 +158,13 @@ Accept: `application/json`
 
 Body Parameters
 
-| Parameter | Mandatory | Type | Enums | Description |
+| **Parameter** | **Mandatory** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- | --- |
 | packageName | yes | string |  | The name of the package. |
 | packageVersion | yes | string |  | The version of the package. |
 | packageManager | yes | string |  | The package manager used for this package. |
 | SupplyChainRiskId | yes | string |  | The id of the supply chain risk. |
-| projectIds\[\] | no | string |  | The project id of one or more projects for which the new profile will be applied.<br>If no project ID is specified, then by default the change applies to all projects in your account. |
+| projectIds\[\] | no | string |  | The project id of one or more projects for which the new profile will be applied.<br>If no project ID is specified, then by default the change applies to **all** projects in your account. |
 | actions\[\] | yes | json object |  | The action that is being taken to change the risk instance profile. |
 | actionType | yes | string | Currently, the only supported action type is:<br>ChangeState | The type of action to be done. |
 | value | yes | string | For ChangeState:<br><ul><li><p>ToVerify</p></li><li><p>NotExploitable</p></li><li><p>ProposedNotExploitable</p></li><li><p>Confirmed</p></li><li><p>Urgent</p></li></ul> | The value assigned for this action, based on the action type. For ChangeState, specify the state to be assigned to this vulnerability instance. |

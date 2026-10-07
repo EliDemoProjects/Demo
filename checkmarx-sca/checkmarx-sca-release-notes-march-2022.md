@@ -16,19 +16,19 @@ We have added the following functionality to our capabilities for identifying Su
 
   <div align="left"><figure><img src=".gitbook/assets/img-ee9aeec1e0e22174d640905846628c1d.png" alt=""></figure></div>
 
-- We have added a Supply Chain Analysis section to the Package Details page. This section shows gauge widgets representing three risk categories (Reputation, Reliability and Behavior). The scores are given on a scale of 0-10, with 10 indicating the highest level of security.
+- We have added a **Supply Chain Analysis** section to the **Package Details** page. This section shows gauge widgets representing three risk categories (Reputation, Reliability and Behavior). The scores are given on a scale of 0-10, with 10 indicating the highest level of security.
 
   <div align="left"><figure><img src=".gitbook/assets/img-98bd11b6d3b33136d6d67a2e15f0ad7b.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 ### Supply Chain Policies
 
-Checkmarx SCA Policy Management enables you to apply customized security rules to the open source packages in your Projects. This makes it easy to identify Projects that are non-compliant with your self-defined security policies.
+Checkmarx SCA **Policy Management** enables you to apply customized security rules to the open source packages in your Projects. This makes it easy to identify Projects that are non-compliant with your self-defined security policies.
 
 {% hint style="info" icon="pencil" %}
 Learn more about [Policy Management](policy-management.md).
 {% endhint %}
 
-We have added the ability to create specialized Policy conditions for Supply Chain risks. You can now add a condition specifying that if a supply chain risk of a particular severity level/s is detected in your project, this will trigger a Policy violation. Supply chain conditions can be combined with other conditions to create complex Policy rules. For example, you can create a Policy that is triggered only when a supply chain risk is identified in a package that is not a Dev or Test Dependency.
+We have added the ability to create specialized Policy conditions for **Supply Chain** risks. You can now add a condition specifying that if a supply chain risk of a particular severity level/s is detected in your project, this will trigger a Policy violation. Supply chain conditions can be combined with other conditions to create complex Policy rules. For example, you can create a Policy that is triggered only when a supply chain risk is identified in a package that is not a Dev or Test Dependency.
 
 <div align="left"><figure><img src=".gitbook/assets/img-279965ffa17216d299d195f1e930552f.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
@@ -36,15 +36,15 @@ We have added the ability to create specialized Policy conditions for Supply Cha
 
 We have improved how the scan results data shown in the UI, as follows:
 
-- Created a new type of details page that opens when you click on a Legal Risk. This page includes the license info that was previously shown on the Package Details page, as well as additional info.
+- Created a new type of details page that opens when you click on a **Legal Risk**. This page includes the license info that was previously shown on the **Package Details** page, as well as additional info.
 
   <div align="left"><figure><img src=".gitbook/assets/img-5b7da2fdb302f5088d314007468f6ab7.png" alt=""></figure></div>
 
-- Added a Policies section to the Package Details page, showing assigned policies and policy violations.
+- Added a **Policies** section to the **Package Details** page, showing assigned policies and policy violations.
 
   <div align="left"><figure><img src=".gitbook/assets/img-13214b7b2bf5ff659e547b800a9b5c24.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-- Added a Management of Risks section to the Package Details page, showing how many vulnerabilities and supply chain risks have been marked as ignored and how many licenses have been marked as effective.
+- Added a **Management of Risks** section to the **Package Details** page, showing how many vulnerabilities and supply chain risks have been marked as ignored and how many licenses have been marked as effective.
 
   <div align="left"><figure><img src=".gitbook/assets/img-c470154498f0d8cc69dab5962240f8c2.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
@@ -62,7 +62,7 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 ## Improvements
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATE | Exploitable Path display | The Exploitable Path column on the Risks page, is now contextualized according to the configuration. If the project is in an unsupported language and Exploitable Path is disabled in the Project, then the column is hidden. If no results are returned, then the tooltip explains why there are no results. |
 | UPDATE | Npm potential private packages | For Npm packages, we now return potential private packages. Meaning that, if a package has been removed from the public registry, we will nonetheless give the version that is in the manifest in order to try resolving it locally. |

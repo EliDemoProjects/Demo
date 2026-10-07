@@ -55,7 +55,7 @@ Accept: application/x-www-form-urlencoded
 
 Body Parameters - Required
 
-| Parameter | Type | Enum | Description |
+| **Parameter** | **Type** | **Enum** | **Description** |
 | --- | --- | --- | --- |
 | username | string | - | Your Checkmarx SCA username. |
 | password | string | - | Your Checkmarx SCA password. |
@@ -68,7 +68,7 @@ Body Parameters - Required
 
 Code: 200 OK
 
-| Attribute | Type | Description |
+| **Attribute** | **Type** | **Description** |
 | --- | --- | --- |
 | access_token | string | A string which is used for authentication when submitting API requests. |
 | expires_in | integer | Time left until the token expires (given in seconds).<br>Tokens are valid for one hour. |

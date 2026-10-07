@@ -9,7 +9,7 @@
 
 3. Add the `--images` flag followed by a comma separated list of images. Specify each image using the following syntax {image_name}:{image_tag}.
 
-Example of scanning a specific image:
+**Example of scanning a specific image:**
 
 The following example shows a command to run a container scan on specific images.
 

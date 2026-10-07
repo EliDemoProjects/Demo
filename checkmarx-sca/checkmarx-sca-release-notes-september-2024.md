@@ -10,9 +10,9 @@ We have added limited support for Pub package manager.
 
 <table>
 <tbody>
-<tr><td><figure><img src=".gitbook/assets/img-7b8261dae4e6c7d876b28a7c1bf2f147.jpg" alt=""></figure></td><td colspan="3"><p><strong><strong>Languages/Frameworks:</strong></strong> Dart, Flutter</p><p><strong><strong>Repository:</strong></strong> N/A</p><p><strong><strong>File Types:</strong></strong> none</p><p><strong><strong>Exploitable Path:</strong></strong> Not supported</p></td></tr>
-<tr><td><p><strong><strong>Supported Package Manager</strong></strong></p></td><td><p><strong><strong>Vulnerability Support</strong></strong></p></td><td><p><strong><strong>Malicious Package Support</strong></strong></p></td><td><p><strong><strong>Manifest Files</strong></strong></p></td></tr>
-<tr><td><p>Pub</p></td><td><p></p></td><td><p></p></td><td><p><code>pubspec.lock</code></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-7b8261dae4e6c7d876b28a7c1bf2f147.jpg" alt=""></figure></td><td colspan="3"><p><strong>Languages/Frameworks:</strong> Dart, Flutter</p><p><strong>Repository:</strong> N/A</p><p><strong>File Types:</strong> none</p><p><strong>Exploitable Path:</strong> Not supported</p></td></tr>
+<tr><td><p><strong>Supported Package Manager</strong></p></td><td><p><strong>Vulnerability Support</strong></p></td><td><p><strong>Malicious Package Support</strong></p></td><td><p><strong>Manifest Files</strong></p></td></tr>
+<tr><td><p>Pub</p></td><td><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><img src=".gitbook/assets/img-068d998044216c98442abfffce83ec52.png" alt="" data-size="line"></p></td><td><p><code>pubspec.lock</code></p></td></tr>
 </tbody>
 </table>
 
@@ -27,7 +27,7 @@ Download the latest version [here](checkmarx-sca-resolver-changelog.md).
 - Added support for Pub package manager (for Dart and Flutter frameworks).
 
   {% hint style="info" icon="pencil" %}
-  Current limitations: Only identifies direct dependecies and only identifies Malicious Packages.
+  **Current limitations:** Only identifies direct dependecies and only identifies Malicious Packages.
   {% endhint %}
 
 - Performance optimization during folder analysis.

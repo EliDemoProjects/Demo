@@ -12,7 +12,7 @@ The following table describes the pre-defined roles.
 
 <table>
 <thead>
-<tr><th><p><strong><strong>Role</strong></strong></p></th><th><p><strong><strong>Description</strong></strong></p></th><th><p><strong><strong>Permissions</strong></strong></p></th></tr>
+<tr><th><p><strong>Role</strong></p></th><th><p><strong>Description</strong></p></th><th><p><strong>Permissions</strong></p></th></tr>
 </thead>
 <tbody>
 <tr><td><p>Admin / SCA Admin</p></td><td><p>Global administrator for your organization’s SCA account</p></td><td><p>All access control permissions (Manage Authentication Providers, Manage Clients, Manage Roles, Manage System Settings, Manage Users) +</p><p>All SCA activity permissions (Administrate, Create Project, Delete Project, Edit Project, Manage Policy, Manage Risk, Scan, Delete Scan, View)</p></td></tr>
@@ -31,27 +31,27 @@ The following table describes the pre-defined roles.
 
 You can create custom roles which defines a set of permissions that will be assigned to users with that role.
 
-To create a custom role:
+**To create a custom role:**
 
-1. In the main navigation, click User Management.
+1. In the main navigation, click **User Management**.
 
    The Access Control screen opens in a new tab.
 
-2. On the Access Control screen select the Roles tab.
+2. On the Access Control screen select the **Roles** tab.
 
-3. Click on the New Role button.
+3. Click on the **New Role** button.
 
    A form opens for creating a new role.
 
    <div align="left"><figure><img src=".gitbook/assets/img-814138096886bc92d6cbd70b5989162b.png" alt=""></figure></div>
 
-4. In the Role name field enter a name for the role.
+4. In the **Role name** field enter a name for the role.
 
-5. In the Description field enter a brief description of the role (required).
+5. In the **Description** field enter a brief description of the role (required).
 
 6. If you would like to assign Access Control permissions, do the following:
 
-   1. Click on the + button next to Access Control.
+   1. Click on the **+** button next to **Access Control**.
 
       A list of Access Control permissions is shown.
 
@@ -61,7 +61,7 @@ To create a custom role:
 
 7. If you would like to assign SCA Activity permissions, do the following:
 
-   1. Click on the + button next to SCA.
+   1. Click on the **+** button next to **SCA**.
 
       A list of SCA Activity permissions is shown.
 
@@ -69,7 +69,7 @@ To create a custom role:
 
       <div align="left"><figure><img src=".gitbook/assets/img-4ce34aca1159759eb8b5d76ec502c204.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
-8. Click Save.
+8. Click **Save**.
 
 {% hint style="info" icon="pencil" %}
 The new role is created. You can assign this role to users.
@@ -79,23 +79,23 @@ The new role is created. You can assign this role to users.
 
 You can perform the following actions on roles. These actions can be done both for predefined and custom roles.
 
-- Edit role - adjust the name, description and permissions for the role.
-- Duplicate role - create a new role based on an existing role (while maintaining the original role).
-- Delete role - delete a role.
+- **Edit role** - adjust the name, description and permissions for the role.
+- **Duplicate role** - create a new role based on an existing role (while maintaining the original role).
+- **Delete role** - delete a role.
 
-To edit a role:
+**To edit a role:**
 
-1. On the Access Control \> Roles screen, click on the context menu at the end of the row of the relevant role.
+1. On the **Access Control** \> **Roles** screen, click on the context menu at the end of the row of the relevant role.
 
-2. Click Edit.
+2. Click **Edit**.
 
    The role form with the current info filled in is displayed.
 
-3. Edit the Role name and Description fields as desired.
+3. Edit the **Role name** and **Description** fields as desired.
 
 4. If you would like to adjust the Access Control permissions, do the following:
 
-   1. Click on the + button next to Access Control.
+   1. Click on the **+** button next to **Access Control**.
 
       A list of Access Control permissions is shown.
 
@@ -103,31 +103,31 @@ To edit a role:
 
 5. If you would like to adjust the SCA Activity permissions, do the following:
 
-   1. Click on the + button next to SCA.
+   1. Click on the **+** button next to **SCA**.
 
       A list of SCA Activity permissions is shown.
 
    2. Select/deselect the checkboxes for the permissions that you would like to add/remove for the role.
 
-6. Click Save.
+6. Click **Save**.
 
 {% hint style="info" icon="pencil" %}
 The new role configuration is saved and is applied to users with this role.
 {% endhint %}
 
-To duplicate a role:
+**To duplicate a role:**
 
-1. On the Access Control \> Roles screen, click on the context menu at the end of the row of the relevant role.
+1. On the **Access Control** \> **Roles** screen, click on the context menu at the end of the row of the relevant role.
 
-2. Click Duplicate.
+2. Click **Duplicate**.
 
    The role form with the current info filled in and the name “Copy of…” is displayed.
 
-3. Edit the Role name and Description fields as desired.
+3. Edit the **Role name** and **Description** fields as desired.
 
 4. If you would like to adjust the Access Control permissions, do the following:
 
-   1. Click on the + button next to Access Control.
+   1. Click on the **+** button next to **Access Control**.
 
       A list of Access Control permissions is shown.
 
@@ -135,27 +135,27 @@ To duplicate a role:
 
 5. If you would like to adjust the SCA Activity permissions, do the following:
 
-   1. Click on the + button next to SCA.
+   1. Click on the **+** button next to **SCA**.
 
       A list of SCA Activity permissions is shown.
 
    2. Select/deselect the checkboxes for the permissions that you would like to add/remove for the role.
 
-6. Click Save.
+6. Click **Save**.
 
 {% hint style="info" icon="pencil" %}
 The new role is created in addition to the original role which remains unchanged.
 {% endhint %}
 
-To delete a role:
+**To delete a role:**
 
-1. On the Access Control \> Roles screen, click on the context menu at the end of the row of the relevant role.
+1. On the **Access Control** \> **Roles** screen, click on the context menu at the end of the row of the relevant role.
 
-2. Click Delete.
+2. Click **Delete**.
 
    A confirmation dialog appears.
 
-3. Click Delete again.
+3. Click **Delete** again.
 
 {% hint style="info" icon="pencil" %}
 The role is permanently deleted from the system.

@@ -91,7 +91,7 @@ Checkmarx Master Software License and Services Agreement 230210
 
 ### Main Features
 
-- Free tool
+- **Free tool**
 
   - No Checkmarx account required
 
@@ -99,20 +99,20 @@ Checkmarx Master Software License and Services Agreement 230210
     Soon we will be adding additional Premium features, which will be available specifically for Checkmarx customers.
     {% endhint %}
 
-- Image scanning
+- **Image scanning**
 
   - Scan local Docker images
   - View a detailed breakdown of image layers
 
-- Package inspection
+- **Package inspection**
 
   - Inspect packages that are installed within your Docker images
 
-- Vulnerability assessment
+- **Vulnerability assessment**
 
   - Identify vulnerabilities associated with packages within your Docker images
 
-- Recommendations and remediation (Premium feature, COMING SOON)
+- **Recommendations and remediation** (Premium feature, COMING SOON)
 
   - Receive suggestions and recommendations for remediating identified vulnerabilities
 
@@ -120,16 +120,16 @@ Checkmarx Master Software License and Services Agreement 230210
 
 Verify that your system meets the following specifications in order to ensure optimal performance:
 
-- Operatingsystem compatibility
+- **Operatingsystem compatibility**
 
-  - amd64: Windows, Linux, MacOS
-  - arm64: MacOS M1
+  - **amd64:** Windows, Linux, MacOS
+  - **arm64:** MacOS M1
 
-- Docker compatibility
+- **Docker compatibility**
 
   - Docker Desktop version 4.26 and above
 
-- Resource requirements
+- **Resource requirements**
 
   - Minimum 200MB disk space for the image to run
   - Minimum 8GB RAM
@@ -161,17 +161,17 @@ The extension is available on [Docker Marketplace](https://hub.docker.com/extens
 
 ## Installing the Extension
 
-To install the extension:
+**To install the extension:**
 
-1. In your Docker Desktop console, click on + Add Extensions and search for the Checkmarx extension.
+1. In your Docker Desktop console, click on **+ Add Extensions** and search for the **Checkmarx** extension.
 
-2. Click Install.
+2. Click **Install**.
 
    <div align="left"><figure><img src=".gitbook/assets/img-4f5155e05497bbc7a82c980f01c39b89.png" alt=""></figure></div>
 
 3. Follow on-screen prompts to complete the installation process.
 
-   The Checkmarx extension is installed and the icon is shown in the Extensions section of the navigation pane.
+   The Checkmarx extension is installed and the icon is shown in the **Extensions** section of the navigation pane.
 
    <div align="left"><figure><img src=".gitbook/assets/img-88ec6e918f88b00de086893236445562.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
@@ -183,19 +183,19 @@ You can scan any image that you have in your Docker Desktop in order to get deta
 The extension stores scan results, so that if an image hasn’t been changed since the last scan, the results from that scan are shown and no new scan is initiated.
 {% endhint %}
 
-To scan an image and view results:
+**To scan an image and view results:**
 
-1. In the navigation pane, click on the Checkmarx extension.
+1. In the navigation pane, click on the **Checkmarx** extension.
 
    The Checkmarx screen opens.
 
    <div align="left"><figure><img src=".gitbook/assets/img-420e1514212634d6eedc92bfa2fac76a.png" alt=""></figure></div>
 
-2. Click on the Select images field and select an image from the drop-down list.
+2. Click on the **Select images** field and select an image from the drop-down list.
 
-3. Click on the Scan Image button.
+3. Click on the **Scan Image** button.
 
-   When the scan completes, the results are shown. The initial view shows the Summary tab. You can view additional details in the Packages and Vulnerabilities tabs.
+   When the scan completes, the results are shown. The initial view shows the **Summary** tab. You can view additional details in the **Packages** and **Vulnerabilities** tabs.
 
    <div align="left"><figure><img src=".gitbook/assets/img-fd8c7fac072891658a7814c1be85fd2c.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
@@ -208,9 +208,9 @@ After scanning an image, the results screen is shown. There are two main section
 
 ### Image & Layers
 
-This pane shows a separate section for each build stage showing all layers within that stage, as well as the ALL section that includes all layers. Next to each item an icon indicates the overall risk level for that item.
+This pane shows a separate section for each build stage showing all layers within that stage, as well as the **ALL** section that includes all layers. Next to each item an icon indicates the overall risk level for that item.
 
-This section serves as a navigation pane for the details tabs. When All is selected, all results are shown in the Vulnerabilities and Packages tabs. When a specific layer is selected, the Vulnerabilities and Packages tabs are filtered to show only results for that layer.
+This section serves as a navigation pane for the details tabs. When **All** is selected, all results are shown in the **Vulnerabilities** and **Packages** tabs. When a specific layer is selected, the **Vulnerabilities** and **Packages** tabs are filtered to show only results for that layer.
 
 <div align="left"><figure><img src=".gitbook/assets/img-06becf54da7053dee6eb02026610da42.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
@@ -221,7 +221,7 @@ This section serves as a navigation pane for the details tabs. When All is selec
 This tab shows a summary of the number of vulnerabilities, broken down by severity, identified in each build stage as well as for the overall image.
 
 {% hint style="info" %}
-This display isn’t affected by the selection made in the Image & Layers section.
+This display isn’t affected by the selection made in the **Image & Layers** section.
 {% endhint %}
 
 <div align="left"><figure><img src=".gitbook/assets/img-a1d171ec6a5ce1f88837d04afc9d5c1f.png" alt="" width="375"><figcaption></figcaption></figure></div>

@@ -4,7 +4,7 @@ We are excited to announce important improvements in our Checkmarx SCA web appli
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | UPDATED | Gradle string declarations | Gradle now supports single quotes, quotes, triple quotes and forward slash string declaration in submodule inclusions. |
 | FIXED | Version compare | Fixed issues with the versions comparer in Evidence Resolver and Remediation Intelligence . |

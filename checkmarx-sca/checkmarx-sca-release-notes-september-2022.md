@@ -20,7 +20,7 @@ To use this feature, it is required that you include the `node_modules` folder i
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
+| **Status** | **Item** | **Description** |
 | --- | --- | --- |
 | FIXED | Problem with settings.gradle file | Fixed issue that when a settings.gradle file contains an IncludeBuild property, it had been causing the scan to fail. |
 | FIXED | Remediation tasks | We now remove the downstream remediation tasks when they don't have any vulnerabilities. |
