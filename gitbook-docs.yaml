@@ -54,3 +54,16 @@ site:
           draft: true
           content:
             directory: ./untitled
+    - type: section
+      key: section-5
+      title: Integrations and Plugins
+      path: integrations-and-plugins
+      children:
+        - type: space
+          key: space-5
+          title: Untitled
+          path: untitled
+          default: true
+          draft: true
+          content:
+            directory: ./untitled
