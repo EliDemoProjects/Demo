@@ -15,4 +15,4 @@ site:
           path: untitled
           default: true
           content:
-            directory: ./untitled
+            directory: ./
