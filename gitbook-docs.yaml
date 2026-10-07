@@ -82,8 +82,9 @@ site:
             directory: ./untitled
     - type: section
       key: section-7
-      title: Untitled - Checkmarx SCA Resolver
+      title: SCA Resolver
       path: untitled-checkmarx-sca-resolver
+      description: ""
       children:
         - type: space
           key: space-7
