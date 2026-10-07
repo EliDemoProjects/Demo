@@ -38,7 +38,6 @@ site:
           title: Untitled
           path: untitled
           default: true
-          draft: true
           content:
             directory: ./untitled
     - type: section
@@ -51,7 +50,6 @@ site:
           title: Untitled
           path: untitled
           default: true
-          draft: true
           content:
             directory: ./untitled
     - type: section
