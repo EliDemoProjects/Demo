@@ -17,18 +17,6 @@ site:
           content:
             directory: ./untitled
     - type: section
-      key: section-6
-      title: Release Notes
-      path: release-notes
-      children:
-        - type: space
-          key: space-6
-          title: Sandbox
-          path: untitled
-          default: true
-          content:
-            directory: ./untitled
-    - type: section
       key: section-7
       title: SCA Resolver
       path: untitled-checkmarx-sca-resolver
