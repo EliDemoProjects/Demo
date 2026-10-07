@@ -96,7 +96,7 @@ site:
             directory: ./untitled
     - type: section
       key: section-8
-      title: SCA FAQ
+      title: FAQ
       path: untitled-checkmarx-sca-faq
       description: ""
       children:
