@@ -1,0 +1,26 @@
+# Checkmarx SCA Main UI Elements
+
+The Checkmarx SCA Console (UI) enables you to view data and perform actions in your Checkmarx SCA account. You can create Projects, run scans, view results and manage your account.
+
+This article gives a brief overview of the main UI elements. Details about specific functionality is provided in the following chapters.
+
+## Main Screens
+
+You can access each of the main screens by clicking on the relevant icon in the main navigation pane at the left of the screen.
+
+The following table describes the main screens:
+
+<table>
+<thead>
+<tr><th><p>Icon</p></th><th><p>Name</p></th><th><p>Description</p></th><th><p>Documentation Links</p></th></tr>
+</thead>
+<tbody>
+<tr><td><figure><img src=".gitbook/assets/img-71baa49dc69f47e39f7f155bb9caa727.png" alt=""></figure></td><td><p>Dashboard</p></td><td><p>This screen shows the aggregated metrics for the Projects in your account as well as a list of all Projects. On this screen, you can create and edit Projects, initiate scans and open Projects to view detailed results.</p></td><td><p><a href="viewing-the-dashboard--home-page-.md">Viewing the Dashboard (Home Page)</a>,</p><p><a href="creating-and-configuring-projects.md">Creating and Configuring Projects</a>,</p><p><a href="scanning-projects.md">Scanning Projects</a></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-299c6d3106759b9747c6a0e3d33d1ffe.png" alt=""></figure></td><td><p>Global Inventory &amp; Risks</p></td><td><p>This screen shows a comprehensive list of the vulnerabilities and risks identified in all of the Projects in your account. This info includes policy violations, vulnerabilities, outdated versions, etc. By showing info for all Projects, this screen enables you to prioritize remediation and coordinate efforts between different development teams.</p></td><td><p><a href="viewing-the-global-inventory-and-risks-page.md">Viewing the Global Inventory &amp; Risks Page</a></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-2df65aae8d297936a59a3613b1474466.png" alt=""></figure></td><td><p>Policies &amp; Notifications</p></td><td><p>Policy management enables you to apply customized security rules to the open source packages in your Projects. This makes it easy to identify Projects that are non-compliant with your self-defined security policies. The Policy Management screen enables you to define, manage and track your organization’s security Policies.</p><p>Notifications enable you to configure automatically generated notification to be sent to the designated recipients when important events occur in your account.</p></td><td><p><a href="policy-management.md">Policy Management</a></p><p><a href="notifications.md">Notifications</a></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-105e117044e8c5b03a56261af8186427.png" alt=""></figure></td><td><p>AppSec Knowledge Center</p></td><td><p>The AppSec Knowledge Center enables you to search our extensive database for information about specific vulnerabilities and the package versions that are affected by those vulnerabilities. The database includes CVEs and also vulnerabilities discovered by the Checkmarx Vulnerability Research Team that are not yet catalogued as CVEs. There are separate tabs for searching the database by vulnerability or by package version.</p></td><td><p><a href="appsec-knowledge-center.md">AppSec Knowledge Center</a></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-e8cf5021dc82832622eddc4730982ac1.png" alt=""></figure></td><td><p>User Management</p></td><td><p>This screen is used to view and configure user accounts and user management settings.</p></td><td><p><a href="user-management-and-access-control.md">User Management and Access Control</a></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-f9c7542e3d81eb631e4ae42878267170.png" alt=""></figure></td><td><p>Support</p></td><td><p>You can access the customer portal to open a support ticket from this menu. This menu also gives links to access the Checkmarx SCA documentation Home page and release notes.</p></td><td><p><a href="getting-help-and-submitting-a-support-ticket.md">Submitting a Support Ticket</a></p></td></tr>
+<tr><td><figure><img src=".gitbook/assets/img-13a4a04311394e97eb8c4c11c31bf73f.png" alt=""></figure></td><td><p>Settings</p></td><td><p>View license info for the account. On this screen, you can also configure global scan settings for the account (i.e., allow/disable code upload and activate/deactivate Exploitable Path by default).</p></td><td><p><a href="configuring-account-settings.md">Configuring Account Settings</a></p></td></tr>
+</tbody>
+</table>
