@@ -40,6 +40,5 @@ site:
           title: Checkmarx SCA
           path: checkmarx-sca
           default: true
-          draft: true
           content:
             directory: ./checkmarx-sca
