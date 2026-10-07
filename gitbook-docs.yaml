@@ -16,29 +16,3 @@ site:
           default: true
           content:
             directory: ./untitled
-    - type: section
-      key: section-7
-      title: SCA Resolver
-      path: untitled-checkmarx-sca-resolver
-      description: ""
-      children:
-        - type: space
-          key: space-7
-          title: Sandbox
-          path: untitled
-          default: true
-          content:
-            directory: ./untitled
-    - type: section
-      key: section-8
-      title: FAQ
-      path: untitled-checkmarx-sca-faq
-      description: ""
-      children:
-        - type: space
-          key: space-8
-          title: Sandbox
-          path: untitled
-          default: true
-          content:
-            directory: ./untitled
