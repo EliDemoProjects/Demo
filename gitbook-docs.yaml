@@ -18,12 +18,13 @@ site:
             directory: ./
     - type: section
       key: section-2
-      title: checkmarx-dast
+      title: Checkmarx DAST
       path: checkmarx-dast
+      description: ""
       children:
         - type: space
           key: space-2
-          title: checkmarx-dast
+          title: Checkmarx DAST
           path: checkmarx-dast
           default: true
           draft: true
