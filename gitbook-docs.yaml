@@ -17,18 +17,6 @@ site:
           content:
             directory: ./untitled
     - type: section
-      key: section-5
-      title: Integrations and Plugins
-      path: integrations-and-plugins
-      children:
-        - type: space
-          key: space-5
-          title: Sandbox
-          path: untitled
-          default: true
-          content:
-            directory: ./untitled
-    - type: section
       key: section-6
       title: Release Notes
       path: release-notes
