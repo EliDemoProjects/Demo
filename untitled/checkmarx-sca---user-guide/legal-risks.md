@@ -2,15 +2,15 @@
 
 ## Overview
 
-Checkmarx identifies all of the licenses associated with the open source packages used in your project. The complete list of licenses is shown in the Scan Results \> Licenses tab.
+Checkmarx identifies all of the licenses associated with the open source packages used in your project. The complete list of licenses is shown in the Scan Results > Licenses tab.
 
 {% hint style="info" icon="pencil" %}
 The License Score represents the level of risk associated with using a package under that license. However, the license doesn't pose an actual risk to your project unless you are actually using the package under that license (i.e., it is your Effective license).
 {% endhint %}
 
-In addition, Checkmarx identifies actual risks to your project based on legal issues related to improper usage of open source packages. These risks are shown in the Scan Results \> Risks tab in the Legal Risk section.
+In addition, Checkmarx identifies actual risks to your project based on legal issues related to improper usage of open source packages. These risks are shown in the Scan Results > Risks tab in the Legal Risk section.
 
-<div align="left"><figure><img src=".gitbook/assets/img-f8a1f1225313dae07d11510750c065dd.png" alt="" width="75%"></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-f8a1f1225313dae07d11510750c065dd.png" alt="" width="75%"><figcaption></figcaption></figure></div>
 
 ### Marking Licenses as Effective or Not Effective
 
@@ -24,18 +24,18 @@ Whether or not a license is marked as Effective impacts on the determination of 
 
 We currently identify the following types of legal risks.
 
-- Risky effective license - A license has a high severity License Score and is also marked as Effective for this package.
-- Package with no effective license - There is an open source package in your project for which no license has been marked as Effective.
-- Package with no license - Checkmarx didn't identify any licenses associated with this package.
+* Risky effective license - A license has a high severity License Score and is also marked as Effective for this package.
+* Package with no effective license - There is an open source package in your project for which no license has been marked as Effective.
+* Package with no license - Checkmarx didn't identify any licenses associated with this package.
 
 ## Recommended Workflow
 
 The following E2E workflow explains how you can leverage the legal risk functionality provided by Checkmarx to get results that accurately reflect the security posture of your project from a legal perspective.
 
 1. Create a project and run a scan.
-2. Go to the Risks tab \> Legal Risks and check for packages with no license associated.
+2. Go to the Risks tab > Legal Risks and check for packages with no license associated.
 3. If you aware of the relevant licenses for these packages, add them via API, using [POST /management-of-risk/package-licenses](https://app.gitbook.com/s/XSPACE_REST_API/checkmarx-sca-management-of-package-licenses).
-4. Go to the Scan Results \> Licenses tab. Review each license and mark whether or not it is the Effective license for the specified package (via the web application).
-5. On the Scan Results page, click on \> Recalculate Last Scan.
-6. After the recalculation is complete, go to the Risks tab \> Legal Risks and check what Legal Risks were identified in your project.
+4. Go to the Scan Results > Licenses tab. Review each license and mark whether or not it is the Effective license for the specified package (via the web application).
+5. On the Scan Results page, click on > Recalculate Last Scan.
+6. After the recalculation is complete, go to the Risks tab > Legal Risks and check what Legal Risks were identified in your project.
 7. Take the required steps to remediate these risks.

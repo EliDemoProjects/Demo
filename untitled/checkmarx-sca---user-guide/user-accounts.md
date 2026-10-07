@@ -4,34 +4,29 @@ Access to the Checkmarx SCA Console (UI) is controlled by user accounts which ar
 
 Admin users can view the existing user accounts, edit the user details and create new user accounts. User management can be done via the SCA Access Control app as described in the following sections or via the Master Access Control as described in [Using Master Access Control (Replica Mode)](using-master-access-control--replica-mode-.md).
 
-The Access Control \> Users tab shows a list of all users within the organization and their account details.
+The Access Control > Users tab shows a list of all users within the organization and their account details.
 
-<div align="left"><figure><img src=".gitbook/assets/img-9e01b5d06cc18af815304cf8da6f9823.png" alt=""></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-9e01b5d06cc18af815304cf8da6f9823.png" alt=""><figcaption></figcaption></figure></div>
 
 The following methods can be used for finding users in the list:
 
-- Search - enter search text in the **Search User** box.
-- Sort - click on a column header to sort by that header.
-- Filter - click on the Filter icon next to a header to set a filter for that column.
+* Search - enter search text in the **Search User** box.
+* Sort - click on a column header to sort by that header.
+* Filter - click on the Filter icon next to a header to set a filter for that column.
 
 The following table describes the info shown for each user on the Users tab.
 
-<table>
-<thead>
-<tr><th><p><strong><strong>Parameter</strong></strong></p></th><th><p><strong><strong>Description</strong></strong></p></th><th><p><strong><strong>Possible values</strong></strong></p></th></tr>
-</thead>
-<tbody>
-<tr><td><p>Status</p></td><td><p>Indicates whether the user’s account is enabled or disabled.</p></td><td><figure><img src=".gitbook/assets/img-42b13a273f7df993dc0b152dccaf5fa7.png" alt=""></figure><p>- enabled</p><figure><img src=".gitbook/assets/img-462f4438ee25756e60a8c66ab66c6dc9.png" alt=""></figure><p>- disabled</p></td></tr>
-<tr><td><p>Name</p></td><td><p>The first and last name of the user.</p></td><td><p>e.g., John Doe</p></td></tr>
-<tr><td><p>Username</p></td><td><p>The username of the user. This is the name used for login.</p></td><td><p>e.g., JohnDoe</p></td></tr>
-<tr><td><p>Authentication Provider</p></td><td><p>The method used for assigning login credentials.</p></td><td><ul><li><p><em><em>Application -</em></em> credentials configured in the web platform</p></li><li><p><em><em>LDAP server</em></em> <em><em>(name of server</em></em>) - credentials assigned via the LDAP server</p></li></ul></td></tr>
-<tr><td><p>Email</p></td><td><p>The user’s email.</p></td><td><p>e.g., JohnDoe@example.com</p></td></tr>
-<tr><td><p>Teams</p></td><td><p>The team(s) assigned to the user.</p></td><td><p>e.g., CxServer, DevTeam01</p></td></tr>
-<tr><td><p>Roles</p></td><td><p>The role(s) assigned to the user.</p></td><td><p><em><em>Access Control Manager, Admin</em></em>, <em><em>SCA Admin</em></em>, <em><em>SCA External Platform User</em></em>, <em><em>SCA Manager</em></em>, <em><em>SCA Scanner</em></em>, <em><em>SCA Viewer</em></em>, <em><em>User Manager</em></em></p><p>Note: For an explanation of the various roles, see <a href="roles.md">Roles</a>.</p></td></tr>
-<tr><td><p>Last Login</p></td><td><p>The date and time of the user’s last login.</p></td><td><p>e.g., 1/28/2021 7:19 AM</p></td></tr>
-<tr><td><p>Creation Date</p></td><td><p>The date and time the user’s account was created.</p></td><td><p>e.g., 1/25/2021 10:50 AM</p></td></tr>
-</tbody>
-</table>
+| **Parameter**           | **Description**                                              | **Possible values**                                                                                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Status                  | Indicates whether the user’s account is enabled or disabled. | <p><img src="../.gitbook/assets/img-42b13a273f7df993dc0b152dccaf5fa7.png" alt="" data-size="original"></p><p>- enabled</p><p><img src="../.gitbook/assets/img-462f4438ee25756e60a8c66ab66c6dc9.png" alt="" data-size="original"></p><p>- disabled</p>                                 |
+| Name                    | The first and last name of the user.                         | e.g., John Doe                                                                                                                                                                                                                                                                        |
+| Username                | The username of the user. This is the name used for login.   | e.g., JohnDoe                                                                                                                                                                                                                                                                         |
+| Authentication Provider | The method used for assigning login credentials.             | <ul><li><em>Application -</em> credentials configured in the web platform</li><li><em>LDAP server</em> <em>(name of server</em>) - credentials assigned via the LDAP server</li></ul>                                                                                                 |
+| Email                   | The user’s email.                                            | e.g., JohnDoe@example.com                                                                                                                                                                                                                                                             |
+| Teams                   | The team(s) assigned to the user.                            | e.g., CxServer, DevTeam01                                                                                                                                                                                                                                                             |
+| Roles                   | The role(s) assigned to the user.                            | <p><em>Access Control Manager, Admin</em>, <em>SCA Admin</em>, <em>SCA External Platform User</em>, <em>SCA Manager</em>, <em>SCA Scanner</em>, <em>SCA Viewer</em>, <em>User Manager</em></p><p>Note: For an explanation of the various roles, see <a href="roles.md">Roles</a>.</p> |
+| Last Login              | The date and time of the user’s last login.                  | e.g., 1/28/2021 7:19 AM                                                                                                                                                                                                                                                               |
+| Creation Date           | The date and time the user’s account was created.            | e.g., 1/25/2021 10:50 AM                                                                                                                                                                                                                                                              |
 
 ## Creating a User Account
 
@@ -39,50 +34,32 @@ An admin user can create new user accounts within your organization. As part of 
 
 To create a new user account:
 
-1. In the main navigation, click User Management.
+1.  In the main navigation, click User Management.
 
-   The Access Control screen opens in a new tab.
-
+    The Access Control screen opens in a new tab.
 2. On the Access Control screen select the Users tab (default).
+3.  On the Users tab, click on the Add User button.
 
-3. On the Users tab, click on the Add User button.
+    The Add New User window opens.
 
-   The Add New User window opens.
+    <div align="left"><figure><img src="../.gitbook/assets/img-a06bce0009dad294be7b469321d8cee4.png" alt="" width="75%"><figcaption></figcaption></figure></div>
+4.  In the General tab, fill in the following required fields: First Name, Last Name, Username, Email, Password, Retype Password.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-a06bce0009dad294be7b469321d8cee4.png" alt="" width="75%"></figure></div>
+    <div data-gb-custom-block data-tag="hint" data-style="info" data-icon="pencil" class="hint hint-info"><p>You may need to scroll down to see the Password fields. These are required fields which must be filled in.</p></div>
 
-4. In the General tab, fill in the following required fields: First Name, Last Name, Username, Email, Password, Retype Password.
+    <div data-gb-custom-block data-tag="hint" data-style="info" data-icon="pencil" class="hint hint-info"><p>Make a note of the Username and Password, as you will need to provide these to the user for login.</p></div>
 
-   {% hint style="info" icon="pencil" %}
-   You may need to scroll down to see the Password fields. These are required fields which must be filled in.
-   {% endhint %}
-
-   {% hint style="info" icon="pencil" %}
-   Make a note of the Username and Password, as you will need to provide these to the user for login.
-   {% endhint %}
-
-   {% hint style="info" icon="pencil" %}
-   Password Requirements:
-
-   - Minimum 6 characters
-   - At least one special symbol
-   - At least one lowercase letter
-   - At least one uppercase letter
-   {% endhint %}
-
+    <div data-gb-custom-block data-tag="hint" data-style="info" data-icon="pencil" class="hint hint-info"><p>Password Requirements:</p><ul><li>Minimum 6 characters</li><li>At least one special symbol</li><li>At least one lowercase letter</li><li>At least one uppercase letter</li></ul></div>
 5. Verify that Active User is toggled ON in order for this user to be activated (default). You can deactivate the user by sliding the toggle to the left.
+6.  Click on the Teams tab, and select one or more Teams to which you would like to add the user, see [Teams](teams.md).
 
-6. Click on the Teams tab, and select one or more Teams to which you would like to add the user, see [Teams](teams.md).
+    <div align="left"><figure><img src="../.gitbook/assets/img-2f40ce6f2076aaef6bb34ccfebca4155.png" alt="" width="75%"><figcaption></figcaption></figure></div>
+7.  Click on the Roles tab, and select one or more roles that you would like to assign to the user. For an explanation of the various roles, see [Roles](roles.md).
 
-   <div align="left"><figure><img src=".gitbook/assets/img-2f40ce6f2076aaef6bb34ccfebca4155.png" alt="" width="75%"></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-5295a8d8cda387251526db8b83010a97.png" alt="" width="75%"><figcaption></figcaption></figure></div>
+8.  Click Save.
 
-7. Click on the Roles tab, and select one or more roles that you would like to assign to the user. For an explanation of the various roles, see [Roles](roles.md).
-
-   <div align="left"><figure><img src=".gitbook/assets/img-5295a8d8cda387251526db8b83010a97.png" alt="" width="75%"></figure></div>
-
-8. Click Save.
-
-   The new user account is created.
+    The new user account is created.
 
 {% hint style="info" icon="pencil" %}
 The system does not automatically send a welcome email, so you will need to notify the new user how to access the system. You should include the following info in the welcome email: **Login URL**, **Account Name**, **Username** and **Password**.
@@ -90,47 +67,38 @@ The system does not automatically send a welcome email, so you will need to noti
 
 ## Actions on User Accounts
 
-An admin user can take the following actions on user accounts from the Access Control \> Users tab.
+An admin user can take the following actions on user accounts from the Access Control > Users tab.
 
 ### Editing a User Account
 
 An Admin user can edit the account details of any user in the system. All fields can be edited aside from the Username and Authentication Provider which cannot be changed. The user’s role and Team membership can also be changed. You can also activate/deactivate the user account.
 
 {% hint style="info" icon="pencil" %}
-Alternatively, any user can edit their own account details or password (but not roles and Teams) by going to Access Control \> My Profile.
+Alternatively, any user can edit their own account details or password (but not roles and Teams) by going to Access Control > My Profile.
 {% endhint %}
 
 To edit a user account:
 
-1. In the main navigation, click the User Management icon.
+1.  In the main navigation, click the User Management icon.
 
-   The Access Control screen opens in a new browser tab.
-
+    The Access Control screen opens in a new browser tab.
 2. On the Access Control screen select the Users tab (default).
+3.  On the Users tab, click on the context menu at the end of the row for the desired user account.
 
-3. On the Users tab, click on the context menu at the end of the row for the desired user account.
+    <div align="left"><figure><img src="../.gitbook/assets/img-f0df50b8a9c3c922bbc67fffcf896c4b.png" alt=""><figcaption></figcaption></figure></div>
+4.  In the context menu, select Edit User.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-f0df50b8a9c3c922bbc67fffcf896c4b.png" alt=""></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-8bbf6a170e49fbd1041d966e10f16666.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
-4. In the context menu, select Edit User.
+    The Edit User window opens, showing the current account details.
+5.  In the General tab, adjust the user info as desired.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-8bbf6a170e49fbd1041d966e10f16666.png" alt="" width="50%"></figure></div>
-
-   The Edit User window opens, showing the current account details.
-
-5. In the General tab, adjust the user info as desired.
-
-   {% hint style="info" icon="pencil" %}
-   The Username and Authentication Provider fields cannot be edited.
-   {% endhint %}
-
+    <div data-gb-custom-block data-tag="hint" data-style="info" data-icon="pencil" class="hint hint-info"><p>The Username and Authentication Provider fields cannot be edited.</p></div>
 6. If you would like to change the user’s Team, then in the Teams tab, select the checkbox for the desired Team or Teams.
-
 7. If you would like to change the user’s role, then in the Roles tab, select the checkbox for the desired role or roles.
+8.  Click Save.
 
-8. Click Save.
-
-   The new details are applied to the user account.
+    The new details are applied to the user account.
 
 ### Duplicating a User Account
 
@@ -142,33 +110,26 @@ The only information that is copied from the initial user are the roles and Team
 
 To duplicate a user account:
 
-1. In the main navigation, click the User Management icon.
+1.  In the main navigation, click the User Management icon.
 
-   The Access Control screen opens in a new browser tab.
-
+    The Access Control screen opens in a new browser tab.
 2. On the Access Control screen select the Users tab (default).
+3.  On the Users tab, click on the context menu at the end of the row for the desired account.
 
-3. On the Users tab, click on the context menu at the end of the row for the desired account.
+    <div align="left"><figure><img src="../.gitbook/assets/img-84e05e9f158c5879e7127292898a6dbf.png" alt=""><figcaption></figcaption></figure></div>
+4.  In the context menu, select Duplicate User.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-84e05e9f158c5879e7127292898a6dbf.png" alt=""></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-8d9190ac2ac82714b1815530ec54c81b.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
-4. In the context menu, select Duplicate User.
+    The Add New User window opens.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-8d9190ac2ac82714b1815530ec54c81b.png" alt="" width="50%"></figure></div>
-
-   The Add New User window opens.
-
-   <div align="left"><figure><img src=".gitbook/assets/img-efb647df98579ff679c29810d7940a42.png" alt="" width="75%"></figure></div>
-
+    <div align="left"><figure><img src="../.gitbook/assets/img-efb647df98579ff679c29810d7940a42.png" alt="" width="75%"><figcaption></figcaption></figure></div>
 5. In the General tab (default), enter the information as if you were creating a new user account.
-
 6. Click on the Teams tab and select/deselect the Teams to which you would like to add/remove the user.
-
 7. Click on the Roles tab, and select/deselect the roles to which you would like to add/remove the user.
+8.  Click Save.
 
-8. Click Save.
-
-   The new user account is created in addition to the original user which remains unchanged.
+    The new user account is created in addition to the original user which remains unchanged.
 
 {% hint style="info" icon="pencil" %}
 The system does not automatically send a welcome email, so you will need to notify the new user how to access the system. You should include the following info in the welcome email: **Login URL**, **Account Name**, **Username** and **Password**.
@@ -188,25 +149,21 @@ The user who is designated as the original admin can’t be deleted. If you want
 
 To delete a user account:
 
-1. In the main navigation, click the User Management icon.
+1.  In the main navigation, click the User Management icon.
 
-   The Access Control screen opens in a new browser tab.
-
+    The Access Control screen opens in a new browser tab.
 2. On the Access Control screen select the Users tab (default).
+3.  On the Users tab, click on the context menu at the end of the row for the desired account.
 
-3. On the Users tab, click on the context menu at the end of the row for the desired account.
+    <div align="left"><figure><img src="../.gitbook/assets/img-1db5a75711d86311fdd349a923800e01.png" alt=""><figcaption></figcaption></figure></div>
+4.  In the context menu, select Delete User.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-1db5a75711d86311fdd349a923800e01.png" alt=""></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-4ee998b6b1c9b998b89391523ee56793.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
-4. In the context menu, select Delete User.
+    A confirmation dialog opens.
+5.  Click Delete.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-4ee998b6b1c9b998b89391523ee56793.png" alt="" width="50%"></figure></div>
-
-   A confirmation dialog opens.
-
-5. Click Delete.
-
-   The user account is deleted from the system.
+    The user account is deleted from the system.
 
 ### Resetting User Account Credentials
 
@@ -218,22 +175,18 @@ Alternatively, the user can reset the password himself from the login screen.
 
 To reset the credentials:
 
-1. In the main navigation, click the User Management icon.
+1.  In the main navigation, click the User Management icon.
 
-   The Access Control screen opens in a new browser tab.
-
+    The Access Control screen opens in a new browser tab.
 2. On the Access Control screen select the Users tab (default).
+3.  On the Users tab, click on the context menu at the end of the row for the desired account.
 
-3. On the Users tab, click on the context menu at the end of the row for the desired account.
+    <div align="left"><figure><img src="../.gitbook/assets/img-fce9679d4ae7ee81d8ddf322e4950233.png" alt=""><figcaption></figcaption></figure></div>
+4.  In the context menu, select Reset Password.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-fce9679d4ae7ee81d8ddf322e4950233.png" alt=""></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-4cd3434237cf6aabe23ceef8c2f0df2f.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
-4. In the context menu, select Reset Password.
-
-   <div align="left"><figure><img src=".gitbook/assets/img-4cd3434237cf6aabe23ceef8c2f0df2f.png" alt="" width="50%"></figure></div>
-
-   A confirmation dialog opens.
-
+    A confirmation dialog opens.
 5. Click Reset Password.
 
 {% hint style="info" icon="pencil" %}
@@ -246,20 +199,16 @@ An admin user can create an exemption to allow a user to authenticate without pr
 
 To grant an exemption:
 
-1. In the main navigation, click the User Management icon.
+1.  In the main navigation, click the User Management icon.
 
-   The Access Control screen opens in a new browser tab.
-
+    The Access Control screen opens in a new browser tab.
 2. On the Access Control screen select the Users tab (default).
+3.  On the Users tab, click on the context menu at the end of the row for the desired account.
 
-3. On the Users tab, click on the context menu at the end of the row for the desired account.
+    <div align="left"><figure><img src="../.gitbook/assets/img-fce9679d4ae7ee81d8ddf322e4950233.png" alt=""><figcaption></figcaption></figure></div>
+4.  In the context menu, select Enable Two-Factor authentication Exemption.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-fce9679d4ae7ee81d8ddf322e4950233.png" alt=""></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-5b52a871f844ae97353243fb7f118c3b.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
-4. In the context menu, select Enable Two-Factor authentication Exemption.
-
-   <div align="left"><figure><img src=".gitbook/assets/img-5b52a871f844ae97353243fb7f118c3b.png" alt="" width="50%"></figure></div>
-
-   A confirmation dialog opens.
-
+    A confirmation dialog opens.
 5. Click Enable Exemption.

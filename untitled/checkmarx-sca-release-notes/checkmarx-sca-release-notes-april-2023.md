@@ -1,6 +1,6 @@
 # Checkmarx SCA Release Notes April 2023
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
 {% hint style="warning" %}
 We are in the process of rolling out a new comprehensive Management of Risks service which will replace the current service. The current APIs `IgnoreVulnerability` and `UnignoreVulnerability` will soon be deprecated. Please plan accordingly. For more info, feel free to contact your Technical Account Manager.
@@ -21,15 +21,10 @@ The data shown in Scan Results for specific projects is retained for a longer pe
 We added support for Unity package manager.
 
 <details>
+
 <summary>Details About Unity Support</summary>
 
-<table>
-<tbody>
-<tr><td><figure><img src=".gitbook/assets/img-8b3dcc8e671fe99e2fe76c9a40c74069.png" alt=""></figure></td><td colspan="3"><p><strong><strong>Languages/Frameworks:</strong></strong> Unity</p><p><strong><strong>Repository:</strong></strong> <a href="https://github.com/orgs/Unity-Technologies/repositories">Unity Technologies</a>, <a href="https://github.com/orgs/needle-mirror/repositories">Needle-mirror</a>, <a href="https://openupm.com/packages/">Open UPM</a></p><p><strong><strong>File Types:</strong></strong> none</p></td></tr>
-<tr><td><p><strong><strong>Supported Package Managers</strong></strong></p></td><td><p><strong><strong>Exploitable Path</strong></strong></p></td><td><p><strong><strong>Supply Chain Security (SCS)</strong></strong></p></td><td><p><strong><strong>Manifest Files</strong></strong> (Packages marked with <img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt="" data-size="line"> are required)</p></td></tr>
-<tr><td><p>none</p></td><td><p></p></td><td><p></p></td><td><p>manifest.json<img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt="" data-size="line">, packages.json<img src=".gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109.png" alt="" data-size="line"></p></td></tr>
-</tbody>
-</table>
+<table data-header-hidden><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/img-8b3dcc8e671fe99e2fe76c9a40c74069 (1).png" alt="" data-size="original"></td><td colspan="3"><p><strong>Languages/Frameworks:</strong> Unity</p><p><strong>Repository:</strong> <a href="https://github.com/orgs/Unity-Technologies/repositories">Unity Technologies</a>, <a href="https://github.com/orgs/needle-mirror/repositories">Needle-mirror</a>, <a href="https://openupm.com/packages/">Open UPM</a></p><p><strong>File Types:</strong> none</p></td></tr><tr><td><strong>Supported Package Managers</strong></td><td><strong>Exploitable Path</strong></td><td><strong>Supply Chain Security (SCS)</strong></td><td><strong>Manifest Files</strong> (Packages marked with <img src="../.gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109 (1).png" alt="" data-size="line"> are required)</td></tr><tr><td>none</td><td></td><td></td><td>manifest.json<img src="../.gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109 (1).png" alt="" data-size="line">, packages.json<img src="../.gitbook/assets/img-dffd1b8669870a53cfed6fe20ff40109 (1).png" alt="" data-size="line"></td></tr></tbody></table>
 
 </details>
 
@@ -47,14 +42,14 @@ The complete changelog, and links to download SCA Resolver are available [here](
 
 ### Version 2.1.5
 
-- Added support for Unity package manager. For more information, see [Unity Package Manager Dependency Resolver](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-download-and-installation/installing-supported-package-managers-for-resolver#UUID-6a56714b-6836-a1e0-3c21-d1fbb411cf4d_section-idm33363974042884).
-- For Bower, fixed issue that dependency resolution was failing when latest version ("\*") was specified.
-- For Ivy, fixed issue that unused versions were being resolved despite the fact that a newer version had been specified in the manifest file.
-- ImageResolver updated to version 2.0.43.
+* Added support for Unity package manager. For more information, see [Unity Package Manager Dependency Resolver](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-download-and-installation/installing-supported-package-managers-for-resolver#UUID-6a56714b-6836-a1e0-3c21-d1fbb411cf4d_section-idm33363974042884).
+* For Bower, fixed issue that dependency resolution was failing when latest version ("\*") was specified.
+* For Ivy, fixed issue that unused versions were being resolved despite the fact that a newer version had been specified in the manifest file.
+* ImageResolver updated to version 2.0.43.
 
 ### Version 2.1.2
 
-- Added support for authentication via Master Access Control, see [Master Access Control Authentication for Checkmarx SCA Resolver](https://app.gitbook.com/s/XSPACE_RESOLVER/master-access-control-authentication-for-checkmarx-sca-resolver).
-- For Sbt, stack overflow is fixed when building the dependency tree.
-- For Gradle, when a submodule is duplicated in a project we now resolve the package only once.
-- ImageResolver was updated to version 2.0.41.
+* Added support for authentication via Master Access Control, see [Master Access Control Authentication for Checkmarx SCA Resolver](https://app.gitbook.com/s/XSPACE_RESOLVER/master-access-control-authentication-for-checkmarx-sca-resolver).
+* For Sbt, stack overflow is fixed when building the dependency tree.
+* For Gradle, when a submodule is duplicated in a project we now resolve the package only once.
+* ImageResolver was updated to version 2.0.41.

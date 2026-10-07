@@ -8,7 +8,7 @@ In order to use SAML authentication, you need to provide the name of your SSO pr
 Because the browser interaction is a necessary part of the SAML authentication process, we don’t recommend using SAML authentication in pipelines.
 {% endhint %}
 
-<div align="left"><figure><img src=".gitbook/assets/img-27e37f87a587b0851c00567863d78f40.png" alt=""></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-27e37f87a587b0851c00567863d78f40.png" alt=""><figcaption></figcaption></figure></div>
 
 ## Run Command for SAML Authentication
 
@@ -34,6 +34,7 @@ The following example shows a run command in Online mode using SAML authenticati
 ./ScaResolver -s /Users/DemoUser/MyApp -n MyApp -a Checkmarx --sso-provider okta
 ```
 {% endtab %}
+
 {% tab title="Windows" %}
 ```
 ./ScaResolver.exe -s C:\Users\DemoUser\MyApp -n MyApp -a Checkmarx --sso-provider okta

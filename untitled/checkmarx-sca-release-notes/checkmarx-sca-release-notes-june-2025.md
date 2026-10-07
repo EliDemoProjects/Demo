@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes June 2025
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
-{% include ".gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540 (1).md" %}
 
 ## SCA Updates
 

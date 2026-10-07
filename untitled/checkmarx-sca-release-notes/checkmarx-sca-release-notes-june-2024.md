@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes June 2024
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
-{% include ".gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540 (1).md" %}
 
 ## Remediation Icon
 
@@ -22,16 +22,16 @@ We have enriched the Global Inventory and Risks page to include all relevant dat
 
 ### Packages Tab
 
-- Show only Effective licenses
-- Added Scan Date
+* Show only Effective licenses
+* Added Scan Date
 
 ### Risks Tab
 
-- Added severity Score
-- Added risk State
-- Added Exploitability indicators
-- Added Category (CWE)
-- Made Package Name and Package Version into separate items
-- Added Detection Date
+* Added severity Score
+* Added risk State
+* Added Exploitability indicators
+* Added Category (CWE)
+* Made Package Name and Package Version into separate items
+* Added Detection Date
 
 In addition we have improved filter and search capabilities.

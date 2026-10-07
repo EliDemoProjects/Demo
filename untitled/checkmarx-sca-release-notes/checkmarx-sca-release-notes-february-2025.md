@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes February 2025
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
-{% include ".gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540 (1).md" %}
 
 ## SCA Updates
 
@@ -14,6 +14,6 @@ We have added support for the [CVSS 4.0](https://nvd.nist.gov/vuln-metrics/cvss/
 
 We have added several new policy conditions, enabling granular detection of specific risk factors:
 
-- [EPSS](https://www.first.org/epss/) - set thresholds based on EPSS score or EPSS percentile.
-- State - set a condition for vulnerabilities in one or more specified states. Options are: To Verify, Proposed not Exploitable, Confirmed and Urgent.
-- Malicious Package detection (for accounts with the relevant license) - you can now create conditions based on specific types of malicious attacks (e.g., Typosquatting, Chainjacking etc.). You can also create conditions based on thresholds for the following package integrity metrics: Contributor Reputation, Reliability Score and Behavioral Integrity.
+* [EPSS](https://www.first.org/epss/) - set thresholds based on EPSS score or EPSS percentile.
+* State - set a condition for vulnerabilities in one or more specified states. Options are: To Verify, Proposed not Exploitable, Confirmed and Urgent.
+* Malicious Package detection (for accounts with the relevant license) - you can now create conditions based on specific types of malicious attacks (e.g., Typosquatting, Chainjacking etc.). You can also create conditions based on thresholds for the following package integrity metrics: Contributor Reputation, Reliability Score and Behavioral Integrity.

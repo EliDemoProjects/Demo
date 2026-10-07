@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Checkmarx SCA - Product Info](README.md)
+* [Checkmarx SCA - Product Info](../)
   * [Product Description](product-description.md)
   * [Supported Languages and Package Managers](supported-languages-and-package-managers.md)
   * [Files Used for Manifest Resolution](files-used-for-manifest-resolution.md)

@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes April 2025
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
-{% include ".gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540 (1).md" %}
 
 ## SCA Updates
 
@@ -16,4 +16,4 @@ Download the latest version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/che
 
 ### Version 2.12.21 (Apr 24, 2025)
 
-- Fixed issue affecting Syft execution on Windows environments.
+* Fixed issue affecting Syft execution on Windows environments.

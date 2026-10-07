@@ -1,6 +1,6 @@
 # Checkmarx SCA Release Notes July 2026
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
 ## SCA Updates
 
@@ -16,9 +16,9 @@ Download the latest version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/che
 
 ### Version 2.14.11 (July 22, 2026)
 
-- Added arm64 version of installation files for each supported OS
-- Added support for extraction of .whl, .tgz and .rpm file formats
-- Added `packages-only` and `binary-only` arguments to Sbom generation
-- Added support for Pnpm package manager
-- Fixed Sbom format to use camelCase instead of PascalCase
-- Added support for custom archive extensions extraction by adding `--include-archive-files` and `--include-extensionless-archives` optional arguments.
+* Added arm64 version of installation files for each supported OS
+* Added support for extraction of .whl, .tgz and .rpm file formats
+* Added `packages-only` and `binary-only` arguments to Sbom generation
+* Added support for Pnpm package manager
+* Fixed Sbom format to use camelCase instead of PascalCase
+* Added support for custom archive extensions extraction by adding `--include-archive-files` and `--include-extensionless-archives` optional arguments.

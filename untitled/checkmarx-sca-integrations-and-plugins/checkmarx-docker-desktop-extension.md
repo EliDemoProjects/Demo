@@ -5,6 +5,7 @@
 The Checkmarx Docker Desktop Extension helps you to strengthen the security posture of your Docker images by taking a proactive approach to safeguarding against vulnerabilities and aligning with industry best practices for secure containerization. This tool offers robust features such as comprehensive scanning, package inspection, and vulnerability assessment. It leverages Checkmarx proprietary database to provide users with valuable insights and recommendations for protecting images against potential security threats and maintaining the integrity of their containerized environments.
 
 <details>
+
 <summary>Checkmarx Terms of Service</summary>
 
 Checkmarx Master Software License and Services Agreement 230210
@@ -15,59 +16,41 @@ Checkmarx Master Software License and Services Agreement 230210
 
 **IF YOU DO NOT AGREE TO THIS AGREEMENT, YOU ARE NOT AUTHORIZED TO ACCESS OR USE THE SOFTWARE OR SERVICES OR ANY PART THEREOF. BY CLICKING “I ACCEPT,” “I AGREE,” OR SIMILAR ACCEPTANCE TEXT, BY EXECUTING A DOCUMENT INCORPORATING THIS AGREEMENT BY REFERENCE, OR BY ACCESSING OR USING THE SOFTWARE OR SERVICES, YOU HEREBY AGREE TO THIS AGREEMENT.**
 
-1. **<u>Definitions</u>**.
-
+1. **Definitions**.
    1. “**Affiliate**” means, with respect to a Party, any entity that, directly or indirectly, controls, is controlled by, or is under common control with such Party, and “control” means the power to direct the management and policies of the controlled entity.
    2. “**Documentation**” means the current Software documentation located at [https://docs.checkmarx.com/](https://docs.checkmarx.com/).
    3. “**Local Country Addendum**” means, if applicable to Customer, the current additional country-specific terms located at [https://checkmarx.com/legal/terms/](https://checkmarx.com/legal/terms/).
    4. “**Software**” means the object code form of Checkmarx’s software programs, and all Software updates and maintenance releases provided by Checkmarx.
-
-2. **<u>Software License Grants and Restrictions</u>**.
-
+2. **Software License Grants and Restrictions**.
    1. **Licenses and Usage Rights**. Subject to this Agreement, Checkmarx grants to Customer a limited, non-exclusive, non-transferable, non-sublicensable license to: (a) download and install one copy of the Software on a device owned by Customer; (b) access and use the Software and Documentation for Customer’s internal business purposes, and (c) retain a backup copy of the Software and Documentation for non-production, inactive backup and archival purposes only.
    2. **Usage Restrictions**. Customer may not, and may not permit others to: (a) attempt to access or use the Software by unauthorized means or circumvent any usage restrictions; (c) reverse engineer, decompile, disassemble, modify or create derivative works of the Software or Documentation; (d) attempt to derive the source code of the Software; (e) reproduce, publish, distribute, transfer, publicly display, resell, rent, lease, sublicense, loan, or lend the Software or Documentation to any third party; (f) use the Software to provide application security services to a third party, or make the Software available for use by a third party; (g) use the Software for the purpose of competitive analysis, competitive benchmarking or to build a competitive product or service; (h) transfer, assign or permit the sharing of passwords, license keys, access credentials, API keys or access codes to a third party; (i) make available to any third party any content from, or output of, the Software, including but not limited to benchmarking results; (j) use any robot, spider, data scraping or content extraction tool or similar mechanism with respect to the Software or Documentation; (k); upload malicious code, files scripts, agents or programs to the Software; (l) use the Software in violation of third party rights or applicable laws and regulations; or (m) infiltrate, hack, or attempt to circumvent or interfere with any authentication or security measures of the Software or Services.
    3. **Audit**. Customer agrees, upon written request by Checkmarx no more than once per year, to furnish Checkmarx with records demonstrating Customer’s compliance with this Agreement.
-
-3. **<u>Customer Data.</u>**
-
+3. **Customer Data.**
    1. **Customer Data.** Customer hereby grants Checkmarx and its Affiliates a limited, non-exclusive license to use the data provided by Customer during use of the Software (the “**Customer Data**”) as necessary to provide the Software to Customer, to provide technical support and assistance to Customer, to monitor the integrity and functioning of the Software, and to perform and administer the Agreement. Except as set out in Section 3.3, Customer owns all right, title and interest in the Customer Data.
    2. **Personal Information**. In the event Customer provides any personal data to Checkmarx, such data shall be handled in accordance with Checkmarx’s privacy policy located at [https://checkmarx.com/legal/privacy-policy/](https://checkmarx.com/legal/privacy-policy/).
    3. **Analytics and Service Data**. Checkmarx and its Affiliates may process and use the usage analytics and metadata generated during Customer’s use of the Software for statistical purposes, product improvement and other internal business purposes.
-
-4. **<u>Title and Ownership; Proprietary Notices</u>**.
-
+4. **Title and Ownership; Proprietary Notices**.
    1. **Proprietary Rights**. The Software and Documentation are licensed, not sold, and Checkmarx, its Affiliates and licensors retain all right, title, and interest in and to the Software and Documentation, and all copies, improvements, enhancements, modifications, and derivative works of the Software and Documentation, including, without limitation, all patent, copyright, trade secret, trademarks, and other intellectual property rights. Any Software licenses granted in this Agreement do not grant any rights whatsoever to the source code of the Software. All express or implied rights to the Software and Documentation not specifically granted herein are expressly reserved to Checkmarx, its Affiliates and licensors.
    2. **Proprietary Notices**. Customer acknowledges that Checkmarx, its Affiliates and licensors own the copyright and other intellectual property rights in the Software and Documentation. Customer will not remove the copyright, trademark and other proprietary notices contained on or in the Software Documentation and any materials provided by Checkmarx under this Agreement.
    3. **Feedback**. In the event Customer provides Checkmarx with feedback regarding the operation, functionality or use of Checkmarx’s offerings Customer hereby grants Checkmarx and its Affiliates a perpetual, irrevocable, worldwide, sub-licensable, royalty-free license to use, modify, create derivative works, distribute, and otherwise exploit the feedback without further compensation to Customer.
-
-5. **<u>Taxes</u>**. Customer shall be responsible for the payment of all taxes and duties, however designated, which are paid or payable, based on the Customer's use or possession of the Software under this Agreement.
-
-6. **<u>Disclaimer of Warranties</u>**. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SOFTWARE AND DOCUMENTATION ARE PROVIDED ON AN “AS IS” BASIS AND CHECKMARX DISCLAIMS ALL OTHER WARRANTIES, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE. CHECKMARX EXPRESSLY DISCLAIMS ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR ARISING OUT OF ANY COURSE OF DEALING OR USAGE OF TRADE. CHECKMARX DOES NOT REPRESENT OR WARRANT THAT THE SOFTWARE OR DOCUMENTATION WILL MEET THE REQUIREMENTS OF CUSTOMER, THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED AND/OR ERROR FREE, OR THAT THE SOFTWARE WILL DETECT OR RENDER CUSTOMER’S CODE FREE FROM ALL ERRORS, VULNERABILITIES, OR INTRUSIONS.
-
-7. **<u>Limitation of Liability</u>**. EXCEPT FOR LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED AS A MATTER OF LAW, CHECKMARX AND ITS AFFILIATES SHALL NOT BE LIABLE OR OBLIGATED IN ANY MANNER FOR ANY LOST PROFITS, LOST REVENUE, LOSS OF USE, LOSS OR DAMAGE TO DATA, REMEDIATION COSTS, LOSS OF GOODWILL, OR ANY SPECIAL, INDIRECT, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES, REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, TORT, NEGLIGENCE, STRICT PRODUCT LIABILITY OR OTHERWISE, EVEN IF INFORMED OF THE POSSIBILITY OF SUCH DAMAGES IN ADVANCE. EXCEPT FOR LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED AS A MATTER OF LAW, THE MAXIMUM AGGREGATE LIABILITY OF CHECKMARX AND ITS AFFILIATES ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED THE FEES PAID TO CHECKMARX UNDER THIS AGREEMENT DURING THE PREVIOUS TWELVE (12) MONTHS PRECEDING THE FIRST EVENT GIVING RISE TO A CLAIM.
-
-8. **<u>Term and Termination</u>**.
-
+5. **Taxes**. Customer shall be responsible for the payment of all taxes and duties, however designated, which are paid or payable, based on the Customer's use or possession of the Software under this Agreement.
+6. **Disclaimer of Warranties**. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SOFTWARE AND DOCUMENTATION ARE PROVIDED ON AN “AS IS” BASIS AND CHECKMARX DISCLAIMS ALL OTHER WARRANTIES, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE. CHECKMARX EXPRESSLY DISCLAIMS ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR ARISING OUT OF ANY COURSE OF DEALING OR USAGE OF TRADE. CHECKMARX DOES NOT REPRESENT OR WARRANT THAT THE SOFTWARE OR DOCUMENTATION WILL MEET THE REQUIREMENTS OF CUSTOMER, THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED AND/OR ERROR FREE, OR THAT THE SOFTWARE WILL DETECT OR RENDER CUSTOMER’S CODE FREE FROM ALL ERRORS, VULNERABILITIES, OR INTRUSIONS.
+7. **Limitation of Liability**. EXCEPT FOR LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED AS A MATTER OF LAW, CHECKMARX AND ITS AFFILIATES SHALL NOT BE LIABLE OR OBLIGATED IN ANY MANNER FOR ANY LOST PROFITS, LOST REVENUE, LOSS OF USE, LOSS OR DAMAGE TO DATA, REMEDIATION COSTS, LOSS OF GOODWILL, OR ANY SPECIAL, INDIRECT, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES, REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, TORT, NEGLIGENCE, STRICT PRODUCT LIABILITY OR OTHERWISE, EVEN IF INFORMED OF THE POSSIBILITY OF SUCH DAMAGES IN ADVANCE. EXCEPT FOR LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED AS A MATTER OF LAW, THE MAXIMUM AGGREGATE LIABILITY OF CHECKMARX AND ITS AFFILIATES ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED THE FEES PAID TO CHECKMARX UNDER THIS AGREEMENT DURING THE PREVIOUS TWELVE (12) MONTHS PRECEDING THE FIRST EVENT GIVING RISE TO A CLAIM.
+8. **Term and Termination**.
    1. **Term**. The term of this Agreement begins at the date that the Customer downloads the Software and shall end as set out in this Section 8.
    2. **Termination**. Either Party may terminate this Agreement: (a) upon written notice in the event of a material breach of this Agreement by the other Party which has not been cured after the expiration of five (5) days from the breaching Party’s receipt of written notice of the breach; (b) to the extent permitted by applicable law, if the other Party becomes the subject of any voluntary or involuntary petition pursuant to applicable bankruptcy or insolvency laws, or a request for receivership, liquidation, or composition for the benefit of creditors and such petition, request or proceeding is not dismissed within sixty (60) days of filing; or (c) immediately upon written notice in the event that either Party reasonably believes that this Agreement or a Party’s performance thereunder will result in a material violation of applicable law, and such violation cannot be promptly corrected to the Party’s reasonable satisfaction despite commercially reasonable measures, or is incurable as a matter of law. Without limiting the foregoing, this Agreement shall automatically terminate in the event of a breach of Section 12.
    3. **Checkmarx Termination**. Checkmarx may, without liability and without notice, immediately terminate this Agreement on written notice.
    4. **Effect of Termination**. Upon termination of this Agreement: (a) all licenses and rights granted to Customer under this Agreement shall immediately terminate; and (b) Customer shall promptly delete all unlicensed copies of the Software and Documentation.
    5. **Survival of Certain Provisions**. The Parties’ rights and obligations contained in Sections 3.2 (“Personal Information”); 3.3 (“Analytics and Service Data”); 4 (“Title and Ownership; Proprietary Notices”); 6 (“Disclaimer of Warranties”); 7 (“Limitation of Liability”); 8.4 (“Effect of Termination”); 10 (“Governing Law and Dispute Resolution”); and 11 (“General Provisions”), shall survive any termination or expiration of this Agreement.
-
-9. **<u>Compliance and Regulatory</u>**.
-
+9. **Compliance and Regulatory**.
    1. **Export Law**. To the extent consistent with applicable local law, Customer agrees to comply with applicable anti-corruption, export control, and financial sanctions laws in connection with the Software and Documentation, including, but not limited to, the United States Export Administration Regulations, 15 CFR 730 et seq (“EAR”) and the United States Foreign Assets Control Regulations, 31 CFR 500 et seq (“OFAC Regulations”) (collectively “Trade Controls”). Customer represents and warrants that it is not, and that, absent an appropriate license obtained from the appropriate government authority, it will not export, re-export or transfer in-country to, or permit access to the Software or Documentation by: (1) any party that is a citizen of, ordinarily resident in, organized under the laws of, or owned or controlled by the government of, any country or region to which the EAR prohibits exports of EAR99 items without a license (see 15 C.F.R. 746) or with which Checkmarx or its financial institutions prohibit dealings as a matter of policy based on a variety of legal and commercial risks (collectively currently Cuba, Iran, Lebanon, Libya, North Korea, Syria, the Crimea Region, and the self-proclaimed the Donetsk People’s Republic and Luhansk People’s Republic); or (2) any party or end use subject to license requirements imposed by Trade Controls, including but not limited to parties enumerated on, or directly or indirectly owned 50 percent or more by parties enumerated on, the Specially Designated Nationals and Blocked Persons list administered by the United States Department of Treasury, any party enumerated on the Entity List or subject to a Denial Order maintained by the United States Department of Commerce, any party or end use otherwise described Parts 744 or 746 of the EAR (15 CFR 744-746), and any party acting on behalf of any such party.
    2. **Compliance with Laws**. Customer shall comply with all relevant laws and regulations applicable to its use of the Software and Documentation. Customer is solely responsible for determining whether the use of the Software or Documentation by Customer and its end users is appropriate and permitted by relevant laws in the jurisdiction(s) where such Software originates or will be accessed and used.
    3. **United States Government Rights in Commercial Off-the-Shelf Software**. The Software and Documentation constitute “commercial computer software,” and “commercial computer software documentation” and “technical data” as defined in FAR Section 12.212. Consistent with the applicable provisions of the applicable federal acquisition regulations, including but not limited to 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through 227.7202-4, as applicable, the Software and Documentation are being licensed to U.S. Government end users only as commercial items and pursuant solely to the terms and conditions herein.
-
-10. **<u>Governing Law and Dispute Resolution</u>**.
-
+10. **Governing Law and Dispute Resolution**.
     1. **Governing Law**. Unless otherwise designated in a Local Country Addendum, this Agreement shall be governed by and interpreted in accordance with the laws of the State of New York, United States of America.
     2. **Dispute Resolution**. In the event of any controversy or claim arising out of or relating to this Agreement, the Parties shall consult and negotiate with each other and attempt to reach a solution satisfactory to both Parties. If the Parties do not reach a settlement within sixty (60) days, any unresolved controversy or claim arising out of or relating to this Agreement shall be resolved by binding arbitration conducted in accordance with the Commercial Arbitration Rules of the American Arbitration Association (“**AAA**”) and administered by the AAA, unless otherwise designated in a Local Country Addendum. The arbitration shall be conducted in the English language in New York, New York, unless otherwise agreed by the Parties.
     3. **Litigation Rights**. Notwithstanding any other provision of this Agreement, and regardless of the dispute resolution provisions and arbitration requirements set out herein, Checkmarx may, without waiving any remedy under this Agreement, seek relief from any court of competent jurisdiction to: (a) protect its confidential information or Intellectual Property Rights; or (b) pursue collections activity or compel the payment of Fees due hereunder.
-
-11. **<u>General Provisions</u>**.
-
+11. **General Provisions**.
     1. **Exclusions**. The United Nations Convention Relating to a Uniform Law on the International Sale of Goods, or any similar or successor convention or law, shall not apply to this Agreement. The Parties expressly agree that the Uniform Computer Information Transactions Act shall not apply to this Agreement and, to the extent that it is applicable, the Parties agree to opt-out of its applicability pursuant to its provisions.
     2. **Assignment**. This Agreement may not be assigned, delegated, or transferred by Customer without Checkmarx’s written consent, and any attempt to take such action shall be void and without effect. Checkmarx may assign this Agreement, or any rights or obligations found therein, including but not limited to its Affiliates, or to an entity which purchases all or substantially all of its assets, or acquires control of Checkmarx by reason of a merger or acquisition, sale of stock, or otherwise.
     3. **No Waiver**. The failure of either Party to enforce any provision of this Agreement shall not be interpreted to be a waiver of such provisions or of the right of such Party to enforce each and every such provision.
@@ -91,67 +74,52 @@ Checkmarx Master Software License and Services Agreement 230210
 
 ### Main Features
 
-- Free tool
+* Free tool
+  *   No Checkmarx account required
 
-  - No Checkmarx account required
-
-    {% hint style="info" icon="pencil" %}
-    Soon we will be adding additional Premium features, which will be available specifically for Checkmarx customers.
-    {% endhint %}
-
-- Image scanning
-
-  - Scan local Docker images
-  - View a detailed breakdown of image layers
-
-- Package inspection
-
-  - Inspect packages that are installed within your Docker images
-
-- Vulnerability assessment
-
-  - Identify vulnerabilities associated with packages within your Docker images
-
-- Recommendations and remediation (Premium feature, COMING SOON)
-
-  - Receive suggestions and recommendations for remediating identified vulnerabilities
+      <div data-gb-custom-block data-tag="hint" data-style="info" data-icon="pencil" class="hint hint-info"><p>Soon we will be adding additional Premium features, which will be available specifically for Checkmarx customers.</p></div>
+* Image scanning
+  * Scan local Docker images
+  * View a detailed breakdown of image layers
+* Package inspection
+  * Inspect packages that are installed within your Docker images
+* Vulnerability assessment
+  * Identify vulnerabilities associated with packages within your Docker images
+* Recommendations and remediation (Premium feature, COMING SOON)
+  * Receive suggestions and recommendations for remediating identified vulnerabilities
 
 ### Requirements
 
 Verify that your system meets the following specifications in order to ensure optimal performance:
 
-- Operatingsystem compatibility
-
-  - amd64: Windows, Linux, MacOS
-  - arm64: MacOS M1
-
-- Docker compatibility
-
-  - Docker Desktop version 4.26 and above
-
-- Resource requirements
-
-  - Minimum 200MB disk space for the image to run
-  - Minimum 8GB RAM
+* Operatingsystem compatibility
+  * amd64: Windows, Linux, MacOS
+  * arm64: MacOS M1
+* Docker compatibility
+  * Docker Desktop version 4.26 and above
+* Resource requirements
+  * Minimum 200MB disk space for the image to run
+  * Minimum 8GB RAM
 
 ### Supported Package Managers
 
 {% tabs %}
 {% tab title="Non-OS Package Managers" %}
-- NPM
-- Maven
-- Gradle
-- NuGet
-- Pip (PyPi)
+* NPM
+* Maven
+* Gradle
+* NuGet
+* Pip (PyPi)
 {% endtab %}
+
 {% tab title="OS Distribution Package Managers" %}
-- Debian
-- Alpine
-- Ubuntu
-- SUSE
-- Oracle
-- Red Hat
-- Amazon
+* Debian
+* Alpine
+* Ubuntu
+* SUSE
+* Oracle
+* Red Hat
+* Amazon
 {% endtab %}
 {% endtabs %}
 
@@ -164,16 +132,14 @@ The extension is available on [Docker Marketplace](https://hub.docker.com/extens
 To install the extension:
 
 1. In your Docker Desktop console, click on + Add Extensions and search for the Checkmarx extension.
+2.  Click Install.
 
-2. Click Install.
+    <div align="left"><figure><img src="../.gitbook/assets/img-4f5155e05497bbc7a82c980f01c39b89.png" alt=""><figcaption></figcaption></figure></div>
+3.  Follow on-screen prompts to complete the installation process.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-4f5155e05497bbc7a82c980f01c39b89.png" alt=""></figure></div>
+    The Checkmarx extension is installed and the icon is shown in the Extensions section of the navigation pane.
 
-3. Follow on-screen prompts to complete the installation process.
-
-   The Checkmarx extension is installed and the icon is shown in the Extensions section of the navigation pane.
-
-   <div align="left"><figure><img src=".gitbook/assets/img-88ec6e918f88b00de086893236445562.png" alt="" width="50%"></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-88ec6e918f88b00de086893236445562.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
 ## Scanning Images
 
@@ -185,26 +151,24 @@ The extension stores scan results, so that if an image hasn’t been changed sin
 
 To scan an image and view results:
 
-1. In the navigation pane, click on the Checkmarx extension.
+1.  In the navigation pane, click on the Checkmarx extension.
 
-   The Checkmarx screen opens.
+    The Checkmarx screen opens.
 
-   <div align="left"><figure><img src=".gitbook/assets/img-420e1514212634d6eedc92bfa2fac76a.png" alt=""></figure></div>
-
+    <div align="left"><figure><img src="../.gitbook/assets/img-420e1514212634d6eedc92bfa2fac76a.png" alt=""><figcaption></figcaption></figure></div>
 2. Click on the Select images field and select an image from the drop-down list.
+3.  Click on the Scan Image button.
 
-3. Click on the Scan Image button.
+    When the scan completes, the results are shown. The initial view shows the Summary tab. You can view additional details in the Packages and Vulnerabilities tabs.
 
-   When the scan completes, the results are shown. The initial view shows the Summary tab. You can view additional details in the Packages and Vulnerabilities tabs.
-
-   <div align="left"><figure><img src=".gitbook/assets/img-fd8c7fac072891658a7814c1be85fd2c.png" alt="" width="75%"></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/img-fd8c7fac072891658a7814c1be85fd2c.png" alt="" width="75%"><figcaption></figcaption></figure></div>
 
 ## Viewing Scan Results
 
 After scanning an image, the results screen is shown. There are two main sections:
 
-- [Image & Layers](checkmarx-docker-desktop-extension.md#UUID-7e9b011a-d70a-f38c-5378-432180f3202f_N1704959618408)
-- [Details Tabs](checkmarx-docker-desktop-extension.md#UUID-7e9b011a-d70a-f38c-5378-432180f3202f_N1704959634340)
+* [Image & Layers](checkmarx-docker-desktop-extension.md#UUID-7e9b011a-d70a-f38c-5378-432180f3202f_N1704959618408)
+* [Details Tabs](checkmarx-docker-desktop-extension.md#UUID-7e9b011a-d70a-f38c-5378-432180f3202f_N1704959634340)
 
 ### Image & Layers
 
@@ -212,7 +176,7 @@ This pane shows a separate section for each build stage showing all layers withi
 
 This section serves as a navigation pane for the details tabs. When All is selected, all results are shown in the Vulnerabilities and Packages tabs. When a specific layer is selected, the Vulnerabilities and Packages tabs are filtered to show only results for that layer.
 
-<div align="left"><figure><img src=".gitbook/assets/img-06becf54da7053dee6eb02026610da42.png" alt="" width="75%"></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-06becf54da7053dee6eb02026610da42.png" alt="" width="75%"><figcaption></figcaption></figure></div>
 
 ### Details Tabs
 
@@ -224,7 +188,7 @@ This tab shows a summary of the number of vulnerabilities, broken down by severi
 This display isn’t affected by the selection made in the Image & Layers section.
 {% endhint %}
 
-<div align="left"><figure><img src=".gitbook/assets/img-a1d171ec6a5ce1f88837d04afc9d5c1f.png" alt="" width="50%"></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-a1d171ec6a5ce1f88837d04afc9d5c1f.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
 #### Vulnerabilities Tab
 
@@ -234,7 +198,7 @@ This tab shows the vulnerabilities identified in each package. Click on a packag
 Use the search field at the top right to search by CVE or package name. Results are filtered as you type.
 {% endhint %}
 
-<div align="left"><figure><img src=".gitbook/assets/img-0d927183b33dca0b23e0337a60b74008.png" alt="" width="50%"></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-0d927183b33dca0b23e0337a60b74008.png" alt="" width="50%"><figcaption></figcaption></figure></div>
 
 #### Packages Tab
 
@@ -244,4 +208,4 @@ This tab shows a list of packages that were identified. Click on a package to sh
 Use the search field at the top right to search by package name. Results are filtered as you type.
 {% endhint %}
 
-<div align="left"><figure><img src=".gitbook/assets/img-9044c336d09aafa5d86e121186853d92.png" alt="" width="50%"></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-9044c336d09aafa5d86e121186853d92.png" alt="" width="50%"><figcaption></figcaption></figure></div>

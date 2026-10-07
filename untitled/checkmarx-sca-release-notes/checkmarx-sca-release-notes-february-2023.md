@@ -1,6 +1,6 @@
 # Checkmarx SCA Release Notes February 2023
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
 ## JFrog Plugin
 
@@ -8,7 +8,7 @@ We have released a new plugin for running Checkmarx SCA scans on the artifacts i
 
 The plugin uses the scan results to enrich the attributes shown in the JFrog UI.
 
-<div align="left"><figure><img src=".gitbook/assets/img-730398462c6ddb432fd7e5c2661e758d.png" alt="" width="75%"></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-730398462c6ddb432fd7e5c2661e758d.png" alt="" width="75%"><figcaption></figcaption></figure></div>
 
 When you install the plugin, Checkmarx scans all artifacts currently in your repository. In addition, each time that an artifact is downloaded, the plugin runs a Checkmarx SCA scan on that artifact.
 
@@ -30,29 +30,22 @@ This is a FREE tool. No Checkmarx account required.
 
 ## Checkmarx SCA Resolver Updates
 
-We have released several new versions of Resolver with a wide range of improvements and bug fixes. Download the latest version of SCA Resolver [here](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-download-and-installation).
+We have released several new versions of Resolver with a wide range of improvements and bug fixes. Download the latest version of SCA Resolver [here](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-download-and-installation).
 
 ### Improvements in Version 2.0.2
 
-- We have stopped supporting `Configuration.ini`. It is a requirement to use the `Configuration.yml` file when running the new version of Resolver.
+*   We have stopped supporting `Configuration.ini`. It is a requirement to use the `Configuration.yml` file when running the new version of Resolver.
 
-  {% hint style="warning" %}
-  This is a breaking change which makes the new version of Resolver incompatible with installations that still rely on a `Configuration.ini` file.
-  {% endhint %}
-
-- When submitting your SAST password using `--cxpassword`, you can now use an Environment Variable. This is preferable to including a password in clear text in the config file.
-
-- Users can now specify a custom path to the NetRc file to be used for authentication.
-
-- For Java, improved the Java version detection for openjdk11 on Windows.
-
-- For Bower:
-
-  - We now support JFrog artifactory.
-  - We now identify Dev dependencies.
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p>This is a breaking change which makes the new version of Resolver incompatible with installations that still rely on a <code>Configuration.ini</code> file.</p></div>
+* When submitting your SAST password using `--cxpassword`, you can now use an Environment Variable. This is preferable to including a password in clear text in the config file.
+* Users can now specify a custom path to the NetRc file to be used for authentication.
+* For Java, improved the Java version detection for openjdk11 on Windows.
+* For Bower:
+  * We now support JFrog artifactory.
+  * We now identify Dev dependencies.
 
 ## Improvements and Bug Fixes
 
-| Status | Item | Description |
-| --- | --- | --- |
-| FIXED | Sorting scan result | On the Scan Results screen, the All Risks and All Packages tabs are now sorted accurately. All Risks is sorted by Risks severity and All Packages is sorted by Risk Score. |
+| Status | Item                | Description                                                                                                                                                                |
+| ------ | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FIXED  | Sorting scan result | On the Scan Results screen, the All Risks and All Packages tabs are now sorted accurately. All Risks is sorted by Risks severity and All Packages is sorted by Risk Score. |

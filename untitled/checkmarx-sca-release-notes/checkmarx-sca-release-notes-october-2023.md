@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes October 2023
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
-{% include ".gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540 (1).md" %}
 
 ## Sysdig Integration
 
@@ -22,7 +22,7 @@ We improved the performance of Exploitable Path scans for Java projects. The upd
 
 We released a new version of SCA Resolver with the following improvements:
 
-- For Yarn, scripts that are defined on package.json are now ignored.
-- For Swift, lock file version 2 is now supported.
+* For Yarn, scripts that are defined on package.json are now ignored.
+* For Swift, lock file version 2 is now supported.
 
 Download the new version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/checkmarx-sca-resolver-changelog).

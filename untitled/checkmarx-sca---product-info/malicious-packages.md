@@ -4,4 +4,4 @@ Our AppSec team is constantly updating our database of known malicious packages.
 
 Click on a Suspected Malware risk to view detailed info about the risk.
 
-<div align="left"><figure><img src=".gitbook/assets/img-4cb6b3614ffd71a8ff7ada3c4f133694.jpg" alt=""></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/img-4cb6b3614ffd71a8ff7ada3c4f133694.jpg" alt=""><figcaption></figcaption></figure></div>

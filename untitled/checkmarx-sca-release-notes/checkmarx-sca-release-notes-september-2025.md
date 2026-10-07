@@ -1,8 +1,8 @@
 # Checkmarx SCA Release Notes September 2025
 
-{% include ".gitbook/includes/note-031596ef.md" %}
+{% include ".gitbook/includes/note-031596ef (1).md" %}
 
-{% include ".gitbook/includes/warning-d19d3540.md" %}
+{% include ".gitbook/includes/warning-d19d3540 (1).md" %}
 
 ## SCA Updates
 
@@ -16,6 +16,6 @@ Download the latest version [here](https://app.gitbook.com/s/XSPACE_RESOLVER/che
 
 ### Version 2.12.36 (September 25, 2025)
 
-- Improved resilience while saving package results.
-- For Pip, improved handling of resources during dependency resolution.
-- For Nuget, improved handling of special characters.
+* Improved resilience while saving package results.
+* For Pip, improved handling of resources during dependency resolution.
+* For Nuget, improved handling of special characters.
