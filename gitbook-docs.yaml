@@ -1,16 +1,31 @@
-$schema: https://api.gitbook.com/openapi.yaml#/components/schemas/GitSyncSiteConfig
+$schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
-  title: Checkmarx Docs
+  title: Sandbox
   structure:
-    - type: space
-      key: checkmarx-dast
+    - type: section
+      key: section-2
       title: Checkmarx DAST
       path: checkmarx-dast
-      content:
-        directory: ./checkmarx-dast
-    - type: space
-      key: checkmarx-sca
+      description: ""
+      default: true
+      children:
+        - type: space
+          key: space-2
+          title: Checkmarx DAST
+          path: checkmarx-dast
+          default: true
+          content:
+            directory: ./checkmarx-dast
+    - type: section
+      key: section-3
       title: Checkmarx SCA
       path: checkmarx-sca
-      content:
-        directory: ./checkmarx-sca
+      description: ""
+      children:
+        - type: space
+          key: space-3
+          title: Checkmarx SCA
+          path: checkmarx-sca
+          default: true
+          content:
+            directory: ./checkmarx-sca
