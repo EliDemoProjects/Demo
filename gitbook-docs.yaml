@@ -6,24 +6,12 @@ site:
       key: section-1
       title: Sandbox
       path: sandbox
+      description: ""
       default: true
       children:
         - type: space
           key: space-1
-          title: Untitled
-          path: untitled
-          default: true
-          content:
-            directory: ./untitled
-    - type: section
-      key: section-2
-      title: Product Info
-      path: product-info
-      description: ""
-      children:
-        - type: space
-          key: space-2
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
@@ -35,7 +23,7 @@ site:
       children:
         - type: space
           key: space-3
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
@@ -47,7 +35,7 @@ site:
       children:
         - type: space
           key: space-4
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
@@ -59,7 +47,7 @@ site:
       children:
         - type: space
           key: space-5
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
@@ -71,7 +59,7 @@ site:
       children:
         - type: space
           key: space-6
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
@@ -84,7 +72,7 @@ site:
       children:
         - type: space
           key: space-7
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
@@ -97,7 +85,7 @@ site:
       children:
         - type: space
           key: space-8
-          title: Untitled
+          title: Sandbox
           path: untitled
           default: true
           content:
