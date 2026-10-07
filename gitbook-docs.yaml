@@ -2,10 +2,29 @@ $schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
   title: Sandbox
   structure:
-    - type: space
-      key: space-1
-      title: Untitled
-      path: untitled
+    - type: section
+      key: section-1
+      title: Sandbox
+      path: sandbox
       default: true
-      content:
-        directory: ./untitled
+      children:
+        - type: space
+          key: space-1
+          title: Untitled
+          path: untitled
+          default: true
+          content:
+            directory: ./untitled
+    - type: section
+      key: section-2
+      title: Product Info
+      path: product-info
+      children:
+        - type: space
+          key: space-2
+          title: Untitled
+          path: untitled
+          default: true
+          draft: true
+          content:
+            directory: ./untitled
