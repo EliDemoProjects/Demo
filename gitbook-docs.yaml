@@ -3,24 +3,11 @@ site:
   title: Sandbox
   structure:
     - type: section
-      key: section-1
-      title: Sandbox
-      path: sandbox
-      description: ""
-      default: true
-      children:
-        - type: space
-          key: space-1
-          title: Sandbox
-          path: untitled
-          default: true
-          content:
-            directory: null
-    - type: section
       key: section-2
       title: Checkmarx DAST
       path: checkmarx-dast
       description: ""
+      default: true
       children:
         - type: space
           key: space-2
