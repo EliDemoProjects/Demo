@@ -1,0 +1,126 @@
+# Viewing the Project Page
+
+The Project page shows detailed results for a specific Project.
+
+By default all tabs show data for the most recent scan of the Project. You can click on a previous scan in the Scans section to show historical data for that particular scan.
+
+The Project page is opened for a specific Project by clicking on the row of the desired Project in the Project pane on the Dashboard **(Home page)**.
+
+<div align="left"><figure><img src=".gitbook/assets/img-c58b4d0f668168ce5bebc2dd0b4c0869.png" alt=""></figure></div>
+
+<details>
+<summary>Hiding Dev &amp; Test Dependencies</summary>
+
+Checkmarx SCA is able to distinguish between development dependencies and production dependencies for several package managers. On the Scan Results page, the number in parenthesis next to the Hide Dev & Test Dependencies toggle indicates the number of dev & test dependencies in the Project. Toggle the Hide Dev & Test Dependencies switch ON if you would like to hide vulnerable packages that were identified as dev and test dependencies.
+
+{% hint style="info" icon="pencil" %}
+This filter can also be applied to the following REST APIs: [Results Summary](https://checkmarx.stoplight.io/docs/checkmarx-one-api-reference-guide/branches/main/510ldapufb6ns-retrieve-summary-of-scan-results) and [All Scanners Results](https://checkmarx.stoplight.io/docs/checkmarx-one-api-reference-guide/branches/main/bf7eab3023aac-retrieve-scan-results-all-scanners).
+{% endhint %}
+
+### Identifying Dev Dependencies
+
+The following table shows how dev dependencies are identified for specific package managers.
+
+<table>
+<thead>
+<tr><th><p><strong><strong>Package Manager</strong></strong></p></th><th><p><strong><strong>Dev Dependency Specification</strong></strong></p></th></tr>
+</thead>
+<tbody>
+<tr><td><p>NPM</p></td><td rowspan="3"><p>In the manifest file (package.json or bower.json), using the devDependencies attribute. For example,</p><pre><code>"devDependencies" : {
+  "my_test_framework": "^3.1.0".
+  "another_dev_dep": "1.0.0 - 1.2.0"
+}</code></pre></td></tr>
+<tr><td><p>Yarn</p></td></tr>
+<tr><td><p>Bower</p></td></tr>
+<tr><td><p>Composer</p></td><td><p>Packages under the require-dev section in the composer.json file.</p></td></tr>
+</tbody>
+</table>
+
+### Identifying Test Dependencies
+
+Any package with the word "test" in the file path is identified as a test dependency.
+
+</details>
+
+## Header Bar
+
+The Header bar shows general info about the Project and scan that is currently displayed on the page.
+
+<div align="left"><figure><img src=".gitbook/assets/img-10c4facec38f412d6ffb9d83f880f0d7.png" alt=""></figure></div>
+
+The following tables describe the info shown in the Header bar and the action buttons that are available.
+
+Header Bar Info
+
+<table>
+<thead>
+<tr><th><p><strong><strong>Item</strong></strong></p></th><th><p><strong><strong>Description</strong></strong></p></th><th><p><strong><strong>Possible Values</strong></strong></p></th></tr>
+</thead>
+<tbody>
+<tr><td><p><strong><strong>Breadcrumbs Navigation</strong></strong></p></td><td><p>Click on the breadcrumbs to navigate back to the HOME page.</p></td><td><p>e.g.,</p><figure><img src=".gitbook/assets/img-f9a798312b7fa90632720225018e2c33.png" alt=""></figure></td></tr>
+<tr><td><p><strong><strong>Project Name</strong></strong></p></td><td><p>The name of the Project.</p></td><td><p>e.g., Demo01</p></td></tr>
+<tr><td><p><strong><strong>Team</strong></strong></p></td><td><p>The teams that are assigned to the Project.</p></td><td><p>e.g., All users, Team01</p></td></tr>
+<tr><td><p><strong><strong>Scan Method</strong></strong></p></td><td><p>The method that was used to scan the Project.</p></td><td><ul><li><p><strong><strong>Zip</strong></strong> – zip file, specified in the Project configuration</p></li><li><p><strong><strong>CLI</strong></strong> – the scan was run from the Command Line Interface</p></li><li><p><strong><strong>Recalculated</strong></strong> - user clicked the <strong><strong>Recalculate</strong></strong> button for an existing scan. This causes the Risks to be recalculated based on current data without re-scanning the project. See <a href="/document/preview/202168#UUID-e285b9ca-3c74-ce89-4af7-cedd9802298f">Recalculating SCA Scan Results</a></p></li><li><p><strong><strong>Auto-scan</strong></strong> - a scan recalculation was triggered automatically because new vulnerabilities were identified in your packages.</p></li><li><p><strong><strong>Github</strong></strong> - GitHub repository, specified in the Project configuration</p></li><li><p><strong><strong>Jenkins Plugin</strong></strong> – the scan was run as part of Jenkins CI/CD process</p></li></ul></td></tr>
+<tr><td><p><strong><strong>Last Scanned</strong></strong></p></td><td><p>The complete date that the last scan was performed on your project.</p></td><td><p>e.g., Jan 28, 2021 11:22 AM</p></td></tr>
+<tr><td><p><strong><strong>Scan ID</strong></strong></p></td><td><p>When you hover over <strong><strong>Scan ID</strong></strong>, the unique identifier of the scan generated by Checkmarx SCA is shown. There is a button to copy the ID to your clipboard.</p></td><td><p>e.g., 95fc1f60-a4aa-4835-acfd-95aa315d4890</p></td></tr>
+</tbody>
+</table>
+
+Header Bar Actions
+
+<table>
+<thead>
+<tr><th><p><strong><strong>Icon</strong></strong></p></th><th><p><strong><strong>Action</strong></strong></p></th><th><p><strong><strong>Description</strong></strong></p></th><th><p><strong><strong>Options</strong></strong></p></th></tr>
+</thead>
+<tbody>
+<tr><td rowspan="3"></td><td><p><strong><strong>Scan Report</strong></strong></p></td><td><p>Click on this button to download a file containing an overview of the security of your project as well as specific vulnerabilities, legal risks, and outdated versions identified by the scan.</p></td><td><p><strong><strong>Report sections:</strong></strong></p><ul><li><p>All data tables (Default)</p></li><li><p>Packages</p></li><li><p>Vulnerabilities</p></li><li><p>Licenses</p></li><li><p>Policy Violations</p></li></ul><p><strong><strong>File formats:</strong></strong></p><ul><li><p>PDF (Default)</p></li><li><p>XML</p></li><li><p>JSON</p></li><li><p>CSV</p></li></ul></td></tr>
+<tr><td><p><strong><strong>Software Bill of Materials</strong></strong></p></td><td><p>Click on this button to download a file containing detailed info about each of the open source packages used by your program and the associated risks, using <a href="https://cyclonedx.org/docs/1.3/#SchemaProperties">CycloneDX v1.3</a> standard.</p></td><td><p><strong><strong>File formats:</strong></strong></p><ul><li><p>XML (Default)</p></li><li><p>JSON</p></li></ul></td></tr>
+<tr><td><p><strong><strong>Remediation Manifest</strong></strong></p></td><td><p>Click on this button to start the process of remediating the Project’s manifest files. For more information see <a href="remediation-using-a-manifest-file.md">Remediation using a Manifest File</a>.</p></td><td><p>-</p></td></tr>
+<tr><td rowspan="2"></td><td><p><strong><strong>Scan Project</strong></strong></p></td><td><p>Click on this button to run a new scan on the Project. For more information, see <a href="scanning-a-project.md">Scanning a Project</a>.</p></td><td><p>-</p></td></tr>
+<tr><td><p><strong><strong>Recalculate Last Scan</strong></strong></p></td><td><p>Click on this button to send the list of project dependencies from the last scan to the risk generator. This can be used to re-evaluate a "static" Project where no significant changes have been made. For more information, see <a href="recalculating-scan-results.md">Recalculating Risk</a>.</p></td><td><p>-</p></td></tr>
+<tr><td rowspan="5"></td><td><p><strong><strong>Resolving Info</strong></strong></p></td><td><p>Display info about the package resolution process.</p><ul><li><p><em><em>Manifest</em></em> – identified by resolving the manifest file</p></li><li><p><em><em>Binary</em></em> – identified by analyzing hashes and fingerprints of files in the Project</p></li></ul><ul><li><p>Package Identified By - Shows the number of packages identified, broken down by how they were identified:</p></li><li><p>Manifests -</p><p>Lists the manifest files in the Project. For each file, an icon indicates whether or not Checkmarx SCA was able to resolve the dependencies from the file.</p><p>There is a <strong><strong>Hide Successful</strong></strong> switch that enables you to hide the manifest files that were successfully resolved. Toggle this switch ON (to the right) in order to hide successfully resolved files.</p></li></ul><p></p></td><td><p>-</p></td></tr>
+<tr><td><p><strong><strong>Scan Details</strong></strong></p></td><td><p>Display details of the scan process. For each step in the scan run, the start time and duration are shown.</p></td><td><p>-</p></td></tr>
+<tr><td><p><strong><strong>Project Settings</strong></strong></p></td><td><p>Edit the settings for the Project.</p></td><td><p>-</p></td></tr>
+<tr><td><p><strong><strong>Delete Project</strong></strong></p></td><td><p>Delete a Project and its associated scans.</p></td><td><p>-</p></td></tr>
+</tbody>
+</table>
+
+## Project Page Elements
+
+This screen includes a Header bar with general info about the Project and scan and action buttons. It also shows detailed results for the Project, divided into the following tabs.
+
+{% hint style="info" icon="pencil" %}
+Detailed info about the content of each tab is shown in [Project Page Tabs](project-page-tabs.md).
+{% endhint %}
+
+- Project Overview – shows the overall status of the project. This page has two sections.
+
+  - Overview Widgets - shows a graphical dislplay of key Project data.
+  - Scans - shows a list of scans run on the Project.
+
+- Packages – shows info about the open-source packages used by your project and the risks associated with those packages, including security vulnerabilities, license violations, and outdated versions. This tab includes two types of pages:
+
+  - All Packages – shows a list of all packages containing vulnerabilities identified by this scan.
+  - Package Details – shows detailed info about the risks associated with a specific package.
+
+- Risks – shows info about all of the security vulnerabilities identified in the open-source packages used by your project, including severity level, CVE references, remediation recommendations, etc. This tab includes two types of pages:
+
+  - All Risks– lists all vulnerabilities identified in your open-source dependencies.
+  - Risk Details – shows detailed info about a specific vulnerability.
+
+- Container (for projects with container images) – shows info about packages identified in your container images and the vulnerabilities associated with those packages.
+
+  - Container Packages – lists all packages identified in the container images.
+  - Container Vulnerabilities – lists all the vulnerabilities associated with the container packages.
+
+- Licenses - shows info about all of the licenses that are associated with the open source packages used by your project.
+
+  - All Licenses – shows a list of all licenses associated with the open source packages identified in this scan.
+  - License Details – shows detailed info about a specific license. Click on a row in the All Licenses tab to access this page.
+
+- Remediation Tasks - shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project.
+
+  - All Remediation Tasks – shows a list of remediation tasks for this Project, with general info about each task.
+  - Task Details – shows detailed info about a specific task. The task details tab is opened by clicking the How to Fix button in a task row in the All Remediation Tasks sub-tab.
+
+- Policy Violations – shows info about any security Policies applied to this Project for which vulnerabilities were identified that violated the Policy.
