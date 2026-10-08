@@ -2,7 +2,7 @@
 
 {% include ".gitbook/includes/note-031596ef.md" %}
 
-## SCA Updates
+## SCA Updates (test)
 
 #### Added Support for PNPM Lockfile Resolution
 
@@ -16,9 +16,9 @@ Download the latest version [here](checkmarx-sca-resolver-changelog.md).
 
 ### Version 2.14.11 (July 22, 2026)
 
-- Added arm64 version of installation files for each supported OS
-- Added support for extraction of .whl, .tgz and .rpm file formats
-- Added `packages-only` and `binary-only` arguments to Sbom generation
-- Added support for Pnpm package manager
-- Fixed Sbom format to use camelCase instead of PascalCase
-- Added support for custom archive extensions extraction by adding `--include-archive-files` and `--include-extensionless-archives` optional arguments.
+* Added arm64 version of installation files for each supported OS
+* Added support for extraction of .whl, .tgz and .rpm file formats
+* Added `packages-only` and `binary-only` arguments to Sbom generation
+* Added support for Pnpm package manager
+* Fixed Sbom format to use camelCase instead of PascalCase
+* Added support for custom archive extensions extraction by adding `--include-archive-files` and `--include-extensionless-archives` optional arguments.
