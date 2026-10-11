@@ -3,7 +3,7 @@
 These APIs enable you to upload a supported type of report file for SCA analysis, and retrieve results. The results include detailed info about the packages specified in the file as well as all associated vulnerabilities, supply chain risks and license info. This service currently supports SBOMs in CycloneDx (v1.0-1.6) and SPDX (v2.3) formats.
 
 {% hint style="warning" %}
-This API does not run a full SCA scan of your project. To run a full SCA scan, use the [Scan Upload](checkmarx-sca--rest--api---scan-upload.md) endpoints.
+This API does not run a full SCA scan of your project. To run a full SCA scan, use the [Scan Upload](checkmarx-sca--rest--api---scan-upload.md) endpoints.
 {% endhint %}
 
 {% hint style="info" icon="pencil" %}
@@ -20,20 +20,20 @@ The default behavior is to store the SBOM and related data in the cloud for 5 da
 
 The following base URLs are used for these APIs, depending on your environment:
 
-- US Environment - https://ast.checkmarx.net/api/sca/analysis/requests
-- US2 Environment - https://us.ast.checkmarx.net/api/sca/analysis/requests
-- EU Environment - https://eu.ast.checkmarx.net/api/sca/analysis/requests
-- EU2 Environment - https://eu-2.ast.checkmarx.net/api/sca/analysis/requests
-- DEU Environment - https://deu.ast.checkmarx.net/api/sca/analysis/requests
-- Australia & New Zealand – https://anz.ast.checkmarx.net/api/sca/analysis/requests
-- India - https://ind.ast.checkmarx.net/api/sca/analysis/requests
-- Singapore - https://sng.ast.checkmarx.net/api/sca/analysis/requests
-- UAE - https://mea.ast.checkmarx.net/api/sca/analysis/requests
+* US Environment - https://ast.checkmarx.net/api/sca/analysis/requests
+* US2 Environment - https://us.ast.checkmarx.net/api/sca/analysis/requests
+* EU Environment - https://eu.ast.checkmarx.net/api/sca/analysis/requests
+* EU2 Environment - https://eu-2.ast.checkmarx.net/api/sca/analysis/requests
+* DEU Environment - https://deu.ast.checkmarx.net/api/sca/analysis/requests
+* Australia & New Zealand – https://anz.ast.checkmarx.net/api/sca/analysis/requests
+* India - https://ind.ast.checkmarx.net/api/sca/analysis/requests
+* Singapore - https://sng.ast.checkmarx.net/api/sca/analysis/requests
+* UAE - https://mea.ast.checkmarx.net/api/sca/analysis/requests
 
 ### Checkmarx SCA Standalone
 
-- US Environment - https://api-sca.checkmarx.net/analysis/requests
-- EU Environment - https://eu.api-sca.checkmarx.net/analysis/requests
+* US Environment - https://api-sca.checkmarx.net/analysis/requests
+* EU Environment - https://eu.api-sca.checkmarx.net/analysis/requests
 
 ## Workflow
 
@@ -42,20 +42,20 @@ The following base URLs are used for these APIs, depending on your environment:
 
 ## SCA File Analysis Endpoints Summary
 
-| **API** | **Method** | **Endpoint** | **Description** |
-| --- | --- | --- | --- |
-| Run file analysis | POST | /analysis/requests | Run file analysis on a supported file type. |
-| Retrieve analysis results | GET | /analysis/requests/{requestId} | Get detailed results from SCA file analysis. The results include detailed info about the packages specified in the file as well as all associated vulnerabilities, supply chain risks and license info. |
+| **API**                   | **Method** | **Endpoint**                   | **Description**                                                                                                                                                                                         |
+| ------------------------- | ---------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Run file analysis         | POST       | /analysis/requests             | Run file analysis on a supported file type.                                                                                                                                                             |
+| Retrieve analysis results | GET        | /analysis/requests/{requestId} | Get detailed results from SCA file analysis. The results include detailed info about the packages specified in the file as well as all associated vulnerabilities, supply chain risks and license info. |
 
 ## POST Run file analysis
 
 ### Description
 
-Submit a file for SCA analysis. The success response returns the `requestId` which can be used to retrieve the results from the analysis.
+Submit a file for SCA analysis. The success response returns the `requestId` which can be used to retrieve the results from the analysis.
 
 ### Media Type (header)
 
-Authorization: Bearer \<access_token\>
+Authorization: Bearer \<access\_token>
 
 Accept: application/json
 
@@ -73,22 +73,23 @@ curl --request POST \
 
 Query Parameters
 
-| **Parameter** | **Type** | Required | **Enum** | **Description** |
-| --- | --- | --- | --- | --- |
-| AnalysisType | string | Yes | sbom | Specify the type of file that you are submitting for analysis. Currently, the only supported type is Sbom. |
-| DisableRetention | boolean | No |  | If `true`, as soon as the Analysis report has been retrieved successfully once, all related data is deleted from the SCA cloud. If `false` (default) then data is retained for 5 days and multiple report retrievals are allowed. |
+| **Parameter**    | **Type** | Required | **Enum** | **Description**                                                                                                                                                                                                                   |
+| ---------------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AnalysisType     | string   | Yes      | sbom     | Specify the type of file that you are submitting for analysis. Currently, the only supported type is Sbom.                                                                                                                        |
+| DisableRetention | boolean  | No       |          | If `true`, as soon as the Analysis report has been retrieved successfully once, all related data is deleted from the SCA cloud. If `false` (default) then data is retained for 5 days and multiple report retrievals are allowed. |
 
 Body Parameter - Required
 
 Format: multipart/form-data
 
-| **Parameter** | **Type** | **Description** |
-| --- | --- | --- |
-| fileToAnalyze | string | The path to the file that is being submitted for analysis.<br>**Tip** You can submit a raw json or xml file, or a zip archive. |
+| **Parameter** | **Type** | **Description**                                                                                                                                    |
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fileToAnalyze | string   | <p>The path to the file that is being submitted for analysis.<br><strong>Tip</strong> You can submit a raw json or xml file, or a zip archive.</p> |
 
 ### Success Response
 
 <details>
+
 <summary>Status code: 202</summary>
 
 Message: `Accepted`
@@ -97,15 +98,15 @@ Message: `Accepted`
 
 Attributes:
 
-| **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
-| requestId | string | The unique identifier for retrieving results from this analysis. |
+| **Attribute** | **Type** | **Description**                                                  |
+| ------------- | -------- | ---------------------------------------------------------------- |
+| requestId     | string   | The unique identifier for retrieving results from this analysis. |
 
 ### Error Response
 
-|  |
-| --- |
-| <details><br><summary>Status code: 400</summary><br><br>Message: `Bad request`<br><br></details> |
+|              |
+| ------------ |
+| MfwtnXLb85Nj |
 
 ## GET Retrieve analysis results
 
@@ -115,12 +116,12 @@ Get detailed results from SCA file analysis. The results include detailed info a
 
 ### URL
 
-- US Engironment - https://api-sca.checkmarx.net/analysis/requests/{requestId}
-- EU Environment - https://eu.api-sca.checkmarx.net/analysis/requests/{requestId}
+* US Engironment - https://api-sca.checkmarx.net/analysis/requests/{requestId}
+* EU Environment - https://eu.api-sca.checkmarx.net/analysis/requests/{requestId}
 
 ### Media Type (header)
 
-Authorization: Bearer \<access_token\>
+Authorization: Bearer \<access\_token>
 
 Accept: application/json
 
@@ -136,13 +137,14 @@ curl --request GET \
 
 Path Parameter - Required
 
-| **Parameter** | **Type** | **Description** |
-| --- | --- | --- |
-| requestId | string | Specify the unique identifier for the SCA analysis that you would like to retrieve. |
+| **Parameter** | **Type** | **Description**                                                                     |
+| ------------- | -------- | ----------------------------------------------------------------------------------- |
+| requestId     | string   | Specify the unique identifier for the SCA analysis that you would like to retrieve. |
 
 ### Success Response
 
 <details>
+
 <summary>Status code: 200</summary>
 
 Message: `Success`
@@ -400,6 +402,6 @@ Message: `Success`
 
 ### Error Response
 
-|  |
-| --- |
-| {% tabs %}<br>{% tab title="Status code: 403" %}<br>Message: `Forbidden`<br>{% endtab %}<br>{% tab title="Status code: 404" %}<br>Message: `Not Found`<br>{% endtab %}<br>{% endtabs %} |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div data-gb-custom-block data-tag="tabs"><div data-gb-custom-block data-tag="tab"><p><br></p></div><div data-gb-custom-block data-tag="tab" data-title="Status code: 403"><p><br>Message: <code>Forbidden</code><br></p></div><div data-gb-custom-block data-tag="tab"><p><br></p></div><div data-gb-custom-block data-tag="tab" data-title="Status code: 404"><p><br>Message: <code>Not Found</code><br></p></div><div data-gb-custom-block data-tag="tab"><p><br></p></div></div> |
