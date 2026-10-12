@@ -4,11 +4,12 @@
 
 Checkmarx SCA assigns a severity level to each risk. The severity level represents the degree of threat posed by this risk. Possible values for severity level are:
 
-* <mark style="background-color:$danger;">**CRITIAL**</mark>
-* <mark style="background-color:red;">**HIGH**</mark>
-* <mark style="background-color:yellow;">**MEDIUM**</mark>
-* <mark style="background-color:$info;">**LOW**</mark>
-* <mark style="background-color:blue;">**INFO**</mark>
+* <mark style="color:red;">**PRIMARY**</mark>
+* <mark style="color:$danger;">**DANGER**</mark>
+* <mark style="color:$warning;">**WARNING**</mark>
+* <mark style="color:$info;">**DEFAULT**</mark>
+* <mark style="color:blue;">**INFO**</mark>
+* <mark style="color:green;">**SUCCESS**</mark>
 
 {% hint style="warning" %}
 There are other factors that contribute to the urgency of remediating a vulnerability that are not reflected in the severity score, such as the degree of exploitability. You should consider all relevant factors when triaging results, see [Remediating SCA Risks](remediating-sca-risks.md).
