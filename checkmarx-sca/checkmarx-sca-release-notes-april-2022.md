@@ -18,5 +18,5 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Gradle 6.9 | Added support for Gradle version 6.9. |
-| UPDATE | Support for MCR | Added support for scanning container images hosted on Microsoft Container Registry (MCR). |
+| <mark style="color:$warning;">**UPDATE**</mark> | Gradle 6.9 | Added support for Gradle version 6.9. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Support for MCR | Added support for scanning container images hosted on Microsoft Container Registry (MCR). |

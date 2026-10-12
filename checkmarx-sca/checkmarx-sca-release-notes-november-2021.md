@@ -38,5 +38,5 @@ For additional details, see [Checkmarx SCA Resolver Changelog](checkmarx-sca-res
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| FIXED | License correlation | Removed mistaken correlation for EPL 1.0. |
-| FIXED | Hide failed scans | Fixed issue that couldn’t hide failed scans when the most recent scan succeeded. |
+| <mark style="color:blue;">**FIXED**</mark> | License correlation | Removed mistaken correlation for EPL 1.0. |
+| <mark style="color:blue;">**FIXED**</mark> | Hide failed scans | Fixed issue that couldn’t hide failed scans when the most recent scan succeeded. |

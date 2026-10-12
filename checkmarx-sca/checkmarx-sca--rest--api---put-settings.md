@@ -6,7 +6,7 @@ Activate/deactivate the Exploitable Path feature for a specific Project.
 
 ## Method
 
-### PUT
+### <mark style="color:$warning;">**PUT**</mark>
 
 ## Workflow
 

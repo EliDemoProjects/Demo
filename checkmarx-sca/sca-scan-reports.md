@@ -166,7 +166,7 @@ The following table describes the info shown for each vulnerability identified b
 
 | **Item** | **Description** | **Possible Values** |
 | --- | --- | --- |
-| **Risk Level** | The severity level of the vulnerability, based on its CVSS score in the NVD. | <ul><li><p><strong>HIGH</strong> - 7.0-10.0</p></li><li><p><strong>MEDIUM</strong> - 4.0-6.9</p></li><li><p><strong>LOW</strong> - 0.0-3.9</p></li></ul><br>For more info see [Severity Levels](severity-levels.md). |
+| **Risk Level** | The severity level of the vulnerability, based on its CVSS score in the NVD. | <ul><li><p><strong><mark style="color:$danger;"><strong>HIGH</strong></mark></strong> - 7.0-10.0</p></li><li><p><strong><mark style="color:$warning;"><strong>MEDIUM</strong></mark></strong> - 4.0-6.9</p></li><li><p><strong><mark style="color:$info;"><strong>LOW</strong></mark></strong> - 0.0-3.9</p></li></ul><br>For more info see [Severity Levels](severity-levels.md). |
 | **ID** | The ID of the CVE listing. The ID consists of the CVE prefix followed by the year that the CVE was discovered and the serial counter for that year's CVE listings.<br>**Note:** Vulnerabilities discovered by the Checkmarx Vulnerability Research Team which are not yet cataloged as CVEs, are indicated by the “Cx” prefix. | e.g., CVE-2020-9488 |
 | **Package** | The name of the package in which the vulnerability was identified. | e.g., mysql:mysql-connector-java |
 | **Version** | The version of the package where the vulnerability was identified. | e.g., 5.1.26 |

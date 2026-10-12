@@ -10,7 +10,7 @@ Scan a previously uploaded ZIP file (or a GitHub file). The user specifies the P
 
 ## Method
 
-### POST
+### <mark style="color:green;">**POST**</mark>
 
 ## URL
 

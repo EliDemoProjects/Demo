@@ -40,7 +40,7 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Carthage resolution | Added support for resolving Git repositories in Carthage. |
-| UPDATE | Package Resolution | General improvements in package resolution. |
-| UPDATE | Yarn lock | Added support for Yarn lock version 2 |
-| FIXED | Gradle multi module | Fixed problem that KTS files weren’t being resolved for Gradle multi module projects. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Carthage resolution | Added support for resolving Git repositories in Carthage. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Package Resolution | General improvements in package resolution. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Yarn lock | Added support for Yarn lock version 2 |
+| <mark style="color:blue;">**FIXED**</mark> | Gradle multi module | Fixed problem that KTS files weren’t being resolved for Gradle multi module projects. |

@@ -2,7 +2,7 @@
 
 ## Method
 
-### POST
+### <mark style="color:green;">**POST**</mark>
 
 ## Description
 

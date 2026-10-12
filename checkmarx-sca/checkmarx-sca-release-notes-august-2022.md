@@ -46,4 +46,4 @@ For more information about managing risk, see [Risk Management](risk-management-
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Private packages | Improved handling of private packages for Maven and Nuget. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Private packages | Improved handling of private packages for Maven and Nuget. |

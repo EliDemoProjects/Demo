@@ -43,7 +43,7 @@ After creating a Project and running a scan, use this API to generate a report o
 
 ### Method
 
-#### GET
+#### <mark style="color:blue;">**GET**</mark>
 
 ### URL
 

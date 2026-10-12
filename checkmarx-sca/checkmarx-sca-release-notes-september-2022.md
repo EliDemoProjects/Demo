@@ -22,9 +22,9 @@ To use this feature, it is required that you include the `node_modules` folder i
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| FIXED | Problem with settings.gradle file | Fixed issue that when a settings.gradle file contains an IncludeBuild property, it had been causing the scan to fail. |
-| FIXED | Remediation tasks | We now remove the downstream remediation tasks when they don't have any vulnerabilities. |
-| FIXED | Package Usage | Fixed inaccuracies in how potentially used packages are shown in the UI. |
+| <mark style="color:blue;">**FIXED**</mark> | Problem with settings.gradle file | Fixed issue that when a settings.gradle file contains an IncludeBuild property, it had been causing the scan to fail. |
+| <mark style="color:blue;">**FIXED**</mark> | Remediation tasks | We now remove the downstream remediation tasks when they don't have any vulnerabilities. |
+| <mark style="color:blue;">**FIXED**</mark> | Package Usage | Fixed inaccuracies in how potentially used packages are shown in the UI. |
 
 ## Checkmarx SCA Resolver Updates
 

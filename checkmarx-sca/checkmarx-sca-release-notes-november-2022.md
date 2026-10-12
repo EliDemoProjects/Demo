@@ -24,8 +24,8 @@ To learn more about the plugin, see [Checkmarx SCA Plugin for Nexus](/document/p
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| FIXED | Nuget dependencies | Resolved issue that "CentralTrasitive" type dependencies weren't being parsed in Nuget. |
-| FIXED | Yarn in cloud | Resolved issue that Checkmarx SCA wasn't identifying certain cloud instances of Yarn. |
+| <mark style="color:blue;">**FIXED**</mark> | Nuget dependencies | Resolved issue that "CentralTrasitive" type dependencies weren't being parsed in Nuget. |
+| <mark style="color:blue;">**FIXED**</mark> | Yarn in cloud | Resolved issue that Checkmarx SCA wasn't identifying certain cloud instances of Yarn. |
 
 ## Checkmarx SCA Resolver Updates
 

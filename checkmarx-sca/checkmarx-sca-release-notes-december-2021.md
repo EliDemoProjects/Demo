@@ -48,12 +48,12 @@ The following are some highlights from the recent releases:
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Show CVSS v2.0/3.0/3.1 | Checkmarx SCA now shows the CVSS score and additional data for v3.1 in addition to previously supplied data for 2.0 and 3.0. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Show CVSS v2.0/3.0/3.1 | Checkmarx SCA now shows the CVSS score and additional data for v3.1 in addition to previously supplied data for 2.0 and 3.0. |
 
 ## Bug Fixes
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| FIXED | Apache Licenses | Fixed problem with missing Apache licenses. |
-| FIXED | Exploitable Path using Checkmarx SCA Resolver | When a scan is initiated via Resolver for a Project with Exploitable Path enabled in the web console, the Exploitable Path now runs as expected. |
-| FIXED | Policy Management | Fixed issue that creating rules based on CVE ID hadn’t been working properly. |
+| <mark style="color:blue;">**FIXED**</mark> | Apache Licenses | Fixed problem with missing Apache licenses. |
+| <mark style="color:blue;">**FIXED**</mark> | Exploitable Path using Checkmarx SCA Resolver | When a scan is initiated via Resolver for a Project with Exploitable Path enabled in the web console, the Exploitable Path now runs as expected. |
+| <mark style="color:blue;">**FIXED**</mark> | Policy Management | Fixed issue that creating rules based on CVE ID hadn’t been working properly. |

@@ -37,13 +37,13 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Pip dependency tree | Pip now uses a new tree converter to create the dependency tree. |
-| UPDATE | Exploitable Path | Improved scan times for large Exploitable Path scans. |
-| UPDATE | Unresolved packages | Improved handling of unresolved packages. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Pip dependency tree | Pip now uses a new tree converter to create the dependency tree. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Exploitable Path | Improved scan times for large Exploitable Path scans. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Unresolved packages | Improved handling of unresolved packages. |
 
 ## Bug Fixes
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| FIXED | Vulnerability identification | Removed mistaken matches for log4j vulnerabilities. |
-| FIXED | iOS package release dates | Fixed issue that release dates for some cocoa pod packages had been inaccurate. |
+| <mark style="color:blue;">**FIXED**</mark> | Vulnerability identification | Removed mistaken matches for log4j vulnerabilities. |
+| <mark style="color:blue;">**FIXED**</mark> | iOS package release dates | Fixed issue that release dates for some cocoa pod packages had been inaccurate. |

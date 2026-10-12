@@ -14,5 +14,5 @@
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Policy Configuration | We have simplified the policy configuration by removing the option to have multiple “sets” of conditions.<br>A policy can still have multiple "rules", each of which contains one "set" of conditions. An OR operator is applied between rules, and an AND operator is applied to the conditions within each rule. |
-| UPDATE | Exploitable Path | We updated the SAST queries for Exploitable Path. The new queries are available for download in zip archive and xml format [here](https://checkmarx.atlassian.net/wiki/spaces/CR/pages/6594035713/Checkmarx+SCA+Resources). |
+| <mark style="color:$warning;">**UPDATE**</mark> | Policy Configuration | We have simplified the policy configuration by removing the option to have multiple “sets” of conditions.<br>A policy can still have multiple "rules", each of which contains one "set" of conditions. An OR operator is applied between rules, and an AND operator is applied to the conditions within each rule. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Exploitable Path | We updated the SAST queries for Exploitable Path. The new queries are available for download in zip archive and xml format [here](https://checkmarx.atlassian.net/wiki/spaces/CR/pages/6594035713/Checkmarx+SCA+Resources). |

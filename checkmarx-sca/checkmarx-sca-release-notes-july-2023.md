@@ -8,7 +8,7 @@
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | SBOM | We added two optional query parameters to the `POST /export` API, `hideDevAndTestDependencies` and `showOnlyEffectiveLicenses`. These can be used to filter the results returned in the SBOM report. |
+| <mark style="color:$warning;">**UPDATE**</mark> | SBOM | We added two optional query parameters to the `POST /export` API, `hideDevAndTestDependencies` and `showOnlyEffectiveLicenses`. These can be used to filter the results returned in the SBOM report. |
 
 ## SCA Resolver Releases
 

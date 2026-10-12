@@ -8,7 +8,7 @@
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Supported manifest files | We added support for resolving Swift dependencies using the `Package.resolved` file when no `Package.swift` file is present in the project. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Supported manifest files | We added support for resolving Swift dependencies using the `Package.resolved` file when no `Package.swift` file is present in the project. |
 
 ## SCA Resolver Releases
 

@@ -48,9 +48,9 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Gradle improvements | General improvements in Gradle resolution. |
-| UPDATE | Gradle flat multi-module | Added support for Gradle flat multi-module projects. |
-| UPDATE | Gradle multi-module | For Gradle multi-module projects, Checkmarx SCA now maps the dependencies to the correct manifest files. |
-| NEW | Dotnet6 resolution | Added support for Dotnet6 resolution. |
-| UPDATE | Improved Carthage resolution | We now use Redis cache to handle multiple requests of the same dependency in Carthage. Also, we now show private Carthage dependencies in the original Carthage.private file. These improvements increase the speed and accuracy of Carthage resolution. |
-| UPDATE | Container scan efficiency | We have improved efficiency on Container scans by avoiding redundant requests to download images. This is done by downloading images to a unique file in the project root. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Gradle improvements | General improvements in Gradle resolution. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Gradle flat multi-module | Added support for Gradle flat multi-module projects. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Gradle multi-module | For Gradle multi-module projects, Checkmarx SCA now maps the dependencies to the correct manifest files. |
+| <mark style="color:green;">**NEW**</mark> | Dotnet6 resolution | Added support for Dotnet6 resolution. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Improved Carthage resolution | We now use Redis cache to handle multiple requests of the same dependency in Carthage. Also, we now show private Carthage dependencies in the original Carthage.private file. These improvements increase the speed and accuracy of Carthage resolution. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Container scan efficiency | We have improved efficiency on Container scans by avoiding redundant requests to download images. This is done by downloading images to a unique file in the project root. |

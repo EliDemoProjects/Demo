@@ -17,8 +17,8 @@ The following is a list of the Checkmarx SCA APIs that relate to Projects:
 
 | **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
-| GET Projects | GET | /risk-management/projects | View info about all the Projects in your account. |
-| [POST Projects](checkmarx-sca--rest--api---post-project.md) | POST | /risk-management/projects | Create a new Project. The user specifies the Project name and configures the Project settings. The response returns a unique Project ID which is used to refer to the Project. |
-| GET (Specific) Project | GET | /risk-management/projects/{id} | View info about a specific Project. |
-| [PUT Project](checkmarx-sca--rest--api---put-project.md) | PUT | /risk-management/projects/{id} | Update the Project name and/or the Teams assigned to the Project. |
-| DELETE Project | DELETE | /risk-management/projects/{id} | Delete a Project. |
+| GET Projects | <mark style="color:blue;">**GET**</mark> | /risk-management/projects | View info about all the Projects in your account. |
+| [POST Projects](checkmarx-sca--rest--api---post-project.md) | <mark style="color:green;">**POST**</mark> | /risk-management/projects | Create a new Project. The user specifies the Project name and configures the Project settings. The response returns a unique Project ID which is used to refer to the Project. |
+| GET (Specific) Project | <mark style="color:blue;">**GET**</mark> | /risk-management/projects/{id} | View info about a specific Project. |
+| [PUT Project](checkmarx-sca--rest--api---put-project.md) | <mark style="color:$warning;">**PUT**</mark> | /risk-management/projects/{id} | Update the Project name and/or the Teams assigned to the Project. |
+| DELETE Project | <mark style="color:$danger;">**DELETE**</mark> | /risk-management/projects/{id} | Delete a Project. |

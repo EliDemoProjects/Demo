@@ -6,7 +6,7 @@ Upload a ZIP file to Checkmarx SCA. The Path parameter is the previously generat
 
 ## Method
 
-### PUT
+### <mark style="color:$warning;">**PUT**</mark>
 
 {% include ".gitbook/includes/section-1ed6de35.md" %}
 

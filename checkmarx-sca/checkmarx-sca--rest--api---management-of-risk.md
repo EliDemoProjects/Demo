@@ -75,8 +75,8 @@ The following is a list of Checkmarx One APIs that relate to Management of Risk:
 
 | **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
-| Change vulnerability profile | POST | /package-vulnerabilities | Change the state and add a comment to a specific instance of a vulnerability.<br>You can specify one or more projects for which the change will take effect.<br>**Tip** This endpoint replaces the current APIs `IgnoreVulnerability` and `UnignoreVulnerability`, which will be deprecated soon. |
-| Change Supply Chain risk profile | POST | /package-supply-chain-risks | Change the state and add a comment to a specific instance of an SCS risk.<br>You can specify one or more projects for which the change will take effect. |
+| Change vulnerability profile | <mark style="color:green;">**POST**</mark> | /package-vulnerabilities | Change the state and add a comment to a specific instance of a vulnerability.<br>You can specify one or more projects for which the change will take effect.<br>**Tip** This endpoint replaces the current APIs `IgnoreVulnerability` and `UnignoreVulnerability`, which will be deprecated soon. |
+| Change Supply Chain risk profile | <mark style="color:green;">**POST**</mark> | /package-supply-chain-risks | Change the state and add a comment to a specific instance of an SCS risk.<br>You can specify one or more projects for which the change will take effect. |
 
 ## Package Vulnerabilities Endpoint Details
 

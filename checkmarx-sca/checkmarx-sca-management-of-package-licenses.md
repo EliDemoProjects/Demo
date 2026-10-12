@@ -61,8 +61,8 @@ The following is a list of Checkmarx One APIs that relate to management of packa
 
 | **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
-| Add License | POST | /package-licenses | Add a license to a package. |
-| Disable License | POST | /package-licenses/disable | Disable (delete) a license that was added manually. |
+| Add License | <mark style="color:green;">**POST**</mark> | /package-licenses | Add a license to a package. |
+| Disable License | <mark style="color:green;">**POST**</mark> | /package-licenses/disable | Disable (delete) a license that was added manually. |
 
 ## Package License Endpoint Details
 

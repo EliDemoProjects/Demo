@@ -64,8 +64,8 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Exploitable Path display | The Exploitable Path column on the Risks page, is now contextualized according to the configuration. If the project is in an unsupported language and Exploitable Path is disabled in the Project, then the column is hidden. If no results are returned, then the tooltip explains why there are no results. |
-| UPDATE | Npm potential private packages | For Npm packages, we now return potential private packages. Meaning that, if a package has been removed from the public registry, we will nonetheless give the version that is in the manifest in order to try resolving it locally. |
-| FIXED | Exploitable Path results | Fixed issue that sometimes scan returned without Exploitable Path results. The feature was stabilized by sending retries to alternative instances. |
-| FIXED | Yarn resolution | Yarn now maps submodule dependencies to the correct file. |
-| FIXED | CVE-2022-23221 remediation | We now, correctly, show that CVE-2022-23221 does have a suggested remediation. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Exploitable Path display | The Exploitable Path column on the Risks page, is now contextualized according to the configuration. If the project is in an unsupported language and Exploitable Path is disabled in the Project, then the column is hidden. If no results are returned, then the tooltip explains why there are no results. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Npm potential private packages | For Npm packages, we now return potential private packages. Meaning that, if a package has been removed from the public registry, we will nonetheless give the version that is in the manifest in order to try resolving it locally. |
+| <mark style="color:blue;">**FIXED**</mark> | Exploitable Path results | Fixed issue that sometimes scan returned without Exploitable Path results. The feature was stabilized by sending retries to alternative instances. |
+| <mark style="color:blue;">**FIXED**</mark> | Yarn resolution | Yarn now maps submodule dependencies to the correct file. |
+| <mark style="color:blue;">**FIXED**</mark> | CVE-2022-23221 remediation | We now, correctly, show that CVE-2022-23221 does have a suggested remediation. |

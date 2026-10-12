@@ -52,9 +52,9 @@ Download the latest version of Resolver [here](checkmarx-sca-resolver-download-a
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | UI changes | In the **Scan Results** \> **Risk Details** tab, the severity indicator was moved to the right side of the header bar, and the publication date was moved to the **Information** card. |
-| UPDATE | NPM Workspaces | For NPM versions 7 and 8, added support for NPM Workspaces. |
-| UPDATE | NPM versions | Added support for NPM versions 7 and 8. |
-| FIXED | Maven configuration | Fixed issues caused by Maven default config. |
-| FIXED | Dotnet resolution | Fixed performance issues for Dotnet resolution. |
-| FIXED | Yarn resolution | Fixed performance issues for Yarn resolution. |
+| <mark style="color:$warning;">**UPDATE**</mark> | UI changes | In the **Scan Results** \> **Risk Details** tab, the severity indicator was moved to the right side of the header bar, and the publication date was moved to the **Information** card. |
+| <mark style="color:$warning;">**UPDATE**</mark> | NPM Workspaces | For NPM versions 7 and 8, added support for NPM Workspaces. |
+| <mark style="color:$warning;">**UPDATE**</mark> | NPM versions | Added support for NPM versions 7 and 8. |
+| <mark style="color:blue;">**FIXED**</mark> | Maven configuration | Fixed issues caused by Maven default config. |
+| <mark style="color:blue;">**FIXED**</mark> | Dotnet resolution | Fixed performance issues for Dotnet resolution. |
+| <mark style="color:blue;">**FIXED**</mark> | Yarn resolution | Fixed performance issues for Yarn resolution. |

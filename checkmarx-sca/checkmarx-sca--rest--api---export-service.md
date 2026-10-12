@@ -87,11 +87,11 @@ Authentication for all SCA endpoints is done using an access token. To learn how
 
 | API | Method | Endpoint | Description |
 | --- | --- | --- | --- |
-| Create a report | POST | /requests | Generate a report for a specific scan by specifying the `scanId` and the `fileFormat`. Currently supported formats are:<br><ul><li><p>CycloneDxJson</p></li><li><p>CycloneDxXml</p></li><li><p>SpdxJson</p></li><li><p>RemediatedPackagesJson</p></li><li><p>ScanReportJson</p></li><li><p>ScanReportXml</p></li><li><p>ScanReportCsv</p></li><li><p>ScanReportPdf</p></li></ul> |
-| Get report | GET | /requests | Check the status of a specific report, and once the report is completed, retrieve the Url to download the report. |
-| Get report formats | GET | /file-formats | Get a list of supported formats. |
+| Create a report | <mark style="color:green;">**POST**</mark> | /requests | Generate a report for a specific scan by specifying the `scanId` and the `fileFormat`. Currently supported formats are:<br><ul><li><p>CycloneDxJson</p></li><li><p>CycloneDxXml</p></li><li><p>SpdxJson</p></li><li><p>RemediatedPackagesJson</p></li><li><p>ScanReportJson</p></li><li><p>ScanReportXml</p></li><li><p>ScanReportCsv</p></li><li><p>ScanReportPdf</p></li></ul> |
+| Get report | <mark style="color:blue;">**GET**</mark> | /requests | Check the status of a specific report, and once the report is completed, retrieve the Url to download the report. |
+| Get report formats | <mark style="color:blue;">**GET**</mark> | /file-formats | Get a list of supported formats. |
 
-## POST Create a report
+## <mark style="color:green;">**POST**</mark> Create a report
 
 This endpoint is used to generate a report for a specific scan by specifying the `scanId` and the desired report format.
 
@@ -192,7 +192,7 @@ The response body consists of the `exportId` of the report.
 }
 ```
 
-## GET report
+## <mark style="color:blue;">**GET**</mark> report
 
 This endpoint is used to check the status of a specific report. Once the report is completed, this endpoint also returns the Url to be used for downloading the report.
 

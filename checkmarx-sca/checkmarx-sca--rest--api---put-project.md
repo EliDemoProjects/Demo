@@ -2,7 +2,7 @@
 
 ## Method
 
-### PUT
+### <mark style="color:$warning;">**PUT**</mark>
 
 ## URL
 

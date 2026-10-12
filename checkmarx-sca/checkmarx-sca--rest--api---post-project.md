@@ -10,7 +10,7 @@ Create a new Project. You need to specify the Project name and assign the Projec
 
 ## Method
 
-### POST
+### <mark style="color:green;">**POST**</mark>
 
 ## Workflow
 

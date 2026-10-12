@@ -8,7 +8,7 @@
 
 | **Status** | **Item** | **Description** |
 | --- | --- | --- |
-| UPDATE | Exploitable Path | We added support for scanning cshtml files using the the Exploitable Path queries. |
+| <mark style="color:$warning;">**UPDATE**</mark> | Exploitable Path | We added support for scanning cshtml files using the the Exploitable Path queries. |
 
 ## SCA Resolver Releases
 

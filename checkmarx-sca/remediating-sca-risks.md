@@ -88,7 +88,7 @@ This feature is accessed from the Scan Results screen by clicking on the <img sr
 
 ### Method 3 - Remediation Tasks Tab
 
-The **Remediation Tasks** tab shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project. These tasks involve replacing vulnerable packages in your project with non-vulnerable versions of those packages. For more info, see [Remediation Tasks Tab](project-page-tabs.md#UUID-4838541d-dfbc-58bb-cef1-5e9c58de543c) .
+The **Remediation Tasks** tab shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project. These tasks involve replacing vulnerable packages in your project with non-vulnerable versions of those packages. For more info, see [Remediation Tasks Tab](project-page-tabs.md#UUID-4838541d-dfbc-58bb-cef1-5e9c58de543c).
 
 <div align="left"><figure><img src=".gitbook/assets/img-603efdbf8c0e446b7e1d056a8937e08a.png" alt=""></figure></div>
 

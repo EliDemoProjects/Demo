@@ -13,5 +13,5 @@ The following is a list of the Checkmarx SCA APIs that relate to Settings:
 
 | **API** | **Method** | **Endpoint** | **Description** |
 | --- | --- | --- | --- |
-| GET (Specific Project) Settings | GET | /risk-management/settings/projects/{projectId} | View the Exploitable Path setting for a specific Project. |
-| [PUT (Specific Project) Settings](checkmarx-sca--rest--api---put-settings.md) | PUT | /risk-management/settings/projects/{projectId} | Set the Exploitable Path setting for a specific Project. |
+| GET (Specific Project) Settings | <mark style="color:blue;">**GET**</mark> | /risk-management/settings/projects/{projectId} | View the Exploitable Path setting for a specific Project. |
+| [PUT (Specific Project) Settings](checkmarx-sca--rest--api---put-settings.md) | <mark style="color:$warning;">**PUT**</mark> | /risk-management/settings/projects/{projectId} | Set the Exploitable Path setting for a specific Project. |
