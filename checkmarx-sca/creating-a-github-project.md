@@ -47,7 +47,7 @@ Before creating a GitHub project, you need to create an Access Token to enable t
    Your new Project is created with a name identical to the name of the selected repository and appears at the top of the **Projects** section on the **Dashboard.**
 
 {% hint style="info" icon="pencil" %}
-As the Project is scanned, the **Last Scanned** column on the **Projects** tab will show **Scanning…** When the status shows a relative time (e.g., a few seconds ago), the scan is completed and you can view the results.
+As the Project is scanned, the **Last Scanned** column on the **Projects** tab will show *Scanning…* When the status shows a relative time (e.g., a few seconds ago), the scan is completed and you can view the results.
 {% endhint %}
 
 {% hint style="info" %}

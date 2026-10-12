@@ -63,8 +63,8 @@ Checkmarx SCA offers a specialized set of Policy conditions for suspected malwar
 
 For example:
 
-- Setting **Severity level = High** means the policy will be triggered for any suspected malware risk with a High severity score, regardless of its risk type (category).
-- Setting **Risk type = Malicious Package** means the policy will be triggered for any finding classified as a malicious package, regardless of its severity level.
+- Setting *Severity level = High* means the policy will be triggered for any suspected malware risk with a High severity score, regardless of its risk type (category).
+- Setting *Risk type = Malicious Package* means the policy will be triggered for any finding classified as a malicious package, regardless of its severity level.
 - Setting both conditions together will further narrow the trigger so that only findings that match both the selected severity and risk type are included.
 
 Suspected Malware conditions can also be combined with other condition sets, such as **package** conditions, to further refine the scope of the policy and control when it is triggered.

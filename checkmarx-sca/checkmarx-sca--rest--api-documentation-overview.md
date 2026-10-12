@@ -13,11 +13,11 @@ Make sure that your firewall is configured to allow access to all relevant Check
 The following represents a standard workflow for creating a new Project, running a scan on that Project and viewing results.
 
 1. Use[`POST /identity/connect/token`](checkmarx-sca--rest--api---post-token.md) to generate an Access Token.
-2. Use `POST risk-management/projects` to create a new Project and generate a Project ID.
-3. If you would like to activate Exploitable Path, use `PUT /risk-management/settings/projects/{projectId}` to configure the Exploitable Path settings.
-4. If your source code is in a zip file, use `POST /api/uploads` to generate an upload link and then use `PUT /{uploadLink}` and the path to your zip file to upload your file.
-5. Use `POST /api/scans` , specifying the URL of the uploaded file or Git repository, to scan the Project.
-6. You can check the status of the scan using `GET /api/scans/{scanId}` .
+2. Use [`POST risk-management/projects`](checkmarx-sca--rest--api---post-project.md) to create a new Project and generate a Project ID.
+3. If you would like to activate Exploitable Path, use [`PUT /risk-management/settings/projects/{projectId}`](checkmarx-sca--rest--api---put-settings.md) to configure the Exploitable Path settings.
+4. If your source code is in a zip file, use [`POST /api/uploads`](checkmarx-sca--rest--api---post-scans-generate-upload-link.md) to generate an upload link and then use [`PUT /{uploadLink}`](checkmarx-sca--rest--api---put-upload-link.md) and the path to your zip file to upload your file.
+5. Use [`POST /api/scans`](checkmarx-sca--rest--api---scans.md) , specifying the URL of the uploaded file or Git repository, to scan the Project.
+6. You can check the status of the scan using [`GET /api/scans/{scanId}`](checkmarx-sca--rest--api---scans.md) .
 7. View the results using the [Export Service](checkmarx-sca--rest--api---export-service.md) APIs.
 
 {% hint style="info" icon="pencil" %}

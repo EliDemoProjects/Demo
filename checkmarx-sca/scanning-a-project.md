@@ -24,11 +24,11 @@ If the Project has not yet been scanned, then the **Scan now** button is shown i
 
   <div align="left"><figure><img src=".gitbook/assets/img-9653796c1ac8a63951d7073e732a8afc.png" alt=""></figure></div>
 
-- For a **General** project, the **Scan project** dialog opens. Enter the zip file or Git URL, since Checkmarx SCA does not save this information.
+- For a *General* project, the **Scan project** dialog opens. Enter the zip file or Git URL, since Checkmarx SCA does not save this information.
 
   <div align="left"><figure><img src=".gitbook/assets/img-08dc5c30a2eacb3ef4af9f55e705f0d7.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-- For a **GitHub** project, the scan starts immediately, since Checkmarx SCA saves the access token and Git URL.
+- For a *GitHub* project, the scan starts immediately, since Checkmarx SCA saves the access token and Git URL.
 
 {% hint style="warning" %}
 If the access token has been deleted from GitHub, you will get an error message when you try to re-scan the project.

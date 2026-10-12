@@ -6,7 +6,7 @@
 
 ## Description
 
-Submit your **username**, **password**, and **Tenant Account** name to obtain an Access Token for use during the current session.
+Submit your *username*, *password*, and *Tenant Account* name to obtain an Access Token for use during the current session.
 
 {% hint style="warning" %}
 To use the Checkmarx SCA APIs you need to use a local user account that was created through Checkmarx SCA User Management and not an account that was added via Master Access Control.
@@ -14,7 +14,7 @@ To use the Checkmarx SCA APIs you need to use a local user account that was crea
 
 When using APIs, you have the same permissions that your user account has in the web portal (UI). For example, a user with a Viewer role will only be able to perform GET APIs but not POST, PUT etc. Also, you can only access Projects that are assigned to a Team in which you are a member.
 
-At the beginning of each new session, you need to submit your **username**, **password**, and **Tenant Account** name using this API and receive an Access Token in the response. The Access Token is then submitted for authentication with each API call during this session. The Access Token is valid for an hour, after which you will need to resubmit your credentials to obtain a new Access Token.
+At the beginning of each new session, you need to submit your *username*, *password*, and *Tenant Account* name using this API and receive an Access Token in the response. The Access Token is then submitted for authentication with each API call during this session. The Access Token is valid for an hour, after which you will need to resubmit your credentials to obtain a new Access Token.
 
 ## Workflow
 
@@ -59,7 +59,7 @@ Body Parameters - Required
 | --- | --- | --- | --- |
 | username | string | - | Your Checkmarx SCA username. |
 | password | string | - | Your Checkmarx SCA password. |
-| acr_values | string | - | The name of the tenant account preceded by **Tenant:**<br>e.g., Tenant:DemoTenant |
+| acr_values | string | - | The name of the tenant account preceded by *Tenant:*<br>e.g., Tenant:DemoTenant |
 | scope | string | sca_api | To access the SCA APIs, set the scope as “sca_api”.<br>To access the Access Control APIs, set the scope as “access_control_api”. |
 | client_id | string | sca_resource_owner | Client_id must be set a “sca_resource_owner”. |
 | grant_type | string | password | Grant_type must be set as “password”. |

@@ -1,2 +1,0 @@
-# Preventing Malicious Software Attacks
-

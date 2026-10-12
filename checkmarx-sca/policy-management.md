@@ -5,7 +5,7 @@ Policy management enables you to apply customized security rules to the open-sou
 Each Policy consists of a series of rules that define a custom compliance threshold. Each rule includes one or more “sets” of conditions. For each set of conditions, you can specify which packages, vulnerabilities, and licenses the policy relates to. For example, you can create a set of conditions so that an “Outdated” package with an “Exploitable Path” and a High Severity vulnerability will violate the policy.
 
 {% hint style="info" icon="pencil" %}
-**All** of the **conditions** in a rule must be met in order for the rule to be considered violated. If **any** one of the **rules** in a policy is violated, the policy is considered to be violated.
+**All** of the *conditions* in a rule must be met in order for the rule to be considered violated. If **any** one of the *rules* in a policy is violated, the policy is considered to be violated.
 {% endhint %}
 
 The system comes with several **Predefined** Policies, which are automatically applied to all Projects. You can create additional custom Policies. When you create a custom Policy, you have the option to define it as a **Global** Policy, which is automatically assigned to all Projects. Otherwise, you need to specify which Projects the Policy is assigned to.
@@ -158,7 +158,7 @@ Only users with SCA Manager or SCA Admin roles can create, update and delete pol
 
 ## Viewing Policies
 
-The Policy Management screen shows detailed information about the policies you have created. The policies table header bar includes the number of policies in your account. You can search for **Policy Name**, **Violating Projects**, and **Associated Projects** using the search box. You can also sort by column headers, and set filters for each column.
+The Policy Management screen shows detailed information about the policies you have created. The policies table header bar includes the number of policies in your account. You can search for *Policy Name*, *Violating Projects*, and *Associated Projects* using the search box. You can also sort by column headers, and set filters for each column.
 
 - Click on a specific row to open the **Edit Policy** screen.
 
@@ -182,7 +182,7 @@ The Policy Management screen shows detailed information about the policies you h
 <tr><td><p><strong>Violating Projects</strong></p></td><td><p>Shows all of the projects that violated the policy in the last scan. For multiple projects, hover over the display to show all of the projects.</p></td><td><p>e.g., Zuul2, AltoroJ</p></td></tr>
 <tr><td><p><strong>Associated Projects</strong></p></td><td><p>Shows all of the projects that are associated with the policy. For multiple projects, hover over the display to show all of the projects.</p></td><td><p>e.g., Zuul2, AltoroJ</p></td></tr>
 <tr><td><p><strong>Break Build</strong></p></td><td><p>Toggle switch used to enable/disable the Break Build option.</p><p>Enable the switch if you would like to break the build if a policy has been violated.</p><p><strong>Tip</strong></p><p>This option is only relevant for scans triggered by a plugin version that supports breaking builds on SCA policy violations.</p></td><td><figure><img src=".gitbook/assets/img-f33b7e50f077aae23b5716e6fc17f764.png" alt=""></figure><p>Enabled</p><figure><img src=".gitbook/assets/img-f6b2e97d531a0a1d69ff1435fccae5ce.png" alt=""></figure><p>Disabled</p></td></tr>
-<tr><td><p><strong>Last Violated/Date</strong></p></td><td><p>The relative time or complete date that the policy was last violated.</p><p>Toggle between relative time and date by clicking <em><em>Last Violated</em></em> or <em><em>Date</em></em> in the column header.</p></td><td><p>e.g., 19 days ago</p><p>e.g., Jan 28, 2021</p></td></tr>
+<tr><td><p><strong>Last Violated/Date</strong></p></td><td><p>The relative time or complete date that the policy was last violated.</p><p>Toggle between relative time and date by clicking <em>Last Violated</em> or <em>Date</em> in the column header.</p></td><td><p>e.g., 19 days ago</p><p>e.g., Jan 28, 2021</p></td></tr>
 <tr><td><p><strong>Description</strong></p></td><td><p>The description of the policy.</p></td><td><p>e.g., Outdated packages and high legal risk</p></td></tr>
 <tr><td colspan="3"><p><strong>Expanded Policy Section</strong></p></td></tr>
 <tr><td><p><strong>Rules</strong></p></td><td><p>The rules applied to the policy.</p></td><td><p>e.g., Outdated package, High severity legal risk</p></td></tr>

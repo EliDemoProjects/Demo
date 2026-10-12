@@ -1,2 +1,0 @@
-# Checkmarx Docker Desktop Extension
-

@@ -12,7 +12,7 @@ We have added limited support for Pub package manager.
 <tbody>
 <tr><td><figure><img src=".gitbook/assets/img-7b8261dae4e6c7d876b28a7c1bf2f147.jpg" alt=""></figure></td><td colspan="3"><p><strong>Languages/Frameworks:</strong> Dart, Flutter</p><p><strong>Repository:</strong> N/A</p><p><strong>File Types:</strong> none</p><p><strong>Exploitable Path:</strong> Not supported</p></td></tr>
 <tr><td><p><strong>Supported Package Manager</strong></p></td><td><p><strong>Vulnerability Support</strong></p></td><td><p><strong>Malicious Package Support</strong></p></td><td><p><strong>Manifest Files</strong></p></td></tr>
-<tr><td><p>Pub</p></td><td><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><img src=".gitbook/assets/img-068d998044216c98442abfffce83ec52.png" alt="" data-size="line"></p></td><td><p><code>pubspec.lock</code></p></td></tr>
+<tr><td><p>Pub</p></td><td align="center"><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td align="center"><p><img src=".gitbook/assets/img-068d998044216c98442abfffce83ec52.png" alt="" data-size="line"></p></td><td><p><code>pubspec.lock</code></p></td></tr>
 </tbody>
 </table>
 

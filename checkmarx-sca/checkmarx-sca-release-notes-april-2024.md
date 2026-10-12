@@ -3,7 +3,7 @@
 {% include ".gitbook/includes/note-031596ef.md" %}
 
 {% hint style="warning" %}
-The **IgnoreVulnerability** and **UnignoreVulnerability** APIs, which had been used for triaging SCA vulnerabilities, will be deprecated on July 7. They have been replaced by the new [Management of Risk](checkmarx-sca--rest--api---management-of-risk.md) API, which supports applying the new set of states and adding comments. We recommend migrating to the new API well in advance of the July 7 deadline.
+The *IgnoreVulnerability* and *UnignoreVulnerability* APIs, which had been used for triaging SCA vulnerabilities, will be deprecated on July 7. They have been replaced by the new [Management of Risk](checkmarx-sca--rest--api---management-of-risk.md) API, which supports applying the new set of states and adding comments. We recommend migrating to the new API well in advance of the July 7 deadline.
 {% endhint %}
 
 {% include ".gitbook/includes/caution-f72202af.md" %}
@@ -38,7 +38,7 @@ Added support for Perl using cpan package manager.
 </thead>
 <tbody>
 <tr><td><p><strong>Supported Package Managers</strong></p></td><td><p><strong>Exploitable Path</strong></p></td><td><p><strong>Supply Chain Security (SCS)</strong></p></td><td><p><strong>Manifest Files</strong> (Packages marked with are required)</p></td></tr>
-<tr><td><p>Cpan</p></td><td><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><code>cpanfile</code>, <code>spcanfile.snapshot</code></p></td></tr>
+<tr><td><p>Cpan</p></td><td align="center"><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td align="center"><p><img src=".gitbook/assets/img-5039e271f26d0c3adaa5128a9aa5b5df.png" alt="" data-size="line"></p></td><td><p><code>cpanfile</code>, <code>spcanfile.snapshot</code></p></td></tr>
 </tbody>
 </table>
 

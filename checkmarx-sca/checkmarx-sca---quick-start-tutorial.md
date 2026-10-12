@@ -12,7 +12,7 @@ Checkmarx SCA users are assigned specific roles which determine what permissions
 
 ### Step 1. Log in to the Web Portal
 
-In order to log in to your account, you need to have your **Account** name, **Username**, and **Password.** If you have not yet received this info, contact your organization’s Checkmarx administrator.
+In order to log in to your account, you need to have your *Account* name, *Username*, and *Password.* If you have not yet received this info, contact your organization’s Checkmarx administrator.
 
 {% hint style="info" icon="pencil" %}
 If you are your organization’s primary admin user, you should have received a “**Welcome to Checkmarx SCA**” email from Checkmarx. In that case you need to complete the registration process before logging in. See [Completing Your Account Registration](checkmarx-sca---quick-start-tutorial.md#UUID-ead5ea0c-b805-c61a-c3b3-37165a24ad7b).
@@ -130,7 +130,7 @@ For this tutorial we will create a General Project. To learn how to create a Git
 
 8. Click **Create**.
 
-   While your Project is being set up, you may see a **Please Wait** window. Do not navigate away from this screen until the scan is initialized.
+   While your Project is being set up, you may see a *Please Wait* window. Do not navigate away from this screen until the scan is initialized.
 
 {% hint style="info" %}
 After creating a Project, there are additional settings that can be configured, these settings can be accessed by clicking on the context menu for the Project and selecting **Project Settings**, see [Editing Project Settings](editing-project-settings.md).
@@ -138,19 +138,19 @@ After creating a Project, there are additional settings that can be configured, 
 
 ## Viewing Scan Results
 
-The top section of the Dashboard shows aggregated results for all of your organization’s Projects. The **Projects** pane shows results for each individual Project. Each record shows general Project info and overall results for the most recent scan of that Project.
+The top section of the Dashboard shows aggregated results for all of your organization’s Projects. The *Projects* pane shows results for each individual Project. Each record shows general Project info and overall results for the most recent scan of that Project.
 
 {% embed url="https://vimeo.com/1050953788" %}
 
 You can drill-down to view detailed results for a specific Project by clicking on the row of the desired Project.
 
-The **Project** page (Overview tab) opens showing widgets representing the packages and vulnerabilities discovered in the Project. The bottom pane shows the **Top Vulnerable Packages**.
+The *Project* page (Overview tab) opens showing widgets representing the packages and vulnerabilities discovered in the Project. The bottom pane shows the *Top Vulnerable Packages*.
 
 <div align="left"><figure><img src=".gitbook/assets/img-5a48c73df1f49dfaf768dbf6f404b67b.png" alt=""></figure></div>
 
 ### Packages Drill-Down
 
-Click on the row of a specific package to open the **Project -** **Scan Results** screen (Package tab), showing detailed information about the specific risks that apply to that package. This screen shows detailed info about various types of risks that apply to open source dependencies, including: vulnerabilities, legal risks, and outdated versions.
+Click on the row of a specific package to open the *Project -* *Scan Results* screen (Package tab), showing detailed information about the specific risks that apply to that package. This screen shows detailed info about various types of risks that apply to open source dependencies, including: vulnerabilities, legal risks, and outdated versions.
 
 <div align="left"><figure><img src=".gitbook/assets/img-2c6f3812cbad5c2e1ed61d01df47efcd.png" alt=""></figure></div>
 

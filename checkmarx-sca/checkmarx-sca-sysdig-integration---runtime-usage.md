@@ -58,7 +58,7 @@ It is generally preferable to install both tools in the same folder. Make sure t
   Before running the scan, it is recommended to verify that you are able to access the image on your local machine.
   {% endhint %}
 
-- You need to have the following info about your Checkmarx SCA account: **account name**, **username** and **password**.
+- You need to have the following info about your Checkmarx SCA account: *account name*, *username* and *password*.
 
   {% hint style="info" icon="pencil" %}
   If you authenticate via a SAML provider, then providing user credentials is not necessary. See [SAML Authentication for Checkmarx SCA Resolver](saml-authentication-for-checkmarx-sca-resolver.md).

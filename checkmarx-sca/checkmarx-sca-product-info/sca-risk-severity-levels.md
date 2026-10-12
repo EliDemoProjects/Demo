@@ -1,2 +1,0 @@
-# SCA Risk Severity Levels
-

@@ -17,7 +17,7 @@ Admin users can edit the user account info and reset passwords for all users in 
 3. On the **General** tab (default), edit the desired fields.
 
    {% hint style="info" icon="pencil" %}
-   The **Username, Teams** and **Authentication Provider** fields cannot be edited.
+   The *Username, Teams* and *Authentication Provider* fields cannot be edited.
    {% endhint %}
 
 4. Click **Save.**

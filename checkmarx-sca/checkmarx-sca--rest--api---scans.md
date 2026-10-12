@@ -1,6 +1,6 @@
 # Checkmarx SCA (REST) API - Scans
 
-Once you have scanned a Project in Checkmarx SCA, you can use the **Scans** APIs to view general information about the scans, including their status, scan time/date, origin, and settings.
+Once you have scanned a Project in Checkmarx SCA, you can use the *Scans* APIs to view general information about the scans, including their status, scan time/date, origin, and settings.
 
 The following base URLs are used for all calls, depending on your environment:
 

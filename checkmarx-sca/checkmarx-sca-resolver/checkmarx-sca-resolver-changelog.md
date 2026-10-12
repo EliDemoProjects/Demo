@@ -1,2 +1,0 @@
-# Checkmarx SCA Resolver Changelog
-

@@ -67,9 +67,9 @@ Alternatively, when running a scan using Checkmarx SCA Resolver you can add a fl
 
    <div align="left"><figure><img src=".gitbook/assets/img-7fcc3a5f1f42102f1335d245272288f1.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
-4. In the **Select data tables** field, select the sections of the report you would like to print. Options are: **All data tables** (default), **Packages**, **Vulnerabilities**, **Licenses**, and **Policy Violations**.
+4. In the **Select data tables** field, select the sections of the report you would like to print. Options are: *All data tables* (default), *Packages*, *Vulnerabilities*, *Licenses*, and *Policy Violations*.
 
-5. Select the format you would like to generate. Options are: **pdf** (default), **xml**, **json**, and **csv**.
+5. Select the format you would like to generate. Options are: *pdf* (default), *xml*, *json*, and *csv*.
 
 6. Click the **Export** button.
 
@@ -81,12 +81,12 @@ A Scan Report shows information about a specific scan that ran on one of your Ch
 
 Reports are generated in the specified file type. A csv report is downloaded as a zip file, from which separate csv’s are extracted for each section.
 
-Reports in xml, json and csv contain the raw data from the scan, divided into the following sections: **Summary**, **Packages**, **Vulnerabilities** and **Licenses**.
+Reports in xml, json and csv contain the raw data from the scan, divided into the following sections: *Summary*, *Packages*, *Vulnerabilities* and *Licenses*.
 
 Pdf reports contain the following sections.
 
 - **Title bar** - shows general info about the Report as well as a link to view the full results in the web application.
-- **Overview section** - shows an overview pane with a graphic display of the overall results for each element that is included in the report (**Packages**, **Vulnerabilities**, **Licenses**, **Policies**).
+- **Overview section** - shows an overview pane with a graphic display of the overall results for each element that is included in the report (*Packages*, *Vulnerabilities*, *Licenses*, *Policies*).
 
 {% hint style="info" icon="pencil" %}
 Only elements included in the report are represented in the overview pane, i.e if the report doesn’t include the Packages section then there won’t be a Packages overview pane.
@@ -99,9 +99,9 @@ Only elements included in the report are represented in the overview pane, i.e i
 
 ### Overview Section
 
-The Title bar shows the following info about the report: **Project name**, **Date scanned**, **Date created**, **Printed Date**, and **Scan Origin**.
+The Title bar shows the following info about the report: *Project name*, *Date scanned*, *Date created*, *Printed Date*, and *Scan Origin*.
 
-The Overview panes show a high level overview of the scan results for each of the sections that are included in the report (**Packages**, **Vulnerabilities**, and **Licenses)**.
+The Overview panes show a high level overview of the scan results for each of the sections that are included in the report (*Packages*, *Vulnerabilities*, and *Licenses)*.
 
 There is also a Policies pane that shows any security Policies that are violated by this Project.
 
@@ -109,29 +109,29 @@ There is also a Policies pane that shows any security Policies that are violated
 
 <div align="left"><figure><img src=".gitbook/assets/img-6dbf01482aefe23c55286a10385ea131.png" alt=""></figure></div>
 
-The **Packages Overview** shows the number of vulnerable packages over the total number of packages identified in the Project. It also shows a color coded graph indicating the number of vulnerable packages of each severity level. In addition, it shows the top five vulnerable packages along with the number of vulnerabilities in each of those packages.
+The *Packages Overview* shows the number of vulnerable packages over the total number of packages identified in the Project. It also shows a color coded graph indicating the number of vulnerable packages of each severity level. In addition, it shows the top five vulnerable packages along with the number of vulnerabilities in each of those packages.
 
 #### Vulnerabilities
 
 <div align="left"><figure><img src=".gitbook/assets/img-673c4bc9f826fdbd2c13fe94a7dd719c.png" alt=""></figure></div>
 
-The **Vulnerabilities Overview** shows the number of high severity vulnerabilities over the total number of vulnerabilities in the Project. It also shows a color coded graph indicating the number of vulnerabilities of each severity level. In addition, it shows a breakdown of vulnerabilities based on other characteristics.
+The *Vulnerabilities Overview* shows the number of high severity vulnerabilities over the total number of vulnerabilities in the Project. It also shows a color coded graph indicating the number of vulnerabilities of each severity level. In addition, it shows a breakdown of vulnerabilities based on other characteristics.
 
 #### Licenses
 
 <div align="left"><figure><img src=".gitbook/assets/img-6645fb8e43816bd42fea2cc1cfb1ca88.png" alt=""></figure></div>
 
-The **Licenses Overview** shows the number of high severity legal risks over the total number of legal risks in the Project. It also shows a color coded graph indicating the severity of the legal risks with the licenses. In additions, it shows the seven licenses with the greatest legal risk.
+The *Licenses Overview* shows the number of high severity legal risks over the total number of legal risks in the Project. It also shows a color coded graph indicating the severity of the legal risks with the licenses. In additions, it shows the seven licenses with the greatest legal risk.
 
 #### Policies
 
 <div align="left"><figure><img src=".gitbook/assets/img-cd7e9ad97bb5b040b507b14d2b68f815.png" alt=""></figure></div>
 
-The **Policies** section shows the number of violated Policies over the total number of Policies that apply to the Project. It also shows a breakdown of the number of Global and Specific policies as well as the number of packages that violate Policies and the number of Policies that cause builds to break.
+The *Policies* section shows the number of violated Policies over the total number of Policies that apply to the Project. It also shows a breakdown of the number of Global and Specific policies as well as the number of packages that violate Policies and the number of Policies that cause builds to break.
 
 ### Packages Data Table
 
-This table shows detailed info about each open source package used by your Project. Separate tables are shown for **Direct** and **Transitive** packages.
+This table shows detailed info about each open source package used by your Project. Separate tables are shown for *Direct* and *Transitive* packages.
 
 The header for each table shows how the table was filtered, the total number of filtered packages, and how the table is sorted.
 
@@ -170,7 +170,7 @@ The following table describes the info shown for each vulnerability identified b
 | **ID** | The ID of the CVE listing. The ID consists of the CVE prefix followed by the year that the CVE was discovered and the serial counter for that year's CVE listings.<br>**Note:** Vulnerabilities discovered by the Checkmarx Vulnerability Research Team which are not yet cataloged as CVEs, are indicated by the “Cx” prefix. | e.g., CVE-2020-9488 |
 | **Package** | The name of the package in which the vulnerability was identified. | e.g., mysql:mysql-connector-java |
 | **Version** | The version of the package where the vulnerability was identified. | e.g., 5.1.26 |
-| **Ignored** | Indicates whether or not the vulnerability has been marked to be Ignored for this Project. Ignored vulnerabilities aren’t included in the count of vulnerabilities for the Project. | **Yes**, **No** |
+| **Ignored** | Indicates whether or not the vulnerability has been marked to be Ignored for this Project. Ignored vulnerabilities aren’t included in the count of vulnerabilities for the Project. | *Yes*, *No* |
 | **Exploitable Path** | Indicates whether an exploitable path was detected by which the vulnerable package is called by your Project. | <ul><li><p><strong>Yes</strong> - an exploitable path was detected</p></li><li><p><strong>No</strong> - no exploitable path was detected</p></li><li><p><strong>Unknown</strong> - the Exploitable Path feature wasn’t activated for the scan</p></li></ul> |
 | **Publication Date** | The date the vulnerability was published in the NVD. | e.g., Nov 16, 2020 |
 

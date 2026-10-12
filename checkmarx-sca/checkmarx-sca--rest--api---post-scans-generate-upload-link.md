@@ -2,7 +2,7 @@
 
 ## Description
 
-This API is used when the source code for your Project is in a zip file. This API generates an upload link for uploading the zip file to be scanned. The upload link generated in this step will then be used in the **PUT Upload Link** and **POST Scan** calls.
+This API is used when the source code for your Project is in a zip file. This API generates an upload link for uploading the zip file to be scanned. The upload link generated in this step will then be used in the *PUT Upload Link* and *POST Scan* calls.
 
 ## Method
 
@@ -39,7 +39,7 @@ Attributes:
 
 | **Attribute** | **Type** | **Enums** | **Description** |
 | --- | --- | --- | --- |
-| url | string | **-** | The url that will be needed for the next two steps of the flow (**PUT Upload Link** and **POST Scan**) for scanning a ZIP file. |
+| url | string | **-** | The url that will be needed for the next two steps of the flow (*PUT Upload Link* and *POST Scan*) for scanning a ZIP file. |
 
 ### Sample Success Response
 

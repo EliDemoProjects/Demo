@@ -1,6 +1,6 @@
 # Roles
 
-Roles define a set of permissions in the system. Each user is assigned one or more roles. There are two general types of roles, **Access Control** roles and **SCA activity** roles. The system comes with a set of predefined roles. You can also create custom roles, specifying the set of permissions included in the role.
+Roles define a set of permissions in the system. Each user is assigned one or more roles. There are two general types of roles, *Access Control* roles and *SCA activity* roles. The system comes with a set of predefined roles. You can also create custom roles, specifying the set of permissions included in the role.
 
 {% hint style="info" icon="pencil" %}
 In addition to roles, there is an additional layer of access control based on Teams. Independent of their roles, users can only access Projects that are assigned to Teams of which they are a member, see [Teams](teams.md).

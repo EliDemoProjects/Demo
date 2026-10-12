@@ -4,7 +4,7 @@
 You have the option of scanning your Project at the same time that you create it or scanning it later.
 {% endhint %}
 
-If the source code for your Project is on your local machine or in a public GitHub repository, you should configure it as a **General Project**.
+If the source code for your Project is on your local machine or in a public GitHub repository, you should configure it as a *General Project*.
 
 **To create a General Project:**
 
@@ -44,12 +44,12 @@ If the source code for your Project is on your local machine or in a public GitH
      You can select a sub-Team without selecting its parent Team. Members of the parent Team can view Projects assigned to the child Team but not the reverse.
      {% endhint %}
 
-7. Click **Create and Scan** or, if you skipped **step 4**, click **Create**.
+7. Click **Create and Scan** or, if you skipped *step 4*, click **Create**.
 
    Your new Project appears at the top of the **Projects** section on the **Dashboard**, and a scanning icon (if you performed step 4) or “Never Scanned” (if you skipped step 4) appears in the **Last Scanned** column.
 
 {% hint style="info" icon="pencil" %}
-As the Project is scanned, the **Last Scanned** column on the **Projects** tab will show **Scanning…** When the status shows a relative time (e.g., a few seconds ago), the scan is completed and you can view the results.
+As the Project is scanned, the **Last Scanned** column on the **Projects** tab will show *Scanning…* When the status shows a relative time (e.g., a few seconds ago), the scan is completed and you can view the results.
 {% endhint %}
 
 {% hint style="info" %}

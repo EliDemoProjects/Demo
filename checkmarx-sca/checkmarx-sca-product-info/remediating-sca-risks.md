@@ -1,2 +1,0 @@
-# Remediating SCA Risks
-

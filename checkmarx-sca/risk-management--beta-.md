@@ -3,7 +3,7 @@
 Checkmarx SCA tracks specific risk instances throughout your SDLC. Each risk instance has a ‘Predicate’ associated with it, which is comprised of the **State** and **Comments**. After reviewing the results of a scan, you can triage the results and modify these predicates accordingly. If the identical risk instance is identified in subsequent scans of the same project, the predicate will automatically be applied to that instance.
 
 {% hint style="info" icon="pencil" %}
-Risk management is currently supported only for **Vulnerability** and **Suspected Malware** risks, but not for **Legal** risks.
+Risk management is currently supported only for *Vulnerability* and *Suspected Malware* risks, but not for *Legal* risks.
 {% endhint %}
 
 A risk instance is defined as a specific **risk** affecting a specific **package** in a specific **project**. Therefore, changes that you make to the predicate of a risk aren’t applied to the identical risk when it is found in a different project. Also, if the risk affects other packages in your project, the changes won’t be applied to those risks.
@@ -36,7 +36,7 @@ When a Risk is marked as **Not Exploitable**, in the **All Risks** page the CVE 
 
 ### What to consider when changing the Risk state
 
-Before defining a new state for a Risk, it is important to ensure not only the security threat that the Risk **currently** poses but the threat that it may cause **at any stage** in your project’s development and deployment. On the other hand, it is sufficient to ensure that the presence of the Risk in **this particular package** and in **this Project** does not pose a threat, even if the Risk would pose a threat if it is identified in a different package and/or a different Project.
+Before defining a new state for a Risk, it is important to ensure not only the security threat that the Risk *currently* poses but the threat that it may cause *at any stage* in your project’s development and deployment. On the other hand, it is sufficient to ensure that the presence of the Risk in *this particular package* and in *this Project* does not pose a threat, even if the Risk would pose a threat if it is identified in a different package and/or a different Project.
 
 The following are some common reasons for changing the state of Risk:
 

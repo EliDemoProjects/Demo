@@ -8,7 +8,7 @@
 
 - Checkmarx SCA Resolver requires dependency resolution utilities to be installed, and the project to be in a **buildable state**. For a list of requirements, see [Package Managers Support in SCA Resolver.](installing-supported-package-managers-for-resolver.md)
 
-- You need to have the following info about your Checkmarx SCA account: **account name**, **username** and **password**.
+- You need to have the following info about your Checkmarx SCA account: *account name*, *username* and *password*.
 
   {% include ".gitbook/includes/warning-e25f6b2c.md" %}
 
@@ -18,14 +18,14 @@ If you authenticate via a SAML provider, then providing user credentials is not 
 
 ## Running Scans Using the Checkmarx SCA Resolver
 
-You can use the Resolver to scan an **existing** Project or to create a **new** Project. If you are scanning an existing Project, then the Project settings that you configured in the SCA web portal (e.g., teams assignment, notifications, Python version) are automatically applied to the scan. If you are creating a new Project in Resolver, then you can use the optional configuration arguments to configure these settings, see [Checkmarx SCA Resolver Configuration Arguments](checkmarx-sca-resolver-configuration-arguments.md).
+You can use the Resolver to scan an *existing* Project or to create a *new* Project. If you are scanning an existing Project, then the Project settings that you configured in the SCA web portal (e.g., teams assignment, notifications, Python version) are automatically applied to the scan. If you are creating a new Project in Resolver, then you can use the optional configuration arguments to configure these settings, see [Checkmarx SCA Resolver Configuration Arguments](checkmarx-sca-resolver-configuration-arguments.md).
 
 {% hint style="info" icon="pencil" %}
-If you would like to use the **Policy** feature to cause builds to break whenever the specified threshold of security threats is detected, you need to first create the Project in the web portal and assign it to a Policy (see [Policy Management](policy-management.md)). Then, you can run the Project using Resolver.
+If you would like to use the *Policy* feature to cause builds to break whenever the specified threshold of security threats is detected, you need to first create the Project in the web portal and assign it to a Policy (see [Policy Management](policy-management.md)). Then, you can run the Project using Resolver.
 {% endhint %}
 
 {% hint style="info" icon="pencil" %}
-If you would like to run scans using the **Exploitable Path** feature, use the procedure described in [Running Exploitable Path Scans Using Resolver](running-exploitable-path-scans-using-resolver.md).
+If you would like to run scans using the *Exploitable Path* feature, use the procedure described in [Running Exploitable Path Scans Using Resolver](running-exploitable-path-scans-using-resolver.md).
 {% endhint %}
 
 ### Checkmarx SCA Resolver Modes

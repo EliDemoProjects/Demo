@@ -20,7 +20,7 @@ You can configure notifications for the following event types.
 
 By default, for each new project created in SCA a notification is configured to send **New vulnerability** and **Policy violation** notifications to the email of the user who created the project. You can edit or delete the notification configuration as described below.
 
-You can change the default behavior by editing the **Baseline** **Notification** (Global). In the Baseline Notification configuration you can specify the event types that will trigger notifications as well as the email recipients. These settings will then be applied by default to all new projects that are created in the account.
+You can change the default behavior by editing the **Baseline Notification** (Global). In the Baseline Notification configuration you can specify the event types that will trigger notifications as well as the email recipients. These settings will then be applied by default to all new projects that are created in the account.
 
 The Notifications screen is accessed by clicking on <img src=".gitbook/assets/img-2aef8be1d93482d5a9a92ae5400b1575.png" alt="" data-size="line"> **Policies & Notifications** in the main navigation, and then selecting the **Notifications** tab.
 
@@ -28,7 +28,7 @@ The Notifications screen is accessed by clicking on <img src=".gitbook/assets/im
 
 ## Viewing Notifications
 
-The Notifications tab shows detailed information about the Notifications that are currently configured in your account. The Notifications table header bar includes the number of Notifications in your account. You can search for Notifications by the **Project Name** of the assigned project.
+The Notifications tab shows detailed information about the Notifications that are currently configured in your account. The Notifications table header bar includes the number of Notifications in your account. You can search for Notifications by the *Project Name* of the assigned project.
 
 - Click on a specific row to open the **Notification Details** screen for editing.
 - Click on the <img src=".gitbook/assets/img-1d1787297384426534f8e8ba6ac6cb44.png" alt="" data-size="line"> on the right side of a row to show options to **Edit** or **Delete** the Notification.

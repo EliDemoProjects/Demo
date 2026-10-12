@@ -24,7 +24,7 @@ You can edit the settings of an existing Project. In addition to adjusting the s
 
 4. If you would like to enable notifications, in the **Notifications Email** field set the toggle to **On** (right) and enter the email addresses of one or more recipients to whom you want the notifications to be sent.
 
-5. For Python projects, In the **Python version** field, click on the field and select the desired version from the dropdown list. Options are **2**, **3** or **Not Specified** (default).
+5. For Python projects, In the **Python version** field, click on the field and select the desired version from the dropdown list. Options are *2*, *3* or *Not Specified* (default).
 
 6. Click **Save**.
 

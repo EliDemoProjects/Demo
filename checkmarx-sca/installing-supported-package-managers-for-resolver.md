@@ -845,7 +845,7 @@ No Installation needed
 
 The dependency resolution process involves downloading the manifest files from Docker Hub via API.
 
-Checkmarx SCA Resolver uses **Dockerfile\*** files information to collect and generate the set of dependencies based on docker layers.
+Checkmarx SCA Resolver uses *Dockerfile\** files information to collect and generate the set of dependencies based on docker layers.
 
 **Test**
 

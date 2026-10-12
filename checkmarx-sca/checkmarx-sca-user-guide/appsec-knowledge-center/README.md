@@ -1,2 +1,0 @@
-# AppSec Knowledge Center
-

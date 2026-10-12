@@ -12,7 +12,7 @@ The goal of SCA remediation is to ensure that your project isn't using vulnerabl
 Checkmarx SCA helps you to prioritize (triage) remediation activities by providing important info about the steps required for the remediation, and the impact that the remediation task will have. The following are some of the factors that you should consider when triaging results, and an explanation of how Checkmarx SCA helps with this process.
 
 {% hint style="info" icon="pencil" %}
-While you triage the results, you can mark the status of each vulnerability as **To Verify**, **Not Exploitable**, **Proposed Not Exploitable**, **Confirmed** or **Urgent**. See [Risk Management](risk-management--beta-.md)
+While you triage the results, you can mark the status of each vulnerability as *To Verify*, *Not Exploitable*, *Proposed Not Exploitable*, *Confirmed* or *Urgent*. See [Risk Management](risk-management--beta-.md)
 {% endhint %}
 
 - Severity - On the **Scan Results** \> **Packages** tab, the risk level of the package is shown, as well the number of vulnerabilities of each severity level that affect the package. This inf is also available in the **AppSec Knowledge Center** \> **Package** page.
@@ -88,7 +88,7 @@ This feature is accessed from the Scan Results screen by clicking on the <img sr
 
 ### Method 3 - Remediation Tasks Tab
 
-The **Remediation Tasks** tab shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project. These tasks involve replacing vulnerable packages in your project with non-vulnerable versions of those packages. For more info, see [Remediation Tasks Tab](project-page-tabs.md#UUID-4838541d-dfbc-58bb-cef1-5e9c58de543c).
+The **Remediation Tasks** tab shows detailed information about specific remediation tasks that Checkmarx recommends implementing for your Project. These tasks involve replacing vulnerable packages in your project with non-vulnerable versions of those packages. For more info, see [Remediation Tasks Tab](project-page-tabs.md#UUID-4838541d-dfbc-58bb-cef1-5e9c58de543c) .
 
 <div align="left"><figure><img src=".gitbook/assets/img-603efdbf8c0e446b7e1d056a8937e08a.png" alt=""></figure></div>
 

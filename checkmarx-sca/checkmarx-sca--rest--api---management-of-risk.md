@@ -10,7 +10,7 @@ This API is supported both for Checkmarx One and SCA standalone accounts.
 
 ## Overview
 
-Checkmarx SCA assigns a profile (predicate) to each risk instance (i.e., vulnerability or Supply Chain risk), consisting of **state**, **severity** and **comments**.
+Checkmarx SCA assigns a profile (predicate) to each risk instance (i.e., vulnerability or Supply Chain risk), consisting of *state*, *severity* and *comments*.
 
 This enables users to prioritize remediation activity and manage risks throughout the SDLC. You can change the state of the risk and add comments in order to keep track of your assessment of the risk. These changes can be applied to that risk instance within a specific project or for multiple projects.
 
@@ -20,12 +20,12 @@ A unique risk is identified based on: packageName, packageVersion, packageManage
 
 ### Changing the State
 
-Each instance of a risk identified by SCA has a state assigned to it. Possible states are: **To Verify**, **Not Exploitable**, **Confirmed**, **Urgent** and **Proposed Not Exploitable**.
+Each instance of a risk identified by SCA has a state assigned to it. Possible states are: *To Verify*, *Not Exploitable*, *Confirmed*, *Urgent* and *Proposed Not Exploitable*.
 
-All new risks are initially marked as **To Verify**, meaning that the threat from this risk has not yet been verified and needs to be assessed by your appsec team. During the onboarding process (and subsequent result reviews), if you determine that a risk isn't vulnerable to exploitation, e.g., the package isn't used or the source code doesn't call the vulnerable method, then you can mark it as **Proposed Not Exploitable** or **Not Exploitable**. If you determine that it does pose a threat, then you can mark it as **Confirmed** or **Urgent**.
+All new risks are initially marked as *To Verify*, meaning that the threat from this risk has not yet been verified and needs to be assessed by your appsec team. During the onboarding process (and subsequent result reviews), if you determine that a risk isn't vulnerable to exploitation, e.g., the package isn't used or the source code doesn't call the vulnerable method, then you can mark it as *Proposed Not Exploitable* or *Not Exploitable*. If you determine that it does pose a threat, then you can mark it as *Confirmed* or *Urgent*.
 
 {% hint style="info" icon="pencil" %}
-**Not Exploitable** is now used in place of the state **Ignore** that had been used previously in Checkmarx SCA.
+*Not Exploitable* is now used in place of the state *Ignore* that had been used previously in Checkmarx SCA.
 {% endhint %}
 
 ### Management of Risk URLs

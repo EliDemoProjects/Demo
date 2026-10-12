@@ -1,2 +1,0 @@
-# Recalculating Scan Results
-
